@@ -1,3 +1,0 @@
-# usage: mummergpu [options] reference.fna query.fna
-
-src/mummergpu ../../data/mummergpu/NC_003997.fna ../../data/mummergpu/NC_003997_q100bp.fna
