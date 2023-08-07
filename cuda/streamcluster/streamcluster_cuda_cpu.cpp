@@ -13,7 +13,7 @@
 	
 ***********************************************/
 
-#include "streamcluster_header.cu"
+#include "streamcluster_header.h"
 
 using namespace std;
 

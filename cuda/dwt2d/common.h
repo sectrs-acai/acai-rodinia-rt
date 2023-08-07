@@ -26,7 +26,6 @@
 
 #ifndef _COMMON_H
 #define _COMMON_H
-
 //24-bit multiplication is faster on G80,
 //but we must be sure to multiply integers
 //only within [-8M, 8M - 1] range
@@ -43,6 +42,10 @@
 //                          cudaEventElapsedTime(&elapsedTime, cstart, cstop)
 
 //divide and round up macro
+
+int do_open(char* outfile, int flags, int mode);
+
+
 #define DIVANDRND(a, b) ((((a) % (b)) != 0) ? ((a) / (b) + 1) : ((a) / (b)))
 
 #  define cudaCheckError( msg ) {                                            \

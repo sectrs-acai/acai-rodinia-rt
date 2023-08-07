@@ -37,6 +37,9 @@
 // This is nvidias histogram256 SDK example modded to do a 1024 point 
 // histogram
 ///////////////////////////////////////////////////////////////////////////////
+#include <cuda.h>
+#include <cuda_runtime.h>
+#include <helper_cuda.h>
 
 //Total number of possible data values
 #define BIN_COUNT 1024 // Changed from 256

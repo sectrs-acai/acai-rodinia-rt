@@ -1,4 +1,4 @@
-include ../../common/make.config
+include ../../common/cuda.config
 
 CUDA_SDK_PATH := $(SDK_DIR)
 

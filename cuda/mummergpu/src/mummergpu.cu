@@ -248,12 +248,15 @@ int destroyReference(Reference* ref)
    return 0;
 }
 
+#include "helper.h"
+
 extern "C"
 int createQuerySet(const char* fromFile, QuerySet* queries)
 {
 
    fprintf(stderr, "Opening %s...\n", fromFile);
-   int qfile = open(fromFile, O_RDONLY);
+   int qfile = do_open(fromFile, O_RDONLY);
+   HERE;
    
    if (qfile == -1)
    {
@@ -263,6 +266,7 @@ int createQuerySet(const char* fromFile, QuerySet* queries)
 
    queries->qfile = qfile;
 
+   HERE;
    return 0;
 }
 
@@ -465,7 +469,9 @@ void boardMemory(size_t * free_mem, size_t * total_mem)
   *free_mem =  512*1024*1024;
   *total_mem = 768*1024*1024;
 #else
-  CU_SAFE_CALL_NO_SYNC(cuMemGetInfo(free_mem, total_mem));
+    *free_mem =  512*1024*1024;
+    *total_mem = 768*1024*1024;
+   // CU_SAFE_CALL_NO_SYNC(cuMemGetInfo(free_mem, total_mem));
 #endif
 }
 
@@ -2169,7 +2175,9 @@ int streamReferenceAgainstQueries(MatchContext* ctx) {
     int num_reference_pages = 0;
     ReferencePage* pages = NULL;
     initReferencePages(ctx, &num_reference_pages, &pages);
-    
+    HERE;
+
+    HERE;
     
     buildReferenceTexture(&(pages[0].ref),
                           ctx->full_ref,
@@ -2183,6 +2191,7 @@ int streamReferenceAgainstQueries(MatchContext* ctx) {
                           
     matchQueriesToReferencePage(ctx, &pages[0]);
     destroyReference(&(pages[0].ref));
+    HERE;
     
     for (int i = 1; i < num_reference_pages - 1; ++i) {
     
@@ -2198,6 +2207,7 @@ int streamReferenceAgainstQueries(MatchContext* ctx) {
         matchQueriesToReferencePage(ctx, &pages[i]);
         destroyReference(&(pages[i].ref));
     }
+    HERE;
     
     if (num_reference_pages > 1) {
         int last_page = num_reference_pages - 1;
@@ -2227,20 +2237,23 @@ int matchQueries(MatchContext* ctx) {
 	ctx->statistics.node_hist_size = 0;
     ctx->statistics.child_hist_size = 0;
 #endif
+    HERE;
 
 	resetStats(&(ctx->statistics));
     
     char* ttimer = createTimer();
     startTimer(ttimer);
-    
+    HERE;
     int ret;
 
     fprintf(stderr, "Streaming reference pages against all queries\n"); 
     ret = streamReferenceAgainstQueries(ctx);
+    HERE;
 
     stopTimer(ttimer);
     ctx->statistics.t_end_to_end += getTimerValue(ttimer);
     deleteTimer(ttimer);
+    HERE;
     
     writeStatisticsFile(&(ctx->statistics), ctx->stats_file, "node_hist.out", "child_hist.out");
     

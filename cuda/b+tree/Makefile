@@ -1,7 +1,4 @@
-include ../../common/make.config
-
-CUDA_LIB =	-lcuda -lcudart
-CUDA_FLAG = -arch sm_20
+include ../../common/cuda.config
 
 # ====================================================================================================100
 #	END
@@ -51,7 +48,7 @@ CUDA_FLAG = -arch sm_20
 #	GCC
 # ====================================================================================================100
 
-C_C = gcc
+C_C = $(CC)
 # OMP_LIB = -lgomp
 # OMP_FLAG = -fopenmp
 # OCL_LIB = -lOpenCL
@@ -60,7 +57,7 @@ C_C = gcc
 #	NVCC
 # ====================================================================================================100
 
-CUD_C = nvcc
+CUD_C = $(NVCC)
 # OMP_FLAG = 	-Xcompiler paste_one_here
 
 # ====================================================================================================100
@@ -86,21 +83,12 @@ CUD_C = nvcc
 # ========================================================================================================================================================================================================200
 
 b+tree.out:	./main.o \
-		./kernel/kernel_gpu_cuda_wrapper.o \
-		./kernel/kernel_gpu_cuda_wrapper_2.o \
+		./kernel/kernel_gpu_cuda_wrapper.cu.cpp \
+		./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp \
 		./util/timer/timer.o \
 		./util/num/num.o \
-		./util/cuda/cuda.o
-	$(C_C)	./main.o \
-			./kernel/kernel_gpu_cuda_wrapper.o \
-			./kernel/kernel_gpu_cuda_wrapper_2.o \
-			./util/timer/timer.o \
-			./util/num/num.o \
-			./util/cuda/cuda.o \
-			-lm \
-			-L$(CUDA_LIB_DIR) \
-			$(CUDA_LIB)\
-                       -o b+tree.out
+		./util/cuda/cuda.cu.cpp
+	$(C_C)	$? $(CC_LIB_DIRS) $(CC_LIBS) -o b+tree.out
 
 
 # ========================================================================================================================================================================================================200
@@ -114,30 +102,29 @@ b+tree.out:	./main.o \
 main.o:	./common.h \
 		./main.h \
 		./main.c
-	$(C_C)	$(KERNEL_DIM) ./main.c \
+	$(C_C)	$(KERNEL_DIM) -O3 ./main.c \
 			-c \
-			-o ./main.o \
-			-O3
+			-o ./main.o
 
 # ======================================================================================================================================================150
 #	KERNELS
 # ======================================================================================================================================================150
 
-./kernel/kernel_gpu_cuda_wrapper.o:	./common.h \
+./kernel/kernel_gpu_cuda_wrapper.cu.cpp:	./common.h \
 									./kernel/kernel_gpu_cuda_wrapper.h \
 									./kernel/kernel_gpu_cuda_wrapper.cu
-	$(CUD_C) $(KERNEL_DIM) ./kernel/kernel_gpu_cuda_wrapper.cu \
+	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper.cu \
 				-c \
-				-o ./kernel/kernel_gpu_cuda_wrapper.o \
+				-o $@
 				-O3 \
 				$(CUDA_FLAG)
 
-./kernel/kernel_gpu_cuda_wrapper_2.o:	./common.h \
+./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp:	./common.h \
 										./kernel/kernel_gpu_cuda_wrapper_2.h \
 										./kernel/kernel_gpu_cuda_wrapper_2.cu
-	$(CUD_C) $(KERNEL_DIM) ./kernel/kernel_gpu_cuda_wrapper_2.cu \
+	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper_2.cu \
 				-c \
-				-o ./kernel/kernel_gpu_cuda_wrapper_2.o \
+				-o $@ -I./kernel -I./
 				-O3 \
 				$(CUDA_FLAG)
 
@@ -161,12 +148,12 @@ main.o:	./common.h \
 			-o ./util/num/num.o \
 			-O3
 
-./util/cuda/cuda.o:	./common.h \
+./util/cuda/cuda.cu.cpp:	./common.h \
 					./util/cuda/cuda.h \
 					./util/cuda/cuda.cu
-	$(CUD_C)	./util/cuda/cuda.cu \
+	$(NVCC) $(NVCC_FLAGS)	./util/cuda/cuda.cu \
 				-c \
-				-o ./util/cuda/cuda.o \
+				-o $@ -I./util/cuda -I./
 				-O3 \
 				$(CUDA_FLAG)
 
@@ -178,13 +165,16 @@ main.o:	./common.h \
 #	DELETE
 # ========================================================================================================================================================================================================200
 
+clean_cu_cpp:
+	rm	*.cu.cpp ./kernel/*.cu.cpp ./util/cuda/*.cu.cpp
+
 clean:
 	rm	*.o *.out \
 		./kernel/*.o \
 		./util/timer/*.o \
 		./util/num/*.o \
 		./util/cuda/*.o \
-                output.txt
+                output.txt ./util/cuda/*.cu.cpp  ./util/num/*.cu.cpp ./util/timer/*.cu.cpp ./kernel/*.cu.cpp
 
 # ========================================================================================================================================================================================================200
 #	END

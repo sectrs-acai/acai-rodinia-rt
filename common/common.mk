@@ -38,7 +38,7 @@
 # Add new SM Versions here as devices with new Compute Capability are released
 SM_VERSIONS := sm_10 sm_11 sm_12 sm_13
 
-CUDA_INSTALL_PATH ?= /usr/local/cuda
+CUDA_INSTALL_PATH ?= /usr/local/cuda-5.0
 
 ifdef cuda-install
 	CUDA_INSTALL_PATH := $(cuda-install)
@@ -62,9 +62,9 @@ COMMONDIR  := $(ROOTDIR)/../common
 
 # Compilers
 NVCC       := $(CUDA_INSTALL_PATH)/bin/nvcc 
-CXX        := g++
-CC         := gcc
-LINK       := g++ -fPIC
+CXX        := g++-4.4
+CC         := gcc-4.4
+LINK       := g++-4.4 -fPIC -lstdc++
 
 # Includes
 INCLUDES  += -I. -I$(CUDA_INSTALL_PATH)/include -I$(COMMONDIR)/inc
@@ -127,53 +127,6 @@ CUBIN_ARCH_FLAG := -m32
 # detect if 32 bit or 64 bit system
 HP_64 =	$(shell uname -m | grep 64)
 
-# OpenGL is used or not (if it is used, then it is necessary to include GLEW)
-ifeq ($(USEGLLIB),1)
-
-	ifneq ($(DARWIN),)
-		OPENGLLIB := -L/System/Library/Frameworks/OpenGL.framework/Libraries -lGL -lGLU $(COMMONDIR)/lib/$(OSLOWER)/libGLEW.a
-	else
-		OPENGLLIB := -lGL -lGLU
-
-		ifeq "$(strip $(HP_64))" ""
-			OPENGLLIB += -lGLEW
-		else
-			OPENGLLIB += -lGLEW_x86_64
-		endif
-	endif
-
-	CUBIN_ARCH_FLAG := -m64
-endif
-
-ifeq ($(USEGLUT),1)
-	ifneq ($(DARWIN),)
-		OPENGLLIB += -framework GLUT
-	else
-		OPENGLLIB += -lglut
-	endif
-endif
-
-ifeq ($(USEPARAMGL),1)
-	PARAMGLLIB := -lparamgl$(LIBSUFFIX)
-endif
-
-ifeq ($(USERENDERCHECKGL),1)
-	RENDERCHECKGLLIB := -lrendercheckgl$(LIBSUFFIX)
-endif
-
-ifeq ($(USECUDPP), 1)
-	ifeq "$(strip $(HP_64))" ""
-		CUDPPLIB := -lcudpp
-	else
-		CUDPPLIB := -lcudpp64
-	endif
-
-	CUDPPLIB := $(CUDPPLIB)$(LIBSUFFIX)
-
-	ifeq ($(emu), 1)
-		CUDPPLIB := $(CUDPPLIB)_emu
-	endif
-endif
 
 # Libs
 LIB       := -L$(CUDA_INSTALL_PATH)/lib -L$(LIBDIR) -L$(COMMONDIR)/lib/$(OSLOWER)
@@ -310,32 +263,3 @@ $(OBJDIR)/%.cu_$(1)_o : $(SRCDIR)%.cu $(CU_DEPS)
 	$(VERBOSE)$(NVCC) -o $$@ -c $$< $(NVCCFLAGS) -arch $(1)
 endef
 
-# This line invokes the above template for each arch version stored in
-# SM_VERSIONS.  The call funtion invokes the template, and the eval
-# function interprets it as make commands.
-$(foreach smver,$(SM_VERSIONS),$(eval $(call SMVERSION_template,$(smver))))
-
-$(TARGET): makedirectories $(OBJS) $(CUBINS) Makefile
-	$(VERBOSE)$(LINKLINE)
-
-cubindirectory:
-	$(VERBOSE)mkdir -p $(CUBINDIR)
-
-makedirectories:
-	$(VERBOSE)mkdir -p $(LIBDIR)
-	$(VERBOSE)mkdir -p $(OBJDIR)
-	$(VERBOSE)mkdir -p $(TARGETDIR)
-
-
-tidy :
-	$(VERBOSE)find . | egrep "#" | xargs rm -f
-	$(VERBOSE)find . | egrep "\~" | xargs rm -f
-
-clean : tidy
-	$(VERBOSE)rm -f $(OBJS)
-	$(VERBOSE)rm -f $(CUBINS)
-	$(VERBOSE)rm -f $(TARGET)
-	$(VERBOSE)rm -f $(NVCC_KEEP_CLEAN)
-
-clobber : clean
-	$(VERBOSE)rm -rf $(ROOTOBJDIR)

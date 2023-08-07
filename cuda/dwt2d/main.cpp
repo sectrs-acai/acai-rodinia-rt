@@ -39,6 +39,9 @@
 #include "components.h"
 #include "dwt.h"
 
+#include <cuda.h>
+#include <cuda_runtime.h>
+
 struct dwt {
     char * srcFilename;
     char * outFilename;
@@ -49,12 +52,13 @@ struct dwt {
     int dwtLvls;
 };
 
+
 int getImg(char * srcFilename, unsigned char *srcImg, int inputSize)
 {
     // printf("Loading ipnput: %s\n", srcFilename);
     char *path = "../../data/dwt2d/";
     char *newSrc = NULL;
-    
+
     if((newSrc = (char *)malloc(strlen(srcFilename)+strlen(path)+1)) != NULL)
     {
         newSrc[0] = '\0';
@@ -66,8 +70,8 @@ int getImg(char * srcFilename, unsigned char *srcImg, int inputSize)
 
     //srcFilename = strcat("../../data/dwt2d/",srcFilename);
     //read image
-    int i = open(srcFilename, O_RDONLY, 0644);
-    if (i == -1) { 
+    int i = open(srcFilename, O_RDONLY, 644);
+    if (i == -1) {
         error(0,errno,"cannot access %s", srcFilename);
         return -1;
     }

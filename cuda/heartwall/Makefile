@@ -1,19 +1,29 @@
+include ../../common/cuda.config
 
 ifdef OUTPUT
 override OUTPUT = -DOUTPUT
 endif
 
+RD_WG_SIZE_0=10
+
 # link objects(binaries) together
-heartwall: main.o ./AVI/avilib.o ./AVI/avimod.o 
-	nvcc main.o ./AVI/avilib.o ./AVI/avimod.o -I/usr/local/cuda/include -lm -o heartwall
+heartwall: main.cu.cpp setdevice.cu.cpp ./AVI/avilib.o ./AVI/avimod.o
+	$(CXX) $(CXX_FLAGS)  $? -o heartwall $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 
 # compile main function file into object (binary)
-main.o: main.cu kernel.cu define.c
-	nvcc $(OUTPUT) $(KERNEL_DIM) main.cu -I./AVI -c -O3
-
 ./AVI/avilib.o ./AVI/avimod.o:
 	cd AVI; make;
 
 # delete all object files
 clean:
 	rm -f *.o AVI/*.o heartwall *.linkinfo
+
+main.cu.cpp: main.cu
+	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -I./AVI -c $< -o $@  $(CUDA_FLAG)
+
+setdevice.cu.cpp: setdevice.cu
+	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -I./AVI -c $< -o $@  $(CUDA_FLAG)
+
+
+clean:
+	rm -f *.cu.cpp

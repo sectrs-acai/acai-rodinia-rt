@@ -2,6 +2,7 @@
 #define _MATRIXMUL_KERNEL_H_
 
 #include <stdio.h>
+#include "mergesort.cuh"
 
 // declare texture reference for 1D float texture
 texture<float4, 1, cudaReadModeElementType> tex;

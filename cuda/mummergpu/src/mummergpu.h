@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "common.cu"
 
+#define HERE printf("%s/%s: %d\n", __FILE__, __FUNCTION__, __LINE__)
 
 extern "C" {
 struct QuerySet {

@@ -76,7 +76,7 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
     cudaMemcpy(tIn_d, tIn, s, cudaMemcpyHostToDevice);
     cudaMemcpy(p_d, p, s, cudaMemcpyHostToDevice);
 
-    cudaFuncSetCacheConfig(hotspotOpt1, cudaFuncCachePreferL1);
+    // cudaFuncSetCacheConfig(hotspotOpt1, cudaFuncCachePreferL1);
 
     dim3 block_dim(64, 4, 1);
     dim3 grid_dim(nx / 64, ny / 4, 1);

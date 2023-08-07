@@ -1053,20 +1053,24 @@ static const int TEXBLOCKSIZE = 32;
 inline TextureAddress id2addr(int id)
 {
   TextureAddress retval;
+  HERE;
 
 #if MERGETEX && REORDER_TREE
   // Half width is 2048 => 11 bits
   // TEXBLOCKSIZE is 32 => 5 bits
   int bigx = id & 0xFFFF; // 11 + 5 bits
   int bigy = id >> 16;
+  HERE;
 
   retval.y = (bigy << 5) + (bigx & 0x1F);
   retval.x = bigx >> 5;
 
+  HERE;
   // now stuff y's 13th bit into x's 12th bit
-  
+
   retval.x |= (retval.y & 0x1000) >> 1;
   retval.y &= 0xFFF;
+  HERE;
 
 #elif REORDER_TREE
   // MAX_TEXTURE_DIMENSION is 4096 => 12 bits
@@ -1076,13 +1080,16 @@ inline TextureAddress id2addr(int id)
   retval.y = (bigy << 5) + (bigx & 0x1F);
   retval.x = bigx >> 5;
 
+  HERE;
 #elif MERGETEX
   retval.x = id;
 
 #else
   retval.x = id;
+  HERE;
 
 #endif
+  HERE;
   return retval;
 }
 
@@ -1149,15 +1156,25 @@ void buildNodeTexture(SuffixNode * node,
                       const char * refstr)
 {	
   int origid = node->id();
+  HERE;
     
   aux_data[origid].length = node->len();
   aux_data[origid].numleaves = node->m_numleaves;
-  aux_data[origid].printParent = id2addr(node->m_printParent->id());
+  HERE;
+  int a = node->m_printParent->id();
+  std::cout <<"a: " <<  a << "\n";
+    TextureAddress res = id2addr(a);
+    HERE;
+    std::cout <<"res: " <<  res.data << "\n";
+  aux_data[origid].printParent = res;
+  HERE;
 
+  HERE;
   TextureAddress myaddress(id2addr(origid));
 
   PixelOfNode * nd;
   PixelOfChildren * cd;
+  HERE;
 
 #if MERGETEX && REORDER_TREE
   int tex = myaddress.x & 0x800;
@@ -1305,6 +1322,7 @@ void buildSuffixTreeTexture(PixelOfNode** nodeTexture,
     
     assert(sizeof(PixelOfNode) == 16);
     assert(sizeof(PixelOfChildren) == 16);
+    HERE;
     
 
 #if MERGETEX && REORDER_TREE
@@ -1365,17 +1383,20 @@ void buildSuffixTreeTexture(PixelOfNode** nodeTexture,
     
     fprintf(stderr, " node: %dx%d",     *width, *node_height);
     fprintf(stderr, " children: %dx%d ", *width, *children_height);
+    HERE;
 
     *aux_data = (AuxiliaryNodeData*)calloc(allnodes, sizeof(AuxiliaryNodeData));
 
     if (!*nodeTexture || (*children_height && !*childrenTexture) || !*aux_data) 
     {
+        HERE;
         fprintf(stderr, "arg.  texture allocation failed.\n");
         exit(-1);
     }
     
     gtree->m_root->setNumLeaves();
     gtree->m_root->setPrintParent(min_match_len);
+    HERE;
     
     buildNodeTexture(gtree->m_root,
                      *nodeTexture,
@@ -1571,6 +1592,7 @@ void createTreeTexture(const char * refstr,
     
     EventTime_t ftimer;
     cerr << "  Flattening Tree... ";
+    HERE;
     char* flattentimer = createTimer();
     startTimer(flattentimer);
     buildSuffixTreeTexture(nodeTexture,
@@ -1579,10 +1601,12 @@ void createTreeTexture(const char * refstr,
                            aux_data,
                            gtree->m_string,
                            min_match_len);
+    HERE;
     stopTimer(flattentimer);
     if (statistics)
         statistics->t_tree_flatten += getTimerValue(flattentimer);
-    deleteTimer(flattentimer);  
+    deleteTimer(flattentimer);
+    HERE;
 
     *num_nodes = SuffixNode::s_nodecount + 1;
     cerr << ftimer.str(true, 5) << endl;
@@ -1591,6 +1615,7 @@ void createTreeTexture(const char * refstr,
     {
         gtree->printDot(dotfilename);
     }
+    HERE;
     
     if (texfilename)
     {
@@ -1599,6 +1624,7 @@ void createTreeTexture(const char * refstr,
                          *childrenTexture,
                          SuffixNode::s_nodecount + 1);
     }
+    HERE;
     
     delete gtree;
     gtree = NULL;

@@ -40,10 +40,12 @@ extern "C" void cpu_vlc_encode(unsigned int* indata, unsigned int num_elements, 
 
 int main(int argc, char* argv[]){
     if(!InitCUDA()) { return 0;	}
-    unsigned int num_block_threads = 256;
+    // unsigned int num_block_threads = 256;
+    unsigned int num_block_threads = 1;
     if (argc > 1)
         for (int i=1; i<argc; i++)
             runVLCTest(argv[i], num_block_threads);
+
     else {	runVLCTest(NULL, num_block_threads, 1024);	}
     CUDA_SAFE_CALL(cudaThreadExit());
     return 0;
@@ -57,6 +59,8 @@ void runVLCTest(char *file_name, uint num_block_threads, uint num_blocks) {
     //////// LOAD DATA ///////////////
     double H; // entropy
     initParams(file_name, num_block_threads, num_blocks, num_elements, mem_size, symbol_type_size);
+    num_elements = 512;
+    num_blocks = 512;
     printf("Parameters: num_elements: %d, num_blocks: %d, num_block_threads: %d\n----------------------------\n", num_elements, num_blocks, num_block_threads);
     ////////LOAD DATA ///////////////
     uint	*sourceData =	(uint*) malloc(mem_size);

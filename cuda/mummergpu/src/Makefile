@@ -1,4 +1,4 @@
-include ../../../common/make.config
+include ../../../common/cuda.config
 
 all: mummergpu
 .SUFFIXES : .cu .cu_dbg_o .c_dbg_o .cpp_dbg_o .cu_rel_o .c_rel_o .cpp_rel_o .cubin
@@ -8,10 +8,10 @@ include ../experiments/test_rule.mk
 CUDA_INSTALL_PATH := $(CUDA_DIR)
 
 # Compilers
-NVCC       := $(CUDA_INSTALL_PATH)/bin/nvcc 
-CXX        := g++ -fopenmp $(PROFILE)
-CC         := gcc 
-LINK       := g++ -fopenmp -m64 -fPIC $(PROFILE)
+#NVCC       := $(CUDA_INSTALL_PATH)/bin/nvcc
+#CXX        := g++ -fopenmp $(PROFILE)
+#CC         := gcc
+#LINK       := g++ -fopenmp -m64 -fPIC $(PROFILE)
 
 # Add source files here
 STATIC_LIB := libmummergpu.a
@@ -35,7 +35,6 @@ ROOTOBJDIR ?= obj
 LIBDIR     := $(ROOTDIR)/lib
 BINNAME    ?= mummergpu
 # Includes
-INCLUDES  += -I. -I$(CUDA_INSTALL_PATH)/include 
 
 # Libs
 LIB       := -L$(CUDA_LIB_DIR) -L$(LIBDIR) -lcuda -lcudart -lGL -lGLU ${LIB}
@@ -64,9 +63,9 @@ CWARN_FLAGS := $(CXXWARN_FLAGS) \
 	-Wmain \
 
 # Compiler-specific flags
-NVCCFLAGS := -Xcompiler "-m64"
-CXXFLAGS  := -m64 $(CXXWARN_FLAGS)
-CFLAGS    := -m64 $(CWARN_FLAGS)
+#NVCCFLAGS := -Xcompiler "-m64"
+#CXXFLAGS  := -m64 $(CXXWARN_FLAGS)
+#CFLAGS    := -m64 $(CWARN_FLAGS)
 
 # Common flags
 COMMONFLAGS ?= 
@@ -110,20 +109,21 @@ $(OBJDIR)/%.c_o : $(SRCDIR)%.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 #.cpp.cpp_$(APPEND)_o:
-$(OBJDIR)/%.cpp_o : $(SRCDIR)%.cpp
-	$(CXX) $(CXXFLAGS) -o $@ -c $<
+#$(OBJDIR)/%.cpp_o : $(SRCDIR)%.cpp
+#	$(CXX) $(CXXFLAGS) -o $@ -c $< $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 
 #.cu.cu_$(APPEND)_o:
-$(OBJDIR)/%.cu_o : $(SRCDIR)%.cu
-	$(NVCC) -o $@ -c $< $(NVCCFLAGS)
+mummergpu.cu.cpp : mummergpu.cu
+	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -c $< -o $@  $(CUDA_FLAG)
+
 
 #.cu.cubin
-%.cubin : $(SRCDIR)mummergpu.cu mummergpu_kernel.cu
-	$(NVCC) -o $(BINNAME).cubin -cubin $< $(NVCCFLAGS)
+#%.cubin : $(SRCDIR)mummergpu.cu mummergpu_kernel.cu
+#	$(NVCC) -o $(BINNAME).cubin -cubin $< $(NVCCFLAGS)
 
-#.cu.ptx
-%.ptx : $(SRCDIR)%.cu mummergpu_kernel.cu
-	$(NVCC) -o $@ -ptx -Xopencc -LIST:source=on $< $(NVCCFLAGS)
+##.cu.ptx
+#%.ptx : $(SRCDIR)%.cu mummergpu_kernel.cu
+#	$(NVCC) -o $@ -ptx -Xopencc -LIST:source=on $< $(NVCCFLAGS)
 
 makedirectories:
 	@mkdir -p $(LIBDIR)
@@ -134,16 +134,27 @@ LIBOBJS= \
     $(OBJDIR)/mummergpu_gold.cpp_o \
     $(OBJDIR)/suffix-tree.cpp_o \
     $(OBJDIR)/PoolMalloc.cpp_o \
-    $(OBJDIR)/mummergpu.cu_o \
+    $(OBJDIR)/mummergpu.cu.cpp_o \
 
-$(LIBDIR)/libmummergpu$(LIBSUFFIX).a: $(LIBOBJS)
-	ar qv $@ $(LIBOBJS)
+#$(LIBDIR)/libmummergpu$(LIBSUFFIX).a: $(LIBOBJS)
+#	ar qv $@ $(LIBOBJS)
 
 BINOBJS= \
     $(OBJDIR)/mummergpu_main.cpp_o
 
-$(BINDIR)/mummergpu: makedirectories $(LIBDIR)/libmummergpu$(LIBSUFFIX).a $(BINOBJS)
-	$(LINK) -o $(BINDIR)/$(BINNAME)  $(BINOBJS) -lmummergpu$(LIBSUFFIX) $(LIB) 
+helper.o: helper.cpp
+	$(CXX) $(CXX_FLAGS) $? -o $@ -c  $(CC_LIB_DIRS) $(CC_LIBS)
+
+suffix-tree.o: suffix-tree.cpp
+	$(CXX) $(CXX_FLAGS) $? -o $@ -c  $(CC_LIB_DIRS) $(CC_LIBS)
+
+PoolMalloc.o: PoolMalloc.cpp
+	$(CXX) $(CXX_FLAGS) $? -o $@ -c  $(CC_LIB_DIRS) $(CC_LIBS)
+
+# CXX_FLAGS+= $(CWARN_FLAGS)
+mummergpu: mummergpu_main.cpp mummergpu_gold.cpp helper.o suffix-tree.o PoolMalloc.o  mummergpu.cu.cpp
+	# $(LINK) -o $(BINDIR)/$(BINNAME)  $(BINOBJS) -lmummergpu$(LIBSUFFIX) $(LIB)
+	$(CXX) $(CXX_FLAGS) $? -o $@  $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 		
 
 ##############################################################################
@@ -166,8 +177,9 @@ clean:
 	rm -rf $(ROOTBINDIR)
 	rm -rf $(ROOTOBJDIR)
 	rm -rf $(LIBDIR)
+	rm -f mummergpu *.cu.cpp
 
-mummergpu: $(BINDIR)/mummergpu
+mummergpu: mummergpu
 
 cubin: mummergpu.cubin
 

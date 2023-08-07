@@ -254,6 +254,7 @@ __device__ int addr2id(unsigned int addr)
  __device__ TextureAddress id2addr(int id)
  {
      TextureAddress retval;
+     HERE;
  
  #if MERGETEX & REORDER_TREE
      // Half width is 2048 => 11 bits

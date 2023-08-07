@@ -11,8 +11,8 @@
 	Department of Computer Science
 	
 ***********************************************/
-#include "streamcluster_header.cu"
-
+#include "streamcluster_header.h"
+#include <cuda.h>
 using namespace std;
 
 // AUTO-ERROR CHECK FOR ALL CUDA FUNCTIONS

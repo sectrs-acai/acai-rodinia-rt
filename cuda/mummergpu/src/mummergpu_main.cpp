@@ -103,6 +103,7 @@ void ParseCommandLine(int argc, char ** argv)
 
 int main(int argc, char* argv[])
 {
+    HERE;
    ParseCommandLine(argc, argv);
 
    fprintf(stderr, "TWO_LEVEL_NODE_TREE is %d\n", TWO_LEVEL_NODE_TREE);
@@ -133,6 +134,7 @@ int main(int argc, char* argv[])
 	  exit(err);
    }
 
+   HERE;
    MatchContext ctx;
    if ((err = createMatchContext(&ref, 
 								&queries, 
@@ -149,20 +151,27 @@ int main(int argc, char* argv[])
 								&ctx)))
    {
 	  printStringForError(err);
+      HERE;
 	  exit(err);
-   }   
+   }
 
+    HERE;
    if ((err = matchQueries(&ctx)))
    {
+       HERE;
 	  printStringForError(err);
 	  exit(err);
-   }   
-   
+   }
+
+    HERE;
    if ((err = destroyMatchContext(&ctx)))
    {
+       HERE;
 	  printStringForError(err);
 	  exit(err);
-   }   
+   }
+    HERE;
+   printf("done\n");
 }
 
 

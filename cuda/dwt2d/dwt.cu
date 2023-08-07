@@ -36,6 +36,21 @@
 #include "dwt.h"
 #include "common.h"
 
+
+#include <unistd.h>
+#include <error.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <string.h>
+#include <assert.h>
+#include <sys/time.h>
+#include <getopt.h>
+
+#include <cuda.h>
+#include <cuda_runtime.h>
+
 inline void fdwt(float *in, float *out, int width, int height, int levels)
 {
         dwt_cuda::fdwt97(in, out, width, height, levels);
@@ -207,7 +222,7 @@ int writeLinear(T *component_cuda, int pixWidth, int pixHeight,
     char outfile[strlen(filename)+strlen(suffix)];
     strcpy(outfile, filename);
     strcpy(outfile+strlen(filename), suffix);
-    i = open(outfile, O_CREAT|O_WRONLY, 0644);
+    i = do_open(outfile, O_CREAT|O_WRONLY, 0644);
     if (i == -1) {
         error(0,errno,"cannot access %s", outfile);
         return -1;
@@ -337,7 +352,7 @@ int writeNStage2DDWT(T *component_cuda, int pixWidth, int pixHeight,
     char outfile[strlen(filename)+strlen(suffix)];
     strcpy(outfile, filename);
     strcpy(outfile+strlen(filename), suffix);
-    i = open(outfile, O_CREAT|O_WRONLY, 0644);
+    i = do_open(outfile, O_CREAT|O_WRONLY, 0644);
     if (i == -1) {
         error(0,errno,"cannot access %s", outfile);
         return -1;
