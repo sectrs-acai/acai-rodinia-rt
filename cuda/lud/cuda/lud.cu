@@ -65,7 +65,7 @@ float init_time = 0, mem_alloc_time = 0, h2d_time = 0, kernel_time = 0,
 #endif
 
 int
-main ( int argc, char *argv[] )
+do_main ( int argc, char *argv[] )
 {
   printf("WG size of kernel = %d X %d\n", BLOCK_SIZE, BLOCK_SIZE);
 
@@ -187,3 +187,12 @@ main ( int argc, char *argv[] )
 
   return EXIT_SUCCESS;
 }				/* ----------  end of function main  ---------- */
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
+}
+

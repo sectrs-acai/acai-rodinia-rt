@@ -1840,10 +1840,12 @@ destroy_tree(node* root)
 //	MAIN FUNCTION
 //========================================================================================================================================================================================================200
 
-int 
-main(	int argc, 
+#include "cca_benchmark.h"
+int
+do_main(	int argc,
 		char** argv ) 
 {
+
 
   printf("WG size of kernel 1 & 2  = %d \n", DEFAULT_ORDER);
 
@@ -2419,6 +2421,16 @@ main(	int argc,
 	free(mem);
 	return EXIT_SUCCESS;
 
+}
+
+int
+main(	int argc,
+            char** argv )
+{
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
 }
 
 //========================================================================================================================================================================================================200

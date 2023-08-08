@@ -145,7 +145,7 @@ void usage(int argc, char **argv)
     exit(1);
 }
 
-int main(int argc, char** argv)
+int do_main(int argc, char** argv)
 {
     if (argc != 7)
     {
@@ -201,6 +201,14 @@ int main(int argc, char** argv)
     free(tempIn);
     free(tempOut); free(powerIn);
     return 0;
-}	
+}
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
+}
 
 

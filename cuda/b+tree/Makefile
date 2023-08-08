@@ -102,7 +102,7 @@ b+tree.out:	./main.o \
 main.o:	./common.h \
 		./main.h \
 		./main.c
-	$(C_C)	$(KERNEL_DIM) -O3 ./main.c \
+	$(CC)	$(CCFLAGS) $(KERNEL_DIM) -O3 ./main.c \
 			-c \
 			-o ./main.o
 
@@ -132,7 +132,7 @@ main.o:	./common.h \
 ./util/timer/timer.o:	./common.h \
 						./util/timer/timer.h \
 						./util/timer/timer.c
-	$(C_C)	./util/timer/timer.c \
+	$(CC) $(CCFLAGS)	./util/timer/timer.c \
 			-c \
 			-o ./util/timer/timer.o \
 			-O3
@@ -140,7 +140,7 @@ main.o:	./common.h \
 ./util/num/num.o:	./common.h \
 					./util/num/num.h \
 					./util/num/num.c
-	$(C_C)	./util/num/num.c \
+	$(CC) $(CCFLAGS)	./util/num/num.c \
 			-c \
 			-o ./util/num/num.o \
 			-O3

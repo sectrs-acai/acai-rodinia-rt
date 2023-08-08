@@ -849,7 +849,7 @@ void streamCluster( PStream* stream,
   outcenterIDs( &centers, centerIDs, outfile);
 }
 
-int main(int argc, char **argv)
+int do_main(int argc, char **argv)
 {
   char *outfilename = new char[MAXNAMESIZE];
   char *infilename = new char[MAXNAMESIZE];
@@ -956,4 +956,12 @@ int main(int argc, char **argv)
 #endif
   
   return 0;
+}
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
 }

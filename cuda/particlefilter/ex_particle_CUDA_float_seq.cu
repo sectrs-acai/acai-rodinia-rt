@@ -798,7 +798,7 @@ void particleFilter(unsigned char * I, int IszX, int IszY, int Nfr, int * seed, 
     free(u);
 }
 
-int main(int argc, char * argv[]) {
+int do_main(int argc, char * argv[]) {
 
     char* usage = "double.out -x <dimX> -y <dimY> -z <Nfr> -np <Nparticles>";
     //check number of arguments
@@ -879,3 +879,12 @@ int main(int argc, char * argv[]) {
     free(I);
     return 0;
 }
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
+}
+

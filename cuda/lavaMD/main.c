@@ -45,7 +45,7 @@
 //========================================================================================================================================================================================================200
 
 int 
-main(	int argc, 
+do_main(	int argc,
 		char *argv [])
 {
 
@@ -318,4 +318,12 @@ main(	int argc,
 
 	return 0.0;																					// always returns 0.0
 
+}
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
 }

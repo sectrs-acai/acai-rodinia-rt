@@ -220,7 +220,7 @@ void processDWT(struct dwt *d, int forward, int writeVisual)
     cudaCheckError("Cuda free device");
 }
 
-int main(int argc, char **argv) 
+int do_main(int argc, char **argv)
 {
     int optindex = 0;
     char ch;
@@ -399,4 +399,12 @@ int main(int argc, char **argv)
     cudaCheckError("Cuda free host");
 
     return 0;
+}
+
+#include "cca_benchmark.h"
+int main(int argc, char **argv) {
+    CCA_BENCHMARK_INIT;
+    int ret = do_main(argc, argv);
+    CCA_BENCHMARK_CLEANUP;
+    return ret;
 }
