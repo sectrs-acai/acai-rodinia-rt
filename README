@@ -1,5 +1,7 @@
 # Rodinia Benchmark Suite
 
+This variant leverages the CUDA runtime APIs.
+
 We use ocelot for the cuda runtime api. Due to compatibility issues of ocelot
 for cuda > 5 we build all benchmarks with cuda 5. cuda 5 is only compatible with
 gcc-4. Hence, we have to split compilation into two stages: cu -> cpp with
