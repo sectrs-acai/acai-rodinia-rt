@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0004aa8f_00000000-3_lud.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0005034e_00000000-3_lud.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0004aa8f_00000000-3_lud.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0005034e_00000000-3_lud.cudafe1.cpp"
 # 1 "lud.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -30728,9 +30728,9 @@ int ret = do_main(argc, argv);
 return ret;
 # 197 "lud.cu"
 }
-# 1 "tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c"
-# 1 "tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c" 1 3
+# 1 "tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c"
+# 1 "tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -31316,8 +31316,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0004aa8f_00000000-1_lud.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_0005034e_00000000-1_lud.fatbin.c" 1 3
 
 
 asm(
@@ -31347,10 +31347,10 @@ asm(
 ".quad 0x0000000000000000,0x0000000000000008,0x0000005001010001,0x0000000000000068\n"
 ".quad 0x0000004000000000,0x0000001400030001,0x0000000600000048,0x0000000000001015\n"
 ".quad 0x0000000000000000,0x000000000000006a,0x0000000000000000,0x000075632e64756c\n"
-".quad 0x20800a518d1d9c78,0xdb7fd214f3bf0510,0xc8435c911a751256,0x83c0d97d3a22d712\n"
-".quad 0xc4a2e014423078f9,0xd26c809d00e5d8fe,0xd6300a3dd072594a,0xfaa3921fecd66226\n"
-".quad 0x736eb275546fcece,0x3195111acbb76588,0x2d3b7accd3f22b93,0x02f1afebe00e312c\n"
-".quad 0x00000000fc1df546\n"
+".quad 0x20800a518d1d9c78,0xdb7fe214f3bf0510,0xb042dc911a741596,0x83c0d97d3a22d712\n"
+".quad 0xc4a2e014423078f9,0x69b6405686a5d8fe,0xceb00a1d33792ca5,0xff63921fec366225\n"
+".quad 0xf26aa56aa81f179d,0x501c441b25eecb16,0x1d384c9ea7e454f7,0x3bbc6beaf06a31cc\n"
+".quad 0x0000000000991d95\n"
 ".text");
 
 extern "C" {
@@ -31366,10 +31366,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c" 2 3
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_38_tmpxft_0004aa8f_00000000_6_lud_cpp1_ii_b50e229a(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_38_tmpxft_0005034e_00000000_6_lud_cpp1_ii_b50e229a(void) __attribute__((__constructor__));
 static void __nv_cudaEntityRegisterCallback(void **__T22){{ volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T22; };}
-static void __sti____cudaRegisterAll_38_tmpxft_0004aa8f_00000000_6_lud_cpp1_ii_b50e229a(void){__cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil);}
-# 2 "tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c" 2
-# 1 "tmpxft_0004aa8f_00000000-3_lud.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_38_tmpxft_0005034e_00000000_6_lud_cpp1_ii_b50e229a(void){__cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil);}
+# 2 "tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c" 2
+# 1 "tmpxft_0005034e_00000000-3_lud.cudafe1.stub.c"

@@ -6,7 +6,6 @@ BENCH_OUT_DIR=/mnt/host/mnt/host/benchmark-rodinia-runtime
 ITERS=1
 
 b_fvp=(
-"b+tree" \
 "dwt2d" \
 "heartwall" \
 "hotspot3D" \
@@ -14,7 +13,8 @@ b_fvp=(
 "lud/cuda" \
 "myocyte" \
 "particlefilter"
-"streamcluster"
+"streamcluster" \
+"b+tree" \
  )
 
 
