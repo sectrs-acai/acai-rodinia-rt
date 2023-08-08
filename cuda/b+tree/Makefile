@@ -88,7 +88,7 @@ b+tree.out:	./main.o \
 		./util/timer/timer.o \
 		./util/num/num.o \
 		./util/cuda/cuda.cu.cpp
-	$(C_C)	$? $(CC_LIB_DIRS) $(CC_LIBS) -o b+tree.out
+	$(CC)	$(CCFLAGS) $? $(CC_LIB_DIRS) $(CC_LIBS) -o b+tree.out
 
 
 # ========================================================================================================================================================================================================200
@@ -115,8 +115,7 @@ main.o:	./common.h \
 									./kernel/kernel_gpu_cuda_wrapper.cu
 	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper.cu \
 				-c \
-				-o $@
-				-O3 \
+				-o $@ \
 				$(CUDA_FLAG)
 
 ./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp:	./common.h \
@@ -124,9 +123,7 @@ main.o:	./common.h \
 										./kernel/kernel_gpu_cuda_wrapper_2.cu
 	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper_2.cu \
 				-c \
-				-o $@ -I./kernel -I./
-				-O3 \
-				$(CUDA_FLAG)
+				-o $@ -I./kernel -I./  $(CUDA_FLAG)
 
 # ======================================================================================================================================================150
 #	UTILITIES
@@ -153,9 +150,7 @@ main.o:	./common.h \
 					./util/cuda/cuda.cu
 	$(NVCC) $(NVCC_FLAGS)	./util/cuda/cuda.cu \
 				-c \
-				-o $@ -I./util/cuda -I./
-				-O3 \
-				$(CUDA_FLAG)
+				-o $@ -I./util/cuda -I./ $(CUDA_FLAG)
 
 # ======================================================================================================================================================150
 #	END
@@ -169,7 +164,7 @@ clean_cu_cpp:
 	rm	*.cu.cpp ./kernel/*.cu.cpp ./util/cuda/*.cu.cpp
 
 clean:
-	rm	*.o *.out \
+	rm	-f *.o *.out \
 		./kernel/*.o \
 		./util/timer/*.o \
 		./util/num/*.o \

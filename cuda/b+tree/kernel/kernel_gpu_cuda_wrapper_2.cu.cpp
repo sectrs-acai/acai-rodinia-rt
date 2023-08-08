@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
 # 1 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -28102,9 +28102,9 @@ printf("Total time:\n");
 printf("%.12f s\n", ((float)(time6 - time0)) / (1000000));
 # 339 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 } }
-# 1 "tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
-# 1 "tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 1 3
+# 1 "tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -28690,8 +28690,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0001019a_00000000-1_kernel_gpu_cuda_wrapper_2.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_0003d51b_00000000-1_kernel_gpu_cuda_wrapper_2.fatbin.c" 1 3
 
 
 asm(
@@ -28794,7 +28794,7 @@ asm(
 ".quad 0x00000075632e325f,0x46a38edb578d9c78,0x291a46415f0e7d10,0xab451ec1df4c60d1\n"
 ".quad 0xa6c211a35e5bcd7d,0x27767802636243c7,0x9a634c297d3dfe51,0xba9c5dddad5a4671\n"
 ".quad 0xfc5ff4083855539c,0x518921d73aaedb2e,0x9dd87d907b45f710,0xecad965171049c72\n"
-".quad 0xcaa72196feabbcba,0xb0f8501fca3ab5f8,0xcfb5fdf7fe8d4fee,0xc1fd0aca09412493\n"
+".quad 0xcaa72196feabbcba,0xb0f8501fca3ab5f8,0xcfb5fdf7fe8d4fee,0xc1fd3b4325212493\n"
 ".quad 0xf2d6d94ffcb2adfc,0x4594bfbe4b9a1f98,0x8e39b6469a2dadfe,0xb0a001eae2434df7\n"
 ".quad 0xc6b77ae49f3b7a82,0x26ff53eb1f15db31,0xdea3eeea5d5baabb,0xddf7dc87fcf69baf\n"
 ".quad 0x4295cb2f5d2f6fba,0xf815af5d55b79aa9,0xed6b155d55973daa,0xf1d7295bea7bbd64\n"
@@ -28831,7 +28831,7 @@ asm(
 ".quad 0x3847f89b538ad8f7,0x32456e829c33cba5,0x2bbedc06b123e199,0x891892c675896a51\n"
 ".quad 0x343429f00b0dd3e5,0xa49983edf1de0eba,0x37034519edef89b4,0xe7bec6786ecba62a\n"
 ".quad 0x43f0118efe2db958,0x2f95fb02f95cfd26,0x119a7d81140452ec,0xaae23341918668c4\n"
-".quad 0x06dfb2b41c43ce19,0xe63a01ffd65faaff,0x000000000000fa00\n"
+".quad 0x06dfb2b41c43ce19,0xc4c401ffd65faaff,0x0000000000002d01\n"
 ".text");
 
 extern "C" {
@@ -28847,10 +28847,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
 extern void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_60_tmpxft_0001019a_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_60_tmpxft_0003d51b_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) __attribute__((__constructor__));
 void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_(long __par0, knode *__par1, long __par2, long *__par3, long *__par4, long *__par5, long *__par6, int *__par7, int *__par8, int *__par9, int *__par10){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)64UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)72UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)80UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK)); (void)cudaLaunch(((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK))); };}
 # 6 "./kernel/./kernel_gpu_cuda_2.cu"
 void findRangeK( long __cuda_0,knode *__cuda_1,long __cuda_2,long *__cuda_3,long *__cuda_4,long *__cuda_5,long *__cuda_6,int *__cuda_7,int *__cuda_8,int *__cuda_9,int *__cuda_10)
@@ -28858,8 +28858,8 @@ void findRangeK( long __cuda_0,knode *__cuda_1,long __cuda_2,long *__cuda_3,long
 {__device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10);
 # 66 "./kernel/./kernel_gpu_cuda_2.cu"
 }
-# 1 "/tmp/tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T24) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T24; }; __cudaRegisterFunction(__T24, (const char*)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK), (char*)"findRangeK", "findRangeK", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_60_tmpxft_0001019a_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2
-# 1 "tmpxft_0001019a_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_60_tmpxft_0003d51b_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2
+# 1 "tmpxft_0003d51b_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"

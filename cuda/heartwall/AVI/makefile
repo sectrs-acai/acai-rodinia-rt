@@ -1,4 +1,4 @@
-include ../../../common/cuda.config
+# include ../../../common/cuda.config
 all: avimod.o avilib.o
 
 # compile supporting function file into object (binary)
@@ -11,4 +11,4 @@ avilib.o: avilib.h avilib.c
 
 # delete files
 clean:
-	rm *.o *.out
+	rm -f *.o *.out

@@ -8,7 +8,7 @@ RD_WG_SIZE_0=10
 
 # link objects(binaries) together
 heartwall: main.cu.cpp setdevice.cu.cpp ./AVI/avilib.o ./AVI/avimod.o
-	$(CXX) $(CXX_FLAGS)  $? -o heartwall $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
+	$(CC) $(CCFLAGS)  $? -o heartwall $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 
 # compile main function file into object (binary)
 ./AVI/avilib.o ./AVI/avimod.o:
@@ -25,5 +25,7 @@ setdevice.cu.cpp: setdevice.cu
 	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -I./AVI -c $< -o $@  $(CUDA_FLAG)
 
 
+include AVI/makefile
+
 clean:
-	rm -f *.cu.cpp
+	rm -f *.cu.cpp AVI/*.o

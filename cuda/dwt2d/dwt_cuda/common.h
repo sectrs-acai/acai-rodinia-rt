@@ -33,6 +33,19 @@
 #ifndef DWT_COMMON_H
 #define	DWT_COMMON_H
 
+#if __cplusplus >= 201703L
+/* MySQL override. This needed to be inclided before cppconn/exception.h to define them */
+    #include <stdexcept>
+    #include <string>
+    #include <memory>
+
+    /* Now remove the trow */
+    #define throw(...)
+    #include <cppconn/exception.h>
+    #undef throw /* reset */
+#endif
+
+
 
 #include <cstdio>
 #include <algorithm>

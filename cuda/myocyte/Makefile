@@ -10,7 +10,7 @@ include ../../common/cuda.config
 
 # link objects(binaries) together
 myocyte:		main.cu.cpp
-	$(CXX) $(CXX_FLAGS) $? -o $@  $(CC_LIB_DIRS) $(CC_LIBS)
+	$(CC) $(CCFLAGS) $? -o $@  $(CC_LIB_DIRS) $(CC_LIBS)
 	#nvcc	main.o \
 #				-I/usr/local/cuda/include \
 #				-L/usr/local/cuda/lib \
@@ -64,4 +64,4 @@ main.cu.cpp : define.c \
 
 # delete all object files
 clean:
-	rm *.o *.out output.txt *.cu.cpp
+	rm -f *.o *.out output.txt *.cu.cpp

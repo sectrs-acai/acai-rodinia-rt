@@ -19,7 +19,7 @@ CUFILES :=  components.cu dwt_cuda/fdwt53.cu dwt_cuda/fdwt97.cu dwt_cuda/common.
 CU_CPP_FILES = components.cu.cpp dwt_cuda/fdwt53.cu.cpp dwt_cuda/fdwt97.cu.cpp dwt_cuda/common.cu.cpp dwt_cuda/rdwt97.cu.cpp dwt_cuda/rdwt53.cu.cpp dwt.cu.cpp
 
 # Includes
-INCLUDES := -I. -I$(CUDA_DIR)/include
+#INCLUDES := -I. -I$(CUDA_DIR)/include
 
 
 
@@ -34,28 +34,28 @@ INCLUDES := -I. -I$(CUDA_DIR)/include
 # Warning flags (from cuda common.mk)
 
 
-CFLAGS += $(CWARN_FLAGS)
-CXXFLAGS += $(CXXWARN_FLAGS)
+#CFLAGS += $(CWARN_FLAGS)
+#CXXFLAGS += $(CXXWARN_FLAGS)
 
 # Debug/release flags
-ifeq ($(dbg),1)
-    COMMONFLAGS += -g 
-    NVCCFLAGS   += -D_DEBUG
-    CXXFLAGS    += -D_DEBUG
-    CFLAGS      += -D_DEBUG
+#ifeq ($(dbg),1)
+#    COMMONFLAGS += -g
+#    NVCCFLAGS   += -D_DEBUG
+#    CXXFLAGS    += -D_DEBUG
+#    CFLAGS      += -D_DEBUG
+#
+#    ifeq ($(cudagdb),1)
+#        NVCCFLAGS += -G
+#    endif
+#else
+#    COMMONFLAGS += -O2
+#    NVCCFLAGS   += --compiler-options -fno-strict-aliasing $(NVCC_FLAGS)
+#    CXXFLAGS    += -fno-strict-aliasing $(CXX_FLAGS)
+#    CFLAGS      += -fno-strict-aliasing
+#endif
 
-    ifeq ($(cudagdb),1)
-        NVCCFLAGS += -G
-    endif
-else 
-    COMMONFLAGS += -O2 
-    NVCCFLAGS   += --compiler-options -fno-strict-aliasing $(NVCC_FLAGS)
-    CXXFLAGS    += -fno-strict-aliasing $(CXX_FLAGS)
-    CFLAGS      += -fno-strict-aliasing
-endif
-
-CFLAGS +=  $(INCLUDES)
-CXX_FLAGS +=  $(INCLUDES)
+#CFLAGS +=  $(INCLUDES)
+#CXX_FLAGS +=  $(INCLUDES)
 
 #ifeq ($(performancetest),1)
 #    COMMONFLAGS += -DGPU_DWT_TESTING
@@ -79,7 +79,7 @@ CXXOBJS=$(CXXFILES:.cpp=.cpp.o)
 .SUFFIXES: .c.o .cpp.o .cu.o .cu 
 
 %.c.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CCFLAGS) -c $< -o $@
 
 
 
@@ -87,11 +87,11 @@ CXXOBJS=$(CXXFILES:.cpp=.cpp.o)
 	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -c $< -o $@  $(CUDA_FLAG)
 
 %.cpp.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(CCFLAGS) -c $< -o $@
 
 $(EXECUTABLE): $(COBJS) $(CXXOBJS) $(CUOBJS) $(CU_CPP_FILES)
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $? $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
+	$(CC) $(CCFLAGS) -o $(EXECUTABLE) $? $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 
 clean:
 	rm -f $(COBJS) $(CXXOBJS) $(CUOBJS) $(EXECUTABLE)
-	rm *.bmp.dwt.* *.cu.cpp dwt_cuda/*.cu.cpp
+	rm -f *.bmp.dwt.* *.cu.cpp dwt_cuda/*.cu.cpp dwt_cuda/*.o *.o *.cu.cpp

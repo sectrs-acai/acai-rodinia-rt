@@ -58,6 +58,18 @@
 #ifndef DWT_CUDA_H
 #define	DWT_CUDA_H
 
+#if __cplusplus >= 201703L
+/* MySQL override. This needed to be inclided before cppconn/exception.h to define them */
+    #include <stdexcept>
+    #include <string>
+    #include <memory>
+
+    /* Now remove the trow */
+    #define throw(...)
+    #include <cppconn/exception.h>
+    #undef throw /* reset */
+#endif
+
 
 namespace dwt_cuda {
   

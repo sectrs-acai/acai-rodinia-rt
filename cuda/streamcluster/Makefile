@@ -26,7 +26,7 @@ TARGET_G = sc_gpu
 
 
 $(TARGET_G): streamcluster_cuda_cpu.cpp streamcluster_cuda.cu.cpp
-	$(CXX) $(CXX_FLAGS) $? -o $@  $(CC_LIB_DIRS) $(CC_LIBS)
+	$(CC) $(CCFLAGS) $? -o $@  $(CC_LIB_DIRS) $(CC_LIBS)
 	
 
 streamcluster_cuda.cu.cpp: streamcluster_cuda.cu

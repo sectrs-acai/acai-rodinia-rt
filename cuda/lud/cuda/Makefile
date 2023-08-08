@@ -25,7 +25,7 @@ lud_kernel.cu.cpp: lud_kernel.cu
 #		-L/usr/local/cuda/lib64 -lcudart_static -ldl -lrt -pthread -DTIMING
 
 $(EXECUTABLE) : lud.cu.cpp lud_kernel.cu.cpp ../common/common.c
-	$(CXX) $(CXX_FLAGS) $? -o $@ $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS) -lrt -pthread
+	$(CC) $(CCFLAGS) $? -o $@ $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS) -lrt -pthread
 
 clean:
-	rm -f $(EXECUTABLE) $(OBJS) *.linkinfo
+	rm -f $(EXECUTABLE) $(OBJS) *.linkinfo *.cu.cpp

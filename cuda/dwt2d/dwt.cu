@@ -51,6 +51,8 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
+
+
 inline void fdwt(float *in, float *out, int width, int height, int levels)
 {
         dwt_cuda::fdwt97(in, out, width, height, levels);
