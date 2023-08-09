@@ -29,15 +29,23 @@
 #include "timing.h"
 #endif
 
-#ifdef RD_WG_SIZE_0_0
-        #define BLOCK_SIZE RD_WG_SIZE_0_0
-#elif defined(RD_WG_SIZE_0)
-        #define BLOCK_SIZE RD_WG_SIZE_0
-#elif defined(RD_WG_SIZE)
-        #define BLOCK_SIZE RD_WG_SIZE
-#else
-        #define BLOCK_SIZE 16
-#endif
+
+
+
+#define RD_WG_SIZE_0_0 2
+#define BLOCK_SIZE RD_WG_SIZE_0_0
+
+#include "lud_kernel.cu"
+
+//#ifdef RD_WG_SIZE_0_0
+//        #define BLOCK_SIZE RD_WG_SIZE_0_0
+//#elif defined(RD_WG_SIZE_0)
+//        #define BLOCK_SIZE RD_WG_SIZE_0
+//#elif defined(RD_WG_SIZE)
+//        #define BLOCK_SIZE RD_WG_SIZE
+//#else
+//        #define BLOCK_SIZE 16
+//#endif
 
 static int do_verify = 0;
 
@@ -49,8 +57,8 @@ static struct option long_options[] = {
   {0,0,0,0}
 };
 
-extern void
-lud_cuda(float *d_m, int matrix_dim);
+//void
+//lud_cuda(float *d_m, int matrix_dim);
 
 #ifdef TIMING
 struct timeval tv;
@@ -191,9 +199,7 @@ do_main ( int argc, char *argv[] )
 #include "cca_benchmark.h"
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
-    // int ret = do_main(argc, argv);
-    int ret = 1;
-    printf("hello\n");
+     int ret = do_main(argc, argv);
     CCA_BENCHMARK_CLEANUP;
     return ret;
 }

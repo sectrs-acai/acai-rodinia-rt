@@ -21,6 +21,7 @@
 //======================================================================================================================================================
 
 #include "define.c"
+#include "setdevice.cu"
 
 params_common_change common_change;
 __constant__ params_common_change d_common_change;

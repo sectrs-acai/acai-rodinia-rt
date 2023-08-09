@@ -7,7 +7,7 @@
 #define fp float
 
 
-#define RD_WG_SIZE_0_0 2
+#define RD_WG_SIZE_0_0 64
 /* #define NUMBER_THREADS 512 */
 /*
 #ifdef RD_WG_SIZE_0_0
