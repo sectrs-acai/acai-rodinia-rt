@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
+# 1 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.cpp"
 # 1 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -27920,6 +27920,8 @@ recstart, int *
 reclength)
 # 55 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 {
+# 60 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
 # 62 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 long long time0;
 # 63 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
@@ -28006,105 +28008,123 @@ cudaMalloc((void **)(&ansDLength), count * sizeof(int));
 checkCUDAError("cudaMalloc ansDLength");
 # 179 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 time2 = get_time();
+# 192 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
 # 193 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(knodesD, knodes, knodes_mem, cudaMemcpyHostToDevice);
+;
 # 194 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(knodesD, knodes, knodes_mem, cudaMemcpyHostToDevice);
+# 195 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMalloc cudaMemcpy memD");
-# 200 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(currKnodeD, currKnode, count * sizeof(long), cudaMemcpyHostToDevice);
 # 201 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(currKnodeD, currKnode, count * sizeof(long), cudaMemcpyHostToDevice);
+# 202 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMalloc cudaMemcpy currKnodeD");
-# 207 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(offsetD, offset, count * sizeof(long), cudaMemcpyHostToDevice);
 # 208 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(offsetD, offset, count * sizeof(long), cudaMemcpyHostToDevice);
+# 209 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMalloc cudaMemcpy offsetD");
-# 214 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(lastKnodeD, lastKnode, count * sizeof(long), cudaMemcpyHostToDevice);
 # 215 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(lastKnodeD, lastKnode, count * sizeof(long), cudaMemcpyHostToDevice);
+# 216 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMalloc cudaMemcpy lastKnodeD");
-# 221 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(offset_2D, offset_2, count * sizeof(long), cudaMemcpyHostToDevice);
 # 222 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(offset_2D, offset_2, count * sizeof(long), cudaMemcpyHostToDevice);
+# 223 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMalloc cudaMemcpy offset_2D");
-# 228 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(startD, start, count * sizeof(int), cudaMemcpyHostToDevice);
 # 229 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(startD, start, count * sizeof(int), cudaMemcpyHostToDevice);
+# 230 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy startD");
-# 235 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(endD, end, count * sizeof(int), cudaMemcpyHostToDevice);
 # 236 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(endD, end, count * sizeof(int), cudaMemcpyHostToDevice);
+# 237 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy endD");
-# 246 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(ansDStart, recstart, count * sizeof(int), cudaMemcpyHostToDevice);
 # 247 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(ansDStart, recstart, count * sizeof(int), cudaMemcpyHostToDevice);
+# 248 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy ansDStart");
-# 253 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaMemcpy(ansDLength, reclength, count * sizeof(int), cudaMemcpyHostToDevice);
 # 254 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(ansDLength, reclength, count * sizeof(int), cudaMemcpyHostToDevice);
+# 255 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy ansDLength");
-# 256 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 257 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 time3 = get_time();
-# 263 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 258 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 259 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 266 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 (cudaConfigureCall(numBlocks, threadsPerBlock)) ? ((void)0) : findRangeK(maxheight, knodesD, knodes_elem, currKnodeD, offsetD, lastKnodeD, offset_2D, startD, endD, ansDStart, ansDLength);
-# 275 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaThreadSynchronize();
-# 276 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-checkCUDAError("findRangeK");
 # 278 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaThreadSynchronize();
+# 279 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("findRangeK");
+# 280 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 281 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 283 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 time4 = get_time();
-# 292 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 297 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 cudaMemcpy(recstart, ansDStart, count * sizeof(int), cudaMemcpyDeviceToHost);
-# 293 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 298 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy ansDStart");
-# 299 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 304 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 cudaMemcpy(reclength, ansDLength, count * sizeof(int), cudaMemcpyDeviceToHost);
-# 300 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 305 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 checkCUDAError("cudaMemcpy ansDLength");
-# 302 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+# 307 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 time5 = get_time();
-# 308 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(knodesD);
+# 309 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
 # 310 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(currKnodeD);
-# 311 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(offsetD);
-# 312 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(lastKnodeD);
-# 313 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(offset_2D);
-# 314 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(startD);
+;
 # 315 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(endD);
-# 316 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(ansDStart);
+cudaFree(knodesD);
 # 317 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-cudaFree(ansDLength);
+cudaFree(currKnodeD);
+# 318 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(offsetD);
 # 319 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(lastKnodeD);
+# 320 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(offset_2D);
+# 321 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(startD);
+# 322 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(endD);
+# 323 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(ansDStart);
+# 324 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(ansDLength);
+# 326 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 time6 = get_time();
-# 325 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("Time spent in different stages of GPU_CUDA KERNEL:\n");
-# 327 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU: SET DEVICE / DRIVER INIT\n", ((float)(time1 - time0)) / (1000000), (((float)(time1 - time0)) / ((float)(time6 - time0))) * (100));
 # 328 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU MEM: ALO\n", ((float)(time2 - time1)) / (1000000), (((float)(time2 - time1)) / ((float)(time6 - time0))) * (100));
-# 329 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU MEM: COPY IN\n", ((float)(time3 - time2)) / (1000000), (((float)(time3 - time2)) / ((float)(time6 - time0))) * (100));
-# 331 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU: KERNEL\n", ((float)(time4 - time3)) / (1000000), (((float)(time4 - time3)) / ((float)(time6 - time0))) * (100));
+;
 # 333 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU MEM: COPY OUT\n", ((float)(time5 - time4)) / (1000000), (((float)(time5 - time4)) / ((float)(time6 - time0))) * (100));
-# 334 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%15.12f s, %15.12f % : GPU MEM: FRE\n", ((float)(time6 - time5)) / (1000000), (((float)(time6 - time5)) / ((float)(time6 - time0))) * (100));
+printf("Time spent in different stages of GPU_CUDA KERNEL:\n");
+# 335 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU: SET DEVICE / DRIVER INIT\n", ((float)(time1 - time0)) / (1000000), (((float)(time1 - time0)) / ((float)(time6 - time0))) * (100));
 # 336 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("Total time:\n");
+printf("%15.12f s, %15.12f % : GPU MEM: ALO\n", ((float)(time2 - time1)) / (1000000), (((float)(time2 - time1)) / ((float)(time6 - time0))) * (100));
 # 337 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
-printf("%.12f s\n", ((float)(time6 - time0)) / (1000000));
+printf("%15.12f s, %15.12f % : GPU MEM: COPY IN\n", ((float)(time3 - time2)) / (1000000), (((float)(time3 - time2)) / ((float)(time6 - time0))) * (100));
 # 339 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU: KERNEL\n", ((float)(time4 - time3)) / (1000000), (((float)(time4 - time3)) / ((float)(time6 - time0))) * (100));
+# 341 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: COPY OUT\n", ((float)(time5 - time4)) / (1000000), (((float)(time5 - time4)) / ((float)(time6 - time0))) * (100));
+# 342 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: FRE\n", ((float)(time6 - time5)) / (1000000), (((float)(time6 - time5)) / ((float)(time6 - time0))) * (100));
+# 344 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("Total time:\n");
+# 345 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%.12f s\n", ((float)(time6 - time0)) / (1000000));
+# 347 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
 } }
-# 1 "tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
-# 1 "tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 1 3
+# 1 "tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -28690,8 +28710,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_00050060_00000000-1_kernel_gpu_cuda_wrapper_2.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_0005a2e5_00000000-1_kernel_gpu_cuda_wrapper_2.fatbin.c" 1 3
 
 
 asm(
@@ -28791,47 +28811,47 @@ asm(
 ".quad 0x0000000000000510,0x0000004000000000,0x0000001400030001,0x0000002500000048\n"
 ".quad 0x0000000000001015,0x0000000000000000,0x000000000000120e,0x0000000000000000\n"
 ".quad 0x6c656e72656b2f2e,0x5f6c656e72656b2f,0x616475635f757067,0x726570706172775f\n"
-".quad 0x00000075632e325f,0x46a36f5b578d9c78,0xd48a4682bf2e7e14,0xd5aa8e207dcf042a\n"
-".quad 0x33616455afadf6be,0xad3767014c6d6871,0x10cc1983973bdffa,0x2e77c399ed6ad237\n"
-".quad 0xd2fe6451c1ce77df,0x8a698ea9d576d577,0xeee3eabdda2fb4a3,0x556cb28b4a2821b8\n"
-".quad 0xa60b156feaba6dd7,0x77c701fa83ab5f8d,0xfb5fdf7f98d8feab,0x60f990242388420d\n"
-".quad 0xd5adaa9fcdf31eff,0x2cb9dd9bce6fb361,0x21bb5469a2dadf36,0x1401dd5a6869aee9\n"
-".quad 0x576d5aa3a76f50d1,0xdfec7563e2dbe524,0xa8fbbae78f755754,0x7d76a1fd3da6ab77\n"
-".quad 0x51f2abd773dbeab7,0x34af5d63dbcd54a3,0x562abaab2a7b63f8,0xad4ab7d0fb6ac9c6\n"
-".quad 0xa18630f97ef395d2,0x6d5755ce4cef9fdd,0xf11fb7dd554e2a0f,0xfd5ef515bf97556b\n"
-".quad 0xe31c5b45369453fa,0x1ba7b1be77982cf4,0x1b93dc6f8f7e7c94,0x6fcf71bb3dc6f4f7\n"
-".quad 0x767dc6f2f71b8bdc,0x1cfd141f55bf3ee3,0xd369c7daada513fd,0x65f9319e6fbe32aa\n"
-".quad 0x2cfb7df1251d470d,0x59f2dbee61a278f0,0x5be1d28745147d0a,0xa73eff12484e7d78\n"
-".quad 0x389643ccb73d65e9,0x5149602496434964,0x8592c859308692c8,0xc879308792c87130\n"
-".quad 0xbc8652c8452c8452,0x32c865308599eb07,0x76921bcac166590f,0x387f74a7f6917def\n"
-".quad 0xad804d0825c38b6d,0x008ba31c4e0192c4,0x1769c3a2ad2001cc,0x7bd3c74718d09893\n"
-".quad 0x17d76106c30ab67a,0x7363726d1f7e9955,0x4b148152aadfa43e,0x879e91d6cfb013ca\n"
-".quad 0xeb26e23be2492083,0x5f4c63f0d21455f3,0xffba7e861a641746,0x7475b319c488311f\n"
-".quad 0x326541443a6d4a2c,0x0931182e64482278,0x219e96c4b3a9c294,0x1ecd261773cf0b4e\n"
-".quad 0x5d55dc959964a230,0x24d8c143432c1e7c,0x15a686140348e60e,0xc563c30917089173\n"
-".quad 0xe10af8930f98a984,0xf1022c87e032c14b,0xebb6a4529e63b3c4,0xce36d9de87a4df54\n"
-".quad 0x7bfa2fbe5d1a8cc6,0xc1b457ebf88b6dbc,0x84a45c0885a50f54,0x9ae2fc2022e8862d\n"
-".quad 0xe7891402c229eb05,0xf1d3cd3470a48d85,0x63323a7915d8ce0e,0x855a39d152b2f837\n"
-".quad 0x159a7b5a01dae3c2,0x2015322f7bae5f96,0xa143acec5c35534f,0x6347cef7dcb5b51f\n"
-".quad 0x4bd262d85c77b389,0x0921ca8b01f7f531,0x9ed0df001a1c27d7,0xf365853acf58d64d\n"
-".quad 0x36669050aa72614e,0x898d7a9d87778a74,0xf9bb41e117799269,0x79635b10434e45d0\n"
-".quad 0x733713059c4bc2c2,0x18e07130bc86c46a,0x750a057be8fa3c3f,0x883cf8b52a1062ec\n"
-".quad 0x58068a5f7bba8ccf,0x4c269e2ab00000bc,0x44d6c820f342c978,0xa4aaec70b74876f2\n"
-".quad 0xe66c5dcfebae480b,0x35dcc6b4f9fd4bc1,0x52e8ee1fd55e5835,0x04572727b0fca1fd\n"
-".quad 0x2d248b9a84e9c7aa,0xbfb188cc757ac429,0x0fa0d80c78e77eb5,0x9823612055b3c66c\n"
-".quad 0x8f3c838ead0d829c,0x690678cd92679ac8,0x890480ec2ce79f32,0x727a31a203344096\n"
-".quad 0x1b568600905fd42e,0xa9b45b6a1ae32227,0xe5fe7d33cff72179,0x7f46668118c8fd47\n"
-".quad 0x0fc1e3bee575cf4e,0x7520a2b9b94c9a7e,0x39b0b89b0f32faf3,0x195cac0a39b98e9b\n"
-".quad 0xe1c6a087c2806144,0xdfd60c12473849c5,0x996be42c0f3257ec,0xfc5cd01642e2e9c3\n"
-".quad 0xb1d8589ce7af90b2,0xe87b2c0a0563b262,0x8636af2258ade113,0x6156afaf0ff99793\n"
-".quad 0xe7818bf88416789e,0x18922fcca2d7c4c3,0xc0508b0b4fa60a46,0x2ee181a6aee392d8\n"
-".quad 0x41143ad90c693868,0x7743d79361888947,0x5468c618de5e5862,0x6c0850cb87fb1f2f\n"
-".quad 0x8ae2ef39f04c45e9,0x853bc032c1b1b71c,0x6bfde95cdc213117,0x5eec3a602b72163b\n"
-".quad 0xb7dafd61e6fd47cc,0x2cf7c71c857e999e,0x73f4b42847316cc7,0x539678944894be9c\n"
-".quad 0xe11e12634e2713dd,0x6895ba0670cf2d8c,0x577bb82d6247c332,0x1239258deb11cc62\n"
-".quad 0x686833e0161ba62b,0x49b707dbe3bc197c,0x6e064e33dbd09319,0xcf7b8cf0ede74c74\n"
-".quad 0x87e1231dfc5b7271,0x5f2b0925f2b9f64c,0x233484922808a5ba,0x45e46683a70cd5a9\n"
-".quad 0x8ebf556a24c44233,0x26d503ffacbfd5fe,0x000000000000c900\n"
+".quad 0x00000075632e325f,0x46a38edb578d9c78,0x291a46415f0e7d10,0xab451ec1df4c60d1\n"
+".quad 0xa6c211a35e5bcd7d,0x27767802636243c7,0x9a634c297d3dfe51,0xba9c5dddad5a4671\n"
+".quad 0xfc5ff4083855539c,0x518921d73aaedb2e,0x9dd87d907b45f710,0xecad965171049c72\n"
+".quad 0xcaa72196feabbcba,0xb0f8501fca3ab5f8,0xcfb5fdf7fe8d4fee,0x307f4c9605612493\n"
+".quad 0x3cb5b653ff2cab7f,0x91652fef92e687e6,0xe38e6d91a68b6b7f,0xac28007ab890d37d\n"
+".quad 0x71addeb927cedea0,0xc9bfd4fac7c576cc,0xf7a8fbba9756eaae,0xb77df721ff3da6eb\n"
+".quad 0x50a572cbd74bdbee,0xbe056bd7556de6aa,0x3b5ac5575565cf6a,0xbc75ca56fa9eef59\n"
+".quad 0xfb9430c61fafdeb6,0x51ddaaeab9ce83cb,0xad7c23f6fbacb186,0x7f5fc83ea2b7f2ea\n"
+".quad 0x5f18538b68a6e20a,0xd1279a7373ce7538,0x4f73be3dcee8f7e7,0x3dceecf73bd3dcee\n"
+".quad 0xee77a7dcee2f73bf,0x7f839f8249f57bb3,0x595a6e308795b882,0xe16cbfc233cd8f86\n"
+".quad 0x1a399f6c7c3823a8,0xae0b3e5b63cc144f,0xaf037c5a58e0828e,0xbd34e7dfc28e31ce\n"
+".quad 0x2cf912cf9996e76c,0xb3e2492c7b12cf89,0x4c3ea4b3ea4c3e24,0xe4b3e64c3e64b3e4\n"
+".quad 0xdeef3e14b3ee4b3e,0x7cccb3e14c3ea67a,0x7bfda49af2b7a996,0xbbcf1c3e39fdc45f\n"
+".quad 0xb12a6011420d78e2,0xb50022e8cb228064,0x710fbcf1d1528900,0xbe3df9d382884988\n"
+".quad 0xaa8befb08d218518,0x1cb9b699368fbf8c,0x61258a4129556fe3,0x41c3cd40dba7d811\n"
+".quad 0xe5f59d311d723890,0xa32fa6d1f9a10a26,0x8fffdd3d430d3c0b,0x153836e98d647818\n"
+".quad 0x3c1a2220a21d32a5,0x94093e1836a784e1,0x4e219e8644b5a9c0,0x509f49261b32cf03\n"
+".quad 0xff3aad992b32f042,0x3893a3050c9a583c,0x98ad3268500d25a8,0xc62b1a2848db848d\n"
+".quad 0x5b0855c8985cc575,0x458811783f02960a,0x275d942294751d8e,0x36b1b6d6f63e26fb\n"
+".quad 0xc3df517df2a8d47a,0x223926bf5f845b5d,0x74c52360442d286a,0xd4d75766011b4431\n"
+".quad 0x2f1c8f2017ee4f5b,0xef2d3cd325852474,0x76d322a790de8ce0,0x2851a39515232f83\n"
+".quad 0xdcb3475b241cae3c,0x7802ba05ef54cbf0,0xeae438ced5c35533,0x86347d6f43cb5351\n"
+".quad 0x16b92629b8c77338,0xb0921888b01f7d53,0x99ed1dd001a0c27d,0xef3a6853acf5b564\n"
+".quad 0x43a669050aa62a14,0xe89b57aac87738a7,0x0d9bb41a11779926,0x278635b10435645d\n"
+".quad 0xa73d7137a9c49dc4,0xd08e0b610bc86c46,0x65a850483f45cad3,0x7c5e67c189508117\n"
+".quad 0xfcc0d452bbddd5aa,0xe13099be55800005,0x923ab64093cd0b24,0x55255b6383bc63b7\n"
+".quad 0x0fd363667f5b7c40,0xa9b66635a6cfeb5e,0xea964770fea6f2c1,0x50c2b9393d87e50f\n"
+".quad 0x4869255cd426463d,0xadfd8f8665abc6c1,0xa27906c0a3c73bf4,0xc4c11d31028d9e33\n"
+".quad 0x4479e5e475686c14,0x934833c674e33c56,0xb44bd8077ea73cba,0x758d928d1029a200\n"
+".quad 0x38dab4100482ff21,0xf58da2bb50532911,0x3f2ff3aa9e7bb90b,0x73ea331408c647aa\n"
+".quad 0xd07e0d1dfb2ba97c,0xf5d4828ae6e53266,0x7466c36c6c3ccbeb,0x178572b028e6e63a\n"
+".quad 0x17871a821b0a0285,0xb3775837b11cfec3,0x0e656f90b3dcc8df,0xebb17343990b8ba7\n"
+".quad 0xf2c7617c739dbe42,0x9f43d96789e58ec9,0xac31b37162c56770,0xb30ab37b687ff4bc\n"
+".quad 0x1b2c0c5dd8c0b1c8,0x30c495766512be26,0x630e422c2cd91052,0x273b86789abb8c4b\n"
+".quad 0x1938516b6411a4fe,0x89dd0f5e4d87c225,0x7aa3251863397960,0x4ba042f84c3fd8d9\n"
+".quad 0xe437e779cd9c622f,0xbc09de1e960d8dd8,0x9b5eef4ae76e7188,0x22f76193011990b1\n"
+".quad 0xf5bcd7ebf337ea36,0x3967be38c5cbf4cc,0xe39b85a142398ba6,0xd53963912444a5f4\n"
+".quad 0x4e11fe26d4e2b63d,0x4c915ba0a70cf2e9,0x4aefb701ac48f866,0x624624b19d625a94\n"
+".quad 0x8d0d0a7c02c374f9,0x292660fb7c7783ae,0x8dc0d1467b7be26d,0x39efb19e1bb2e98a\n"
+".quad 0x90fc0463bf8b6e56,0x0be57ec0be573f49,0x04669f60450114bb,0x6ab88cd064619a31\n"
+".quad 0xc1b7ecad0710f386,0x012efa7ff597eabf,0x0000000000000030\n"
 ".text");
 
 extern "C" {
@@ -28847,10 +28867,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2 3
 extern void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_60_tmpxft_00050060_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_60_tmpxft_0005a2e5_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) __attribute__((__constructor__));
 void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_(long __par0, knode *__par1, long __par2, long *__par3, long *__par4, long *__par5, long *__par6, int *__par7, int *__par8, int *__par9, int *__par10){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)64UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)72UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)80UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK)); (void)cudaLaunch(((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK))); };}
 # 6 "./kernel/./kernel_gpu_cuda_2.cu"
 void findRangeK( long __cuda_0,knode *__cuda_1,long __cuda_2,long *__cuda_3,long *__cuda_4,long *__cuda_5,long *__cuda_6,int *__cuda_7,int *__cuda_8,int *__cuda_9,int *__cuda_10)
@@ -28858,8 +28878,8 @@ void findRangeK( long __cuda_0,knode *__cuda_1,long __cuda_2,long *__cuda_3,long
 {__device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10);
 # 66 "./kernel/./kernel_gpu_cuda_2.cu"
 }
-# 1 "/tmp/tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T24) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T24; }; __cudaRegisterFunction(__T24, (const char*)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK), (char*)"findRangeK", "findRangeK", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_60_tmpxft_00050060_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2
-# 1 "tmpxft_00050060_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_60_tmpxft_0005a2e5_00000000_6_kernel_gpu_cuda_wrapper_2_cpp1_ii_ffda5caf(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c" 2
+# 1 "tmpxft_0005a2e5_00000000-3_kernel_gpu_cuda_wrapper_2.cudafe1.stub.c"

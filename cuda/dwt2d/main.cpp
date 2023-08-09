@@ -148,7 +148,7 @@ void processDWT(struct dwt *d, int forward, int writeVisual)
 
         /* Compute DWT and always store into file */
 
-        nStage2dDWT(c_r, c_r_out, backup, d->pixWidth, d->pixHeight, d->dwtLvls, forward);
+        nStage2,dDWT(c_r, c_r_out, backup, d->pixWidth, d->pixHeight, d->dwtLvls, forward);
         nStage2dDWT(c_g, c_g_out, backup, d->pixWidth, d->pixHeight, d->dwtLvls, forward);
         nStage2dDWT(c_b, c_b_out, backup, d->pixWidth, d->pixHeight, d->dwtLvls, forward);
      
@@ -401,7 +401,7 @@ int do_main(int argc, char **argv)
     return 0;
 }
 
-#include "cca_benchmark.h"
+
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
     int ret = do_main(argc, argv);

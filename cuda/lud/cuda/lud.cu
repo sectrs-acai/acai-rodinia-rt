@@ -191,7 +191,9 @@ do_main ( int argc, char *argv[] )
 #include "cca_benchmark.h"
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
-    int ret = do_main(argc, argv);
+    // int ret = do_main(argc, argv);
+    int ret = 1;
+    printf("hello\n");
     CCA_BENCHMARK_CLEANUP;
     return ret;
 }

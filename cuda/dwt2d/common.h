@@ -30,7 +30,7 @@
 //but we must be sure to multiply integers
 //only within [-8M, 8M - 1] range
 #define IMUL(a, b) __mul24(a, b)
-
+#include "cca_benchmark.h"
 ////cuda timing macros
 //#define CTIMERINIT  cudaEvent_t cstart, cstop; \
 //                    cudaEventCreate(&cstart); \

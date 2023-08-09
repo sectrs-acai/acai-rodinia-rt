@@ -75,6 +75,7 @@ kernel_gpu_cuda_wrapper(record *records,
 	//	INITIAL DRIVER OVERHEAD
 	//====================================================================================================100
 
+    CCA_MEMALLOC;
 	cudaThreadSynchronize();
 
 	//====================================================================================================100
@@ -151,6 +152,8 @@ kernel_gpu_cuda_wrapper(record *records,
 	checkCUDAError("cudaMalloc ansD");
 
 	time2 = get_time();
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 
 	//======================================================================================================================================================150
 	//	GPU MEMORY			COPY
@@ -206,6 +209,8 @@ kernel_gpu_cuda_wrapper(record *records,
 	cudaMemcpy(ansD, ans, count*sizeof(record), cudaMemcpyHostToDevice);
 	checkCUDAError("cudaMalloc cudaMemcpy ansD");
 
+    CCA_H_TO_D_STOP;
+    CCA_EXEC;
 	time3 = get_time();
 
 	//======================================================================================================================================================150
@@ -225,6 +230,7 @@ kernel_gpu_cuda_wrapper(record *records,
 											ansD);
 	cudaThreadSynchronize();
 	checkCUDAError("findK");
+    CCA_EXEC_STOP;
 
 	time4 = get_time();
 
@@ -240,15 +246,18 @@ kernel_gpu_cuda_wrapper(record *records,
 	//	ansD
 	//==================================================50
 
+    CCA_D_TO_H;
 	cudaMemcpy(ans, ansD, count*sizeof(record), cudaMemcpyDeviceToHost);
 	checkCUDAError("cudaMemcpy ansD");
 
+    CCA_D_TO_H_STOP;
 	time5 = get_time();
 
 	//======================================================================================================================================================150
 	//	GPU MEMORY DEALLOCATION
 	//======================================================================================================================================================150
 
+    CCA_CLOSE;
 	cudaFree(recordsD);
 	cudaFree(knodesD);
 
@@ -256,6 +265,7 @@ kernel_gpu_cuda_wrapper(record *records,
 	cudaFree(offsetD);
 	cudaFree(keysD);
 	cudaFree(ansD);
+    CCA_CLOSE_STOP;
 
 	time6 = get_time();
 

@@ -16,7 +16,7 @@
 #include <stdint.h>					// (in path known to compiler)			needed by uint32_t
 #include <stdbool.h>				// (in path known to compiler)			needed by true/false, bool
 #include <stdlib.h>					// (in path known to compiler)			needed by malloc
-
+#include "cca_benchmark.h"
 //======================================================================================================================================================150
 //	DEFINE
 //======================================================================================================================================================150

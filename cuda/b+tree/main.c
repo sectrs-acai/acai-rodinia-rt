@@ -1840,13 +1840,13 @@ destroy_tree(node* root)
 //	MAIN FUNCTION
 //========================================================================================================================================================================================================200
 
-#include "cca_benchmark.h"
+
 int
 do_main(	int argc,
 		char** argv ) 
 {
 
-
+  CCA_INIT;
   printf("WG size of kernel 1 & 2  = %d \n", DEFAULT_ORDER);
 
 	// ------------------------------------------------------------60
@@ -2016,6 +2016,8 @@ do_main(	int argc,
 	// ------------------------------------------------------------60
 	// get tree statistics
 	// ------------------------------------------------------------60
+    CCA_INIT_STOP;
+
 
 	printf("Transforming data to a GPU suitable structure...\n");
 	long mem_used = transform_to_cuda(root,0);
@@ -2144,6 +2146,7 @@ do_main(	int argc,
 			case 'k':
 			{
 
+
 				// get # of queries from user
 				int count;
 				sscanf(commandPointer, "%d", &count);
@@ -2196,6 +2199,7 @@ do_main(	int argc,
 					ans[i].value = -1;
 				}
 
+
 				// CUDA kernel
 				kernel_gpu_cuda_wrapper(records,
 										records_mem,
@@ -2220,6 +2224,7 @@ do_main(	int argc,
 				/* printf(" \n"); */
 
 
+
 				pFile = fopen (output,"aw+");
 				if (pFile==NULL)
 				  {
@@ -2238,6 +2243,7 @@ do_main(	int argc,
 				free(offset);
 				free(keys);
 				free(ans);
+
 
 				// break out of case
 				break;
@@ -2273,6 +2279,7 @@ do_main(	int argc,
 
 			case 'j':
 			{
+
 
 				// get # of queries from user
 				int count;
@@ -2348,6 +2355,9 @@ do_main(	int argc,
 					reclength[i] = 0;
 				}
 
+
+
+
 				// CUDA kernel
 				kernel_gpu_cuda_wrapper_2(	knodes,
 											knodes_elem,
@@ -2373,6 +2383,8 @@ do_main(	int argc,
 				    fputs ("Fail to open %s !\n",output);
 				  }
 
+
+
 				fprintf(pFile,"\n******command: j count=%d, rSize=%d \n",count, rSize);				
 				for(i = 0; i < count; i++){
 				  fprintf(pFile, "%d    %d    %d\n",i, recstart[i],reclength[i]);
@@ -2390,6 +2402,7 @@ do_main(	int argc,
 				free(end);
 				free(recstart);
 				free(reclength);
+
 
 				// break out of case
 				break;
