@@ -27,3 +27,7 @@ heartwall
 gaussian
 dwt2d
 backprop
+/altis/
+/cuda/lud/cuda/abc
+/cuda/lud/cuda/abcdef
+/cuda/lud/cuda/libenccuda.so
