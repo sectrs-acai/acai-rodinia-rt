@@ -81,7 +81,7 @@ int do_main(int argc, char **argv)
 {
     const unsigned int OPT_N_MAX = 16;
     unsigned int useDoublePrecision;
-    CCA_INIT;
+
 
     printf("[%s] - Starting...\n", argv[0]);
 
@@ -141,7 +141,7 @@ int do_main(int argc, char **argv)
         return 0;
     }
 
-    CCA_INIT_STOP;
+
 
     printf("Generating input data...\n");
     //Generate options set

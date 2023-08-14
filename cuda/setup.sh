@@ -9,12 +9,12 @@ b_fvp=(
 "hotspot3D" \
 "lavaMD" \
 "lud/cuda" \
-"myocyte" \
 "particlefilter"
 "streamcluster" \
 "b+tree" \
-"dwt2d" \
 "heartwall" \
+"../misc/samples/BlackScholes" \
+"myocyte" \
  )
 
 
@@ -27,12 +27,14 @@ function do_run {
 
     for b in ${b_fvp[@]}; do
         for i in {1..$ITERS}; do
-            LOG=$DIR/$b
+            NAME=$(basename $b)
+            LOG=$DIR/$NAME
             echo "executing $b"
 
             cd $SCRIPT_DIR/$b
             cat ./run | tee -a $LOG
-            exec ./run 2>&1 | tee -a $LOG
+            exec time ./run 2>&1 | tee -a $LOG
+            echo "--------------" >> $LOG
         done
     done
 }
@@ -68,6 +70,44 @@ function do_compile {
     done
 }
 
+
+function do_compile_encrypted {
+    # must be executed with bash
+    HERE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+    source $SCRIPTS_DIR/env-aarch64.sh
+    set +x
+    export CC=aarch64-none-linux-gnu-gcc
+    export CXX=aarch64-none-linux-gnu-g++
+    export CROSS_COMPILE=aarch64-none-linux-gnu-
+    export AR=aarch64-none-linux-gnu-ar
+    set -euo pipefail
+    export ENC_CUDA=1
+
+    for b in ${b_fvp[@]}; do
+        echo "================================="
+        echo "==== building $b"
+        cd $HERE_DIR/$b && make clean && make && cd $HERE_DIR
+        echo "==== building $b done"
+    done
+}
+
+
+function do_compile_encrypted_x86 {
+    # must be executed with bash
+    HERE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+    set +x
+    set -euo pipefail
+    export ENC_CUDA=1
+
+    for b in ${b_fvp[@]}; do
+        echo "================================="
+        echo "==== building $b"
+        cd $HERE_DIR/$b && make clean && make && cd $HERE_DIR
+        echo "==== building $b done"
+    done
+}
+
+
 function do_clean {
     # must be executed with bash
     HERE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
@@ -86,7 +126,13 @@ function do_clean {
 case "$1" in
     build)
         do_compile
+        ;;
+    encrypted)
+        do_compile_encrypted
     ;;
+  encrypted_x86)
+          do_compile_encrypted_x86
+      ;;
     clean)
         do_clean
     ;;

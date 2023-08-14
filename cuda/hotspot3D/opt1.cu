@@ -66,6 +66,8 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
     cn = cs =stepDivCap/ Ry;
     ct = cb =stepDivCap/ Rz;
 
+    CCA_MEMALLOC;
+
     cc = 1.0 - (2.0*ce + 2.0*cn + 3.0*ct);
 
     size_t s = sizeof(float) * nx * ny * nz;  
@@ -73,14 +75,18 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
     cudaMalloc((void**)&p_d,s);
     cudaMalloc((void**)&tIn_d,s);
     cudaMalloc((void**)&tOut_d,s);
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
     cudaMemcpy(tIn_d, tIn, s, cudaMemcpyHostToDevice);
     cudaMemcpy(p_d, p, s, cudaMemcpyHostToDevice);
+    CCA_H_TO_D_STOP;
 
     // cudaFuncSetCacheConfig(hotspotOpt1, cudaFuncCachePreferL1);
 
     dim3 block_dim(64, 4, 1);
     dim3 grid_dim(nx / 64, ny / 4, 1);
 
+    CCA_EXEC;
     long long start = get_time();
     for (int i = 0; i < numiter; ++i) {
         hotspotOpt1<<<grid_dim, block_dim>>>
@@ -90,13 +96,18 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
         tOut_d = t;
     }
     cudaDeviceSynchronize();
+    CCA_EXEC_STOP;
+    CCA_D_TO_H;
     long long stop = get_time();
     float time = (float)((stop - start)/(1000.0 * 1000.0));
     printf("Time: %.3f (s)\n",time);
     cudaMemcpy(tOut, tOut_d, s, cudaMemcpyDeviceToHost);
+    CCA_D_TO_H_STOP;
+    CCA_CLOSE;
     cudaFree(p_d);
     cudaFree(tIn_d);
     cudaFree(tOut_d);
+    CCA_CLOSE_STOP;
     return;
 }
 

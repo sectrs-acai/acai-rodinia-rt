@@ -5,6 +5,7 @@
 //======================================================================================================================================================150
 //	MAIN FUNCTION HEADER
 //======================================================================================================================================================150
+#include "cca_benchmark.h"
 
 #include "./../main.h"								// (in the main program folder)	needed to recognized input parameters
 
@@ -95,6 +96,7 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 	//====================================================================================================100
 	//	GPU MEMORY				(MALLOC) COPY IN
 	//====================================================================================================100
+    CCA_MEMALLOC;
 
 	//==================================================50
 	//	boxes
@@ -129,6 +131,8 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 				dim_cpu.space_mem);
 
 	time2 = get_time();
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 
 	//======================================================================================================================================================150
 	//	GPU MEMORY			COPY
@@ -179,7 +183,8 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 				cudaMemcpyHostToDevice);
 
 	time3 = get_time();
-
+    CCA_H_TO_D_STOP;
+    CCA_EXEC;
 	//======================================================================================================================================================150
 	//	KERNEL
 	//======================================================================================================================================================150
@@ -194,6 +199,8 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 
 	checkCUDAError("Start");
 	cudaThreadSynchronize();
+    CCA_EXEC_STOP;
+    CCA_D_TO_H;
 
 	time4 = get_time();
 
@@ -207,6 +214,8 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 				cudaMemcpyDeviceToHost);
 
 	time5 = get_time();
+    CCA_D_TO_H_STOP;
+    CCA_CLOSE;
 
 	//======================================================================================================================================================150
 	//	GPU MEMORY DEALLOCATION
@@ -216,6 +225,7 @@ kernel_gpu_cuda_wrapper(par_str par_cpu,
 	cudaFree(d_qv_gpu);
 	cudaFree(d_fv_gpu);
 	cudaFree(d_box_gpu);
+    CCA_CLOSE_STOP;
 
 	time6 = get_time();
 

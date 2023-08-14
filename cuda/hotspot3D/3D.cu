@@ -4,6 +4,7 @@
 #include <stdlib.h> 
 #include <math.h> 
 #include <sys/time.h>
+#include "cca_benchmark.h"
 
 #define BLOCK_SIZE 16
 #define STR_SIZE 256

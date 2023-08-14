@@ -1,7 +1,7 @@
 //=====================================================================
 //	MAIN FUNCTION
 //=====================================================================
-
+#include "cca_benchmark.h"
 void master(fp timeinst,
 					fp* initvalu,
 					fp* parameter,
@@ -43,21 +43,27 @@ void master(fp timeinst,
 	int d_com_mem;
 	d_com_mem = 3 * sizeof(fp);
 
+    CCA_H_TO_D;
 	cudaMemcpy(d_initvalu, initvalu, d_initvalu_mem, cudaMemcpyHostToDevice);
 	cudaMemcpy(d_params, parameter, d_params_mem, cudaMemcpyHostToDevice);
+    CCA_H_TO_D_STOP;
 
 	threads.x = NUMBER_THREADS;
 	threads.y = 1;
 	blocks.x = 2;
 	blocks.y = 1;
+    CCA_EXEC;
 	kernel<<<blocks, threads>>>(	timeinst,
 															d_initvalu,
 															d_finavalu,
 															d_params,
 															d_com);
 
+    CCA_EXEC_STOP;
+    CCA_D_TO_H;
 	cudaMemcpy(finavalu, d_finavalu, d_finavalu_mem, cudaMemcpyDeviceToHost);
 	cudaMemcpy(com, d_com, d_com_mem, cudaMemcpyDeviceToHost);
+    CCA_D_TO_H_STOP;
 
 	//=====================================================================
 	//	FINAL KERNEL

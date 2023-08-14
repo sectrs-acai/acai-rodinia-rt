@@ -178,6 +178,7 @@ int do_main(int argc, char *argv []){
 	//================================================================================80
 
 	else{
+        printf("measurement code not present in mode == 1\n");
 
 		work_2(	xmax,
 						workload);

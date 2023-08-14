@@ -84,10 +84,8 @@ CUD_C = $(NVCC)
 
 b+tree.out:	./main.o \
 		./kernel/kernel_gpu_cuda_wrapper.cu.cpp \
-		./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp \
 		./util/timer/timer.o \
-		./util/num/num.o \
-		./util/cuda/cuda.cu.cpp
+		./util/num/num.o
 	$(CC)	$(CCFLAGS) $? $(CC_LIB_DIRS) $(CC_LIBS) -o b+tree.out
 
 
@@ -104,7 +102,7 @@ main.o:	./common.h \
 		./main.c
 	$(CC)	$(CCFLAGS) $(KERNEL_DIM) -O3 ./main.c \
 			-c \
-			-o ./main.o
+			-o ./main.o $(CC_LIBS)
 
 # ======================================================================================================================================================150
 #	KERNELS
@@ -116,14 +114,14 @@ main.o:	./common.h \
 	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper.cu \
 				-c \
 				-o $@ \
-				$(CUDA_FLAG)
+				$(CUDA_FLAG) $(CC_LIBS)
 
-./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp:	./common.h \
-										./kernel/kernel_gpu_cuda_wrapper_2.h \
-										./kernel/kernel_gpu_cuda_wrapper_2.cu
-	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper_2.cu \
-				-c \
-				-o $@ -I./kernel -I./  $(CUDA_FLAG)
+#./kernel/kernel_gpu_cuda_wrapper_2.cu.cpp:	./common.h \
+#										./kernel/kernel_gpu_cuda_wrapper_2.h \
+#										./kernel/kernel_gpu_cuda_wrapper_2.cu
+#	$(NVCC) $(KERNEL_DIM) $(NVCC_FLAGS) ./kernel/kernel_gpu_cuda_wrapper_2.cu \
+#				-c \
+#				-o $@ -I./kernel -I./  $(CUDA_FLAG)
 
 # ======================================================================================================================================================150
 #	UTILITIES
@@ -135,7 +133,7 @@ main.o:	./common.h \
 	$(CC) $(CCFLAGS)	./util/timer/timer.c \
 			-c \
 			-o ./util/timer/timer.o \
-			-O3
+			-O3 $(CC_LIBS)
 
 ./util/num/num.o:	./common.h \
 					./util/num/num.h \
@@ -143,14 +141,14 @@ main.o:	./common.h \
 	$(CC) $(CCFLAGS)	./util/num/num.c \
 			-c \
 			-o ./util/num/num.o \
-			-O3
+			-O3 $(CC_LIBS)
 
-./util/cuda/cuda.cu.cpp:	./common.h \
-					./util/cuda/cuda.h \
-					./util/cuda/cuda.cu
-	$(NVCC) $(NVCC_FLAGS)	./util/cuda/cuda.cu \
-				-c \
-				-o $@ -I./util/cuda -I./ $(CUDA_FLAG)
+#./util/cuda/cuda.cu.cpp:	./common.h \
+#					./util/cuda/cuda.h \
+#					./util/cuda/cuda.cu
+#	$(NVCC) $(NVCC_FLAGS)	./util/cuda/cuda.cu \
+#				-c \
+#				-o $@ -I./util/cuda -I./ $(CUDA_FLAG)
 
 # ======================================================================================================================================================150
 #	END

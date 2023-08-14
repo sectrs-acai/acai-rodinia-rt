@@ -1845,8 +1845,6 @@ int
 do_main(	int argc,
 		char** argv ) 
 {
-
-  CCA_INIT;
   printf("WG size of kernel 1 & 2  = %d \n", DEFAULT_ORDER);
 
 	// ------------------------------------------------------------60
@@ -2016,7 +2014,6 @@ do_main(	int argc,
 	// ------------------------------------------------------------60
 	// get tree statistics
 	// ------------------------------------------------------------60
-    CCA_INIT_STOP;
 
 
 	printf("Transforming data to a GPU suitable structure...\n");

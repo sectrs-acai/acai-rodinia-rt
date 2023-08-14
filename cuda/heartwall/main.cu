@@ -22,6 +22,7 @@
 
 #include "define.c"
 #include "setdevice.cu"
+#include "cca_benchmark.h"
 
 params_common_change common_change;
 __constant__ params_common_change d_common_change;
@@ -162,8 +163,10 @@ int do_main(int argc, char *argv []){
 	common.frame_elem = common.frame_rows * common.frame_cols;
 	common.frame_mem = sizeof(fp) * common.frame_elem;
 
+    CCA_MEMALLOC;
 	// pointers
 	cudaMalloc((void **)&common_change.d_frame, common.frame_mem);
+    CCA_MEMALLOC_STOP;
 
 	//======================================================================================================================================================
 	// 	CHECK INPUT ARGUMENTS
@@ -241,8 +244,13 @@ int do_main(int argc, char *argv []){
 	common.endoCol[17] = 383;
 	common.endoCol[18] = 401;
 	common.endoCol[19] = 411;
+    CCA_MEMALLOC;
 	cudaMalloc((void **)&common.d_endoCol, common.endo_mem);
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 	cudaMemcpy(common.d_endoCol, common.endoCol, common.endo_mem, cudaMemcpyHostToDevice);
+    CCA_H_TO_D_STOP;
+    CCA_MEMALLOC;
 
 	common.tEndoRowLoc = (int *)malloc(common.endo_mem * common.no_frames);
 	cudaMalloc((void **)&common.d_tEndoRowLoc, common.endo_mem * common.no_frames);
@@ -290,7 +298,11 @@ int do_main(int argc, char *argv []){
 	common.epiRow[29] = 331;
 	common.epiRow[30] = 360;
 	cudaMalloc((void **)&common.d_epiRow, common.epi_mem);
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 	cudaMemcpy(common.d_epiRow, common.epiRow, common.epi_mem, cudaMemcpyHostToDevice);
+    CCA_H_TO_D_STOP;
+    CCA_MEMALLOC;
 
 	common.epiCol = (int *)malloc(common.epi_mem);
 	common.epiCol[ 0] = 457;
@@ -325,7 +337,11 @@ int do_main(int argc, char *argv []){
 	common.epiCol[29] = 448;
 	common.epiCol[30] = 455;
 	cudaMalloc((void **)&common.d_epiCol, common.epi_mem);
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 	cudaMemcpy(common.d_epiCol, common.epiCol, common.epi_mem, cudaMemcpyHostToDevice);
+    CCA_H_TO_D_STOP;
+    CCA_MEMALLOC;
 
 	common.tEpiRowLoc = (int *)malloc(common.epi_mem * common.no_frames);
 	cudaMalloc((void **)&common.d_tEpiRowLoc, common.epi_mem * common.no_frames);
@@ -631,9 +647,13 @@ int do_main(int argc, char *argv []){
 	//====================================================================================================
 	//	COPY ARGUMENTS
 	//====================================================================================================
+    CCA_MEMALLOC_STOP;
+    CCA_H_TO_D;
 
 	cudaMemcpyToSymbol(d_common, &common, sizeof(params_common));
 	cudaMemcpyToSymbol(d_unique, &unique, sizeof(params_unique)*ALL_POINTS);
+    CCA_H_TO_D_STOP;
+
 
 	//====================================================================================================
 	//	PRINT FRAME PROGRESS START
@@ -655,12 +675,16 @@ int do_main(int argc, char *argv []){
 										0,								// scaled?
 										1);							// converted
 
-		// copy frame to GPU memory
+        CCA_H_TO_D;
+        // copy frame to GPU memory
 		cudaMemcpy(common_change.d_frame, frame, common.frame_mem, cudaMemcpyHostToDevice);
 		cudaMemcpyToSymbol(d_common_change, &common_change, sizeof(params_common_change));
+        CCA_H_TO_D_STOP;
 
+        CCA_EXEC;
 		// launch GPU kernel
 		kernel<<<blocks, threads>>>();
+        CCA_EXEC_STOP;
 
 		// free frame after each loop iteration, since AVI library allocates memory for every frame fetched
 		free(frame);
@@ -682,11 +706,13 @@ int do_main(int argc, char *argv []){
 	//	OUTPUT
 	//====================================================================================================
 
+    CCA_D_TO_H;
 	cudaMemcpy(common.tEndoRowLoc, common.d_tEndoRowLoc, common.endo_mem * common.no_frames, cudaMemcpyDeviceToHost);
 	cudaMemcpy(common.tEndoColLoc, common.d_tEndoColLoc, common.endo_mem * common.no_frames, cudaMemcpyDeviceToHost);
 
 	cudaMemcpy(common.tEpiRowLoc, common.d_tEpiRowLoc, common.epi_mem * common.no_frames, cudaMemcpyDeviceToHost);
 	cudaMemcpy(common.tEpiColLoc, common.d_tEpiColLoc, common.epi_mem * common.no_frames, cudaMemcpyDeviceToHost);
+    CCA_D_TO_H_STOP;
 
 
 
@@ -721,6 +747,7 @@ int do_main(int argc, char *argv []){
 	//	COMMON
 	//====================================================================================================
 
+    CCA_CLOSE;
 	// frame
 	cudaFree(common_change.d_frame);
 
@@ -771,6 +798,7 @@ int do_main(int argc, char *argv []){
 		cudaFree(unique[i].d_mask_conv);
 	}
 
+    CCA_CLOSE_STOP;
     return 0;
 }
 

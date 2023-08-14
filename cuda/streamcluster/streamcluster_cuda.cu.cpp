@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.cpp"
 # 1 "streamcluster_cuda.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -47857,227 +47857,247 @@ cudaEventElapsedTime(&tmp_t, start, stop);
 (*serial_t) += ((double)tmp_t);
 # 191 "streamcluster_cuda.cu"
 cudaEventRecord(start, 0);
-# 197 "streamcluster_cuda.cu"
-do { cudaError err = cudaMalloc((void **)(&work_mem_d), (stride * (nThread + 1)) * sizeof(float)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 197, cudaGetErrorString(err)); exit(1); } } while (0);
-# 199 "streamcluster_cuda.cu"
-if (iter == 0)
+# 194 "streamcluster_cuda.cu"
+;
+# 198 "streamcluster_cuda.cu"
+do { cudaError err = cudaMalloc((void **)(&work_mem_d), (stride * (nThread + 1)) * sizeof(float)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 198, cudaGetErrorString(err)); exit(1); } } while (0);
 # 200 "streamcluster_cuda.cu"
-{
+if (iter == 0)
 # 201 "streamcluster_cuda.cu"
-allocDevMem(num, dim);
+{
 # 202 "streamcluster_cuda.cu"
+allocDevMem(num, dim);
+# 203 "streamcluster_cuda.cu"
 }
-# 205 "streamcluster_cuda.cu"
-cudaEventRecord(stop, 0);
-# 206 "streamcluster_cuda.cu"
-cudaEventSynchronize(stop);
+# 204 "streamcluster_cuda.cu"
+;
 # 207 "streamcluster_cuda.cu"
-cudaEventElapsedTime(&tmp_t, start, stop);
+cudaEventRecord(stop, 0);
 # 208 "streamcluster_cuda.cu"
-(*alloc_t) += ((double)tmp_t);
+cudaEventSynchronize(stop);
+# 209 "streamcluster_cuda.cu"
+cudaEventElapsedTime(&tmp_t, start, stop);
 # 210 "streamcluster_cuda.cu"
+(*alloc_t) += ((double)tmp_t);
+# 212 "streamcluster_cuda.cu"
 cudaEventRecord(start, 0);
-# 217 "streamcluster_cuda.cu"
-if (isCoordChanged || (iter == 0))
-# 218 "streamcluster_cuda.cu"
-{
-# 219 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemcpy(coord_d, coord_h, (num * dim) * sizeof(float), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 219, cudaGetErrorString(err)); exit(1); } } while (0);
+# 215 "streamcluster_cuda.cu"
+;
 # 220 "streamcluster_cuda.cu"
-}
+if (isCoordChanged || (iter == 0))
 # 221 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemcpy(center_table_d, center_table, num * sizeof(int), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 221, cudaGetErrorString(err)); exit(1); } } while (0);
+{
 # 222 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemcpy(p, points->p, num * sizeof(Point), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 222, cudaGetErrorString(err)); exit(1); } } while (0);
+do { cudaError err = cudaMemcpy(coord_d, coord_h, (num * dim) * sizeof(float), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 222, cudaGetErrorString(err)); exit(1); } } while (0);
+# 223 "streamcluster_cuda.cu"
+}
 # 224 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemset((void *)switch_membership_d, 0, num * sizeof(bool)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 224, cudaGetErrorString(err)); exit(1); } } while (0);
+do { cudaError err = cudaMemcpy(center_table_d, center_table, num * sizeof(int), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 224, cudaGetErrorString(err)); exit(1); } } while (0);
 # 225 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemset((void *)work_mem_d, 0, (stride * (nThread + 1)) * sizeof(float)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 225, cudaGetErrorString(err)); exit(1); } } while (0);
+do { cudaError err = cudaMemcpy(p, points->p, num * sizeof(Point), cudaMemcpyHostToDevice); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 225, cudaGetErrorString(err)); exit(1); } } while (0);
+# 227 "streamcluster_cuda.cu"
+do { cudaError err = cudaMemset((void *)switch_membership_d, 0, num * sizeof(bool)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 227, cudaGetErrorString(err)); exit(1); } } while (0);
 # 228 "streamcluster_cuda.cu"
-cudaEventRecord(stop, 0);
-# 229 "streamcluster_cuda.cu"
-cudaEventSynchronize(stop);
-# 230 "streamcluster_cuda.cu"
-cudaEventElapsedTime(&tmp_t, start, stop);
+do { cudaError err = cudaMemset((void *)work_mem_d, 0, (stride * (nThread + 1)) * sizeof(float)); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 228, cudaGetErrorString(err)); exit(1); } } while (0);
 # 231 "streamcluster_cuda.cu"
-(*cpu_to_gpu_t) += ((double)tmp_t);
+cudaEventRecord(stop, 0);
+# 232 "streamcluster_cuda.cu"
+cudaEventSynchronize(stop);
 # 233 "streamcluster_cuda.cu"
+cudaEventElapsedTime(&tmp_t, start, stop);
+# 234 "streamcluster_cuda.cu"
+(*cpu_to_gpu_t) += ((double)tmp_t);
+# 236 "streamcluster_cuda.cu"
 cudaEventRecord(start, 0);
-# 240 "streamcluster_cuda.cu"
-int num_blocks = ((int)(((float)((num + 512) - 1)) / ((float)512)));
-# 241 "streamcluster_cuda.cu"
-int num_blocks_y = ((int)(((float)((num_blocks + 65536) - 1)) / ((float)65536)));
-# 242 "streamcluster_cuda.cu"
-int num_blocks_x = ((int)(((float)((num_blocks + num_blocks_y) - 1)) / ((float)num_blocks_y)));
-# 243 "streamcluster_cuda.cu"
-dim3 grid_size(num_blocks_x, num_blocks_y, 1);
+# 238 "streamcluster_cuda.cu"
+;
+# 239 "streamcluster_cuda.cu"
+;
 # 245 "streamcluster_cuda.cu"
+int num_blocks = ((int)(((float)((num + 512) - 1)) / ((float)512)));
+# 246 "streamcluster_cuda.cu"
+int num_blocks_y = ((int)(((float)((num_blocks + 65536) - 1)) / ((float)65536)));
+# 247 "streamcluster_cuda.cu"
+int num_blocks_x = ((int)(((float)((num_blocks + num_blocks_y) - 1)) / ((float)num_blocks_y)));
+# 248 "streamcluster_cuda.cu"
+dim3 grid_size(num_blocks_x, num_blocks_y, 1);
+# 250 "streamcluster_cuda.cu"
 (cudaConfigureCall(grid_size, 512)) ? ((void)0) : kernel_compute_cost(num, dim, x, p, K, stride, coord_d, work_mem_d, center_table_d, switch_membership_d);
-# 257 "streamcluster_cuda.cu"
-cudaThreadSynchronize();
-# 260 "streamcluster_cuda.cu"
-error = cudaGetLastError();
-# 261 "streamcluster_cuda.cu"
-if (error != (cudaSuccess))
 # 262 "streamcluster_cuda.cu"
-{
+cudaThreadSynchronize();
 # 263 "streamcluster_cuda.cu"
-printf("kernel error: %s\n", cudaGetErrorString(error));
-# 264 "streamcluster_cuda.cu"
-exit(1);
-# 265 "streamcluster_cuda.cu"
-}
+;
+# 266 "streamcluster_cuda.cu"
+error = cudaGetLastError();
+# 267 "streamcluster_cuda.cu"
+if (error != (cudaSuccess))
 # 268 "streamcluster_cuda.cu"
-cudaEventRecord(stop, 0);
+{
 # 269 "streamcluster_cuda.cu"
-cudaEventSynchronize(stop);
+printf("kernel error: %s\n", cudaGetErrorString(error));
 # 270 "streamcluster_cuda.cu"
-cudaEventElapsedTime(&tmp_t, start, stop);
+exit(1);
 # 271 "streamcluster_cuda.cu"
-(*kernel_t) += ((double)tmp_t);
-# 273 "streamcluster_cuda.cu"
-cudaEventRecord(start, 0);
-# 279 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemcpy(work_mem_h, work_mem_d, (stride * (nThread + 1)) * sizeof(float), cudaMemcpyDeviceToHost); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 279, cudaGetErrorString(err)); exit(1); } } while (0);
-# 280 "streamcluster_cuda.cu"
-do { cudaError err = cudaMemcpy(switch_membership, switch_membership_d, num * sizeof(bool), cudaMemcpyDeviceToHost); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 280, cudaGetErrorString(err)); exit(1); } } while (0);
-# 283 "streamcluster_cuda.cu"
-cudaEventRecord(stop, 0);
-# 284 "streamcluster_cuda.cu"
-cudaEventSynchronize(stop);
-# 285 "streamcluster_cuda.cu"
-cudaEventElapsedTime(&tmp_t, start, stop);
-# 286 "streamcluster_cuda.cu"
-(*gpu_to_cpu_t) += ((double)tmp_t);
-# 288 "streamcluster_cuda.cu"
-cudaEventRecord(start, 0);
-# 294 "streamcluster_cuda.cu"
-int number_of_centers_to_close = 0;
-# 295 "streamcluster_cuda.cu"
-float gl_cost_of_opening_x = z;
-# 296 "streamcluster_cuda.cu"
-float *gl_lower = (&(work_mem_h[stride * nThread]));
-# 298 "streamcluster_cuda.cu"
-for (int i = 0; i < num; i++)
-# 299 "streamcluster_cuda.cu"
-{
-# 300 "streamcluster_cuda.cu"
-if (is_center[i])
-# 301 "streamcluster_cuda.cu"
-{
-# 302 "streamcluster_cuda.cu"
-float low = z;
-# 303 "streamcluster_cuda.cu"
-for (int j = 0; j < num; j++)
-# 304 "streamcluster_cuda.cu"
-{
-# 305 "streamcluster_cuda.cu"
-low += (work_mem_h[(j * stride) + (center_table[i])]);
-# 306 "streamcluster_cuda.cu"
 }
-# 308 "streamcluster_cuda.cu"
-(gl_lower[center_table[i]]) = low;
-# 310 "streamcluster_cuda.cu"
-if (low > (0))
-# 311 "streamcluster_cuda.cu"
+# 274 "streamcluster_cuda.cu"
+cudaEventRecord(stop, 0);
+# 275 "streamcluster_cuda.cu"
+cudaEventSynchronize(stop);
+# 276 "streamcluster_cuda.cu"
+cudaEventElapsedTime(&tmp_t, start, stop);
+# 277 "streamcluster_cuda.cu"
+(*kernel_t) += ((double)tmp_t);
+# 279 "streamcluster_cuda.cu"
+cudaEventRecord(start, 0);
+# 282 "streamcluster_cuda.cu"
+;
+# 286 "streamcluster_cuda.cu"
+do { cudaError err = cudaMemcpy(work_mem_h, work_mem_d, (stride * (nThread + 1)) * sizeof(float), cudaMemcpyDeviceToHost); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 286, cudaGetErrorString(err)); exit(1); } } while (0);
+# 287 "streamcluster_cuda.cu"
+do { cudaError err = cudaMemcpy(switch_membership, switch_membership_d, num * sizeof(bool), cudaMemcpyDeviceToHost); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 287, cudaGetErrorString(err)); exit(1); } } while (0);
+# 290 "streamcluster_cuda.cu"
+cudaEventRecord(stop, 0);
+# 291 "streamcluster_cuda.cu"
+cudaEventSynchronize(stop);
+# 292 "streamcluster_cuda.cu"
+cudaEventElapsedTime(&tmp_t, start, stop);
+# 293 "streamcluster_cuda.cu"
+(*gpu_to_cpu_t) += ((double)tmp_t);
+# 295 "streamcluster_cuda.cu"
+cudaEventRecord(start, 0);
+# 297 "streamcluster_cuda.cu"
+;
+# 302 "streamcluster_cuda.cu"
+int number_of_centers_to_close = 0;
+# 303 "streamcluster_cuda.cu"
+float gl_cost_of_opening_x = z;
+# 304 "streamcluster_cuda.cu"
+float *gl_lower = (&(work_mem_h[stride * nThread]));
+# 306 "streamcluster_cuda.cu"
+for (int i = 0; i < num; i++)
+# 307 "streamcluster_cuda.cu"
 {
+# 308 "streamcluster_cuda.cu"
+if (is_center[i])
+# 309 "streamcluster_cuda.cu"
+{
+# 310 "streamcluster_cuda.cu"
+float low = z;
+# 311 "streamcluster_cuda.cu"
+for (int j = 0; j < num; j++)
 # 312 "streamcluster_cuda.cu"
-++number_of_centers_to_close;
+{
 # 313 "streamcluster_cuda.cu"
-(work_mem_h[(i * stride) + K]) -= low;
+low += (work_mem_h[(j * stride) + (center_table[i])]);
 # 314 "streamcluster_cuda.cu"
 }
-# 315 "streamcluster_cuda.cu"
-}
 # 316 "streamcluster_cuda.cu"
-gl_cost_of_opening_x += (work_mem_h[(i * stride) + K]);
-# 317 "streamcluster_cuda.cu"
-}
+(gl_lower[center_table[i]]) = low;
+# 318 "streamcluster_cuda.cu"
+if (low > (0))
+# 319 "streamcluster_cuda.cu"
+{
 # 320 "streamcluster_cuda.cu"
-if (gl_cost_of_opening_x < (0))
+++number_of_centers_to_close;
 # 321 "streamcluster_cuda.cu"
-{
+(work_mem_h[(i * stride) + K]) -= low;
 # 322 "streamcluster_cuda.cu"
-for (int i = 0; i < num; i++)
+}
 # 323 "streamcluster_cuda.cu"
-{
+}
 # 324 "streamcluster_cuda.cu"
-bool close_center = ((gl_lower[center_table[((points->p)[i]).assign]]) > (0));
+gl_cost_of_opening_x += (work_mem_h[(i * stride) + K]);
 # 325 "streamcluster_cuda.cu"
-if ((switch_membership[i]) || close_center)
-# 326 "streamcluster_cuda.cu"
-{
-# 327 "streamcluster_cuda.cu"
-(((points->p)[i]).cost) = (dist((points->p)[i], (points->p)[x], dim) * (((points->p)[i]).weight));
+}
 # 328 "streamcluster_cuda.cu"
-(((points->p)[i]).assign) = x;
+if (gl_cost_of_opening_x < (0))
 # 329 "streamcluster_cuda.cu"
-}
+{
 # 330 "streamcluster_cuda.cu"
-}
-# 332 "streamcluster_cuda.cu"
 for (int i = 0; i < num; i++)
+# 331 "streamcluster_cuda.cu"
+{
+# 332 "streamcluster_cuda.cu"
+bool close_center = ((gl_lower[center_table[((points->p)[i]).assign]]) > (0));
 # 333 "streamcluster_cuda.cu"
-{
+if ((switch_membership[i]) || close_center)
 # 334 "streamcluster_cuda.cu"
-if ((is_center[i]) && ((gl_lower[center_table[i]]) > (0)))
-# 335 "streamcluster_cuda.cu"
 {
+# 335 "streamcluster_cuda.cu"
+(((points->p)[i]).cost) = (dist((points->p)[i], (points->p)[x], dim) * (((points->p)[i]).weight));
 # 336 "streamcluster_cuda.cu"
-(is_center[i]) = false;
+(((points->p)[i]).assign) = x;
 # 337 "streamcluster_cuda.cu"
 }
 # 338 "streamcluster_cuda.cu"
 }
 # 340 "streamcluster_cuda.cu"
-if ((x >= (0)) && (x < num))
+for (int i = 0; i < num; i++)
 # 341 "streamcluster_cuda.cu"
 {
 # 342 "streamcluster_cuda.cu"
-(is_center[x]) = true;
+if ((is_center[i]) && ((gl_lower[center_table[i]]) > (0)))
 # 343 "streamcluster_cuda.cu"
-}
-# 344 "streamcluster_cuda.cu"
-(*numcenters) = (((*numcenters) + (1)) - number_of_centers_to_close);
-# 345 "streamcluster_cuda.cu"
-} else
-# 347 "streamcluster_cuda.cu"
 {
+# 344 "streamcluster_cuda.cu"
+(is_center[i]) = false;
+# 345 "streamcluster_cuda.cu"
+}
+# 346 "streamcluster_cuda.cu"
+}
 # 348 "streamcluster_cuda.cu"
-gl_cost_of_opening_x = (0);
+if ((x >= (0)) && (x < num))
 # 349 "streamcluster_cuda.cu"
+{
+# 350 "streamcluster_cuda.cu"
+(is_center[x]) = true;
+# 351 "streamcluster_cuda.cu"
 }
-# 354 "streamcluster_cuda.cu"
+# 352 "streamcluster_cuda.cu"
+(*numcenters) = (((*numcenters) + (1)) - number_of_centers_to_close);
+# 353 "streamcluster_cuda.cu"
+} else
+# 355 "streamcluster_cuda.cu"
+{
+# 356 "streamcluster_cuda.cu"
+gl_cost_of_opening_x = (0);
+# 357 "streamcluster_cuda.cu"
+}
+# 362 "streamcluster_cuda.cu"
 free(work_mem_h);
-# 358 "streamcluster_cuda.cu"
+# 366 "streamcluster_cuda.cu"
 cudaEventRecord(stop, 0);
-# 359 "streamcluster_cuda.cu"
+# 367 "streamcluster_cuda.cu"
 cudaEventSynchronize(stop);
-# 360 "streamcluster_cuda.cu"
+# 368 "streamcluster_cuda.cu"
 cudaEventElapsedTime(&tmp_t, start, stop);
-# 361 "streamcluster_cuda.cu"
-(*serial_t) += ((double)tmp_t);
-# 363 "streamcluster_cuda.cu"
-cudaEventRecord(start, 0);
 # 369 "streamcluster_cuda.cu"
-do { cudaError err = cudaFree(work_mem_d); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 369, cudaGetErrorString(err)); exit(1); } } while (0);
-# 373 "streamcluster_cuda.cu"
-cudaEventRecord(stop, 0);
+(*serial_t) += ((double)tmp_t);
+# 371 "streamcluster_cuda.cu"
+cudaEventRecord(start, 0);
 # 374 "streamcluster_cuda.cu"
-cudaEventSynchronize(stop);
-# 375 "streamcluster_cuda.cu"
-cudaEventElapsedTime(&tmp_t, start, stop);
-# 376 "streamcluster_cuda.cu"
-(*free_t) += ((double)tmp_t);
+;
 # 378 "streamcluster_cuda.cu"
+do { cudaError err = cudaFree(work_mem_d); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error in file \'%s\' in line %i : %s.\n", "streamcluster_cuda.cu", 378, cudaGetErrorString(err)); exit(1); } } while (0);
+# 382 "streamcluster_cuda.cu"
+cudaEventRecord(stop, 0);
+# 383 "streamcluster_cuda.cu"
+cudaEventSynchronize(stop);
+# 384 "streamcluster_cuda.cu"
+cudaEventElapsedTime(&tmp_t, start, stop);
+# 385 "streamcluster_cuda.cu"
+(*free_t) += ((double)tmp_t);
+# 387 "streamcluster_cuda.cu"
 iter++;
-# 379 "streamcluster_cuda.cu"
+# 388 "streamcluster_cuda.cu"
+;
+# 389 "streamcluster_cuda.cu"
 return -gl_cost_of_opening_x;
-# 380 "streamcluster_cuda.cu"
+# 390 "streamcluster_cuda.cu"
 }
-# 1 "tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c"
-# 1 "tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c" 1 3
+# 1 "tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c"
+# 1 "tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -48663,8 +48683,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0002e410_00000000-1_streamcluster_cuda.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_00006193_00000000-1_streamcluster_cuda.fatbin.c" 1 3
 
 
 asm(
@@ -48761,44 +48781,44 @@ asm(
 ".quad 0x389b8f6d57a59c78,0xa5695a057e5cfe10,0x4eacdaf36c1d6556,0x2aaddbee9582fea7\n"
 ".quad 0xd9810423d2c9c044,0x631ed9fbfee9deeb,0xdad8548936e9025e,0x960ccf199e78cf33\n"
 ".quad 0xaa716d3595e87f25,0x181cda7885b08a6c,0x79a50b5c4263dbb7,0x661fe2da4db6b0de\n"
-".quad 0x80fb2517de109e07,0x8fdff2d63f0dbbed,0xaec3cc25d75c4f3d,0x0de5a4e21efd43fc\n"
-".quad 0x49359cb5d9598f4b,0xe2a29aeaca29e5d6,0xb23a72f18110634e,0x36df4bbf90436ecd\n"
-".quad 0xaae87da2dac2fe47,0xcefa737536caadf6,0x87f24123786ede32,0x9b5550f2fd45359a\n"
-".quad 0x8aa8bca7343ddd43,0x259b6b1337a12374,0x5d8b68b4f49ddddb,0x88feccaaefb46cc9\n"
-".quad 0x6251da368f49b4ea,0xdd2d35fc61a495cb,0xd179279067f2764f,0xb1ad1ff69efc42f2\n"
-".quad 0xbceb895b51336ce8,0x8847bc8847bf0843,0x3eb3c8456f02848e,0xd51b0761a85aff59\n"
-".quad 0xb6fe91fafbedcb0d,0x311e6fbf00ad2bd5,0xeec47fb2b97b2b36,0x4b11fc9befb02320\n"
-".quad 0xa53a8a30732acb35,0xdb6f8d8579fb1d4b,0xfd85cf8c2ab7b0b9,0xd30aac1c2e726155\n"
-".quad 0x427b4aad12f83089,0x6c4fb626cca7951a,0x5440e4a8d78cb56c,0xf4f1d6b785301d8d\n"
-".quad 0x69f7dddb1d8ab9aa,0x26bbd8a85dfed53f,0x3bd82a13757ebfb5,0x3e2699c8bbfa2576\n"
-".quad 0x9ee25adbc5601d8f,0x914a53e8e26354f5,0xf5128239c80a9201,0x0ebb0c5cf2d8c215\n"
-".quad 0xf7612c8f09666b04,0x625096a803725b82,0x09c3932f913e92c1,0xe40239438659419e\n"
-".quad 0x6edbac6517a862c3,0x069425b96da557a7,0xa9a8a63fb6013c17,0xdea788f55168d386\n"
-".quad 0xfd5bc9645fa7739e,0xf0878d04188c1322,0x1c56463881b297c4,0x0fcd1358989ac45d\n"
-".quad 0xe4709ee75cb562fd,0xcdbf767cc6b8f3c3,0xfeb5b9b10d84097c,0x5c4de6f1562a571b\n"
-".quad 0x49958a9ac5ff1c6f,0xb32de2671dd63a76,0x65c5454e9ff27cb7,0x3769e2a79381ff16\n"
-".quad 0x9e6bf78f554eab14,0x53ae6546112bb257,0xf408cdc81197e9c5,0xbd9bfc119bbc2f66\n"
-".quad 0x6e88466f08466e08,0x18f43f90fa178846,0x6779923d945b881c,0xf26779c899de74a2\n"
-".quad 0xf5ff91550a6752f0,0x784875d12e6f3fd4,0x84b22c3aff60f3a1,0x3af8c3dcf487a575\n"
-".quad 0xa06bc3d6491cef24,0x2582b0eb830725fc,0x495d612e18832bac,0x162be4ae4580b457\n"
-".quad 0x43a13f114f2bd958,0xb9341d39a5a5da79,0x9f6d68c8375f6d78,0x0fd03df6d7747742\n"
-".quad 0xf30c7039420adb4d,0x6f4722d3c6403c81,0xc7e360ae1a41b993,0xb01734e5cbc8c364\n"
-".quad 0x1d0d7e816756237d,0xc0aab13441c8687d,0xe56005f3ea5a1cf9,0xb743606a582ba003\n"
-".quad 0x4694fa9e3607f3ef,0x37ff1138748f1db8,0x7a33de1c35d4fd7a,0x7cc81fab0594c818\n"
-".quad 0xd36688be74fdeeb5,0x013673126e3cbe26,0xf19982433a0096bd,0x239d0948477d5297\n"
-".quad 0xd34bed328c5490e2,0x833bf483b3a25ad7,0x9e5d4e981485e40e,0x1b3cf2ef12ac8ceb\n"
-".quad 0x26c42a79bdba503a,0x4025e0797a371058,0x8d393c69789f3c70,0xe67e911e51db897f\n"
-".quad 0x5e9abccd9ba672c5,0x4fb2e1af2b3ecf33,0x560264f1a3d862f6,0x8ac08c2f709ea423\n"
-".quad 0x26b063eb9fac2d01,0x5c2bf40a25c2bf5d,0x3193f20d5c29831d,0x9a83f75236463a98\n"
-".quad 0xfa1650cf329aa41c,0xe0329e2015767f42,0x1cd9d106fa0618f3,0x59e7382e13a6a90f\n"
-".quad 0x44941b21a9f50c56,0x0a5c1c6819cf6585,0x2267c03dfa2885a3,0xd470ad66d58f7a31\n"
-".quad 0x2860e1c67b0e57c3,0x0e264147e61c9108,0x193bfb81f1cd0ac0,0x82c5f1afb658831a\n"
-".quad 0x004081a5312933af,0x75204d5463472675,0xe800671b84c89501,0xa9220e627f0ec850\n"
-".quad 0x4db0fabea8e6a644,0xa6b6a9bd3aa75816,0xf066b29eaa768197,0x4118829b50569ab1\n"
-".quad 0xaa455754c2aaea24,0x148539669dc89ec9,0x92cc2c6faa618380,0x45dc30714ab69c78\n"
-".quad 0x8720e8857693d760,0x6a086193cf017217,0xaa9e2567fb013260,0xfd531c0c494f1412\n"
-".quad 0x6645e9d0f994c085,0x75e605c3e66347cc,0xc656fabcca68d0f6,0x23e605fb565ae3ea\n"
-".quad 0xb1d5038754d23e60,0x02063ff5a8b7cc4d,0x000000000000c4ec\n"
+".quad 0x80fb2517de109e07,0x8fdff2d63f0dbbed,0xd54c700bf15c4f3d,0x586f2d2710f7f21f\n"
+".quad 0xb249ace5aecacc7a,0x771514d756514f2e,0x6d91d3978c08831a,0x39b6fa5dfc821b76\n"
+".quad 0xb55743ed16d617f2,0x9677d39ba9b6556f,0xd43f92091bc376f1,0x1cdaaa8797ea29ac\n"
+".quad 0xa45545e539a1eeea,0xd92cdb5899bd091b,0x4aec5b45a7a4eeee,0x5447f665577da366\n"
+".quad 0x5b128ed1b47a4da7,0x7ee969afe30d24ae,0x968bc93c833f93b2,0x458d68ffb4f7e217\n"
+".quad 0x1de75c4ada899b67,0x74423de4423df842,0xc9f59e422b781424,0x6ea8d83b0d42d7fa\n"
+".quad 0xadb7f48fd7df6e58,0xb188f37df805695e,0x077623fd95cbd959,0xaa588fe4df7d8119\n"
+".quad 0x5d29d45183995659,0xcedb7c6c2bcfd8ea,0xafec2e7c6155bd85,0x4e985560e173930a\n"
+".quad 0xd213da556897c184,0x63627db136653ca8,0x6aa2072546bc65ab,0x57a78eb5bc2980ec\n"
+".quad 0xfb4fbeeed8ec55cd,0xa935dec542eff6a9,0xb1dec1509babf5fd,0x79f134ce45dfd12b\n"
+".quad 0xacf712d6de2b00ec,0x0c8a529f47131aa7,0xafa89411ce405490,0x2075d862e796c610\n"
+".quad 0x17bb0964784b3358,0x0b1284b5401b92dc,0xf04e1c997c89f496,0x1f2011ca1c32ca0c\n"
+".quad 0x3b76dd6328bd4316,0xb834a12dcb6d2abd,0x354d4531fdb009e0,0xf6f53c47aa8b469c\n"
+".quad 0x17eade4b22fd3b9c,0x27843c6820c46099,0xe8e2b231c40d94be,0xe87e689ac4c4d622\n"
+".quad 0x1f2384f73ae5ab17,0xe66dfbb3e635c79e,0xdff5adcd886c204b,0x7ae26f378ab152b8\n"
+".quad 0xb24cac54d62ff8e3,0xbd996f1338eeb1d3,0xb32e2a2a74ff93e5,0xa1bb4f153c9c0ff8\n"
+".quad 0xbcf35fbc7aaa7558,0x2a9d732a30895d92,0x37a0466e408cbf4e,0x45ecdfe08cdde17b\n"
+".quad 0x3374423378423370,0xe0c7a1fc87d0bc42,0x133bcc91eca2dc40,0x87933bce44cef3a5\n"
+".quad 0xa7affc8aa8533a97,0x0bc243ae897379fe,0xac259161d7fb079d,0x21d7c61ee7a43d2b\n"
+".quad 0xe5035e1eb248e779,0x612c15875c18392f,0xba4aeb0970c4195d,0xc0b15f25722c05a2\n"
+".quad 0xca1d09f88a795eca,0xc5c9a0e9cd2d2ed3,0x14fb6b4641bafb6b,0x687e81efb6bba3ba\n"
+".quad 0x0f986381ca1056da,0x9b7a39169e3201e4,0x263f1b0570d20dcc,0xed80b9a72e5e461b\n"
+".quad 0xe8e86bf40b3ab11b,0xce055589a20e4343,0x1f2b002f9f52d0e7,0x7dba1b0352c15d00\n"
+".quad 0xc234a7d4f1b03f9f,0xd1bff889c3a478ed,0xc3d19ef0e1aea7eb,0xabe640fd582ca640\n"
+".quad 0x369b3445f3a7ef75,0xe809b3989371e5f1,0xbf8ccc1219d004b5,0x111ce84a423bea94\n"
+".quad 0xbe9a5f699462a487,0x7419dfa41d9d12d6,0x5cf2ea74c0a42f20,0xd0d9e79778956467\n"
+".quad 0xc1362153cdedd281,0x82012f03cbd1b882,0xfc69c9e34bc4f9e3,0x2f33f488f28edc4b\n"
+".quad 0x9af4d5e66cdd3396,0xb27d970d7959f679,0x1ab013278d1ec317,0x0c5604617b84f521\n"
+".quad 0xe935831f5cfd6168,0xeae15fa0512e15fa,0xc18c9f906ae14c18,0xe4d41fba91b231d4\n"
+".quad 0x17d0b2867994d520,0x9f0194f100abb3fa,0x78e6ce8837d030c7,0xb2cf39c1709d3548\n"
+".quad 0x2a24a0d90d4fa862,0x1852e0e340ce7b2c,0x89133e01efd1442d,0x1ea3856b36ac7bd1\n"
+".quad 0x4143070e33d872be,0x0071320a3f30e488,0xd0c9dfdc0f8e6856,0x7c162f8d7db2c418\n"
+".quad 0xa802040d2989499d,0x0ba9026aa31a3933,0x87400338dc2644a8,0x2549107313f87642\n"
+".quad 0xb26d87d5f5473532,0xbd35b54de9d53ac0,0x8f833594f553b40c,0x2208c414da82b4d5\n"
+".quad 0x4d522abaa6155751,0x00a429cb34ee44f6,0xc49661637d530c1c,0x022ee1838a55b4e3\n"
+".quad 0xbc3907442bb49ebb,0x0350430c9e780b90,0x9554f12b3fd80993,0x2fea98e0624a78a0\n"
+".quad 0x63322f4e87cca604,0xb3af302e1f331a3e,0x5632b7d5e6534687,0x011f302fdab2d71f\n"
+".quad 0x6d8ea81c3aa691f3,0x9bd701ffad45be62,0x0000000000009bec\n"
 ".text");
 
 extern "C" {
@@ -48814,10 +48834,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2 3
 extern void __device_stub__Z19kernel_compute_costiilP5PointiiPfS1_PiPb(int, int, long, Point *, int, int, float *, float *, int *, bool *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_53_tmpxft_0002e410_00000000_6_streamcluster_cuda_cpp1_ii_29df1226(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_53_tmpxft_00006193_00000000_6_streamcluster_cuda_cpp1_ii_29df1226(void) __attribute__((__constructor__));
 void __device_stub__Z19kernel_compute_costiilP5PointiiPfS1_PiPb(int __par0, int __par1, long __par2, Point *__par3, int __par4, int __par5, float *__par6, float *__par7, int *__par8, bool *__par9){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)4UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)28UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)56UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(int, int, long, Point *, int, int, float *, float *, int *, bool *))kernel_compute_cost)); (void)cudaLaunch(((char *)((void ( *)(int, int, long, Point *, int, int, float *, float *, int *, bool *))kernel_compute_cost))); };}
 # 63 "streamcluster_cuda.cu"
 void kernel_compute_cost( int __cuda_0,int __cuda_1,long __cuda_2,Point *__cuda_3,int __cuda_4,int __cuda_5,float *__cuda_6,float *__cuda_7,int *__cuda_8,bool *__cuda_9)
@@ -48825,8 +48845,8 @@ void kernel_compute_cost( int __cuda_0,int __cuda_1,long __cuda_2,Point *__cuda_
 {__device_stub__Z19kernel_compute_costiilP5PointiiPfS1_PiPb( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9);
 # 89 "streamcluster_cuda.cu"
 }
-# 1 "/tmp/tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T23) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T23; }; __cudaRegisterFunction(__T23, (const char*)((void ( *)(int, int, long, Point *, int, int, float *, float *, int *, bool *))kernel_compute_cost), (char*)"_Z19kernel_compute_costiilP5PointiiPfS1_PiPb", "_Z19kernel_compute_costiilP5PointiiPfS1_PiPb", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_53_tmpxft_0002e410_00000000_6_streamcluster_cuda_cpp1_ii_29df1226(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2
-# 1 "tmpxft_0002e410_00000000-3_streamcluster_cuda.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_53_tmpxft_00006193_00000000_6_streamcluster_cuda_cpp1_ii_29df1226(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c" 2
+# 1 "tmpxft_00006193_00000000-3_streamcluster_cuda.cudafe1.stub.c"

@@ -94,6 +94,7 @@ int work(	int xmax,
 	//============================================================60
 	// 	ALLOCATE CUDA ARRAYS
 	//============================================================60
+    CCA_MEMALLOC;
 
 	int d_initvalu_mem;
 	d_initvalu_mem = EQUATIONS * sizeof(fp);
@@ -116,6 +117,7 @@ int work(	int xmax,
 	cudaMalloc((void **)&d_com, d_com_mem);
 
 	time2 = get_time();
+    CCA_MEMALLOC_STOP;
 
 	//================================================================================80
 	// 	INITIAL VALUES
@@ -194,6 +196,7 @@ int work(	int xmax,
 	//	DEALLOCATION
 	//================================================================================80
 
+    CCA_CLOSE;
 	// y values
 	for (i= 0; i< workload; i++){
 		for (j= 0; j< (1+xmax); j++){
@@ -225,6 +228,7 @@ int work(	int xmax,
 	cudaFree(d_finavalu);
 	cudaFree(d_params);
 	cudaFree(d_com);
+    CCA_CLOSE_STOP;
 
 	//================================================================================80
 	//		DISPLAY TIMING

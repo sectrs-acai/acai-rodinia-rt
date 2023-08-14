@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.cpp"
 # 1 "./kernel/kernel_gpu_cuda_wrapper.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -2754,51 +2754,31 @@ double4 t; (t.x) = x; (t.y) = y; (t.z) = z; (t.w) = w; return t;
 # 307 "/usr/local/cuda-5.0//include/vector_functions.h"
 }
 # 43 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
+extern "C" void *memcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
 # 44 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 47 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memmove(void * , const void * , size_t ) throw()
+extern "C" void *memmove(void * , const void * , size_t ) throw()
 # 48 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 54 "/usr/include/string.h" 3
 extern "C" void *memccpy(void *__restrict__ , const void *__restrict__ , int , size_t ) throw()
 # 56 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 61 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memset(void * , int , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void *memset(void * , int , size_t ) throw() __attribute((__nonnull__(1)));
 # 64 "/usr/include/string.h" 3
 extern "C" int memcmp(const void * , const void * , size_t ) throw()
 # 65 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 71 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline void *memchr(void * , int , size_t ) throw() __asm__("memchr")
+extern void *memchr(void * , int , size_t ) throw() __asm__("memchr")
 # 72 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 73 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const void *memchr(const void * , int , size_t ) throw() __asm__("memchr")
+extern const void *memchr(const void * , int , size_t ) throw() __asm__("memchr")
 # 74 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 77 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline void *
-# 78 "/usr/include/string.h" 3
-memchr(void *__s, int __c, size_t __n) throw()
-# 79 "/usr/include/string.h" 3
-{
-# 80 "/usr/include/string.h" 3
-return __builtin_memchr(__s, __c, __n);
-# 81 "/usr/include/string.h" 3
-}
-# 83 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const void *
-# 84 "/usr/include/string.h" 3
-memchr(const void *__s, int __c, size_t __n) throw()
-# 85 "/usr/include/string.h" 3
-{
-# 86 "/usr/include/string.h" 3
-return __builtin_memchr(__s, __c, __n);
-# 87 "/usr/include/string.h" 3
-}
 # 99 "/usr/include/string.h" 3
 void *rawmemchr(void * , int ) throw() __asm__("rawmemchr")
 # 100 "/usr/include/string.h" 3
@@ -2816,21 +2796,21 @@ const void *memrchr(const void * , int , size_t ) throw() __asm__("memrchr")
 # 113 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 122 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strcpy(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *strcpy(char *__restrict__ , const char *__restrict__ ) throw()
 # 123 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 125 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *strncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 127 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 130 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strcat(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *strcat(char *__restrict__ , const char *__restrict__ ) throw()
 # 131 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 133 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strncat(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *strncat(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 134 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 137 "/usr/include/string.h" 3
 extern "C" int strcmp(const char * , const char * ) throw()
 # 138 "/usr/include/string.h" 3
@@ -2882,61 +2862,21 @@ extern "C" char *strndup(const char * , size_t ) throw()
 # 176 "/usr/include/string.h" 3
  __attribute((__malloc__)) __attribute((__nonnull__(1)));
 # 206 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strchr(char * , int ) throw() __asm__("strchr")
+extern char *strchr(char * , int ) throw() __asm__("strchr")
 # 207 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 208 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strchr(const char * , int ) throw() __asm__("strchr")
+extern const char *strchr(const char * , int ) throw() __asm__("strchr")
 # 209 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 212 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 213 "/usr/include/string.h" 3
-strchr(char *__s, int __c) throw()
-# 214 "/usr/include/string.h" 3
-{
-# 215 "/usr/include/string.h" 3
-return __builtin_strchr(__s, __c);
-# 216 "/usr/include/string.h" 3
-}
-# 218 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 219 "/usr/include/string.h" 3
-strchr(const char *__s, int __c) throw()
-# 220 "/usr/include/string.h" 3
-{
-# 221 "/usr/include/string.h" 3
-return __builtin_strchr(__s, __c);
-# 222 "/usr/include/string.h" 3
-}
 # 233 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strrchr(char * , int ) throw() __asm__("strrchr")
+extern char *strrchr(char * , int ) throw() __asm__("strrchr")
 # 234 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 235 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strrchr(const char * , int ) throw() __asm__("strrchr")
+extern const char *strrchr(const char * , int ) throw() __asm__("strrchr")
 # 236 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 239 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 240 "/usr/include/string.h" 3
-strrchr(char *__s, int __c) throw()
-# 241 "/usr/include/string.h" 3
-{
-# 242 "/usr/include/string.h" 3
-return __builtin_strrchr(__s, __c);
-# 243 "/usr/include/string.h" 3
-}
-# 245 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 246 "/usr/include/string.h" 3
-strrchr(const char *__s, int __c) throw()
-# 247 "/usr/include/string.h" 3
-{
-# 248 "/usr/include/string.h" 3
-return __builtin_strrchr(__s, __c);
-# 249 "/usr/include/string.h" 3
-}
 # 261 "/usr/include/string.h" 3
 char *strchrnul(char * , int ) throw() __asm__("strchrnul")
 # 262 "/usr/include/string.h" 3
@@ -2954,61 +2894,21 @@ extern "C" size_t strspn(const char * , const char * ) throw()
 # 278 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 283 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strpbrk(char * , const char * ) throw() __asm__("strpbrk")
+extern char *strpbrk(char * , const char * ) throw() __asm__("strpbrk")
 # 284 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 285 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strpbrk(const char * , const char * ) throw() __asm__("strpbrk")
+extern const char *strpbrk(const char * , const char * ) throw() __asm__("strpbrk")
 # 286 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
-# 289 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 290 "/usr/include/string.h" 3
-strpbrk(char *__s, const char *__accept) throw()
-# 291 "/usr/include/string.h" 3
-{
-# 292 "/usr/include/string.h" 3
-return __builtin_strpbrk(__s, __accept);
-# 293 "/usr/include/string.h" 3
-}
-# 295 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 296 "/usr/include/string.h" 3
-strpbrk(const char *__s, const char *__accept) throw()
-# 297 "/usr/include/string.h" 3
-{
-# 298 "/usr/include/string.h" 3
-return __builtin_strpbrk(__s, __accept);
-# 299 "/usr/include/string.h" 3
-}
 # 310 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strstr(char * , const char * ) throw() __asm__("strstr")
+extern char *strstr(char * , const char * ) throw() __asm__("strstr")
 # 311 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 312 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strstr(const char * , const char * ) throw() __asm__("strstr")
+extern const char *strstr(const char * , const char * ) throw() __asm__("strstr")
 # 313 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
-# 316 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 317 "/usr/include/string.h" 3
-strstr(char *__haystack, const char *__needle) throw()
-# 318 "/usr/include/string.h" 3
-{
-# 319 "/usr/include/string.h" 3
-return __builtin_strstr(__haystack, __needle);
-# 320 "/usr/include/string.h" 3
-}
-# 322 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 323 "/usr/include/string.h" 3
-strstr(const char *__haystack, const char *__needle) throw()
-# 324 "/usr/include/string.h" 3
-{
-# 325 "/usr/include/string.h" 3
-return __builtin_strstr(__haystack, __needle);
-# 326 "/usr/include/string.h" 3
-}
 # 336 "/usr/include/string.h" 3
 extern "C" char *strtok(char *__restrict__ , const char *__restrict__ ) throw()
 # 337 "/usr/include/string.h" 3
@@ -3038,9 +2938,9 @@ extern "C" void *__mempcpy(void *__restrict__ , const void *__restrict__ , size_
 # 377 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 378 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *mempcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
+extern "C" void *mempcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
 # 380 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 385 "/usr/include/string.h" 3
 extern "C" size_t strlen(const char * ) throw()
 # 386 "/usr/include/string.h" 3
@@ -3054,7 +2954,7 @@ extern "C" char *strerror(int ) throw();
 # 421 "/usr/include/string.h" 3
 extern "C" char *strerror_r(int , char * , size_t ) throw()
 # 422 "/usr/include/string.h" 3
- __attribute((__nonnull__(2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(2)));
 # 428 "/usr/include/string.h" 3
 extern "C" char *strerror_l(int , locale_t ) throw();
 # 34 "/usr/include/strings.h" 3
@@ -3062,67 +2962,27 @@ extern "C" int bcmp(const void * , const void * , size_t ) throw()
 # 35 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 38 "/usr/include/strings.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void bcopy(const void * , void * , size_t ) throw()
+extern "C" void bcopy(const void * , void * , size_t ) throw()
 # 39 "/usr/include/strings.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 42 "/usr/include/strings.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void bzero(void * , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void bzero(void * , size_t ) throw() __attribute((__nonnull__(1)));
 # 48 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline char *index(char * , int ) throw() __asm__("index")
+extern char *index(char * , int ) throw() __asm__("index")
 # 49 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 50 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline const char *index(const char * , int ) throw() __asm__("index")
+extern const char *index(const char * , int ) throw() __asm__("index")
 # 51 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 54 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 55 "/usr/include/strings.h" 3
-index(char *__s, int __c) throw()
-# 56 "/usr/include/strings.h" 3
-{
-# 57 "/usr/include/strings.h" 3
-return __builtin_index(__s, __c);
-# 58 "/usr/include/strings.h" 3
-}
-# 60 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 61 "/usr/include/strings.h" 3
-index(const char *__s, int __c) throw()
-# 62 "/usr/include/strings.h" 3
-{
-# 63 "/usr/include/strings.h" 3
-return __builtin_index(__s, __c);
-# 64 "/usr/include/strings.h" 3
-}
 # 76 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline char *rindex(char * , int ) throw() __asm__("rindex")
+extern char *rindex(char * , int ) throw() __asm__("rindex")
 # 77 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 78 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline const char *rindex(const char * , int ) throw() __asm__("rindex")
+extern const char *rindex(const char * , int ) throw() __asm__("rindex")
 # 79 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 82 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 83 "/usr/include/strings.h" 3
-rindex(char *__s, int __c) throw()
-# 84 "/usr/include/strings.h" 3
-{
-# 85 "/usr/include/strings.h" 3
-return __builtin_rindex(__s, __c);
-# 86 "/usr/include/strings.h" 3
-}
-# 88 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 89 "/usr/include/strings.h" 3
-rindex(const char *__s, int __c) throw()
-# 90 "/usr/include/strings.h" 3
-{
-# 91 "/usr/include/strings.h" 3
-return __builtin_rindex(__s, __c);
-# 92 "/usr/include/strings.h" 3
-}
 # 104 "/usr/include/strings.h" 3
 extern "C" int ffs(int ) throw() __attribute((const));
 # 110 "/usr/include/strings.h" 3
@@ -3147,32 +3007,8 @@ extern "C" int strcasecmp_l(const char * , const char * , locale_t ) throw()
 extern "C" int strncasecmp_l(const char * , const char * , size_t , locale_t ) throw()
 # 135 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2, 4)));
-# 23 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-extern "C" {
-# 22 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 23 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-bcopy(const void *__src, void *__dest, size_t __len) throw()
-# 24 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-{
-# 25 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-(void)__builtin___memmove_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 26 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-} }
-# 29 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-extern "C" {
-# 28 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 29 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-bzero(void *__dest, size_t __len) throw()
-# 30 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-{
-# 31 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-(void)__builtin___memset_chk(__dest, '\000', __len, __builtin_object_size(__dest, 0));
-# 32 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-} }
 # 436 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void explicit_bzero(void * , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void explicit_bzero(void * , size_t ) throw() __attribute((__nonnull__(1)));
 # 440 "/usr/include/string.h" 3
 extern "C" char *strsep(char **__restrict__ , const char *__restrict__ ) throw()
 # 442 "/usr/include/string.h" 3
@@ -3184,17 +3020,17 @@ extern "C" char *__stpcpy(char *__restrict__ , const char *__restrict__ ) throw(
 # 451 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 452 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *stpcpy(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *stpcpy(char *__restrict__ , const char *__restrict__ ) throw()
 # 453 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 457 "/usr/include/string.h" 3
 extern "C" char *__stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 459 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 460 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 462 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 467 "/usr/include/string.h" 3
 extern "C" int strverscmp(const char * , const char * ) throw()
 # 468 "/usr/include/string.h" 3
@@ -3211,162 +3047,6 @@ char *basename(char * ) throw() __asm__("basename")
 const char *basename(const char * ) throw() __asm__("basename")
 # 485 "/usr/include/string.h" 3
  __attribute((__nonnull__(1)));
-# 26 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" void __warn_memset_zero_len() __attribute((__warning__("memset used with constant zero length parameter; this could be due to transposed parameters")));
-# 31 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 30 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 31 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memcpy(void *__restrict__ __dest, const void *__restrict__ __src, size_t __len) throw()
-# 33 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 34 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memcpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 35 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 38 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 37 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 38 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memmove(void *__dest, const void *__src, size_t __len) throw()
-# 39 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 40 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memmove_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 41 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 45 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 44 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 45 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-mempcpy(void *__restrict__ __dest, const void *__restrict__ __src, size_t __len) throw()
-# 47 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 48 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___mempcpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 49 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 59 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 58 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 59 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memset(void *__dest, int __ch, size_t __len) throw()
-# 60 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 64 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-if (((0) && (__len == (0))) && ((!(0)) || (__ch != 0)))
-# 66 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 67 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__warn_memset_zero_len();
-# 68 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __dest;
-# 69 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-}
-# 71 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memset_chk(__dest, __ch, __len, __builtin_object_size(__dest, 0));
-# 72 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" void __explicit_bzero_chk(void * , size_t , size_t ) throw()
-# 78 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
- __attribute((__nonnull__(1)));
-# 81 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 80 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 81 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-explicit_bzero(void *__dest, size_t __len) throw()
-# 82 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 83 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__explicit_bzero_chk(__dest, __len, __builtin_object_size(__dest, 0));
-# 84 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 88 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 87 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 88 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strcpy(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 89 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 90 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strcpy_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 91 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 95 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 94 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 95 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-stpcpy(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 96 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 97 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___stpcpy_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 98 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 103 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 102 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 103 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strncpy(char *__restrict__ __dest, const char *__restrict__ __src, size_t __len) throw()
-# 105 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 106 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strncpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 2 > 1));
-# 107 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 110 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" char *__stpncpy_chk(char * , const char * , size_t , size_t ) throw();
-# 112 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" char *__stpncpy_alias(char * , const char * , size_t ) throw() __asm__("stpncpy");
-# 116 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 115 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 116 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-stpncpy(char *__dest, const char *__src, size_t __n) throw()
-# 117 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 118 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-if ((__builtin_object_size(__dest, 2 > 1) != ((size_t)(-1))) && ((!(0)) || (__n > __builtin_object_size(__dest, 2 > 1)))) {
-# 120 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __stpncpy_chk(__dest, __src, __n, __builtin_object_size(__dest, 2 > 1)); }
-# 121 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __stpncpy_alias(__dest, __src, __n);
-# 122 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 126 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 125 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 126 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strcat(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 127 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 128 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strcat_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 129 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 133 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 132 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 133 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strncat(char *__restrict__ __dest, const char *__restrict__ __src, size_t __len) throw()
-# 135 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 136 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strncat_chk(__dest, __src, __len, __builtin_object_size(__dest, 2 > 1));
-# 137 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
 # 31 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
 typedef unsigned char __u_char;
 # 32 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
@@ -3694,9 +3374,9 @@ extern "C" int getdate_r(const char *__restrict__ , tm *__restrict__ );
 # 69 "/usr/local/cuda-5.0//include/common_functions.h"
 extern "C" clock_t clock() throw();
 # 70 "/usr/local/cuda-5.0//include/common_functions.h"
-extern "C" { extern __attribute((gnu_inline)) inline void *memset(void *, int, size_t) throw(); }
+extern "C" void *memset(void *, int, size_t) throw();
 # 71 "/usr/local/cuda-5.0//include/common_functions.h"
-extern "C" { extern __attribute((gnu_inline)) inline void *memcpy(void *, const void *, size_t) throw(); }
+extern "C" void *memcpy(void *, const void *, size_t) throw();
 # 136 "/usr/local/cuda-5.0//include/math_functions.h"
 extern "C" int abs(int) throw();
 # 137 "/usr/local/cuda-5.0//include/math_functions.h"
@@ -5544,23 +5224,23 @@ long long rem;
 # 80 "/usr/include/stdlib.h" 3
 } lldiv_t; }
 # 97 "/usr/include/stdlib.h" 3
-extern "C" size_t __ctype_get_mb_cur_max() throw() __attribute((__warn_unused_result__));
+extern "C" size_t __ctype_get_mb_cur_max() throw();
 # 101 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline double atof(const char * ) throw()
+extern "C" double atof(const char * ) throw()
 # 102 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 104 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int atoi(const char * ) throw()
+extern "C" int atoi(const char * ) throw()
 # 105 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 107 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline long atol(const char * ) throw()
+extern "C" long atol(const char * ) throw()
 # 108 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 112 "/usr/include/stdlib.h" 3
-__extension__ extern "C" { extern __attribute((gnu_inline)) inline long long atoll(const char * ) throw()
+__extension__ extern "C" long long atoll(const char * ) throw()
 # 113 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 117 "/usr/include/stdlib.h" 3
 extern "C" double strtod(const char *__restrict__ , char **__restrict__ ) throw()
 # 119 "/usr/include/stdlib.h" 3
@@ -5685,48 +5365,12 @@ extern "C" _Float32x strtof32x_l(const char *__restrict__ , char **__restrict__ 
 extern "C" _Float64x strtof64x_l(const char *__restrict__ , char **__restrict__ , locale_t ) throw()
 # 347 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1, 3)));
-# 361 "/usr/include/stdlib.h" 3
-extern "C" {
-# 360 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 361 "/usr/include/stdlib.h" 3
-atoi(const char *__nptr) throw()
-# 362 "/usr/include/stdlib.h" 3
-{
-# 363 "/usr/include/stdlib.h" 3
-return (int)strtol(__nptr, (char **)__null, 10);
-# 364 "/usr/include/stdlib.h" 3
-} }
-# 366 "/usr/include/stdlib.h" 3
-extern "C" {
-# 365 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline long
-# 366 "/usr/include/stdlib.h" 3
-atol(const char *__nptr) throw()
-# 367 "/usr/include/stdlib.h" 3
-{
-# 368 "/usr/include/stdlib.h" 3
-return strtol(__nptr, (char **)__null, 10);
-# 369 "/usr/include/stdlib.h" 3
-} }
-# 373 "/usr/include/stdlib.h" 3
-__extension__ extern "C" {
-# 372 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline long long
-# 373 "/usr/include/stdlib.h" 3
-atoll(const char *__nptr) throw()
-# 374 "/usr/include/stdlib.h" 3
-{
-# 375 "/usr/include/stdlib.h" 3
-return strtoll(__nptr, (char **)__null, 10);
-# 376 "/usr/include/stdlib.h" 3
-} }
 # 385 "/usr/include/stdlib.h" 3
-extern "C" char *l64a(long ) throw() __attribute((__warn_unused_result__));
+extern "C" char *l64a(long ) throw();
 # 388 "/usr/include/stdlib.h" 3
 extern "C" long a64l(const char * ) throw()
 # 389 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 33 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 extern "C" { typedef __u_char u_char; }
 # 34 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
@@ -5873,12 +5517,6 @@ extern "C" { typedef __fd_mask fd_mask; }
 extern "C" int select(int , fd_set *__restrict__ , fd_set *__restrict__ , fd_set *__restrict__ , timeval *__restrict__ );
 # 113 "/usr/include/x86_64-linux-gnu/sys/select.h" 3
 extern "C" int pselect(int , fd_set *__restrict__ , fd_set *__restrict__ , fd_set *__restrict__ , const timespec *__restrict__ , const __sigset_t *__restrict__ );
-# 24 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
-extern "C" long __fdelt_chk(long );
-# 25 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
-extern "C" long __fdelt_warn(long )
-# 26 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
- __attribute((__warning__("bit outside of fd_set selected")));
 # 185 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 extern "C" { typedef __blksize_t blksize_t; }
 # 192 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
@@ -6232,11 +5870,11 @@ extern "C" int lcong48_r(unsigned short [7], drand48_data * ) throw()
 # 539 "/usr/include/stdlib.h" 3
 extern "C" void *malloc(size_t ) throw() __attribute((__malloc__))
 # 540 "/usr/include/stdlib.h" 3
- __attribute((__alloc_size__(1))) __attribute((__warn_unused_result__));
+ __attribute((__alloc_size__(1)));
 # 542 "/usr/include/stdlib.h" 3
 extern "C" void *calloc(size_t , size_t ) throw()
 # 543 "/usr/include/stdlib.h" 3
- __attribute((__malloc__)) __attribute((__alloc_size__(1, 2))) __attribute((__warn_unused_result__));
+ __attribute((__malloc__)) __attribute((__alloc_size__(1, 2)));
 # 550 "/usr/include/stdlib.h" 3
 extern "C" void *realloc(void * , size_t ) throw()
 # 551 "/usr/include/stdlib.h" 3
@@ -6254,15 +5892,15 @@ extern "C" void *alloca(size_t ) throw();
 # 574 "/usr/include/stdlib.h" 3
 extern "C" void *valloc(size_t ) throw() __attribute((__malloc__))
 # 575 "/usr/include/stdlib.h" 3
- __attribute((__alloc_size__(1))) __attribute((__warn_unused_result__));
+ __attribute((__alloc_size__(1)));
 # 580 "/usr/include/stdlib.h" 3
 extern "C" int posix_memalign(void ** , size_t , size_t ) throw()
 # 581 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 586 "/usr/include/stdlib.h" 3
 extern "C" void *aligned_alloc(size_t , size_t ) throw()
 # 587 "/usr/include/stdlib.h" 3
- __attribute((__malloc__)) __attribute((__alloc_size__(2))) __attribute((__warn_unused_result__));
+ __attribute((__malloc__)) __attribute((__alloc_size__(2)));
 # 591 "/usr/include/stdlib.h" 3
 extern "C" void abort() throw() __attribute((__noreturn__));
 # 595 "/usr/include/stdlib.h" 3
@@ -6282,11 +5920,11 @@ extern "C" void quick_exit(int ) throw() __attribute((__noreturn__));
 # 629 "/usr/include/stdlib.h" 3
 extern "C" void _Exit(int ) throw() __attribute((__noreturn__));
 # 634 "/usr/include/stdlib.h" 3
-extern "C" char *getenv(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" char *getenv(const char * ) throw() __attribute((__nonnull__(1)));
 # 639 "/usr/include/stdlib.h" 3
 extern "C" char *secure_getenv(const char * ) throw()
 # 640 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 647 "/usr/include/stdlib.h" 3
 extern "C" int putenv(char * ) throw() __attribute((__nonnull__(1)));
 # 653 "/usr/include/stdlib.h" 3
@@ -6300,39 +5938,37 @@ extern "C" int clearenv() throw();
 # 675 "/usr/include/stdlib.h" 3
 extern "C" char *mktemp(char * ) throw() __attribute((__nonnull__(1)));
 # 688 "/usr/include/stdlib.h" 3
-extern "C" int mkstemp(char * ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemp(char * ) __attribute((__nonnull__(1)));
 # 698 "/usr/include/stdlib.h" 3
-extern "C" int mkstemp64(char * ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemp64(char * ) __attribute((__nonnull__(1)));
 # 710 "/usr/include/stdlib.h" 3
-extern "C" int mkstemps(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemps(char * , int ) __attribute((__nonnull__(1)));
 # 720 "/usr/include/stdlib.h" 3
 extern "C" int mkstemps64(char * , int )
 # 721 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 731 "/usr/include/stdlib.h" 3
-extern "C" char *mkdtemp(char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" char *mkdtemp(char * ) throw() __attribute((__nonnull__(1)));
 # 742 "/usr/include/stdlib.h" 3
-extern "C" int mkostemp(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkostemp(char * , int ) __attribute((__nonnull__(1)));
 # 752 "/usr/include/stdlib.h" 3
-extern "C" int mkostemp64(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkostemp64(char * , int ) __attribute((__nonnull__(1)));
 # 762 "/usr/include/stdlib.h" 3
 extern "C" int mkostemps(char * , int , int )
 # 763 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 774 "/usr/include/stdlib.h" 3
 extern "C" int mkostemps64(char * , int , int )
 # 775 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 784 "/usr/include/stdlib.h" 3
-extern "C" int system(const char * ) __attribute((__warn_unused_result__));
+extern "C" int system(const char * );
 # 790 "/usr/include/stdlib.h" 3
 extern "C" char *canonicalize_file_name(const char * ) throw()
 # 791 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 800 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *realpath(const char *__restrict__ , char *__restrict__ ) throw()
-# 801 "/usr/include/stdlib.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" char *realpath(const char *__restrict__ , char *__restrict__ ) throw();
 # 808 "/usr/include/stdlib.h" 3
 extern "C" { typedef int (*__compar_fn_t)(const void *, const void *); }
 # 811 "/usr/include/stdlib.h" 3
@@ -6340,55 +5976,9 @@ extern "C" { typedef __compar_fn_t comparison_fn_t; }
 # 815 "/usr/include/stdlib.h" 3
 extern "C" { typedef int (*__compar_d_fn_t)(const void *, const void *, void *); }
 # 820 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *bsearch(const void * , const void * , size_t , size_t , __compar_fn_t )
+extern "C" void *bsearch(const void * , const void * , size_t , size_t , __compar_fn_t )
 # 822 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1, 2, 5))) __attribute((__warn_unused_result__)); }
-# 20 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-extern "C" {
-# 19 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__attribute((__gnu_inline__)) extern inline void *
-# 20 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-bsearch(const void *__key, const void *__base, size_t __nmemb, size_t __size, __compar_fn_t
-# 21 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__compar)
-# 22 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-{
-# 23 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-size_t __l, __u, __idx;
-# 24 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-const void *__p;
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-int __comparison;
-# 27 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__l = (0);
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__u = __nmemb;
-# 29 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-while (__l < __u)
-# 30 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-{
-# 31 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__idx = ((__l + __u) / (2));
-# 32 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__p = ((void *)(((const char *)__base) + (__idx * __size)));
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__comparison = (*__compar)(__key, __p);
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-if (__comparison < 0) {
-# 35 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__u = __idx; } else {
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-if (__comparison > 0) {
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__l = (__idx + (1)); } else {
-# 39 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-return (void *)__p; } }
-# 40 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-}
-# 42 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-return __null;
-# 43 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-} }
+ __attribute((__nonnull__(1, 2, 5)));
 # 830 "/usr/include/stdlib.h" 3
 extern "C" void qsort(void * , size_t , size_t , __compar_fn_t )
 # 831 "/usr/include/stdlib.h" 3
@@ -6398,49 +5988,49 @@ extern "C" void qsort_r(void * , size_t , size_t , __compar_d_fn_t , void * )
 # 835 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1, 4)));
 # 840 "/usr/include/stdlib.h" 3
-extern "C" int abs(int ) throw() __attribute((const)) __attribute((__warn_unused_result__));
+extern "C" int abs(int ) throw() __attribute((const));
 # 841 "/usr/include/stdlib.h" 3
-extern "C" long labs(long ) throw() __attribute((const)) __attribute((__warn_unused_result__));
+extern "C" long labs(long ) throw() __attribute((const));
 # 844 "/usr/include/stdlib.h" 3
 __extension__ extern "C" long long llabs(long long ) throw()
 # 845 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 852 "/usr/include/stdlib.h" 3
 extern "C" div_t div(int , int ) throw()
 # 853 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 854 "/usr/include/stdlib.h" 3
 extern "C" ldiv_t ldiv(long , long ) throw()
 # 855 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 858 "/usr/include/stdlib.h" 3
 __extension__ extern "C" lldiv_t lldiv(long long , long long ) throw()
 # 860 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 872 "/usr/include/stdlib.h" 3
 extern "C" char *ecvt(double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 873 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 878 "/usr/include/stdlib.h" 3
 extern "C" char *fcvt(double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 879 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 884 "/usr/include/stdlib.h" 3
 extern "C" char *gcvt(double , int , char * ) throw()
 # 885 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3)));
 # 890 "/usr/include/stdlib.h" 3
 extern "C" char *qecvt(long double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 892 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 893 "/usr/include/stdlib.h" 3
 extern "C" char *qfcvt(long double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 895 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 896 "/usr/include/stdlib.h" 3
 extern "C" char *qgcvt(long double , int , char * ) throw()
 # 897 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3)));
 # 902 "/usr/include/stdlib.h" 3
 extern "C" int ecvt_r(double , int , int *__restrict__ , int *__restrict__ , char *__restrict__ , size_t ) throw()
 # 904 "/usr/include/stdlib.h" 3
@@ -6462,209 +6052,35 @@ extern "C" int mblen(const char * , size_t ) throw();
 # 925 "/usr/include/stdlib.h" 3
 extern "C" int mbtowc(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw();
 # 929 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int wctomb(char * , wchar_t ) throw(); }
+extern "C" int wctomb(char * , wchar_t ) throw();
 # 933 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t mbstowcs(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw(); }
+extern "C" size_t mbstowcs(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw();
 # 936 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t wcstombs(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw(); }
+extern "C" size_t wcstombs(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw();
 # 946 "/usr/include/stdlib.h" 3
-extern "C" int rpmatch(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int rpmatch(const char * ) throw() __attribute((__nonnull__(1)));
 # 957 "/usr/include/stdlib.h" 3
 extern "C" int getsubopt(char **__restrict__ , char *const *__restrict__ , char **__restrict__ ) throw()
 # 960 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1, 2, 3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1, 2, 3)));
 # 968 "/usr/include/stdlib.h" 3
-extern "C" int posix_openpt(int ) __attribute((__warn_unused_result__));
+extern "C" int posix_openpt(int );
 # 976 "/usr/include/stdlib.h" 3
 extern "C" int grantpt(int ) throw();
 # 980 "/usr/include/stdlib.h" 3
 extern "C" int unlockpt(int ) throw();
 # 985 "/usr/include/stdlib.h" 3
-extern "C" char *ptsname(int ) throw() __attribute((__warn_unused_result__));
+extern "C" char *ptsname(int ) throw();
 # 992 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int ptsname_r(int , char * , size_t ) throw()
+extern "C" int ptsname_r(int , char * , size_t ) throw()
 # 993 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(2))); }
+ __attribute((__nonnull__(2)));
 # 996 "/usr/include/stdlib.h" 3
 extern "C" int getpt();
 # 1003 "/usr/include/stdlib.h" 3
 extern "C" int getloadavg(double [], int ) throw()
 # 1004 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1)));
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-extern "C" {
-# 24 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-__attribute((__gnu_inline__)) extern inline double
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-atof(const char *__nptr) throw()
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-{
-# 27 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-return strtod(__nptr, (char **)__null);
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-} }
-# 23 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_chk(const char *__restrict__ , char *__restrict__ , size_t ) throw()
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warn_unused_result__));
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_alias(const char *__restrict__ , char *__restrict__ ) throw() __asm__("realpath") __attribute((__warn_unused_result__));
-# 29 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_chk_warn(const char *__restrict__ , char *__restrict__ , size_t ) throw() __asm__("__realpath_chk") __attribute((__warn_unused_result__))
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("second argument of realpath must be either NULL or at least PATH_MAX bytes long buffer")));
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-realpath(const char *__restrict__ __name, char *__restrict__ __resolved) throw()
-# 38 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 39 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__resolved, 2 > 1) != ((size_t)(-1)))
-# 40 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 42 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__resolved, 2 > 1) < (4096)) {
-# 43 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_chk_warn(__name, __resolved, __builtin_object_size(__resolved, 2 > 1)); }
-# 45 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_chk(__name, __resolved, __builtin_object_size(__resolved, 2 > 1));
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_alias(__name, __resolved);
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 52 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_chk(int , char * , size_t , size_t ) throw()
-# 53 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2)));
-# 54 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_alias(int , char * , size_t ) throw() __asm__("ptsname_r")
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2)));
-# 57 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_chk_warn(int , char * , size_t , size_t ) throw() __asm__("__ptsname_r_chk")
-# 60 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2))) __attribute((__warning__("ptsname_r called with buflen bigger than size of buf")));
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 63 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-ptsname_r(int __fd, char *__buf, size_t __buflen) throw()
-# 65 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 68 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_chk(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 70 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 71 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_chk_warn(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 72 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_alias(__fd, __buf, __buflen);
-# 74 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __wctomb_chk(char * , wchar_t , size_t ) throw()
-# 78 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warn_unused_result__));
-# 79 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __wctomb_alias(char * , wchar_t ) throw() __asm__("wctomb") __attribute((__warn_unused_result__));
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline int
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-wctomb(char *__s, wchar_t __wchar) throw()
-# 84 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 92 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if ((__builtin_object_size(__s, 2 > 1) != ((size_t)(-1))) && ((16) > __builtin_object_size(__s, 2 > 1))) {
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wctomb_chk(__s, __wchar, __builtin_object_size(__s, 2 > 1)); }
-# 94 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wctomb_alias(__s, __wchar);
-# 95 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_chk(wchar_t *__restrict__ , const char *__restrict__ , size_t , size_t ) throw();
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_alias(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw() __asm__("mbstowcs");
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_chk_warn(wchar_t *__restrict__ , const char *__restrict__ , size_t , size_t ) throw() __asm__("__mbstowcs_chk")
-# 109 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("mbstowcs called with dst buffer smaller than len * sizeof (wchar_t)")));
-# 113 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 112 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline size_t
-# 113 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-mbstowcs(wchar_t *__restrict__ __dst, const char *__restrict__ __src, size_t __len) throw()
-# 115 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 116 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__dst, 2 > 1) != ((size_t)(-1)))
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 119 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_chk(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t)); }
-# 122 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__len > (__builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t))) {
-# 123 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_chk_warn(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t)); }
-# 125 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 126 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_alias(__dst, __src, __len);
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_chk(char *__restrict__ , const wchar_t *__restrict__ , size_t , size_t ) throw();
-# 133 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_alias(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw() __asm__("wcstombs");
-# 137 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_chk_warn(char *__restrict__ , const wchar_t *__restrict__ , size_t , size_t ) throw() __asm__("__wcstombs_chk")
-# 141 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("wcstombs called with dst buffer smaller than len")));
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 143 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline size_t
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-wcstombs(char *__restrict__ __dst, const wchar_t *__restrict__ __src, size_t __len) throw()
-# 146 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 147 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__dst, 2 > 1) != ((size_t)(-1)))
-# 148 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 149 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 150 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_chk(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1)); }
-# 151 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__len > __builtin_object_size(__dst, 2 > 1)) {
-# 152 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_chk_warn(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1)); }
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 154 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_alias(__dst, __src, __len);
-# 155 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
 # 69 "/usr/include/c++/4.4/bits/cpp_type_traits.h" 3
 namespace __gnu_cxx __attribute((__visibility__("default"))) {
 # 71 "/usr/include/c++/4.4/bits/cpp_type_traits.h" 3
@@ -26668,6 +26084,1862 @@ extern "C" { typedef unsigned long uintptr_t; }
 extern "C" { typedef __intmax_t intmax_t; }
 # 102 "/usr/include/stdint.h" 3
 extern "C" { typedef __uintmax_t uintmax_t; }
+# 40 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stdarg.h" 3
+extern "C" { typedef __builtin_va_list __gnuc_va_list; }
+# 21 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+extern "C" { typedef
+# 14 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+struct {
+# 15 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+int __count;
+# 17 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+union {
+# 18 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+unsigned __wch;
+# 19 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+char __wchb[4];
+# 20 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+} __value;
+# 21 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
+} __mbstate_t; }
+# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
+extern "C" { typedef
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
+struct _G_fpos_t {
+# 12 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
+__off_t __pos;
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
+__mbstate_t __state;
+# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
+} __fpos_t; }
+# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
+extern "C" { typedef
+# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
+struct _G_fpos64_t {
+# 12 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
+__off64_t __pos;
+# 13 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
+__mbstate_t __state;
+# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
+} __fpos64_t; }
+# 4 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 3
+struct _IO_FILE;
+# 5 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 3
+extern "C" { typedef _IO_FILE __FILE; }
+# 4 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 3
+struct _IO_FILE;
+# 7 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 3
+extern "C" { typedef _IO_FILE FILE; }
+# 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+struct _IO_FILE;
+# 36 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+struct _IO_marker;
+# 37 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+struct _IO_codecvt;
+# 38 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+struct _IO_wide_data;
+# 43 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+extern "C" { typedef void _IO_lock_t; }
+# 49 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+extern "C" { struct _IO_FILE {
+# 51 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+int _flags;
+# 54 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_read_ptr;
+# 55 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_read_end;
+# 56 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_read_base;
+# 57 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_write_base;
+# 58 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_write_ptr;
+# 59 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_write_end;
+# 60 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_buf_base;
+# 61 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_buf_end;
+# 64 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_save_base;
+# 65 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_backup_base;
+# 66 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char *_IO_save_end;
+# 68 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_marker *_markers;
+# 70 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_FILE *_chain;
+# 72 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+int _fileno;
+# 73 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+int _flags2;
+# 74 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+__off_t _old_offset;
+# 77 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+unsigned short _cur_column;
+# 78 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+signed char _vtable_offset;
+# 79 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char _shortbuf[1];
+# 81 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_lock_t *_lock;
+# 89 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+__off64_t _offset;
+# 91 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_codecvt *_codecvt;
+# 92 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_wide_data *_wide_data;
+# 93 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+_IO_FILE *_freeres_list;
+# 94 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+void *_freeres_buf;
+# 95 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+size_t __pad5;
+# 96 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+int _mode;
+# 98 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+char _unused2[(((15) * sizeof(int)) - ((4) * sizeof(void *))) - sizeof(size_t)];
+# 99 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
+}; }
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+extern "C" { typedef __ssize_t cookie_read_function_t(void * , char * , size_t ); }
+# 36 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+extern "C" { typedef __ssize_t cookie_write_function_t(void * , const char * , size_t ); }
+# 45 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+extern "C" { typedef int cookie_seek_function_t(void * , __off64_t * , int ); }
+# 48 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+extern "C" { typedef int cookie_close_function_t(void * ); }
+# 61 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+extern "C" { typedef
+# 55 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+struct _IO_cookie_io_functions_t {
+# 57 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+cookie_read_function_t *read;
+# 58 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+cookie_write_function_t *write;
+# 59 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+cookie_seek_function_t *seek;
+# 60 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+cookie_close_function_t *close;
+# 61 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
+} cookie_io_functions_t; }
+# 52 "/usr/include/stdio.h" 3
+extern "C" { typedef __gnuc_va_list va_list; }
+# 84 "/usr/include/stdio.h" 3
+extern "C" { typedef __fpos_t fpos_t; }
+# 89 "/usr/include/stdio.h" 3
+extern "C" { typedef __fpos64_t fpos64_t; }
+# 137 "/usr/include/stdio.h" 3
+extern "C" { extern FILE *stdin; }
+# 138 "/usr/include/stdio.h" 3
+extern "C" { extern FILE *stdout; }
+# 139 "/usr/include/stdio.h" 3
+extern "C" { extern FILE *stderr; }
+# 146 "/usr/include/stdio.h" 3
+extern "C" int remove(const char * ) throw();
+# 148 "/usr/include/stdio.h" 3
+extern "C" int rename(const char * , const char * ) throw();
+# 152 "/usr/include/stdio.h" 3
+extern "C" int renameat(int , const char * , int , const char * ) throw();
+# 164 "/usr/include/stdio.h" 3
+extern "C" int renameat2(int , const char * , int , const char * , unsigned ) throw();
+# 173 "/usr/include/stdio.h" 3
+extern "C" FILE *tmpfile();
+# 183 "/usr/include/stdio.h" 3
+extern "C" FILE *tmpfile64();
+# 187 "/usr/include/stdio.h" 3
+extern "C" char *tmpnam(char * ) throw();
+# 192 "/usr/include/stdio.h" 3
+extern "C" char *tmpnam_r(char * ) throw();
+# 204 "/usr/include/stdio.h" 3
+extern "C" char *tempnam(const char * , const char * ) throw()
+# 205 "/usr/include/stdio.h" 3
+ __attribute((__malloc__));
+# 213 "/usr/include/stdio.h" 3
+extern "C" int fclose(FILE * );
+# 218 "/usr/include/stdio.h" 3
+extern "C" int fflush(FILE * );
+# 227 "/usr/include/stdio.h" 3
+extern "C" int fflush_unlocked(FILE * );
+# 237 "/usr/include/stdio.h" 3
+extern "C" int fcloseall();
+# 246 "/usr/include/stdio.h" 3
+extern "C" FILE *fopen(const char *__restrict__ , const char *__restrict__ );
+# 252 "/usr/include/stdio.h" 3
+extern "C" FILE *freopen(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ );
+# 270 "/usr/include/stdio.h" 3
+extern "C" FILE *fopen64(const char *__restrict__ , const char *__restrict__ );
+# 272 "/usr/include/stdio.h" 3
+extern "C" FILE *freopen64(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ );
+# 279 "/usr/include/stdio.h" 3
+extern "C" FILE *fdopen(int , const char * ) throw();
+# 285 "/usr/include/stdio.h" 3
+extern "C" FILE *fopencookie(void *__restrict__ , const char *__restrict__ , cookie_io_functions_t ) throw();
+# 292 "/usr/include/stdio.h" 3
+extern "C" FILE *fmemopen(void * , size_t , const char * ) throw();
+# 298 "/usr/include/stdio.h" 3
+extern "C" FILE *open_memstream(char ** , size_t * ) throw();
+# 304 "/usr/include/stdio.h" 3
+extern "C" void setbuf(FILE *__restrict__ , char *__restrict__ ) throw();
+# 308 "/usr/include/stdio.h" 3
+extern "C" int setvbuf(FILE *__restrict__ , char *__restrict__ , int , size_t ) throw();
+# 314 "/usr/include/stdio.h" 3
+extern "C" void setbuffer(FILE *__restrict__ , char *__restrict__ , size_t ) throw();
+# 318 "/usr/include/stdio.h" 3
+extern "C" void setlinebuf(FILE * ) throw();
+# 326 "/usr/include/stdio.h" 3
+extern "C" int fprintf(FILE *__restrict__ , const char *__restrict__ , ...);
+# 332 "/usr/include/stdio.h" 3
+extern "C" int printf(const char *__restrict__ , ...);
+# 334 "/usr/include/stdio.h" 3
+extern "C" int sprintf(char *__restrict__ , const char *__restrict__ , ...) throw();
+# 341 "/usr/include/stdio.h" 3
+extern "C" int vfprintf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list );
+# 347 "/usr/include/stdio.h" 3
+extern "C" int vprintf(const char *__restrict__ , __gnuc_va_list );
+# 349 "/usr/include/stdio.h" 3
+extern "C" int vsprintf(char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw();
+# 354 "/usr/include/stdio.h" 3
+extern "C" int snprintf(char *__restrict__ , size_t , const char *__restrict__ , ...) throw()
+# 356 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 3, 4)));
+# 358 "/usr/include/stdio.h" 3
+extern "C" int vsnprintf(char *__restrict__ , size_t , const char *__restrict__ , __gnuc_va_list ) throw()
+# 360 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 3, 0)));
+# 366 "/usr/include/stdio.h" 3
+extern "C" int vasprintf(char **__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
+# 368 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 0)));
+# 369 "/usr/include/stdio.h" 3
+extern "C" int __asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
+# 371 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 3)));
+# 372 "/usr/include/stdio.h" 3
+extern "C" int asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
+# 374 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 3)));
+# 379 "/usr/include/stdio.h" 3
+extern "C" int vdprintf(int , const char *__restrict__ , __gnuc_va_list )
+# 381 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 0)));
+# 382 "/usr/include/stdio.h" 3
+extern "C" int dprintf(int , const char *__restrict__ , ...)
+# 383 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 3)));
+# 391 "/usr/include/stdio.h" 3
+extern "C" int fscanf(FILE *__restrict__ , const char *__restrict__ , ...);
+# 397 "/usr/include/stdio.h" 3
+extern "C" int scanf(const char *__restrict__ , ...);
+# 399 "/usr/include/stdio.h" 3
+extern "C" int sscanf(const char *__restrict__ , const char *__restrict__ , ...) throw();
+# 432 "/usr/include/stdio.h" 3
+extern "C" int vfscanf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list )
+# 434 "/usr/include/stdio.h" 3
+ __attribute((__format__(__scanf__, 2, 0)));
+# 440 "/usr/include/stdio.h" 3
+extern "C" int vscanf(const char *__restrict__ , __gnuc_va_list )
+# 441 "/usr/include/stdio.h" 3
+ __attribute((__format__(__scanf__, 1, 0)));
+# 444 "/usr/include/stdio.h" 3
+extern "C" int vsscanf(const char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
+# 446 "/usr/include/stdio.h" 3
+ __attribute((__format__(__scanf__, 2, 0)));
+# 485 "/usr/include/stdio.h" 3
+extern "C" int fgetc(FILE * );
+# 486 "/usr/include/stdio.h" 3
+extern "C" int getc(FILE * );
+# 492 "/usr/include/stdio.h" 3
+extern "C" int getchar();
+# 499 "/usr/include/stdio.h" 3
+extern "C" int getc_unlocked(FILE * );
+# 500 "/usr/include/stdio.h" 3
+extern "C" int getchar_unlocked();
+# 510 "/usr/include/stdio.h" 3
+extern "C" int fgetc_unlocked(FILE * );
+# 521 "/usr/include/stdio.h" 3
+extern "C" int fputc(int , FILE * );
+# 522 "/usr/include/stdio.h" 3
+extern "C" int putc(int , FILE * );
+# 528 "/usr/include/stdio.h" 3
+extern "C" int putchar(int );
+# 537 "/usr/include/stdio.h" 3
+extern "C" int fputc_unlocked(int , FILE * );
+# 545 "/usr/include/stdio.h" 3
+extern "C" int putc_unlocked(int , FILE * );
+# 546 "/usr/include/stdio.h" 3
+extern "C" int putchar_unlocked(int );
+# 553 "/usr/include/stdio.h" 3
+extern "C" int getw(FILE * );
+# 556 "/usr/include/stdio.h" 3
+extern "C" int putw(int , FILE * );
+# 564 "/usr/include/stdio.h" 3
+extern "C" char *fgets(char *__restrict__ , int , FILE *__restrict__ );
+# 577 "/usr/include/stdio.h" 3
+extern "C" char *gets(char * ) __attribute((__deprecated__));
+# 587 "/usr/include/stdio.h" 3
+extern "C" char *fgets_unlocked(char *__restrict__ , int , FILE *__restrict__ );
+# 603 "/usr/include/stdio.h" 3
+extern "C" __ssize_t __getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ );
+# 606 "/usr/include/stdio.h" 3
+extern "C" __ssize_t getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ );
+# 616 "/usr/include/stdio.h" 3
+extern "C" __ssize_t getline(char **__restrict__ , size_t *__restrict__ , FILE *__restrict__ );
+# 626 "/usr/include/stdio.h" 3
+extern "C" int fputs(const char *__restrict__ , FILE *__restrict__ );
+# 632 "/usr/include/stdio.h" 3
+extern "C" int puts(const char * );
+# 639 "/usr/include/stdio.h" 3
+extern "C" int ungetc(int , FILE * );
+# 646 "/usr/include/stdio.h" 3
+extern "C" size_t fread(void *__restrict__ , size_t , size_t , FILE *__restrict__ );
+# 652 "/usr/include/stdio.h" 3
+extern "C" size_t fwrite(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
+# 662 "/usr/include/stdio.h" 3
+extern "C" int fputs_unlocked(const char *__restrict__ , FILE *__restrict__ );
+# 673 "/usr/include/stdio.h" 3
+extern "C" size_t fread_unlocked(void *__restrict__ , size_t , size_t , FILE *__restrict__ );
+# 675 "/usr/include/stdio.h" 3
+extern "C" size_t fwrite_unlocked(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
+# 684 "/usr/include/stdio.h" 3
+extern "C" int fseek(FILE * , long , int );
+# 689 "/usr/include/stdio.h" 3
+extern "C" long ftell(FILE * );
+# 694 "/usr/include/stdio.h" 3
+extern "C" void rewind(FILE * );
+# 707 "/usr/include/stdio.h" 3
+extern "C" int fseeko(FILE * , __off_t , int );
+# 712 "/usr/include/stdio.h" 3
+extern "C" __off_t ftello(FILE * );
+# 731 "/usr/include/stdio.h" 3
+extern "C" int fgetpos(FILE *__restrict__ , fpos_t *__restrict__ );
+# 736 "/usr/include/stdio.h" 3
+extern "C" int fsetpos(FILE * , const fpos_t * );
+# 750 "/usr/include/stdio.h" 3
+extern "C" int fseeko64(FILE * , __off64_t , int );
+# 751 "/usr/include/stdio.h" 3
+extern "C" __off64_t ftello64(FILE * );
+# 752 "/usr/include/stdio.h" 3
+extern "C" int fgetpos64(FILE *__restrict__ , fpos64_t *__restrict__ );
+# 753 "/usr/include/stdio.h" 3
+extern "C" int fsetpos64(FILE * , const fpos64_t * );
+# 757 "/usr/include/stdio.h" 3
+extern "C" void clearerr(FILE * ) throw();
+# 759 "/usr/include/stdio.h" 3
+extern "C" int feof(FILE * ) throw();
+# 761 "/usr/include/stdio.h" 3
+extern "C" int ferror(FILE * ) throw();
+# 765 "/usr/include/stdio.h" 3
+extern "C" void clearerr_unlocked(FILE * ) throw();
+# 766 "/usr/include/stdio.h" 3
+extern "C" int feof_unlocked(FILE * ) throw();
+# 767 "/usr/include/stdio.h" 3
+extern "C" int ferror_unlocked(FILE * ) throw();
+# 775 "/usr/include/stdio.h" 3
+extern "C" void perror(const char * );
+# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
+extern "C" { extern int sys_nerr; }
+# 27 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
+extern "C" { extern const char *const sys_errlist[]; }
+# 30 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
+extern "C" { extern int _sys_nerr; }
+# 31 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
+extern "C" { extern const char *const _sys_errlist[]; }
+# 786 "/usr/include/stdio.h" 3
+extern "C" int fileno(FILE * ) throw();
+# 791 "/usr/include/stdio.h" 3
+extern "C" int fileno_unlocked(FILE * ) throw();
+# 800 "/usr/include/stdio.h" 3
+extern "C" FILE *popen(const char * , const char * );
+# 806 "/usr/include/stdio.h" 3
+extern "C" int pclose(FILE * );
+# 812 "/usr/include/stdio.h" 3
+extern "C" char *ctermid(char * ) throw();
+# 818 "/usr/include/stdio.h" 3
+extern "C" char *cuserid(char * );
+# 823 "/usr/include/stdio.h" 3
+struct obstack;
+# 826 "/usr/include/stdio.h" 3
+extern "C" int obstack_printf(obstack *__restrict__ , const char *__restrict__ , ...) throw()
+# 828 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 3)));
+# 829 "/usr/include/stdio.h" 3
+extern "C" int obstack_vprintf(obstack *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
+# 832 "/usr/include/stdio.h" 3
+ __attribute((__format__(__printf__, 2, 0)));
+# 840 "/usr/include/stdio.h" 3
+extern "C" void flockfile(FILE * ) throw();
+# 844 "/usr/include/stdio.h" 3
+extern "C" int ftrylockfile(FILE * ) throw();
+# 847 "/usr/include/stdio.h" 3
+extern "C" void funlockfile(FILE * ) throw();
+# 858 "/usr/include/stdio.h" 3
+extern "C" int __uflow(FILE *);
+# 859 "/usr/include/stdio.h" 3
+extern "C" int __overflow(FILE *, int);
+# 148 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUdeviceptr; }
+# 155 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef int CUdevice; }
+# 156 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUctx_st *CUcontext; }
+# 157 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUmod_st *CUmodule; }
+# 158 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUfunc_st *CUfunction; }
+# 159 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUarray_st *CUarray; }
+# 160 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUmipmappedArray_st *CUmipmappedArray; }
+# 161 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUtexref_st *CUtexref; }
+# 162 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUsurfref_st *CUsurfref; }
+# 163 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef CUevent_st *CUevent; }
+# 164 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef CUstream_st *CUstream; }
+# 165 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUgraphicsResource_st *CUgraphicsResource; }
+# 166 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUtexObject; }
+# 167 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUsurfObject; }
+# 171 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 169 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUuuid_st {
+# 170 "/usr/local/cuda-5.0//include/cuda.h"
+char bytes[16];
+# 171 "/usr/local/cuda-5.0//include/cuda.h"
+} CUuuid; }
+# 186 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 184 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUipcEventHandle_st {
+# 185 "/usr/local/cuda-5.0//include/cuda.h"
+char reserved[64];
+# 186 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcEventHandle; }
+# 193 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 191 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUipcMemHandle_st {
+# 192 "/usr/local/cuda-5.0//include/cuda.h"
+char reserved[64];
+# 193 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcMemHandle; }
+# 200 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 198 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUipcMem_flags_enum {
+# 199 "/usr/local/cuda-5.0//include/cuda.h"
+CU_IPC_MEM_LAZY_ENABLE_PEER_ACCESS = 1
+# 200 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcMem_flags; }
+# 219 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 207 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUctx_flags_enum {
+# 208 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_AUTO,
+# 209 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_SPIN,
+# 210 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_YIELD,
+# 211 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_BLOCKING_SYNC = 4,
+# 212 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_BLOCKING_SYNC = 4,
+# 215 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_MASK = 7,
+# 216 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_MAP_HOST,
+# 217 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_LMEM_RESIZE_TO_MAX = 16,
+# 218 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_FLAGS_MASK = 31
+# 219 "/usr/local/cuda-5.0//include/cuda.h"
+} CUctx_flags; }
+# 227 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 224 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUstream_flags_enum {
+# 225 "/usr/local/cuda-5.0//include/cuda.h"
+CU_STREAM_DEFAULT,
+# 226 "/usr/local/cuda-5.0//include/cuda.h"
+CU_STREAM_NON_BLOCKING
+# 227 "/usr/local/cuda-5.0//include/cuda.h"
+} CUstream_flags; }
+# 237 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 232 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUevent_flags_enum {
+# 233 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_DEFAULT,
+# 234 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_BLOCKING_SYNC,
+# 235 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_DISABLE_TIMING,
+# 236 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_INTERPROCESS = 4
+# 237 "/usr/local/cuda-5.0//include/cuda.h"
+} CUevent_flags; }
+# 251 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 242 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUarray_format_enum {
+# 243 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT8 = 1,
+# 244 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT16,
+# 245 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT32,
+# 246 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT8 = 8,
+# 247 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT16,
+# 248 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT32,
+# 249 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_HALF = 16,
+# 250 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_FLOAT = 32
+# 251 "/usr/local/cuda-5.0//include/cuda.h"
+} CUarray_format; }
+# 261 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 256 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUaddress_mode_enum {
+# 257 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_WRAP,
+# 258 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_CLAMP,
+# 259 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_MIRROR,
+# 260 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_BORDER
+# 261 "/usr/local/cuda-5.0//include/cuda.h"
+} CUaddress_mode; }
+# 269 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 266 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfilter_mode_enum {
+# 267 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_FILTER_MODE_POINT,
+# 268 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_FILTER_MODE_LINEAR
+# 269 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfilter_mode; }
+# 358 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 274 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUdevice_attribute_enum {
+# 275 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_THREADS_PER_BLOCK = 1,
+# 276 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_X,
+# 277 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_Y,
+# 278 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_Z,
+# 279 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_X,
+# 280 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_Y,
+# 281 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_Z,
+# 282 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_SHARED_MEMORY_PER_BLOCK,
+# 283 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_SHARED_MEMORY_PER_BLOCK = 8,
+# 284 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TOTAL_CONSTANT_MEMORY,
+# 285 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_WARP_SIZE,
+# 286 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_PITCH,
+# 287 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_REGISTERS_PER_BLOCK,
+# 288 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_REGISTERS_PER_BLOCK = 12,
+# 289 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CLOCK_RATE,
+# 290 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TEXTURE_ALIGNMENT,
+# 291 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_GPU_OVERLAP,
+# 292 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MULTIPROCESSOR_COUNT,
+# 293 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_KERNEL_EXEC_TIMEOUT,
+# 294 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_INTEGRATED,
+# 295 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CAN_MAP_HOST_MEMORY,
+# 296 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_MODE,
+# 297 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_WIDTH,
+# 298 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_WIDTH,
+# 299 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_HEIGHT,
+# 300 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_WIDTH,
+# 301 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_HEIGHT,
+# 302 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_DEPTH,
+# 303 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_WIDTH,
+# 304 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_HEIGHT,
+# 305 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_LAYERS,
+# 306 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_WIDTH = 27,
+# 307 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_HEIGHT,
+# 308 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_NUMSLICES,
+# 309 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_SURFACE_ALIGNMENT,
+# 310 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CONCURRENT_KERNELS,
+# 311 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_ECC_ENABLED,
+# 312 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_BUS_ID,
+# 313 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_DEVICE_ID,
+# 314 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TCC_DRIVER,
+# 315 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MEMORY_CLOCK_RATE,
+# 316 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_GLOBAL_MEMORY_BUS_WIDTH,
+# 317 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_L2_CACHE_SIZE,
+# 318 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_THREADS_PER_MULTIPROCESSOR,
+# 319 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_ASYNC_ENGINE_COUNT,
+# 320 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_UNIFIED_ADDRESSING,
+# 321 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LAYERED_WIDTH,
+# 322 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LAYERED_LAYERS,
+# 323 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CAN_TEX2D_GATHER,
+# 324 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_GATHER_WIDTH,
+# 325 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_GATHER_HEIGHT,
+# 326 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_WIDTH_ALTERNATE,
+# 327 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_HEIGHT_ALTERNATE,
+# 328 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_DEPTH_ALTERNATE,
+# 329 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_DOMAIN_ID,
+# 330 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TEXTURE_PITCH_ALIGNMENT,
+# 331 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_WIDTH,
+# 332 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_LAYERED_WIDTH,
+# 333 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_LAYERED_LAYERS,
+# 334 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_WIDTH,
+# 335 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_WIDTH,
+# 336 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_HEIGHT,
+# 337 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_WIDTH,
+# 338 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_HEIGHT,
+# 339 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_DEPTH,
+# 340 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_LAYERED_WIDTH,
+# 341 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_LAYERED_LAYERS,
+# 342 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_WIDTH,
+# 343 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_HEIGHT,
+# 344 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_LAYERS,
+# 345 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_WIDTH,
+# 346 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_LAYERED_WIDTH,
+# 347 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_LAYERED_LAYERS,
+# 348 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LINEAR_WIDTH,
+# 349 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_WIDTH,
+# 350 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_HEIGHT,
+# 351 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_PITCH,
+# 352 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_MIPMAPPED_WIDTH,
+# 353 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_MIPMAPPED_HEIGHT,
+# 354 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MAJOR,
+# 355 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MINOR,
+# 356 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_MIPMAPPED_WIDTH,
+# 357 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX
+# 358 "/usr/local/cuda-5.0//include/cuda.h"
+} CUdevice_attribute; }
+# 374 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 363 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUdevprop_st {
+# 364 "/usr/local/cuda-5.0//include/cuda.h"
+int maxThreadsPerBlock;
+# 365 "/usr/local/cuda-5.0//include/cuda.h"
+int maxThreadsDim[3];
+# 366 "/usr/local/cuda-5.0//include/cuda.h"
+int maxGridSize[3];
+# 367 "/usr/local/cuda-5.0//include/cuda.h"
+int sharedMemPerBlock;
+# 368 "/usr/local/cuda-5.0//include/cuda.h"
+int totalConstantMemory;
+# 369 "/usr/local/cuda-5.0//include/cuda.h"
+int SIMDWidth;
+# 370 "/usr/local/cuda-5.0//include/cuda.h"
+int memPitch;
+# 371 "/usr/local/cuda-5.0//include/cuda.h"
+int regsPerBlock;
+# 372 "/usr/local/cuda-5.0//include/cuda.h"
+int clockRate;
+# 373 "/usr/local/cuda-5.0//include/cuda.h"
+int textureAlign;
+# 374 "/usr/local/cuda-5.0//include/cuda.h"
+} CUdevprop; }
+# 385 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 379 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUpointer_attribute_enum {
+# 380 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_CONTEXT = 1,
+# 381 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_MEMORY_TYPE,
+# 382 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_DEVICE_POINTER,
+# 383 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_HOST_POINTER,
+# 384 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_P2P_TOKENS
+# 385 "/usr/local/cuda-5.0//include/cuda.h"
+} CUpointer_attribute; }
+# 440 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 390 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfunction_attribute_enum {
+# 396 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_MAX_THREADS_PER_BLOCK,
+# 403 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_SHARED_SIZE_BYTES,
+# 409 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_CONST_SIZE_BYTES,
+# 414 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_LOCAL_SIZE_BYTES,
+# 419 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_NUM_REGS,
+# 428 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_PTX_VERSION,
+# 437 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_BINARY_VERSION,
+# 439 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_MAX
+# 440 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfunction_attribute; }
+# 450 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 445 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfunc_cache_enum {
+# 446 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_NONE,
+# 447 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_SHARED,
+# 448 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_L1,
+# 449 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_EQUAL
+# 450 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfunc_cache; }
+# 459 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 455 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUsharedconfig_enum {
+# 456 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_DEFAULT_BANK_SIZE,
+# 457 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_FOUR_BYTE_BANK_SIZE,
+# 458 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_EIGHT_BYTE_BANK_SIZE
+# 459 "/usr/local/cuda-5.0//include/cuda.h"
+} CUsharedconfig; }
+# 469 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 464 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUmemorytype_enum {
+# 465 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_HOST = 1,
+# 466 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_DEVICE,
+# 467 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_ARRAY,
+# 468 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_UNIFIED
+# 469 "/usr/local/cuda-5.0//include/cuda.h"
+} CUmemorytype; }
+# 479 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 474 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUcomputemode_enum {
+# 475 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_DEFAULT,
+# 476 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_EXCLUSIVE,
+# 477 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_PROHIBITED,
+# 478 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_EXCLUSIVE_PROCESS
+# 479 "/usr/local/cuda-5.0//include/cuda.h"
+} CUcomputemode; }
+# 571 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 484 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_option_enum {
+# 490 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_MAX_REGISTERS,
+# 503 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_THREADS_PER_BLOCK,
+# 510 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_WALL_TIME,
+# 518 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_INFO_LOG_BUFFER,
+# 526 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_INFO_LOG_BUFFER_SIZE_BYTES,
+# 534 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_ERROR_LOG_BUFFER,
+# 542 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_ERROR_LOG_BUFFER_SIZE_BYTES,
+# 549 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_OPTIMIZATION_LEVEL,
+# 556 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_TARGET_FROM_CUCONTEXT,
+# 562 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_TARGET,
+# 569 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_FALLBACK_STRATEGY
+# 571 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_option; }
+# 586 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 576 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_target_enum {
+# 578 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_10,
+# 579 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_11,
+# 580 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_12,
+# 581 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_13,
+# 582 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_20,
+# 583 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_21,
+# 584 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_30,
+# 585 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_35
+# 586 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_target; }
+# 597 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 591 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_fallback_enum {
+# 593 "/usr/local/cuda-5.0//include/cuda.h"
+CU_PREFER_PTX,
+# 595 "/usr/local/cuda-5.0//include/cuda.h"
+CU_PREFER_BINARY
+# 597 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_fallback; }
+# 608 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 602 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUgraphicsRegisterFlags_enum {
+# 603 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_NONE,
+# 604 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_READ_ONLY,
+# 605 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_WRITE_DISCARD,
+# 606 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_SURFACE_LDST = 4,
+# 607 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_TEXTURE_GATHER = 8
+# 608 "/usr/local/cuda-5.0//include/cuda.h"
+} CUgraphicsRegisterFlags; }
+# 617 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 613 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUgraphicsMapResourceFlags_enum {
+# 614 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_NONE,
+# 615 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_READ_ONLY,
+# 616 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_WRITE_DISCARD
+# 617 "/usr/local/cuda-5.0//include/cuda.h"
+} CUgraphicsMapResourceFlags; }
+# 629 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 622 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUarray_cubemap_face_enum {
+# 623 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_X,
+# 624 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_X,
+# 625 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_Y,
+# 626 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_Y,
+# 627 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_Z,
+# 628 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_Z
+# 629 "/usr/local/cuda-5.0//include/cuda.h"
+} CUarray_cubemap_face; }
+# 640 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 634 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUlimit_enum {
+# 635 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_STACK_SIZE,
+# 636 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_PRINTF_FIFO_SIZE,
+# 637 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_MALLOC_HEAP_SIZE,
+# 638 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_DEV_RUNTIME_SYNC_DEPTH,
+# 639 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_DEV_RUNTIME_PENDING_LAUNCH_COUNT
+# 640 "/usr/local/cuda-5.0//include/cuda.h"
+} CUlimit; }
+# 650 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 645 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUresourcetype_enum {
+# 646 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_ARRAY,
+# 647 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_MIPMAPPED_ARRAY,
+# 648 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_LINEAR,
+# 649 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_PITCH2D
+# 650 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresourcetype; }
+# 985 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 655 "/usr/local/cuda-5.0//include/cuda.h"
+enum cudaError_enum {
+# 661 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_SUCCESS,
+# 667 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_VALUE,
+# 673 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_OUT_OF_MEMORY,
+# 679 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_INITIALIZED,
+# 684 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_DEINITIALIZED,
+# 691 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_DISABLED,
+# 699 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_NOT_INITIALIZED,
+# 706 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_ALREADY_STARTED,
+# 713 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_ALREADY_STOPPED,
+# 719 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NO_DEVICE = 100,
+# 725 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_DEVICE,
+# 732 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_IMAGE = 200,
+# 742 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_CONTEXT,
+# 751 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_ALREADY_CURRENT,
+# 756 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_MAP_FAILED = 205,
+# 761 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNMAP_FAILED,
+# 767 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ARRAY_IS_MAPPED,
+# 772 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ALREADY_MAPPED,
+# 780 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NO_BINARY_FOR_GPU,
+# 785 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ALREADY_ACQUIRED,
+# 790 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED,
+# 796 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED_AS_ARRAY,
+# 802 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED_AS_POINTER,
+# 808 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ECC_UNCORRECTABLE,
+# 814 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNSUPPORTED_LIMIT,
+# 821 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_ALREADY_IN_USE,
+# 827 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_UNSUPPORTED,
+# 832 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_SOURCE = 300,
+# 837 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_FILE_NOT_FOUND,
+# 842 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_SHARED_OBJECT_SYMBOL_NOT_FOUND,
+# 847 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_SHARED_OBJECT_INIT_FAILED,
+# 852 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_OPERATING_SYSTEM,
+# 859 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_HANDLE = 400,
+# 866 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_FOUND = 500,
+# 875 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_READY = 600,
+# 886 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_FAILED = 700,
+# 897 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES,
+# 908 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_TIMEOUT,
+# 914 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_INCOMPATIBLE_TEXTURING,
+# 921 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_ALREADY_ENABLED,
+# 928 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_NOT_ENABLED,
+# 934 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PRIMARY_CONTEXT_ACTIVE = 708,
+# 941 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_IS_DESTROYED,
+# 949 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ASSERT,
+# 956 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_TOO_MANY_PEERS,
+# 962 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_HOST_MEMORY_ALREADY_REGISTERED,
+# 968 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_HOST_MEMORY_NOT_REGISTERED,
+# 973 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_PERMITTED = 800,
+# 979 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_SUPPORTED,
+# 984 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNKNOWN = 999
+# 985 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresult; }
+# 999 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef void (*CUstreamCallback)(CUstream , CUresult , void * ); }
+# 1061 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1040 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY2D_st {
+# 1041 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1042 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1044 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1045 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1046 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1047 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1048 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1050 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1051 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1053 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1054 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1055 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1056 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1057 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1059 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1060 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1061 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY2D; }
+# 1094 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1066 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY3D_st {
+# 1067 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1068 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1069 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcZ;
+# 1070 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcLOD;
+# 1071 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1072 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1073 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1074 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1075 "/usr/local/cuda-5.0//include/cuda.h"
+void *reserved0;
+# 1076 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1077 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcHeight;
+# 1079 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1080 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1081 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstZ;
+# 1082 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstLOD;
+# 1083 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1084 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1085 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1086 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1087 "/usr/local/cuda-5.0//include/cuda.h"
+void *reserved1;
+# 1088 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1089 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstHeight;
+# 1091 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1092 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1093 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1094 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY3D; }
+# 1127 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1099 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY3D_PEER_st {
+# 1100 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1101 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1102 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcZ;
+# 1103 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcLOD;
+# 1104 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1105 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1106 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1107 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1108 "/usr/local/cuda-5.0//include/cuda.h"
+CUcontext srcContext;
+# 1109 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1110 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcHeight;
+# 1112 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1113 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1114 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstZ;
+# 1115 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstLOD;
+# 1116 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1117 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1118 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1119 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1120 "/usr/local/cuda-5.0//include/cuda.h"
+CUcontext dstContext;
+# 1121 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1122 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstHeight;
+# 1124 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1125 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1126 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1127 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY3D_PEER; }
+# 1139 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1132 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_ARRAY_DESCRIPTOR_st {
+# 1134 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Width;
+# 1135 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1137 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format Format;
+# 1138 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned NumChannels;
+# 1139 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_ARRAY_DESCRIPTOR; }
+# 1153 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1144 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_ARRAY3D_DESCRIPTOR_st {
+# 1146 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Width;
+# 1147 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1148 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1150 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format Format;
+# 1151 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned NumChannels;
+# 1152 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned Flags;
+# 1153 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_ARRAY3D_DESCRIPTOR; }
+# 1193 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1162 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_RESOURCE_DESC_st {
+# 1164 "/usr/local/cuda-5.0//include/cuda.h"
+CUresourcetype resType;
+# 1166 "/usr/local/cuda-5.0//include/cuda.h"
+union {
+# 1167 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1168 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray hArray;
+# 1169 "/usr/local/cuda-5.0//include/cuda.h"
+} array;
+# 1170 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1171 "/usr/local/cuda-5.0//include/cuda.h"
+CUmipmappedArray hMipmappedArray;
+# 1172 "/usr/local/cuda-5.0//include/cuda.h"
+} mipmap;
+# 1173 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1174 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr devPtr;
+# 1175 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format format;
+# 1176 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned numChannels;
+# 1177 "/usr/local/cuda-5.0//include/cuda.h"
+size_t sizeInBytes;
+# 1178 "/usr/local/cuda-5.0//include/cuda.h"
+} linear;
+# 1179 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1180 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr devPtr;
+# 1181 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format format;
+# 1182 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned numChannels;
+# 1183 "/usr/local/cuda-5.0//include/cuda.h"
+size_t width;
+# 1184 "/usr/local/cuda-5.0//include/cuda.h"
+size_t height;
+# 1185 "/usr/local/cuda-5.0//include/cuda.h"
+size_t pitchInBytes;
+# 1186 "/usr/local/cuda-5.0//include/cuda.h"
+} pitch2D;
+# 1187 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1188 "/usr/local/cuda-5.0//include/cuda.h"
+int reserved[32];
+# 1189 "/usr/local/cuda-5.0//include/cuda.h"
+} reserved;
+# 1190 "/usr/local/cuda-5.0//include/cuda.h"
+} res;
+# 1192 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned flags;
+# 1193 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_RESOURCE_DESC; }
+# 1208 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1198 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_TEXTURE_DESC_st {
+# 1199 "/usr/local/cuda-5.0//include/cuda.h"
+CUaddress_mode addressMode[3];
+# 1200 "/usr/local/cuda-5.0//include/cuda.h"
+CUfilter_mode filterMode;
+# 1201 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned flags;
+# 1202 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned maxAnisotropy;
+# 1203 "/usr/local/cuda-5.0//include/cuda.h"
+CUfilter_mode mipmapFilterMode;
+# 1204 "/usr/local/cuda-5.0//include/cuda.h"
+float mipmapLevelBias;
+# 1205 "/usr/local/cuda-5.0//include/cuda.h"
+float minMipmapLevelClamp;
+# 1206 "/usr/local/cuda-5.0//include/cuda.h"
+float maxMipmapLevelClamp;
+# 1207 "/usr/local/cuda-5.0//include/cuda.h"
+int reserved[16];
+# 1208 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_TEXTURE_DESC; }
+# 1250 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1213 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUresourceViewFormat_enum {
+# 1215 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_NONE,
+# 1216 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X8,
+# 1217 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X8,
+# 1218 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X8,
+# 1219 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X8,
+# 1220 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X8,
+# 1221 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X8,
+# 1222 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X16,
+# 1223 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X16,
+# 1224 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X16,
+# 1225 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X16,
+# 1226 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X16,
+# 1227 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X16,
+# 1228 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X32,
+# 1229 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X32,
+# 1230 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X32,
+# 1231 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X32,
+# 1232 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X32,
+# 1233 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X32,
+# 1234 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_1X16,
+# 1235 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_2X16,
+# 1236 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_4X16,
+# 1237 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_1X32,
+# 1238 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_2X32,
+# 1239 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_4X32,
+# 1240 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC1,
+# 1241 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC2,
+# 1242 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC3,
+# 1243 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC4,
+# 1244 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC4,
+# 1245 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC5,
+# 1246 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC5,
+# 1247 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC6H,
+# 1248 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC6H,
+# 1249 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC7
+# 1250 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresourceViewFormat; }
+# 1266 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1255 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_RESOURCE_VIEW_DESC_st {
+# 1257 "/usr/local/cuda-5.0//include/cuda.h"
+CUresourceViewFormat format;
+# 1258 "/usr/local/cuda-5.0//include/cuda.h"
+size_t width;
+# 1259 "/usr/local/cuda-5.0//include/cuda.h"
+size_t height;
+# 1260 "/usr/local/cuda-5.0//include/cuda.h"
+size_t depth;
+# 1261 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned firstMipmapLevel;
+# 1262 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned lastMipmapLevel;
+# 1263 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned firstLayer;
+# 1264 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned lastLayer;
+# 1265 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned reserved[16];
+# 1266 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_RESOURCE_VIEW_DESC; }
+# 1274 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1271 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_POINTER_ATTRIBUTE_P2P_TOKENS_st {
+# 1272 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned long long p2pToken;
+# 1273 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned vaSpaceToken;
+# 1274 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_POINTER_ATTRIBUTE_P2P_TOKENS; }
+# 1401 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuInit(unsigned );
+# 1428 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDriverGetVersion(int * );
+# 1465 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGet(CUdevice * , int );
+# 1490 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetCount(int * );
+# 1518 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetName(char * , int , CUdevice );
+# 1545 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceTotalMem_v2(size_t * , CUdevice );
+# 1718 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetAttribute(int * , CUdevice_attribute , CUdevice );
+# 1792 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetProperties(CUdevprop * , CUdevice );
+# 1825 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceComputeCapability(int * , int * , CUdevice );
+# 1924 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxCreate_v2(CUcontext * , unsigned , CUdevice );
+# 1963 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDestroy_v2(CUcontext );
+# 1998 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxPushCurrent_v2(CUcontext );
+# 2031 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxPopCurrent_v2(CUcontext * );
+# 2057 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetCurrent(CUcontext );
+# 2076 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetCurrent(CUcontext * );
+# 2105 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetDevice(CUdevice * );
+# 2133 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSynchronize();
+# 2227 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetLimit(CUlimit , size_t );
+# 2265 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetLimit(size_t * , CUlimit );
+# 2307 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetCacheConfig(CUfunc_cache * );
+# 2356 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetCacheConfig(CUfunc_cache );
+# 2397 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetSharedMemConfig(CUsharedconfig * );
+# 2448 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetSharedMemConfig(CUsharedconfig );
+# 2485 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetApiVersion(CUcontext , unsigned * );
+# 2536 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxAttach(CUcontext * , unsigned );
+# 2571 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDetach(CUcontext );
+# 2620 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoad(CUmodule * , const char * );
+# 2654 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadData(CUmodule * , const void * );
+# 2733 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadDataEx(CUmodule * , const void * , unsigned , CUjit_option * , void ** );
+# 2773 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadFatBinary(CUmodule * , const void * );
+# 2798 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleUnload(CUmodule );
+# 2828 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetFunction(CUfunction * , CUmodule , const char * );
+# 2862 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetGlobal_v2(CUdeviceptr * , size_t * , CUmodule , const char * );
+# 2896 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetTexRef(CUtexref * , CUmodule , const char * );
+# 2927 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetSurfRef(CUsurfref * , CUmodule , const char * );
+# 2970 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemGetInfo_v2(size_t * , size_t * );
+# 3003 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAlloc_v2(CUdeviceptr * , size_t );
+# 3064 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAllocPitch_v2(CUdeviceptr * , size_t * , size_t , size_t , unsigned );
+# 3093 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemFree_v2(CUdeviceptr );
+# 3126 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemGetAddressRange_v2(CUdeviceptr * , size_t * , CUdeviceptr );
+# 3172 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAllocHost_v2(void ** , size_t );
+# 3202 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemFreeHost(void * );
+# 3284 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostAlloc(void ** , size_t , unsigned );
+# 3322 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostGetDevicePointer_v2(CUdeviceptr * , void * , unsigned );
+# 3347 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostGetFlags(unsigned * , void * );
+# 3374 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetByPCIBusId(CUdevice * , char * );
+# 3402 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetPCIBusId(char * , int , CUdevice );
+# 3444 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcGetEventHandle(CUipcEventHandle * , CUevent );
+# 3481 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcOpenEventHandle(CUevent * , CUipcEventHandle );
+# 3518 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcGetMemHandle(CUipcMemHandle * , CUdeviceptr );
+# 3566 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcOpenMemHandle(CUdeviceptr * , CUipcMemHandle , unsigned );
+# 3597 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcCloseMemHandle(CUdeviceptr );
+# 3660 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostRegister(void * , size_t , unsigned );
+# 3684 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostUnregister(void * );
+# 3720 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy(CUdeviceptr , CUdeviceptr , size_t );
+# 3753 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyPeer(CUdeviceptr , CUcontext , CUdeviceptr , CUcontext , size_t );
+# 3789 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoD_v2(CUdeviceptr , const void * , size_t );
+# 3822 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoH_v2(void * , CUdeviceptr , size_t );
+# 3855 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoD_v2(CUdeviceptr , CUdeviceptr , size_t );
+# 3889 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoA_v2(CUarray , size_t , CUdeviceptr , size_t );
+# 3925 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoD_v2(CUdeviceptr , CUarray , size_t , size_t );
+# 3959 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoA_v2(CUarray , size_t , const void * , size_t );
+# 3993 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoH_v2(void * , CUarray , size_t , size_t );
+# 4031 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoA_v2(CUarray , size_t , CUarray , size_t , size_t );
+# 4191 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2D_v2(const CUDA_MEMCPY2D * );
+# 4349 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2DUnaligned_v2(const CUDA_MEMCPY2D * );
+# 4516 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3D_v2(const CUDA_MEMCPY3D * );
+# 4547 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DPeer(const CUDA_MEMCPY3D_PEER * );
+# 4587 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAsync(CUdeviceptr , CUdeviceptr , size_t , CUstream );
+# 4618 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyPeerAsync(CUdeviceptr , CUcontext , CUdeviceptr , CUcontext , size_t , CUstream );
+# 4660 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoDAsync_v2(CUdeviceptr , const void * , size_t , CUstream );
+# 4700 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoHAsync_v2(void * , CUdeviceptr , size_t , CUstream );
+# 4737 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoDAsync_v2(CUdeviceptr , CUdeviceptr , size_t , CUstream );
+# 4779 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoAAsync_v2(CUarray , size_t , const void * , size_t , CUstream );
+# 4821 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoHAsync_v2(void * , CUarray , size_t , size_t , CUstream );
+# 4992 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2DAsync_v2(const CUDA_MEMCPY2D * , CUstream );
+# 5167 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DAsync_v2(const CUDA_MEMCPY3D * , CUstream );
+# 5192 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DPeerAsync(const CUDA_MEMCPY3D_PEER * , CUstream );
+# 5230 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD8_v2(CUdeviceptr , unsigned char , size_t );
+# 5266 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD16_v2(CUdeviceptr , unsigned short , size_t );
+# 5302 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD32_v2(CUdeviceptr , unsigned , size_t );
+# 5343 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D8_v2(CUdeviceptr , size_t , unsigned char , size_t , size_t );
+# 5385 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D16_v2(CUdeviceptr , size_t , unsigned short , size_t , size_t );
+# 5427 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D32_v2(CUdeviceptr , size_t , unsigned , size_t , size_t );
+# 5464 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD8Async(CUdeviceptr , unsigned char , size_t , CUstream );
+# 5501 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD16Async(CUdeviceptr , unsigned short , size_t , CUstream );
+# 5537 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD32Async(CUdeviceptr , unsigned , size_t , CUstream );
+# 5579 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D8Async(CUdeviceptr , size_t , unsigned char , size_t , size_t , CUstream );
+# 5622 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D16Async(CUdeviceptr , size_t , unsigned short , size_t , size_t , CUstream );
+# 5665 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D32Async(CUdeviceptr , size_t , unsigned , size_t , size_t , CUstream );
+# 5768 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayCreate_v2(CUarray * , const CUDA_ARRAY_DESCRIPTOR * );
+# 5801 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayGetDescriptor_v2(CUDA_ARRAY_DESCRIPTOR * , CUarray );
+# 5832 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayDestroy(CUarray );
+# 6012 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArray3DCreate_v2(CUarray * , const CUDA_ARRAY3D_DESCRIPTOR * );
+# 6048 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArray3DGetDescriptor_v2(CUDA_ARRAY3D_DESCRIPTOR * , CUarray );
+# 6175 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayCreate(CUmipmappedArray * , const CUDA_ARRAY3D_DESCRIPTOR * , unsigned );
+# 6201 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayGetLevel(CUarray * , CUmipmappedArray , unsigned );
+# 6221 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayDestroy(CUmipmappedArray );
+# 6437 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuPointerGetAttribute(void * , CUpointer_attribute , CUdeviceptr );
+# 6479 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamCreate(CUstream * , unsigned );
+# 6522 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamWaitEvent(CUstream , CUevent , unsigned );
+# 6567 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamAddCallback(CUstream , CUstreamCallback , void * , unsigned );
+# 6592 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamQuery(CUstream );
+# 6618 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamSynchronize(CUstream );
+# 6647 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamDestroy_v2(CUstream );
+# 6699 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventCreate(CUevent * , unsigned );
+# 6737 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventRecord(CUevent , CUstream );
+# 6768 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventQuery(CUevent );
+# 6802 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventSynchronize(CUevent );
+# 6831 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventDestroy_v2(CUevent );
+# 6875 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventElapsedTime(float * , CUevent , CUevent );
+# 6938 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncGetAttribute(int * , CUfunction_attribute , CUfunction );
+# 6981 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetCacheConfig(CUfunction , CUfunc_cache );
+# 7033 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetSharedMemConfig(CUfunction , CUsharedconfig );
+# 7150 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchKernel(CUfunction , unsigned , unsigned , unsigned , unsigned , unsigned , unsigned , unsigned , CUstream , void ** , void ** );
+# 7208 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetBlockShape(CUfunction , int , int , int );
+# 7242 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetSharedSize(CUfunction , unsigned );
+# 7274 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetSize(CUfunction , unsigned );
+# 7307 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSeti(CUfunction , int , unsigned );
+# 7340 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetf(CUfunction , int , float );
+# 7375 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetv(CUfunction , int , void * , unsigned );
+# 7412 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunch(CUfunction );
+# 7451 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchGrid(CUfunction , int , int );
+# 7495 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchGridAsync(CUfunction , int , int , CUstream );
+# 7520 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetTexRef(CUfunction , int , CUtexref );
+# 7559 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetArray(CUtexref , CUarray , unsigned );
+# 7586 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmappedArray(CUtexref , CUmipmappedArray , unsigned );
+# 7630 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddress_v2(size_t * , CUtexref , CUdeviceptr , size_t );
+# 7682 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddress2D_v3(CUtexref , const CUDA_ARRAY_DESCRIPTOR * , CUdeviceptr , size_t );
+# 7711 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFormat(CUtexref , CUarray_format , int );
+# 7751 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddressMode(CUtexref , int , CUaddress_mode );
+# 7784 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFilterMode(CUtexref , CUfilter_mode );
+# 7817 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapFilterMode(CUtexref , CUfilter_mode );
+# 7843 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapLevelBias(CUtexref , float );
+# 7871 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapLevelClamp(CUtexref , float , float );
+# 7897 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMaxAnisotropy(CUtexref , unsigned );
+# 7932 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFlags(CUtexref , unsigned );
+# 7958 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetAddress_v2(CUdeviceptr * , CUtexref );
+# 7984 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetArray(CUarray * , CUtexref );
+# 8009 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmappedArray(CUmipmappedArray * , CUtexref );
+# 8035 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetAddressMode(CUaddress_mode * , CUtexref , int );
+# 8059 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFilterMode(CUfilter_mode * , CUtexref );
+# 8085 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFormat(CUarray_format * , int * , CUtexref );
+# 8109 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapFilterMode(CUfilter_mode * , CUtexref );
+# 8133 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapLevelBias(float * , CUtexref );
+# 8158 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapLevelClamp(float * , float * , CUtexref );
+# 8182 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMaxAnisotropy(int * , CUtexref );
+# 8205 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFlags(unsigned * , CUtexref );
+# 8241 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefCreate(CUtexref * );
+# 8261 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefDestroy(CUtexref );
+# 8297 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfRefSetArray(CUsurfref , CUarray , unsigned );
+# 8318 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfRefGetArray(CUarray * , CUsurfref );
+# 8535 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectCreate(CUtexObject * , const CUDA_RESOURCE_DESC * , const CUDA_TEXTURE_DESC * , const CUDA_RESOURCE_VIEW_DESC * );
+# 8553 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectDestroy(CUtexObject );
+# 8572 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetResourceDesc(CUDA_RESOURCE_DESC * , CUtexObject );
+# 8591 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetTextureDesc(CUDA_TEXTURE_DESC * , CUtexObject );
+# 8611 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetResourceViewDesc(CUDA_RESOURCE_VIEW_DESC * , CUtexObject );
+# 8647 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectCreate(CUsurfObject * , const CUDA_RESOURCE_DESC * );
+# 8665 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectDestroy(CUsurfObject );
+# 8684 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectGetResourceDesc(CUDA_RESOURCE_DESC * , CUsurfObject );
+# 8723 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceCanAccessPeer(int * , CUdevice , CUdevice );
+# 8770 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxEnablePeerAccess(CUcontext , unsigned );
+# 8795 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDisablePeerAccess(CUcontext );
+# 8836 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsUnregisterResource(CUgraphicsResource );
+# 8874 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsSubResourceGetMappedArray(CUarray * , CUgraphicsResource , unsigned , unsigned );
+# 8905 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceGetMappedMipmappedArray(CUmipmappedArray * , CUgraphicsResource );
+# 8941 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceGetMappedPointer_v2(CUdeviceptr * , size_t * , CUgraphicsResource );
+# 8982 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceSetMapFlags(CUgraphicsResource , unsigned );
+# 9020 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsMapResources(unsigned , CUgraphicsResource * , CUstream );
+# 9055 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsUnmapResources(unsigned , CUgraphicsResource * , CUstream );
+# 9059 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGetExportTable(const void ** , const CUuuid * );
+# 10 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" CUresult cuda_enc_setup(char * , char * );
+# 11 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" CUresult cuda_enc_release();
+# 123 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" { static inline int _benchmark_init()
+# 124 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 125 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("_benchmark_init\n");
+# 128 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 129 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("calling cuda_enc_setup\n");
+# 131 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+char static_key[] = "0123456789abcdeF0123456789abcdeF";
+# 132 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+char static_iv[] = "12345678876543211234567887654321";
+# 134 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+CUresult ret = cuda_enc_setup(static_key, static_iv);
+# 135 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+if (ret != (CUDA_SUCCESS)) {
+# 136 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+fprintf(stderr, "cuda_enc_setup failed\n");
+# 137 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return ret;
+# 138 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 144 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return CUDA_SUCCESS;
+# 145 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+} }
+# 147 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" { static inline int _benchmark_cleanup()
+# 148 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 152 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 153 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+CUresult ret = cuda_enc_release();
+# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+if (ret != (CUDA_SUCCESS)) {
+# 155 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+fprintf(stderr, "cuda_enc_release failed\n");
+# 156 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return ret;
+# 157 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 158 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 160 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return CUDA_SUCCESS;
+# 161 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+} }
 # 75 "./kernel/../common.h"
 extern "C" { typedef struct list_item list_item_t; }
 # 82 "./kernel/../common.h"
@@ -26882,982 +28154,6 @@ extern "C" node *redistribute_nodes(node * , node * , node * , int , int , int )
 extern "C" node *delete_entry(node * , node * , int , void * );
 # 453 "./kernel/../common.h"
 extern "C" node *deleteVal(node * , int );
-# 40 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stdarg.h" 3
-extern "C" { typedef __builtin_va_list __gnuc_va_list; }
-# 21 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-extern "C" { typedef
-# 14 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-struct {
-# 15 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-int __count;
-# 17 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-union {
-# 18 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-unsigned __wch;
-# 19 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-char __wchb[4];
-# 20 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-} __value;
-# 21 "/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h" 3
-} __mbstate_t; }
-# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
-extern "C" { typedef
-# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
-struct _G_fpos_t {
-# 12 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
-__off_t __pos;
-# 13 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
-__mbstate_t __state;
-# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h" 3
-} __fpos_t; }
-# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
-extern "C" { typedef
-# 10 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
-struct _G_fpos64_t {
-# 12 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
-__off64_t __pos;
-# 13 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
-__mbstate_t __state;
-# 14 "/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h" 3
-} __fpos64_t; }
-# 4 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 3
-struct _IO_FILE;
-# 5 "/usr/include/x86_64-linux-gnu/bits/types/__FILE.h" 3
-extern "C" { typedef _IO_FILE __FILE; }
-# 4 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 3
-struct _IO_FILE;
-# 7 "/usr/include/x86_64-linux-gnu/bits/types/FILE.h" 3
-extern "C" { typedef _IO_FILE FILE; }
-# 35 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-struct _IO_FILE;
-# 36 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-struct _IO_marker;
-# 37 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-struct _IO_codecvt;
-# 38 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-struct _IO_wide_data;
-# 43 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-extern "C" { typedef void _IO_lock_t; }
-# 49 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-extern "C" { struct _IO_FILE {
-# 51 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-int _flags;
-# 54 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_read_ptr;
-# 55 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_read_end;
-# 56 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_read_base;
-# 57 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_write_base;
-# 58 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_write_ptr;
-# 59 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_write_end;
-# 60 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_buf_base;
-# 61 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_buf_end;
-# 64 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_save_base;
-# 65 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_backup_base;
-# 66 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char *_IO_save_end;
-# 68 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_marker *_markers;
-# 70 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_FILE *_chain;
-# 72 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-int _fileno;
-# 73 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-int _flags2;
-# 74 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-__off_t _old_offset;
-# 77 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-unsigned short _cur_column;
-# 78 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-signed char _vtable_offset;
-# 79 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char _shortbuf[1];
-# 81 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_lock_t *_lock;
-# 89 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-__off64_t _offset;
-# 91 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_codecvt *_codecvt;
-# 92 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_wide_data *_wide_data;
-# 93 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-_IO_FILE *_freeres_list;
-# 94 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-void *_freeres_buf;
-# 95 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-size_t __pad5;
-# 96 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-int _mode;
-# 98 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-char _unused2[(((15) * sizeof(int)) - ((4) * sizeof(void *))) - sizeof(size_t)];
-# 99 "/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h" 3
-}; }
-# 27 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-extern "C" { typedef __ssize_t cookie_read_function_t(void * , char * , size_t ); }
-# 36 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-extern "C" { typedef __ssize_t cookie_write_function_t(void * , const char * , size_t ); }
-# 45 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-extern "C" { typedef int cookie_seek_function_t(void * , __off64_t * , int ); }
-# 48 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-extern "C" { typedef int cookie_close_function_t(void * ); }
-# 61 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-extern "C" { typedef
-# 55 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-struct _IO_cookie_io_functions_t {
-# 57 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-cookie_read_function_t *read;
-# 58 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-cookie_write_function_t *write;
-# 59 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-cookie_seek_function_t *seek;
-# 60 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-cookie_close_function_t *close;
-# 61 "/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h" 3
-} cookie_io_functions_t; }
-# 52 "/usr/include/stdio.h" 3
-extern "C" { typedef __gnuc_va_list va_list; }
-# 84 "/usr/include/stdio.h" 3
-extern "C" { typedef __fpos_t fpos_t; }
-# 89 "/usr/include/stdio.h" 3
-extern "C" { typedef __fpos64_t fpos64_t; }
-# 137 "/usr/include/stdio.h" 3
-extern "C" { extern FILE *stdin; }
-# 138 "/usr/include/stdio.h" 3
-extern "C" { extern FILE *stdout; }
-# 139 "/usr/include/stdio.h" 3
-extern "C" { extern FILE *stderr; }
-# 146 "/usr/include/stdio.h" 3
-extern "C" int remove(const char * ) throw();
-# 148 "/usr/include/stdio.h" 3
-extern "C" int rename(const char * , const char * ) throw();
-# 152 "/usr/include/stdio.h" 3
-extern "C" int renameat(int , const char * , int , const char * ) throw();
-# 164 "/usr/include/stdio.h" 3
-extern "C" int renameat2(int , const char * , int , const char * , unsigned ) throw();
-# 173 "/usr/include/stdio.h" 3
-extern "C" FILE *tmpfile() __attribute((__warn_unused_result__));
-# 183 "/usr/include/stdio.h" 3
-extern "C" FILE *tmpfile64() __attribute((__warn_unused_result__));
-# 187 "/usr/include/stdio.h" 3
-extern "C" char *tmpnam(char * ) throw() __attribute((__warn_unused_result__));
-# 192 "/usr/include/stdio.h" 3
-extern "C" char *tmpnam_r(char * ) throw() __attribute((__warn_unused_result__));
-# 204 "/usr/include/stdio.h" 3
-extern "C" char *tempnam(const char * , const char * ) throw()
-# 205 "/usr/include/stdio.h" 3
- __attribute((__malloc__)) __attribute((__warn_unused_result__));
-# 213 "/usr/include/stdio.h" 3
-extern "C" int fclose(FILE * );
-# 218 "/usr/include/stdio.h" 3
-extern "C" int fflush(FILE * );
-# 227 "/usr/include/stdio.h" 3
-extern "C" int fflush_unlocked(FILE * );
-# 237 "/usr/include/stdio.h" 3
-extern "C" int fcloseall();
-# 246 "/usr/include/stdio.h" 3
-extern "C" FILE *fopen(const char *__restrict__ , const char *__restrict__ )
-# 247 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 252 "/usr/include/stdio.h" 3
-extern "C" FILE *freopen(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ )
-# 254 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 270 "/usr/include/stdio.h" 3
-extern "C" FILE *fopen64(const char *__restrict__ , const char *__restrict__ )
-# 271 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 272 "/usr/include/stdio.h" 3
-extern "C" FILE *freopen64(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ )
-# 274 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 279 "/usr/include/stdio.h" 3
-extern "C" FILE *fdopen(int , const char * ) throw() __attribute((__warn_unused_result__));
-# 285 "/usr/include/stdio.h" 3
-extern "C" FILE *fopencookie(void *__restrict__ , const char *__restrict__ , cookie_io_functions_t ) throw()
-# 287 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 292 "/usr/include/stdio.h" 3
-extern "C" FILE *fmemopen(void * , size_t , const char * ) throw()
-# 293 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 298 "/usr/include/stdio.h" 3
-extern "C" FILE *open_memstream(char ** , size_t * ) throw() __attribute((__warn_unused_result__));
-# 304 "/usr/include/stdio.h" 3
-extern "C" void setbuf(FILE *__restrict__ , char *__restrict__ ) throw();
-# 308 "/usr/include/stdio.h" 3
-extern "C" int setvbuf(FILE *__restrict__ , char *__restrict__ , int , size_t ) throw();
-# 314 "/usr/include/stdio.h" 3
-extern "C" void setbuffer(FILE *__restrict__ , char *__restrict__ , size_t ) throw();
-# 318 "/usr/include/stdio.h" 3
-extern "C" void setlinebuf(FILE * ) throw();
-# 326 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fprintf(FILE *__restrict__ , const char *__restrict__ , ...); }
-# 332 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int printf(const char *__restrict__ , ...); }
-# 334 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int sprintf(char *__restrict__ , const char *__restrict__ , ...) throw(); }
-# 341 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vfprintf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list ); }
-# 347 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vprintf(const char *__restrict__ , __gnuc_va_list ); }
-# 349 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vsprintf(char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw(); }
-# 354 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int snprintf(char *__restrict__ , size_t , const char *__restrict__ , ...) throw()
-# 356 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 3, 4))); }
-# 358 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vsnprintf(char *__restrict__ , size_t , const char *__restrict__ , __gnuc_va_list ) throw()
-# 360 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 3, 0))); }
-# 366 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vasprintf(char **__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
-# 368 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))) __attribute((__warn_unused_result__)); }
-# 369 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int __asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
-# 371 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))) __attribute((__warn_unused_result__)); }
-# 372 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
-# 374 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))) __attribute((__warn_unused_result__)); }
-# 379 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vdprintf(int , const char *__restrict__ , __gnuc_va_list )
-# 381 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))); }
-# 382 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int dprintf(int , const char *__restrict__ , ...)
-# 383 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))); }
-# 391 "/usr/include/stdio.h" 3
-extern "C" int fscanf(FILE *__restrict__ , const char *__restrict__ , ...)
-# 392 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 397 "/usr/include/stdio.h" 3
-extern "C" int scanf(const char *__restrict__ , ...) __attribute((__warn_unused_result__));
-# 399 "/usr/include/stdio.h" 3
-extern "C" int sscanf(const char *__restrict__ , const char *__restrict__ , ...) throw();
-# 432 "/usr/include/stdio.h" 3
-extern "C" int vfscanf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list )
-# 434 "/usr/include/stdio.h" 3
- __attribute((__format__(__scanf__, 2, 0))) __attribute((__warn_unused_result__));
-# 440 "/usr/include/stdio.h" 3
-extern "C" int vscanf(const char *__restrict__ , __gnuc_va_list )
-# 441 "/usr/include/stdio.h" 3
- __attribute((__format__(__scanf__, 1, 0))) __attribute((__warn_unused_result__));
-# 444 "/usr/include/stdio.h" 3
-extern "C" int vsscanf(const char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
-# 446 "/usr/include/stdio.h" 3
- __attribute((__format__(__scanf__, 2, 0)));
-# 485 "/usr/include/stdio.h" 3
-extern "C" int fgetc(FILE * );
-# 486 "/usr/include/stdio.h" 3
-extern "C" int getc(FILE * );
-# 492 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getchar(); }
-# 499 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getc_unlocked(FILE * ); }
-# 500 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getchar_unlocked(); }
-# 510 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fgetc_unlocked(FILE * ); }
-# 521 "/usr/include/stdio.h" 3
-extern "C" int fputc(int , FILE * );
-# 522 "/usr/include/stdio.h" 3
-extern "C" int putc(int , FILE * );
-# 528 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putchar(int ); }
-# 537 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fputc_unlocked(int , FILE * ); }
-# 545 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putc_unlocked(int , FILE * ); }
-# 546 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putchar_unlocked(int ); }
-# 553 "/usr/include/stdio.h" 3
-extern "C" int getw(FILE * );
-# 556 "/usr/include/stdio.h" 3
-extern "C" int putw(int , FILE * );
-# 564 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *fgets(char *__restrict__ , int , FILE *__restrict__ )
-# 565 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
-# 577 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *gets(char * ) __attribute((__warn_unused_result__)) __attribute((__deprecated__)); }
-# 587 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *fgets_unlocked(char *__restrict__ , int , FILE *__restrict__ )
-# 588 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
-# 603 "/usr/include/stdio.h" 3
-extern "C" __ssize_t __getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ )
-# 605 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 606 "/usr/include/stdio.h" 3
-extern "C" __ssize_t getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ )
-# 608 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
-# 616 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline __ssize_t getline(char **__restrict__ , size_t *__restrict__ , FILE *__restrict__ )
-# 618 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
-# 626 "/usr/include/stdio.h" 3
-extern "C" int fputs(const char *__restrict__ , FILE *__restrict__ );
-# 632 "/usr/include/stdio.h" 3
-extern "C" int puts(const char * );
-# 639 "/usr/include/stdio.h" 3
-extern "C" int ungetc(int , FILE * );
-# 646 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t fread(void *__restrict__ , size_t , size_t , FILE *__restrict__ )
-# 647 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
-# 652 "/usr/include/stdio.h" 3
-extern "C" size_t fwrite(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
-# 662 "/usr/include/stdio.h" 3
-extern "C" int fputs_unlocked(const char *__restrict__ , FILE *__restrict__ );
-# 673 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t fread_unlocked(void *__restrict__ , size_t , size_t , FILE *__restrict__ )
-# 674 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
-# 675 "/usr/include/stdio.h" 3
-extern "C" size_t fwrite_unlocked(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
-# 684 "/usr/include/stdio.h" 3
-extern "C" int fseek(FILE * , long , int );
-# 689 "/usr/include/stdio.h" 3
-extern "C" long ftell(FILE * ) __attribute((__warn_unused_result__));
-# 694 "/usr/include/stdio.h" 3
-extern "C" void rewind(FILE * );
-# 707 "/usr/include/stdio.h" 3
-extern "C" int fseeko(FILE * , __off_t , int );
-# 712 "/usr/include/stdio.h" 3
-extern "C" __off_t ftello(FILE * ) __attribute((__warn_unused_result__));
-# 731 "/usr/include/stdio.h" 3
-extern "C" int fgetpos(FILE *__restrict__ , fpos_t *__restrict__ );
-# 736 "/usr/include/stdio.h" 3
-extern "C" int fsetpos(FILE * , const fpos_t * );
-# 750 "/usr/include/stdio.h" 3
-extern "C" int fseeko64(FILE * , __off64_t , int );
-# 751 "/usr/include/stdio.h" 3
-extern "C" __off64_t ftello64(FILE * ) __attribute((__warn_unused_result__));
-# 752 "/usr/include/stdio.h" 3
-extern "C" int fgetpos64(FILE *__restrict__ , fpos64_t *__restrict__ );
-# 753 "/usr/include/stdio.h" 3
-extern "C" int fsetpos64(FILE * , const fpos64_t * );
-# 757 "/usr/include/stdio.h" 3
-extern "C" void clearerr(FILE * ) throw();
-# 759 "/usr/include/stdio.h" 3
-extern "C" int feof(FILE * ) throw() __attribute((__warn_unused_result__));
-# 761 "/usr/include/stdio.h" 3
-extern "C" int ferror(FILE * ) throw() __attribute((__warn_unused_result__));
-# 765 "/usr/include/stdio.h" 3
-extern "C" void clearerr_unlocked(FILE * ) throw();
-# 766 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int feof_unlocked(FILE * ) throw() __attribute((__warn_unused_result__)); }
-# 767 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int ferror_unlocked(FILE * ) throw() __attribute((__warn_unused_result__)); }
-# 775 "/usr/include/stdio.h" 3
-extern "C" void perror(const char * );
-# 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
-extern "C" { extern int sys_nerr; }
-# 27 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
-extern "C" { extern const char *const sys_errlist[]; }
-# 30 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
-extern "C" { extern int _sys_nerr; }
-# 31 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
-extern "C" { extern const char *const _sys_errlist[]; }
-# 786 "/usr/include/stdio.h" 3
-extern "C" int fileno(FILE * ) throw() __attribute((__warn_unused_result__));
-# 791 "/usr/include/stdio.h" 3
-extern "C" int fileno_unlocked(FILE * ) throw() __attribute((__warn_unused_result__));
-# 800 "/usr/include/stdio.h" 3
-extern "C" FILE *popen(const char * , const char * ) __attribute((__warn_unused_result__));
-# 806 "/usr/include/stdio.h" 3
-extern "C" int pclose(FILE * );
-# 812 "/usr/include/stdio.h" 3
-extern "C" char *ctermid(char * ) throw();
-# 818 "/usr/include/stdio.h" 3
-extern "C" char *cuserid(char * );
-# 823 "/usr/include/stdio.h" 3
-struct obstack;
-# 826 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int obstack_printf(obstack *__restrict__ , const char *__restrict__ , ...) throw()
-# 828 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))); }
-# 829 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int obstack_vprintf(obstack *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
-# 832 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))); }
-# 840 "/usr/include/stdio.h" 3
-extern "C" void flockfile(FILE * ) throw();
-# 844 "/usr/include/stdio.h" 3
-extern "C" int ftrylockfile(FILE * ) throw() __attribute((__warn_unused_result__));
-# 847 "/usr/include/stdio.h" 3
-extern "C" void funlockfile(FILE * ) throw();
-# 858 "/usr/include/stdio.h" 3
-extern "C" int __uflow(FILE *);
-# 859 "/usr/include/stdio.h" 3
-extern "C" int __overflow(FILE *, int);
-# 47 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 47 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getchar()
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return getc(stdin);
-# 50 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 55 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-fgetc_unlocked(FILE *__fp)
-# 57 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 58 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__fp->_IO_read_ptr) >= (__fp->_IO_read_end), 0)) ? __uflow(__fp) : (*((unsigned char *)((__fp->_IO_read_ptr)++)));
-# 59 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 65 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getc_unlocked(FILE *__fp)
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 68 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__fp->_IO_read_ptr) >= (__fp->_IO_read_end), 0)) ? __uflow(__fp) : (*((unsigned char *)((__fp->_IO_read_ptr)++)));
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 72 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getchar_unlocked()
-# 74 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 75 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((stdin->_IO_read_ptr) >= (stdin->_IO_read_end), 0)) ? __uflow(stdin) : (*((unsigned char *)((stdin->_IO_read_ptr)++)));
-# 76 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 81 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putchar(int __c)
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 84 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return putc(__c, stdout);
-# 85 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 90 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-fputc_unlocked(int __c, FILE *__stream)
-# 92 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__stream->_IO_write_ptr) >= (__stream->_IO_write_end), 0)) ? __overflow(__stream, (unsigned char)__c) : ((unsigned char)((*((__stream->_IO_write_ptr)++)) = __c));
-# 94 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 100 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putc_unlocked(int __c, FILE *__stream)
-# 102 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 103 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__stream->_IO_write_ptr) >= (__stream->_IO_write_end), 0)) ? __overflow(__stream, (unsigned char)__c) : ((unsigned char)((*((__stream->_IO_write_ptr)++)) = __c));
-# 104 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 107 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putchar_unlocked(int __c)
-# 109 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 110 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((stdout->_IO_write_ptr) >= (stdout->_IO_write_end), 0)) ? __overflow(stdout, (unsigned char)__c) : ((unsigned char)((*((stdout->_IO_write_ptr)++)) = __c));
-# 111 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline __ssize_t
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getline(char **__lineptr, size_t *__n, FILE *__stream)
-# 119 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 120 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return __getdelim(__lineptr, __n, '\n', __stream);
-# 121 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-feof_unlocked(FILE *__stream) throw()
-# 129 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return ((__stream->_flags) & 16) != 0;
-# 131 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 134 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-ferror_unlocked(FILE *__stream) throw()
-# 136 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 137 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return ((__stream->_flags) & 32) != 0;
-# 138 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __sprintf_chk(char *__restrict__ , int , size_t , const char *__restrict__ , ...) throw();
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vsprintf_chk(char *__restrict__ , int , size_t , const char *__restrict__ , __gnuc_va_list ) throw();
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-sprintf(char *__restrict__ __s, const char *__restrict__ __fmt, ...) throw()
-# 35 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___sprintf_chk(__s, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __builtin_va_arg_pack());
-# 38 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 45 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vsprintf(char *__restrict__ __s, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___vsprintf_chk(__s, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __ap);
-# 51 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 55 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __snprintf_chk(char *__restrict__ , size_t , int , size_t , const char *__restrict__ , ...) throw();
-# 58 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vsnprintf_chk(char *__restrict__ , size_t , int , size_t , const char *__restrict__ , __gnuc_va_list ) throw();
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 63 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-snprintf(char *__restrict__ __s, size_t __n, const char *__restrict__ __fmt, ...) throw()
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___snprintf_chk(__s, __n, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __builtin_va_arg_pack());
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 76 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vsnprintf(char *__restrict__ __s, size_t __n, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 79 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 80 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___vsnprintf_chk(__s, __n, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __ap);
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 88 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __fprintf_chk(FILE *__restrict__ , int , const char *__restrict__ , ...);
-# 90 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __printf_chk(int , const char *__restrict__ , ...);
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vfprintf_chk(FILE *__restrict__ , int , const char *__restrict__ , __gnuc_va_list );
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vprintf_chk(int , const char *__restrict__ , __gnuc_va_list );
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 97 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fprintf(FILE *__restrict__ __stream, const char *__restrict__ __fmt, ...)
-# 99 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 100 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fprintf_chk(__stream, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 102 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 104 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-printf(const char *__restrict__ __fmt, ...)
-# 106 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 107 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __printf_chk(2 - 1, __fmt, __builtin_va_arg_pack());
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 116 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vprintf(const char *__restrict__ __fmt, __gnuc_va_list __ap)
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 120 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vfprintf_chk(stdout, 2 - 1, __fmt, __ap);
-# 124 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 126 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vfprintf(FILE *__restrict__ __stream, const char *__restrict__
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__fmt, __gnuc_va_list __ap)
-# 129 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vfprintf_chk(__stream, 2 - 1, __fmt, __ap);
-# 131 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 134 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __dprintf_chk(int , int , const char *__restrict__ , ...)
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4)));
-# 136 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vdprintf_chk(int , int , const char *__restrict__ , __gnuc_va_list )
-# 138 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0)));
-# 142 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 141 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 142 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-dprintf(int __fd, const char *__restrict__ __fmt, ...)
-# 143 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __dprintf_chk(__fd, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 146 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 152 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vdprintf(int __fd, const char *__restrict__ __fmt, __gnuc_va_list __ap)
-# 154 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 155 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vdprintf_chk(__fd, 2 - 1, __fmt, __ap);
-# 156 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 161 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __asprintf_chk(char **__restrict__ , int , const char *__restrict__ , ...) throw()
-# 163 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4))) __attribute((__warn_unused_result__));
-# 164 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vasprintf_chk(char **__restrict__ , int , const char *__restrict__ , __gnuc_va_list ) throw()
-# 166 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0))) __attribute((__warn_unused_result__));
-# 167 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __obstack_printf_chk(obstack *__restrict__ , int , const char *__restrict__ , ...) throw()
-# 170 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4)));
-# 171 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __obstack_vprintf_chk(obstack *__restrict__ , int , const char *__restrict__ , __gnuc_va_list ) throw()
-# 175 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0)));
-# 179 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 178 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 179 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-asprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, ...) throw()
-# 180 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 181 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __asprintf_chk(__ptr, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 183 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 186 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 185 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 186 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__asprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, ...) throw()
-# 188 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 189 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __asprintf_chk(__ptr, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 191 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 194 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 193 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 194 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-obstack_printf(obstack *__restrict__ __obstack, const char *__restrict__ __fmt, ...) throw()
-# 196 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 197 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __obstack_printf_chk(__obstack, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 199 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 210 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 209 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 210 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vasprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 212 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 213 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vasprintf_chk(__ptr, 2 - 1, __fmt, __ap);
-# 214 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 217 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 216 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 217 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-obstack_vprintf(obstack *__restrict__ __obstack, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 219 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 220 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __obstack_vprintf_chk(__obstack, 2 - 1, __fmt, __ap);
-# 222 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 229 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__gets_chk(char * , size_t) __attribute((__warn_unused_result__));
-# 230 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__gets_warn(char * ) __asm__("gets")
-# 231 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("please use fgets or getline instead, gets can\'t specify buffer size")));
-# 235 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 234 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 235 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-gets(char *__str)
-# 236 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 237 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__str, 2 > 1) != ((size_t)(-1))) {
-# 238 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __gets_chk(__str, __builtin_object_size(__str, 2 > 1)); }
-# 239 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __gets_warn(__str);
-# 240 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 243 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_chk(char *__restrict__ , size_t , int , FILE *__restrict__ )
-# 244 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 245 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_alias(char *__restrict__ , int , FILE *__restrict__ ) __asm__("fgets") __attribute((__warn_unused_result__));
-# 248 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_chk_warn(char *__restrict__ , size_t , int , FILE *__restrict__ ) __asm__("__fgets_chk")
-# 251 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fgets called with bigger size than length of destination buffer")));
-# 255 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 254 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 255 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fgets(char *__restrict__ __s, int __n, FILE *__restrict__ __stream)
-# 256 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 257 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__s, 2 > 1) != ((size_t)(-1)))
-# 258 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 259 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((!(0)) || (__n <= 0)) {
-# 260 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_chk(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 262 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((size_t)__n) > __builtin_object_size(__s, 2 > 1)) {
-# 263 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_chk_warn(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 264 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 265 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_alias(__s, __n, __stream);
-# 266 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 268 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_chk(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ )
-# 270 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 271 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_alias(void *__restrict__ , size_t , size_t , FILE *__restrict__ ) __asm__("fread") __attribute((__warn_unused_result__));
-# 275 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_chk_warn(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ ) __asm__("__fread_chk")
-# 280 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fread called with bigger size * nmemb than length of destination buffer")));
-# 284 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 283 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline size_t
-# 284 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fread(void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__
-# 285 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__stream)
-# 286 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 287 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__ptr, 0) != ((size_t)(-1)))
-# 288 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 289 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((!(0)) || (!(0))) || ((__size | __n) >= (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) {
-# 292 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_chk(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 294 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((__size * __n) > __builtin_object_size(__ptr, 0)) {
-# 295 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_chk_warn(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 296 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 297 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_alias(__ptr, __size, __n, __stream);
-# 298 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 301 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_chk(char *__restrict__ , size_t , int , FILE *__restrict__ )
-# 302 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 303 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_alias(char *__restrict__ , int , FILE *__restrict__ ) __asm__("fgets_unlocked") __attribute((__warn_unused_result__));
-# 306 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_chk_warn(char *__restrict__ , size_t , int , FILE *__restrict__ ) __asm__("__fgets_unlocked_chk")
-# 309 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fgets_unlocked called with bigger size than length of destination buffer")));
-# 313 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 312 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 313 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fgets_unlocked(char *__restrict__ __s, int __n, FILE *__restrict__ __stream)
-# 314 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 315 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__s, 2 > 1) != ((size_t)(-1)))
-# 316 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 317 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((!(0)) || (__n <= 0)) {
-# 318 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_chk(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 320 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((size_t)__n) > __builtin_object_size(__s, 2 > 1)) {
-# 321 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_chk_warn(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 322 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 323 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_alias(__s, __n, __stream);
-# 324 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 329 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_chk(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ )
-# 331 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 332 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_alias(void *__restrict__ , size_t , size_t , FILE *__restrict__ ) __asm__("fread_unlocked") __attribute((__warn_unused_result__));
-# 336 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_chk_warn(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ ) __asm__("__fread_unlocked_chk")
-# 341 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fread_unlocked called with bigger size * nmemb than length of destination buffer")));
-# 345 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 344 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline size_t
-# 345 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fread_unlocked(void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__
-# 346 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__stream)
-# 347 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 348 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__ptr, 0) != ((size_t)(-1)))
-# 349 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 350 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((!(0)) || (!(0))) || ((__size | __n) >= (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) {
-# 353 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_chk(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 356 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((__size * __n) > __builtin_object_size(__ptr, 0)) {
-# 357 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_chk_warn(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 359 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 362 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((((0) && (0)) && ((__size | __n) < (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) && ((__size * __n) <= (8)))
-# 366 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 367 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-size_t __cnt = (__size * __n);
-# 368 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-char *__cptr = ((char *)__ptr);
-# 369 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__cnt == (0)) {
-# 370 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return 0; }
-# 372 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-for (; __cnt > (0); --__cnt)
-# 373 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 374 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-int __c = getc_unlocked(__stream);
-# 375 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__c == (-1)) {
-# 376 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-break; }
-# 377 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-(*(__cptr++)) = __c;
-# 378 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 379 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return (__cptr - ((char *)__ptr)) / __size;
-# 380 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 382 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_alias(__ptr, __size, __n, __stream);
-# 383 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
 # 23 "./kernel/../util/cuda/cuda.h"
 extern "C" void setdevice();
 # 29 "./kernel/../util/cuda/cuda.h"
@@ -28072,9 +28368,331 @@ printf("Total time:\n");
 printf("%.12f s\n", ((float)(time6 - time0)) / (1000000));
 # 294 "./kernel/kernel_gpu_cuda_wrapper.cu"
 } }
-# 1 "tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
-# 1 "tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 1 3
+# 14 "./kernel/../util/timer/timer.h"
+extern "C" long long get_time();
+# 6 "./kernel/./kernel_gpu_cuda_2.cu"
+extern "C" { void findRangeK(long height, knode *
+# 8 "./kernel/./kernel_gpu_cuda_2.cu"
+knodesD, long
+# 9 "./kernel/./kernel_gpu_cuda_2.cu"
+knodes_elem, long *
+# 11 "./kernel/./kernel_gpu_cuda_2.cu"
+currKnodeD, long *
+# 12 "./kernel/./kernel_gpu_cuda_2.cu"
+offsetD, long *
+# 13 "./kernel/./kernel_gpu_cuda_2.cu"
+lastKnodeD, long *
+# 14 "./kernel/./kernel_gpu_cuda_2.cu"
+offset_2D, int *
+# 15 "./kernel/./kernel_gpu_cuda_2.cu"
+startD, int *
+# 16 "./kernel/./kernel_gpu_cuda_2.cu"
+endD, int *
+# 17 "./kernel/./kernel_gpu_cuda_2.cu"
+RecstartD, int *
+# 18 "./kernel/./kernel_gpu_cuda_2.cu"
+ReclenD) ;
+# 81 "./kernel/./kernel_gpu_cuda_2.cu"
+}
+# 10 "./kernel/./kernel_gpu_cuda_wrapper_2.h"
+extern "C" void kernel_gpu_cuda_wrapper_2(knode * , long , long , int , long , int , long * , long * , long * , long * , int * , int * , int * , int * );
+# 39 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+extern "C" { void kernel_gpu_cuda_wrapper_2(knode *knodes, long
+# 40 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+knodes_elem, long
+# 41 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+knodes_mem, int
+# 43 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+order, long
+# 44 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+maxheight, int
+# 45 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+count, long *
+# 47 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+currKnode, long *
+# 48 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+offset, long *
+# 49 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+lastKnode, long *
+# 50 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+offset_2, int *
+# 51 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+start, int *
+# 52 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+end, int *
+# 53 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+recstart, int *
+# 54 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+reclength)
+# 55 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+{
+# 60 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 62 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time0;
+# 63 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time1;
+# 64 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time2;
+# 65 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time3;
+# 66 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time4;
+# 67 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time5;
+# 68 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long long time6;
+# 70 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time0 = get_time();
+# 81 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaThreadSynchronize();
+# 88 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int numBlocks;
+# 89 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+numBlocks = count;
+# 90 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int threadsPerBlock;
+# 91 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+threadsPerBlock = ((order < 1024) ? order : 1024);
+# 93 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("# of blocks = %d, # of threads/block = %d (ensure that device can handle)\n", numBlocks, threadsPerBlock);
+# 95 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time1 = get_time();
+# 110 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+knode *knodesD;
+# 111 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&knodesD), knodes_mem);
+# 112 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc  recordsD");
+# 118 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long *currKnodeD;
+# 119 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&currKnodeD), count * sizeof(long));
+# 120 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc  currKnodeD");
+# 126 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long *offsetD;
+# 127 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&offsetD), count * sizeof(long));
+# 128 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc  offsetD");
+# 134 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long *lastKnodeD;
+# 135 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&lastKnodeD), count * sizeof(long));
+# 136 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc  lastKnodeD");
+# 142 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+long *offset_2D;
+# 143 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&offset_2D), count * sizeof(long));
+# 144 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc  offset_2D");
+# 150 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int *startD;
+# 151 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&startD), count * sizeof(int));
+# 152 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc startD");
+# 158 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int *endD;
+# 159 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&endD), count * sizeof(int));
+# 160 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc endD");
+# 170 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int *ansDStart;
+# 171 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&ansDStart), count * sizeof(int));
+# 172 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc ansDStart");
+# 178 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+int *ansDLength;
+# 179 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMalloc((void **)(&ansDLength), count * sizeof(int));
+# 180 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc ansDLength");
+# 182 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time2 = get_time();
+# 195 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 196 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 197 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(knodesD, knodes, knodes_mem, cudaMemcpyHostToDevice);
+# 198 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc cudaMemcpy memD");
+# 204 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(currKnodeD, currKnode, count * sizeof(long), cudaMemcpyHostToDevice);
+# 205 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc cudaMemcpy currKnodeD");
+# 211 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(offsetD, offset, count * sizeof(long), cudaMemcpyHostToDevice);
+# 212 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc cudaMemcpy offsetD");
+# 218 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(lastKnodeD, lastKnode, count * sizeof(long), cudaMemcpyHostToDevice);
+# 219 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc cudaMemcpy lastKnodeD");
+# 225 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(offset_2D, offset_2, count * sizeof(long), cudaMemcpyHostToDevice);
+# 226 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMalloc cudaMemcpy offset_2D");
+# 232 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(startD, start, count * sizeof(int), cudaMemcpyHostToDevice);
+# 233 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy startD");
+# 239 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(endD, end, count * sizeof(int), cudaMemcpyHostToDevice);
+# 240 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy endD");
+# 250 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(ansDStart, recstart, count * sizeof(int), cudaMemcpyHostToDevice);
+# 251 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy ansDStart");
+# 257 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(ansDLength, reclength, count * sizeof(int), cudaMemcpyHostToDevice);
+# 258 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy ansDLength");
+# 260 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time3 = get_time();
+# 261 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 262 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 269 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+(cudaConfigureCall(numBlocks, threadsPerBlock)) ? ((void)0) : findRangeK(maxheight, knodesD, knodes_elem, currKnodeD, offsetD, lastKnodeD, offset_2D, startD, endD, ansDStart, ansDLength);
+# 281 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaThreadSynchronize();
+# 282 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("findRangeK");
+# 283 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 284 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 286 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time4 = get_time();
+# 300 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(recstart, ansDStart, count * sizeof(int), cudaMemcpyDeviceToHost);
+# 301 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy ansDStart");
+# 307 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaMemcpy(reclength, ansDLength, count * sizeof(int), cudaMemcpyDeviceToHost);
+# 308 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+checkCUDAError("cudaMemcpy ansDLength");
+# 310 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time5 = get_time();
+# 312 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 313 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 318 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(knodesD);
+# 320 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(currKnodeD);
+# 321 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(offsetD);
+# 322 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(lastKnodeD);
+# 323 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(offset_2D);
+# 324 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(startD);
+# 325 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(endD);
+# 326 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(ansDStart);
+# 327 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+cudaFree(ansDLength);
+# 329 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+time6 = get_time();
+# 331 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+;
+# 336 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("Time spent in different stages of GPU_CUDA KERNEL:\n");
+# 338 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU: SET DEVICE / DRIVER INIT\n", ((float)(time1 - time0)) / (1000000), (((float)(time1 - time0)) / ((float)(time6 - time0))) * (100));
+# 339 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: ALO\n", ((float)(time2 - time1)) / (1000000), (((float)(time2 - time1)) / ((float)(time6 - time0))) * (100));
+# 340 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: COPY IN\n", ((float)(time3 - time2)) / (1000000), (((float)(time3 - time2)) / ((float)(time6 - time0))) * (100));
+# 342 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU: KERNEL\n", ((float)(time4 - time3)) / (1000000), (((float)(time4 - time3)) / ((float)(time6 - time0))) * (100));
+# 344 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: COPY OUT\n", ((float)(time5 - time4)) / (1000000), (((float)(time5 - time4)) / ((float)(time6 - time0))) * (100));
+# 345 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%15.12f s, %15.12f % : GPU MEM: FRE\n", ((float)(time6 - time5)) / (1000000), (((float)(time6 - time5)) / ((float)(time6 - time0))) * (100));
+# 347 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("Total time:\n");
+# 348 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+printf("%.12f s\n", ((float)(time6 - time0)) / (1000000));
+# 350 "./kernel/kernel_gpu_cuda_wrapper_2.cu"
+} }
+# 23 "./kernel/../util/cuda/cuda.h"
+extern "C" void setdevice();
+# 29 "./kernel/../util/cuda/cuda.h"
+extern "C" void checkCUDAError(const char * );
+# 23 "./kernel/../util/cuda/cuda.cu"
+extern "C" { void setdevice() {
+# 26 "./kernel/../util/cuda/cuda.cu"
+int num_devices;
+# 27 "./kernel/../util/cuda/cuda.cu"
+int device;
+# 30 "./kernel/../util/cuda/cuda.cu"
+cudaGetDeviceCount(&num_devices);
+# 31 "./kernel/../util/cuda/cuda.cu"
+if (num_devices > 1) {
+# 34 "./kernel/../util/cuda/cuda.cu"
+int max_multiprocessors;
+# 35 "./kernel/../util/cuda/cuda.cu"
+int max_device;
+# 36 "./kernel/../util/cuda/cuda.cu"
+cudaDeviceProp properties;
+# 39 "./kernel/../util/cuda/cuda.cu"
+max_multiprocessors = 0;
+# 40 "./kernel/../util/cuda/cuda.cu"
+max_device = 0;
+# 42 "./kernel/../util/cuda/cuda.cu"
+for (device = 0; device < num_devices; device++) {
+# 43 "./kernel/../util/cuda/cuda.cu"
+cudaGetDeviceProperties(&properties, device);
+# 44 "./kernel/../util/cuda/cuda.cu"
+if (max_multiprocessors < (properties.multiProcessorCount)) {
+# 45 "./kernel/../util/cuda/cuda.cu"
+max_multiprocessors = (properties.multiProcessorCount);
+# 46 "./kernel/../util/cuda/cuda.cu"
+max_device = device;
+# 47 "./kernel/../util/cuda/cuda.cu"
+}
+# 48 "./kernel/../util/cuda/cuda.cu"
+}
+# 49 "./kernel/../util/cuda/cuda.cu"
+cudaSetDevice(max_device);
+# 50 "./kernel/../util/cuda/cuda.cu"
+}
+# 52 "./kernel/../util/cuda/cuda.cu"
+} }
+# 58 "./kernel/../util/cuda/cuda.cu"
+extern "C" { void checkCUDAError(const char *msg)
+# 59 "./kernel/../util/cuda/cuda.cu"
+{
+# 60 "./kernel/../util/cuda/cuda.cu"
+cudaError_t err = cudaGetLastError();
+# 61 "./kernel/../util/cuda/cuda.cu"
+if ((cudaSuccess) != err) {
+# 63 "./kernel/../util/cuda/cuda.cu"
+printf("Cuda error: %s: %s.\n", msg, cudaGetErrorString(err));
+# 64 "./kernel/../util/cuda/cuda.cu"
+fflush(__null);
+# 65 "./kernel/../util/cuda/cuda.cu"
+exit(1);
+# 66 "./kernel/../util/cuda/cuda.cu"
+}
+# 67 "./kernel/../util/cuda/cuda.cu"
+} }
+# 1 "tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
+# 1 "tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -28660,126 +29278,219 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0005a2bd_00000000-1_kernel_gpu_cuda_wrapper.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_000298fe_00000000-1_kernel_gpu_cuda_wrapper.fatbin.c" 1 3
 
 
 asm(
 ".section .nv_fatbin, \"a\"\n"
 ".align 8\n"
 "fatbinData:\n"
-".quad 0x00100001ba55ed50,0x0000000000000d50,0x0000006801010002,0x0000000000000890\n"
+".quad 0x00100001ba55ed50,0x00000000000018d8,0x0000006801010002,0x00000000000010b0\n"
 ".quad 0x0000000000000000,0x0000001400010006,0x0000002300000040,0x0000000000000015\n"
 ".quad 0x0000000000000000,0x0000000000000000,0x6c656e72656b2f2e,0x5f6c656e72656b2f\n"
 ".quad 0x616475635f757067,0x726570706172775f,0x000000000075632e,0x33010102464c457f\n"
-".quad 0x0000000000000006,0x0000000100be0002,0x0000000000000000,0x00000000000007e4\n"
-".quad 0x00000000000005e4,0x0038004000140514,0x0001000800400003,0x7472747368732e00\n"
+".quad 0x0000000000000006,0x0000000100be0002,0x0000000000000000,0x0000000000001008\n"
+".quad 0x0000000000000d48,0x0038004000140514,0x0001000b00400003,0x7472747368732e00\n"
 ".quad 0x747274732e006261,0x746d79732e006261,0x747865742e006261,0x2e004b646e69662e\n"
 ".quad 0x2e6f666e692e766e,0x6e2e004b646e6966,0x6465726168732e76,0x2e004b646e69662e\n"
-".quad 0x006f666e692e766e,0x736e6f632e766e2e,0x69662e30746e6174,0x68732e00004b646e\n"
-".quad 0x2e00626174727473,0x2e00626174727473,0x66006261746d7973,0x65742e004b646e69\n"
-".quad 0x4b646e69662e7478,0x666e692e766e2e00,0x004b646e69662e6f,0x726168732e766e2e\n"
-".quad 0x4b646e69662e6465,0x666e692e766e2e00,0x6f632e766e2e006f,0x2e30746e6174736e\n"
-".quad 0x705f004b646e6966,0x000000006d617261,0x0000000000000000,0x0000000000000000\n"
-".quad 0x0000000000000000,0x0007000300000021,0x0000000000000000,0x0000000000000000\n"
-".quad 0x0006000300000056,0x0000000000000000,0x0000000000000000,0x000710120000001b\n"
-".quad 0x0000000000000000,0x0000000000000358,0x0000000300081204,0x0008110400000000\n"
-".quad 0x0000000000000003,0x0000000200080a04,0x0040190300400020,0x00000000000c1704\n"
-".quad 0x0021f00000380007,0x00000000000c1704,0x0021f00000300006,0x00000000000c1704\n"
-".quad 0x0021f00000280005,0x00000000000c1704,0x0021f00000200004,0x00000000000c1704\n"
-".quad 0x0021f00000180003,0x00000000000c1704,0x0021f00000100002,0x00000000000c1704\n"
-".quad 0x0021f00000080001,0x00000000000c1704,0x0021f00000000000,0x0004003000080d04\n"
-".quad 0x0000000000000003,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x006f666e692e766e,0x736e6f632e766e2e,0x69662e30746e6174,0x7865742e004b646e\n"
+".quad 0x6152646e69662e74,0x766e2e004b65676e,0x69662e6f666e692e,0x4b65676e6152646e\n"
+".quad 0x6168732e766e2e00,0x646e69662e646572,0x2e004b65676e6152,0x74736e6f632e766e\n"
+".quad 0x6e69662e30746e61,0x004b65676e615264,0x7472747368732e00,0x747274732e006261\n"
+".quad 0x746d79732e006261,0x4b646e6966006261,0x662e747865742e00,0x766e2e004b646e69\n"
+".quad 0x69662e6f666e692e,0x2e766e2e004b646e,0x662e646572616873,0x766e2e004b646e69\n"
+".quad 0x6e2e006f666e692e,0x6174736e6f632e76,0x646e69662e30746e,0x6d617261705f004b\n"
+".quad 0x6e6152646e696600,0x7865742e004b6567,0x6152646e69662e74,0x766e2e004b65676e\n"
+".quad 0x69662e6f666e692e,0x4b65676e6152646e,0x6168732e766e2e00,0x646e69662e646572\n"
+".quad 0x2e004b65676e6152,0x74736e6f632e766e,0x6e69662e30746e61,0x004b65676e615264\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x000a000300000021\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0007000300000056,0x0000000000000000\n"
+".quad 0x0000000000000000,0x000900030000007c,0x0000000000000000,0x0000000000000000\n"
+".quad 0x00080003000000b7,0x0000000000000000,0x0000000000000000,0x000a10120000001b\n"
+".quad 0x0000000000000000,0x0000000000000358,0x0009101200000071,0x0000000000000000\n"
+".quad 0x0000000000000510,0x0000000600081204,0x0008110400000000,0x0000000000000006\n"
+".quad 0x0000000500081204,0x0008110400000000,0x0000000000000005,0x0000000200080a04\n"
+".quad 0x0040190300400020,0x00000000000c1704,0x0021f00000380007,0x00000000000c1704\n"
+".quad 0x0021f00000300006,0x00000000000c1704,0x0021f00000280005,0x00000000000c1704\n"
+".quad 0x0021f00000200004,0x00000000000c1704,0x0021f00000180003,0x00000000000c1704\n"
+".quad 0x0021f00000100002,0x00000000000c1704,0x0021f00000080001,0x00000000000c1704\n"
+".quad 0x0021f00000000000,0x0004003000080d04,0x00080a0400000003,0x0058002000000004\n"
+".quad 0x000c170400581903,0x0050000a00000000,0x000c17040021f000,0x0048000900000000\n"
+".quad 0x000c17040021f000,0x0040000800000000,0x000c17040021f000,0x0038000700000000\n"
+".quad 0x000c17040021f000,0x0030000600000000,0x000c17040021f000,0x0028000500000000\n"
+".quad 0x000c17040021f000,0x0020000400000000,0x000c17040021f000,0x0018000300000000\n"
+".quad 0x000c17040021f000,0x0010000200000000,0x000c17040021f000,0x0008000100000000\n"
+".quad 0x000c17040021f000,0x0000000000000000,0x00080d040021f000,0x0000000300040030\n"
 ".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
 ".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
-".quad 0x00005de400000000,0x94001c0428004404,0x00009de42c000000,0x84031c0428004001\n"
-".quad 0x80035de42c000000,0x20011ca328004000,0x20009ce32005c000,0x10215c435000c000\n"
-".quad 0x10c09ce348004001,0x00421ca55000c000,0x5081dc038c000000,0x5080dc435001c020\n"
-".quad 0x50919c0320ffc020,0x10c0dca32086c020,0x08609c43200fc000,0xa0329c0348000000\n"
-".quad 0x9000dde448014000,0xb022dc4328004000,0x40009de448004000,0x20a2dc8528004001\n"
-".quad 0x10019ca384000010,0x10009ce32005c000,0x5021dc435000c000,0x04dfdd0348004001\n"
-".quad 0x00649c854801c000,0xfc31dc638c000000,0x600001e7188e0000,0x20009de440000007\n"
-".quad 0x04c41c0328004001,0x2000dce34800c000,0x20009ca35000c000,0x0903dc032005c000\n"
-".quad 0xfc035de46000c000,0xfc039de428000000,0x78c45c2328000000,0x79041c235800c000\n"
-".quad 0x3030dc435800c000,0x48b1dc2348004001,0x400000071a0e0000,0x000001f460000003\n"
-".quad 0x50829c0340000000,0x50821c435001c020,0x50925c0320ffc020,0x3ca21c032090c020\n"
-".quad 0x40925c4348010000,0xa0821c0348000000,0xb0925c4348014000,0x20821c8548004000\n"
-".quad 0x4881dc2384000010,0x000001f4198e0000,0x00221ca540000000,0x5082dc0384000000\n"
-".quad 0x50821c435001c020,0x50929c0320ffc020,0x78c21c232090c020,0x10c25c035800c000\n"
-".quad 0x20a29c432017c000,0xa0921c0348000000,0xb0a25c4348014000,0x10821c8548004000\n"
-".quad 0xc08fdd0384000000,0x7c825c2348014000,0xd091dc637000c004,0x002220a51b0e4000\n"
-".quad 0x00001df494000000,0xfcc1dc2340000000,0x0c1fdc03190e0000,0xffffdc04207e0000\n"
-".quad 0x002200a550ee0000,0x004200a584000000,0xffffdc0494000000,0x00421ca550ee0000\n"
-".quad 0x00649c8584000000,0x50829c0384000000,0x5082dc435001c020,0x5092dc0320ffc020\n"
-".quad 0x10c29c032096c020,0x44b2dc432015c000,0xa0a29c0348000000,0xb0b2dc4348014000\n"
-".quad 0x04d35c0348004000,0x20a2dc854801c000,0xfce39c4384000010,0x80dfdd0348000000\n"
-".quad 0x90e1dc6348014000,0xe00001e7188e4000,0x48b1dc234003fff9,0x000001e71a8e0000\n"
-".quad 0x50815c0380000000,0x78c09c235001c020,0x5080dc435800c000,0x10021de220ffc020\n"
-".quad 0x50911c0318000000,0x10c0dc032086c020,0x08409c43200bc000,0xa0311c0348000000\n"
-".quad 0xb0215c4348014000,0x10409c8548004000,0x7820dc2384000000,0xe0219c035800c000\n"
-".quad 0xf031dc4320118000,0x1000dce348004000,0x60011ca35000c000,0x00609c8520118001\n"
-".quad 0x70315c4384000000,0x00409c8548004001,0x00001de794000000,0x0000000080000000\n"
 ".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
-".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000100000000\n"
-".quad 0x0000000000000003,0x0000000000000000,0x0000004000000000,0x0000006400000000\n"
-".quad 0x0000000000000000,0x0000000100000000,0x0000000000000000,0x0000000b00000000\n"
-".quad 0x0000000000000003,0x0000000000000000,0x000000a400000000,0x0000007100000000\n"
-".quad 0x0000000000000000,0x0000000100000000,0x0000000000000000,0x0000001300000000\n"
-".quad 0x0000000000000002,0x0000000000000000,0x0000011800000000,0x0000006000000000\n"
-".quad 0x0000000200000000,0x0000000800000002,0x0000001800000000,0x0000004700000000\n"
-".quad 0x0000000070000000,0x0000000000000000,0x0000017800000000,0x0000001800000000\n"
-".quad 0x0000000300000000,0x0000000400000000,0x0000000000000000,0x0000002700000000\n"
-".quad 0x0000000070000000,0x0000000000000000,0x0000019000000000,0x0000009c00000000\n"
-".quad 0x0000000300000000,0x0000000400000007,0x0000000000000000,0x0000005000000000\n"
-".quad 0x0000000200000001,0x0000000000000000,0x0000022c00000000,0x0000006000000000\n"
-".quad 0x0000000000000000,0x0000000400000007,0x0000000000000000,0x0000001b00000000\n"
-".quad 0x0010000600000001,0x0000000000000000,0x0000028c00000000,0x0000035800000000\n"
-".quad 0x0000000300000000,0x0000000413000003,0x0000000000000000,0x0000000600000000\n"
-".quad 0x000007e400000005,0x0000000000000000,0x0000000000000000,0x000000a800000000\n"
-".quad 0x000000a800000000,0x0000000800000000,0x0000000100000000,0x0000022c00000005\n"
-".quad 0x0000000000000000,0x0000000000000000,0x000003b800000000,0x000003b800000000\n"
-".quad 0x0000000800000000,0x0000000100000000,0x0000000000000006,0x0000000000000000\n"
-".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000800000000\n"
-".quad 0x0000000000000000,0x0000007001010001,0x00000000000003e8,0x0000004000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x2800440400005de4\n"
+".quad 0x2c00000094001c04,0x180000002001dde2,0x2c00000084049c04,0x5000c00020019ce3\n"
+".quad 0x200f8000e0031ca3,0x5000c00011211ce3,0x48004000f0635c43,0x8c00000000c09ca5\n"
+".quad 0x5001c02050225c03,0x20ffc02050215c43,0x208ac02050321c03,0x2013c00011215ca3\n"
+".quad 0x5000c00010025ce3,0x4800000010811c43,0x48014000a0529c03,0x2800400080015de4\n"
+".quad 0x1800000010021de2,0x48004000b042dc43,0x2800400090011de4,0x4801c000045fdd03\n"
+".quad 0x8400001020a3dc85,0x188e0000fc41dc63,0x2011800160011ca3,0x4800400170915c43\n"
+".quad 0x200f800120029ca3,0x8c00000000441c85,0x480040013062dc43,0x2011800180021ca3\n"
+".quad 0x4800400190925c43,0x4000000ae00001e7,0x1800000020011de2,0x5000c00020015ce3\n"
+".quad 0x7000c0047d24dc23,0x2009800100019ca3,0x28000000fc051de4,0x28000000fc055de4\n"
+".quad 0x480040011051dc43,0x2009800140011ca3,0x4800400150515c43,0x1a0e000040f1dc23\n"
+".quad 0x60000002a0000007,0x40000000000001f4,0x5001c02050239c03,0x20ffc0205023dc43\n"
+".quad 0x4800c00005209c03,0x209ec0205033dc03,0x5000c0001020dce3,0x201dc00010209ca3\n"
+".quad 0x480000000cf0dc43,0x48014000a0209c03,0x48004000b030dc43,0x4801c01020209c03\n"
+".quad 0x48000000fc30dc43,0x8400000000239c85,0x198e000040e1dc23,0x40000000000001f4\n"
+".quad 0x87ffffefe0209c85,0x48014000c02fdd03,0x7000c0047c20dc23,0x1b0e4000d031dc63\n"
+".quad 0x940000000060a0a5,0x4000000000001df4,0x8400000000a09ca5,0x5800c0007923dc03\n"
+".quad 0x6000c00009241c03,0x60000002e0000007,0x400000003d345c43,0x5001c02050239c03\n"
+".quad 0x20ffc02050209c43,0x2084c0205030dc03,0x4801000040e09c03,0x8400000000839c85\n"
+".quad 0x480000004430dc43,0x48014000a0209c03,0x48004000b030dc43,0x4801c01020209c03\n"
+".quad 0x48000000fc30dc43,0x840000000023dc85,0x1a0e000038f1dc23,0x40000000000001f4\n"
+".quad 0x840000001023dc85,0x198e000038f1dc23,0x40000000000001f4,0x87ffffeff0209c85\n"
+".quad 0x48014000c02fdd03,0x7000c0047c20dc23,0x1b0e4000d031dc63,0x940000000040a0a5\n"
+".quad 0x4000000000001df4,0x190e0000fd21dc23,0x200a0000101fdc03,0x207e00001c6fdc03\n"
+".quad 0x50ee0000ffffdc04,0x84000000006380a5,0x9400000000c380a5,0x84000000004080a5\n"
+".quad 0x9400000000a080a5,0x50ee0000ffffdc04,0x8400000000c09ca5,0x5001c0205023dc03\n"
+".quad 0x20ffc02050239c43,0x209cc02050339c03,0x4801000040f41c03,0x4800000044e3dc43\n"
+".quad 0x48014000a1039c03,0x2800400160041de4,0x5000c00010045ce3,0x48004000b0f3dc43\n"
+".quad 0x2021c00010041ca3,0x8400001020e3dc85,0x4800400171145c43,0x4801c00005451c03\n"
+".quad 0x8400000001041c85,0x48000000fd555c43,0x48014000814fdd03,0x188e40009151dc63\n"
+".quad 0x4003fff6400001e7,0x28004001a0011de4,0x5000c00010015ce3,0x1a8e000040f1dc23\n"
+".quad 0x2009c00010011ca3,0x6000000180000007,0x48004001b0515c43,0x40000000000001f4\n"
+".quad 0x5001c0205021dc03,0x20ffc02050219c43,0x5000c00011209ce3,0x208cc02050319c03\n"
+".quad 0x200fc0001120dca3,0x4800000008609c43,0x48014000a0319c03,0x48004000b021dc43\n"
+".quad 0x8400000010609c85,0x9400000000409c95,0x20100000141fdc03,0x20160000289fdc03\n"
+".quad 0x50ee0000ffffdc04,0x8400000000a09ca5,0x5001c0205021dc03,0x20ffc02050219c43\n"
+".quad 0x5000c00011209ce3,0x208cc02050319c03,0x200fc0001120dca3,0x4800000008609c43\n"
+".quad 0x48014000a030dc03,0x48004000b0209c43,0x4801c01020329c03,0x48000000fc22dc43\n"
+".quad 0x8400000000809c85,0x8400000000a0dc85,0x1a8e00000831dc23,0x87ffffeff0a0e085\n"
+".quad 0x840000000040a085,0x28004001c001e1e4,0x5000c0001001a0e3,0x200fc000100220a3\n"
+".quad 0x48004001d0626043,0x4800c00004302003,0x4800000008002103,0x9400000000802085\n"
+".quad 0x8000000000001de7,0x2800440400005de4,0x2c00000094001c04,0x2800400100009de4\n"
+".quad 0x2c00000084031c04,0x2800400080035de4,0x2005c00020011ca3,0x5000c00020009ce3\n"
+".quad 0x4800400110215c43,0x5000c00010c09ce3,0x8c00000000421ca5,0x5001c0205081dc03\n"
+".quad 0x20ffc0205080dc43,0x2086c02050919c03,0x200fc00010c0dca3,0x4800000008609c43\n"
+".quad 0x48014000a0329c03,0x280040009000dde4,0x48004000b022dc43,0x2800400140009de4\n"
+".quad 0x8400001020a2dc85,0x2005c00010019ca3,0x5000c00010009ce3,0x480040015021dc43\n"
+".quad 0x4801c00004dfdd03,0x8c00000000649c85,0x188e0000fc31dc63,0x40000007600001e7\n"
+".quad 0x2800400120009de4,0x4800c00004c41c03,0x5000c0002000dce3,0x2005c00020009ca3\n"
+".quad 0x6000c0000903dc03,0x28000000fc035de4,0x28000000fc039de4,0x5800c00078c45c23\n"
+".quad 0x5800c00079041c23,0x480040013030dc43,0x1a0e000048b1dc23,0x6000000340000007\n"
+".quad 0x40000000000001f4,0x5001c02050829c03,0x20ffc02050821c43,0x2090c02050925c03\n"
+".quad 0x480100003ca21c03,0x4800000040925c43,0x48014000a0821c03,0x48004000b0925c43\n"
+".quad 0x8400001020821c85,0x198e00004881dc23,0x40000000000001f4,0x8400000000221ca5\n"
+".quad 0x5001c0205082dc03,0x20ffc02050821c43,0x2090c02050929c03,0x5800c00078c21c23\n"
+".quad 0x2017c00010c25c03,0x4800000020a29c43,0x48014000a0921c03,0x48004000b0a25c43\n"
+".quad 0x8400000010821c85,0x48014000c08fdd03,0x7000c0047c825c23,0x1b0e4000d091dc63\n"
+".quad 0x94000000002220a5,0x4000000000001df4,0x190e0000fcc1dc23,0x207e00000c1fdc03\n"
+".quad 0x50ee0000ffffdc04,0x84000000002200a5,0x94000000004200a5,0x50ee0000ffffdc04\n"
+".quad 0x8400000000421ca5,0x8400000000649c85,0x5001c02050829c03,0x20ffc0205082dc43\n"
+".quad 0x2096c0205092dc03,0x2015c00010c29c03,0x4800000044b2dc43,0x48014000a0a29c03\n"
+".quad 0x48004000b0b2dc43,0x4801c00004d35c03,0x8400001020a2dc85,0x48000000fce39c43\n"
+".quad 0x4801400080dfdd03,0x188e400090e1dc63,0x4003fff9e00001e7,0x1a8e000048b1dc23\n"
+".quad 0x80000000000001e7,0x5001c02050815c03,0x5800c00078c09c23,0x20ffc0205080dc43\n"
+".quad 0x1800000010021de2,0x2086c02050911c03,0x200bc00010c0dc03,0x4800000008409c43\n"
+".quad 0x48014000a0311c03,0x48004000b0215c43,0x8400000010409c85,0x5800c0007820dc23\n"
+".quad 0x20118000e0219c03,0x48004000f031dc43,0x5000c0001000dce3,0x2011800160011ca3\n"
+".quad 0x8400000000609c85,0x4800400170315c43,0x9400000000409c85,0x8000000000001de7\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000300000001,0x0000000000000000,0x0000000000000000,0x0000000000000040\n"
+".quad 0x00000000000000b8,0x0000000000000000,0x0000000000000001,0x0000000000000000\n"
+".quad 0x000000030000000b,0x0000000000000000,0x0000000000000000,0x00000000000000f8\n"
+".quad 0x00000000000000d0,0x0000000000000000,0x0000000000000001,0x0000000000000000\n"
+".quad 0x0000000200000013,0x0000000000000000,0x0000000000000000,0x00000000000001c8\n"
+".quad 0x00000000000000a8,0x0000000400000002,0x0000000000000008,0x0000000000000018\n"
+".quad 0x7000000000000047,0x0000000000000000,0x0000000000000000,0x0000000000000270\n"
+".quad 0x0000000000000030,0x0000000000000003,0x0000000000000004,0x0000000000000000\n"
+".quad 0x7000000000000027,0x0000000000000000,0x0000000000000000,0x00000000000002a0\n"
+".quad 0x000000000000009c,0x0000000a00000003,0x0000000000000004,0x0000000000000000\n"
+".quad 0x7000000000000075,0x0000000000000000,0x0000000000000000,0x000000000000033c\n"
+".quad 0x00000000000000cc,0x0000000900000003,0x0000000000000004,0x0000000000000000\n"
+".quad 0x0000000100000050,0x0000000000000002,0x0000000000000000,0x0000000000000408\n"
+".quad 0x0000000000000060,0x0000000a00000000,0x0000000000000004,0x0000000000000000\n"
+".quad 0x000000010000009f,0x0000000000000002,0x0000000000000000,0x0000000000000468\n"
+".quad 0x0000000000000078,0x0000000900000000,0x0000000000000004,0x0000000000000000\n"
+".quad 0x0000000100000064,0x0000000000100006,0x0000000000000000,0x00000000000004e0\n"
+".quad 0x0000000000000510,0x1600000600000003,0x0000000000000004,0x0000000000000000\n"
+".quad 0x000000010000001b,0x0000000000100006,0x0000000000000000,0x00000000000009f0\n"
+".quad 0x0000000000000358,0x1300000500000003,0x0000000000000004,0x0000000000000000\n"
+".quad 0x0000000500000006,0x0000000000001008,0x0000000000000000,0x0000000000000000\n"
+".quad 0x00000000000000a8,0x00000000000000a8,0x0000000000000008,0x0000000500000001\n"
+".quad 0x0000000000000408,0x0000000000000000,0x0000000000000000,0x0000000000000940\n"
+".quad 0x0000000000000940,0x0000000000000008,0x0000000600000001,0x0000000000000000\n"
+".quad 0x0000000000000000,0x0000000000000000,0x0000000000000000,0x0000000000000000\n"
+".quad 0x0000000000000008,0x0000007001010001,0x0000000000000750,0x0000004000000000\n"
 ".quad 0x0000001400030001,0x0000002300000048,0x0000000000001015,0x0000000000000000\n"
-".quad 0x0000000000000c2b,0x0000000000000000,0x6c656e72656b2f2e,0x5f6c656e72656b2f\n"
-".quad 0x616475635f757067,0x726570706172775f,0x000000000075632e,0x46a38edb56859c78\n"
-".quad 0x291a46415f0e7d10,0xd1478f057d0dc1ab,0xe9810ad109f35f6a,0x9dd99a69318bb0f1\n"
-".quad 0x51734c0df4f7f944,0xaa9d4e1f77648d2c,0xe7780fe8104c5553,0x800c01886d6fafa2\n"
-".quad 0x28e6bfb0cb85c42c,0xde7df78255514009,0xad7e051190f37fd7,0xed79621f0c0bfe1b\n"
-".quad 0x4249279957cfdff4,0x8e1cf98bfa56540b,0x6e97e4de5a2e77f9,0xd1443fe45543cfc8\n"
-".quad 0x3f5061d773805c75,0x1e576ede88a42238,0xabe23e2cb4023197,0xffb6861fdd7de37c\n"
-".quad 0x59f8df6e2771cf68,0x5075792f4314b1f6,0x5158db6876f7751c,0x7588badbaaadc41f\n"
-".quad 0xc418f382927cb888,0xc3ce011265f4f636,0x21e1b2ebeeb7ce83,0x56dd6be11f14ade0\n"
-".quad 0x35c510ae8016fc7f,0x79073728f6230304,0x7fb42bfdc15eed12,0xbfdd15fec8aff785\n"
-".quad 0x27f829f06957fb62,0x855e09d0425f8200,0xf49dc9fbf64bdd8f,0x89fb9305e28f8518\n"
-".quad 0xa3a9942f5451fe7a,0x39d5786c4b2a6820,0xa7af9c57a7f851a4,0x4100dc100b250815\n"
-".quad 0xe100ba502da100b6,0xd94c5b22017070ad,0xb6c402d098b74402,0x77e740aa500b8e98\n"
-".quad 0x1656e69703790059,0x11eef6396c8d04cd,0x21cedcdfaaa800b6,0x0ef6f5c18431e10a\n"
-".quad 0xcb3c7c95540ce306,0xc6988309cfc0aea2,0x5859dc5751f80d0c,0xd0d40a767c391221\n"
-".quad 0x74e8881e68a2468e,0x5fb7d53daa0a8586,0xae5a7a865f3232ef,0x5582519874a4a835\n"
-".quad 0xd150e591a34b5a70,0x1a2c712618a545af,0xf5f523566584a005,0x7ca31d8d090cd1a7\n"
-".quad 0x04c13e9f53918f43,0x53ff47a3902f5da3,0xd1a0e9e24758e3c7,0x9faa3cd1d7e8e49c\n"
-".quad 0x08ab088cbde842d4,0xacea25a4681d973d,0xefd59f2e548c7a1f,0x2b924be5f84514b0\n"
-".quad 0x26cc11f6d8e91dce,0x05bb68c7486d9c62,0x706fe45e091ce96c,0xb3a5a7826cec64d6\n"
-".quad 0x415c25b64f8803c6,0xa035bfd5cf89dd94,0x69d107a9c36d9274,0xca74086b58f648d6\n"
-".quad 0x636a99c262f7d9e8,0xce90ad22ef14d015,0x787aaa03b4ee6d3c,0xb261737e94531eaa\n"
-".quad 0xaeb60cab394d2e6e,0xc53d62417346e43a,0x6779aba6eb2e6c74,0x68d14f1114cc9e5b\n"
-".quad 0xcce8bb719bb2a257,0x78ed9d2f3325eb92,0xf360b2e4a7e74b62,0x7a433463a53f5294\n"
-".quad 0x8e9c988375333929,0xda7b5dc2e84c644f,0x8949b457a3b59882,0x929e72e1b504a66e\n"
-".quad 0x0db3d9873811c5cd,0xeec9ae831572ffc0,0xf4010b2a628983ad,0xbfcff3aa9e7e7eeb\n"
-".quad 0x57d5afaaf8a647aa,0xe920ba99f9b5b430,0x56649342ab1737b3,0x72519325646495e8\n"
-".quad 0xd669995b6491b136,0xe049d99d1af99455,0xcf40943bad049dae,0x1fd6b721c8e7624e\n"
-".quad 0xd889743b1e0951b6,0x988546e6e5f34bdb,0x4808668b1617f7e1,0x612eaa98e34669bd\n"
-".quad 0x6485ef1f74e34b93,0x89a349c9c76c1ee3,0xbbb840113a4e4dc0,0xe279adee91d3890a\n"
-".quad 0x357f524b2538f83a,0xf30861ba486fb611,0x57117ceee9a7710d,0x76a647baf9d9926f\n"
-".quad 0x23d7172ff90034ac,0x6ed3a50efd6486ce,0x29acd87f5c96bc5f,0xeefd0a196ddfb0da\n"
-".quad 0xcc47f69b18e69757,0x14424d1ae4e10699,0xc13feabfc14f2e08,0x0000e65dde4d00ff\n"
+".quad 0x0000000000001db9,0x0000000000000000,0x6c656e72656b2f2e,0x5f6c656e72656b2f\n"
+".quad 0x616475635f757067,0x726570706172775f,0x000000000075632e,0x36db8f4b58bd9c78\n"
+".quad 0x40b00d42bf573e10,0x45075a5be2caf58b,0xdb218106bd6f6b90,0x1e72caadaf5baf5a\n"
+".quad 0x9489438a4bdffa2d,0x8e4bc0100d4f7686,0xc4931f3338f8f386,0x3e70e5edd4becbfc\n"
+".quad 0xbeed55d649232ca5,0x5649e69adbcbd2ee,0x872facb97d6d76ed,0x3872fc2d7254eabf\n"
+".quad 0x6b7bb2ddf4903fd6,0x73cf3add2f6fffcc,0x7bffd1f9b52f165a,0xae3ea9edd47fd72a\n"
+".quad 0xf5aaeebdbd75cdf7,0x4db6cdba9a6ab6d7,0xa2b544503bc3b2c3,0x26692cdcbd5bf3d7\n"
+".quad 0x5f5af75be5f7d536,0xb4fdf2e9eba7970e,0x5ddb7af7f9ed365d,0x49eef574bd7b5d96\n"
+".quad 0x52d3a74faf3438eb,0x50e9c3bbcf6a7eab,0xd6d763cdcb11cd2d,0x831f87b3da5b32f5\n"
+".quad 0xebff660eeaf6d911,0xb87d43ad1fda6bc1,0xd753eacd3ac7361c,0x3fafdda70e5f4f7e\n"
+".quad 0x5d9a5bd5b5535925,0x2f9d617eeb4bb725,0x2c5be345be245ba2,0xe325be225be3c5be\n"
+".quad 0xdac93bf939f92a5b,0x87d2ef5b4d669f7a,0x8c2e560acbf17de6,0xfd15c7c67bed0fa6\n"
+".quad 0x4a5ea42f7bbb43fd,0x75eaf5ee2acee392,0x579f3820a7e91622,0x442208844f9a2133\n"
+".quad 0xc4226a42628844e4,0x8a9a638844c8e3b0,0xc49089d134c09089,0x5fb685a521139534\n"
+".quad 0xde78fed9ceeb2aba,0xdb11c3617441c754,0x79e3fd1d100acca7,0xcede49299494d29b\n"
+".quad 0xf923a2199f6bb25f,0xc836fb2ec3aaedb0,0x61ebecc7ae646950,0xbe402f94770a4357\n"
+".quad 0x85d244b85eba2558,0x0856275cee37107f,0x08a33479fbb35393,0x53b41b73775fd0cd\n"
+".quad 0x373560b5826718e6,0xb55bfa7d0eac2c4d,0x4019c2e4e3061ad3,0x5abf68451b585973\n"
+".quad 0x57bf33874fa49278,0x68ce491eaf5828cf,0x2c713bd3d4141734,0x4af8588760791c5d\n"
+".quad 0x634be6a7fd8e30ca,0x52e13e9948c31888,0xe6c6a2acec764d77,0x77fd07cbed235cc3\n"
+".quad 0xad7cc7e3f4ab69ba,0x18a44716674c4675,0x021c519d3102b314,0xe5effc4d84a07436\n"
+".quad 0x99a6ac89a419926c,0x020242cad84073ed,0xc7af2eba879dd3a2,0xe90fe9c05b26036c\n"
+".quad 0xc62436365d9203ca,0xa3eb9062e61cfa65,0x359df6f07d81f4cd,0x74064cf7eebfe9a4\n"
+".quad 0xe08655a93d10d8f4,0x0c8bd2a32e0e7c62,0xdb845c04490559b3,0x3109b365c0e1329c\n"
+".quad 0x2c0f1167b9e42c6f,0x386e9e77b5cae972,0xb3a1f8c8a6e55a5d,0x85e04ba17436e788\n"
+".quad 0x93c2e54ba1525df4,0x3ef4801a64825c0c,0x9e01afb439dc8f95,0x77ba2531d97d2036\n"
+".quad 0x77cef093112ea049,0xd9f2c3200a02fac9,0xb200231109ff501e,0xcdaa9b4d6b8c3a11\n"
+".quad 0xf0ff5e95d7f7c34c,0xff5ae35f3864fea3,0x4382a7ff43a7aecc,0xb9e681662f7073d4\n"
+".quad 0x9dcc9ad4c999e817,0x3d65b8e78da0c5c9,0x274bd465f8a76758,0x2728473a7274d127\n"
+".quad 0x95892047bdb93a41,0x2a7421cce54f663f,0xc2ab83717e4bab11,0x24f0b92c161fcbfb\n"
+".quad 0xa354d775336e0888,0x031cbbb772590e44,0x16a39bb93c1d5d29,0x4840506a39b80283\n"
+".quad 0x3ccac543b07214b4,0xa5855cb383970407,0x191092144278cb89,0x88717ef455560426\n"
+".quad 0xf6164f1afdec2f37,0x08c017361a01195a,0xf6d43150f79f21a4,0x4505af587c025b49\n"
+".quad 0x7afd109046550fd2,0xa484a9fc3d665fb3,0xda4d29e44d643211,0x6ff333e0ff255bba\n"
+".quad 0x8f5db383235f69d5,0xfb0742323ec1cf4f,0xb074c323ec1d1cc8,0x0756323ec1d44c8f\n"
+".quad 0xfb3babec1d6cc8fb,0x64727c5ef2fd9dc5,0x1b324bc23a742782,0x986e430fc23e15e1\n"
+".quad 0x986c49312e1c6c26,0x59e89b125ce5f337,0xb124c73d63a2498e,0x05f01d124c119ed9\n"
+".quad 0x0a926254f94d8926,0x9854e981678d1d3b,0xe8f3e46816498964,0x48a8772316f30b74\n"
+".quad 0x8e5d730f6b605519,0x22a3320071e126d9,0x13ef3b50e6c4a65a,0xd445460483b88a9c\n"
+".quad 0x122a4de823e88a94,0x2a578c0738c641b3,0xa42cc6ef1ac30b18,0xb7159e250a78c3c6\n"
+".quad 0x32deb8a6630c0739,0xd1877161602ee796,0x043a46650198b401,0x761a4988c64e7754\n"
+".quad 0x9ce91ee21b380877,0x459fc24573082434,0xd4a639a1151487b8,0xddb88d0dac873484\n"
+".quad 0x450ddcd9bd4b0ddc,0x5003894f1a39a384,0xe87911498f965dfa,0x426f249f2a7bf2a7\n"
+".quad 0x2ca466477a470a8d,0xb28afcfb2b311a33,0x210d0e3d6064b16f,0xb01908f59c7991eb\n"
+".quad 0x1ecb8ecce40e321e,0xe59ec1dc9ba4739b,0x3704ea3029b90276,0xb6073403836c8785\n"
+".quad 0x92e63b4c3211ede1,0xae45bcb761cae420,0x34c1671d4738e7a4,0xf8f2100b3c0e58ee\n"
+".quad 0x123ef71d329f6be4,0x2874c9bf3f509d30,0x03d39899073e5564,0x40a946d099d32120\n"
+".quad 0x2fe2f720f40151a6,0xf61fc58a09fe3608,0xa1b305e472fe2c58,0x92019a905827a211\n"
+".quad 0x7fa60caa7f68527d,0x1e03e99a8f0dbf7d,0xb015018f39c8d84d,0x5dcca002603257ef\n"
+".quad 0x4cf3acd479e68275,0x73cfdc9a019e598b,0x34482b44d1401f81,0xaad5a71efc934487\n"
+".quad 0xb4e1317af51cc604,0xc7e4b12d49f51d5a,0xfc511cdcaa0e78fe,0xa51732c3c15ad03f\n"
+".quad 0x46708b41c2d50aad,0x1a8a47dc504bc58d,0x3c8691cc09f677eb,0xcb84b21b46ac3985\n"
+".quad 0xd23273ad3c868625,0x7b348e6563d06563,0x1d26aa58b5e34cf7,0x785cba04614bc2c3\n"
+".quad 0xf8aba5130e783412,0x0852570900e5941a,0x8d4b650942348e7b,0x69dc325dc5219abd\n"
+".quad 0x99108d922d5ade02,0x24c32bcbcd027513,0x661423fbc62bd11f,0x2ef3cc52620d8f02\n"
+".quad 0xd7b1241b1db1c927,0x466575b4a4c4180f,0x4bdeb99803d9496f,0xf53f6fc712df88c4\n"
+".quad 0x3e67be58d52bf0cc,0x31f7cad0211f5116,0x10c900147d944a1c,0x9c25e088d382d4f7\n"
+".quad 0x07955b80e70d78f3,0x4acedcaf6c4c7c35,0x898d49657ac4db9c,0x685c05f505876195\n"
+".quad 0x1d2fb0fa71de1432,0x46e5c2c99e9b0446,0x639cec6fb8dd74db,0x714c880a31e516e1\n"
+".quad 0x2ef057c8e28af91b,0x127d946618a5810d,0xd291980d4661cc11,0x383d1905fe49127b\n"
+".quad 0x000000000000008f\n"
 ".text");
 
 extern "C" {
 
-extern const unsigned long long fatbinData[428];
+extern const unsigned long long fatbinData[797];
 
 }
 
@@ -28790,10 +29501,11 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2 3
 extern void __device_stub__Z5findKlP5knodelP6recordPlS3_PiS2_(long, knode *, long, record *, long *, long *, int *, record *);
+extern void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_58_tmpxft_0005a2bd_00000000_6_kernel_gpu_cuda_wrapper_cpp1_ii_findK(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_58_tmpxft_000298fe_00000000_6_kernel_gpu_cuda_wrapper_cpp1_ii_findK(void) __attribute__((__constructor__));
 void __device_stub__Z5findKlP5knodelP6recordPlS3_PiS2_(long __par0, knode *__par1, long __par2, record *__par3, long *__par4, long *__par5, int *__par6, record *__par7){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(long, knode *, long, record *, long *, long *, int *, record *))findK)); (void)cudaLaunch(((char *)((void ( *)(long, knode *, long, record *, long *, long *, int *, record *))findK))); };}
 # 6 "./kernel/./kernel_gpu_cuda.cu"
 void findK( long __cuda_0,knode *__cuda_1,long __cuda_2,record *__cuda_3,long *__cuda_4,long *__cuda_5,int *__cuda_6,record *__cuda_7)
@@ -28801,8 +29513,16 @@ void findK( long __cuda_0,knode *__cuda_1,long __cuda_2,record *__cuda_3,long *_
 {__device_stub__Z5findKlP5knodelP6recordPlS3_PiS2_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7);
 # 50 "./kernel/./kernel_gpu_cuda.cu"
 }
-# 1 "/tmp/tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
-static void __nv_cudaEntityRegisterCallback( void **__T24) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T24; }; __cudaRegisterFunction(__T24, (const char*)((void ( *)(long, knode *, long, record *, long *, long *, int *, record *))findK), (char*)"findK", "findK", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_58_tmpxft_0005a2bd_00000000_6_kernel_gpu_cuda_wrapper_cpp1_ii_findK(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2
-# 1 "tmpxft_0005a2bd_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
+void __device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_( long __par0, knode *__par1, long __par2, long *__par3, long *__par4, long *__par5, long *__par6, int *__par7, int *__par8, int *__par9, int *__par10) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)64UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)72UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)80UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK)); (void)cudaLaunch(((char *)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK))); }; }
+# 6 "./kernel/./kernel_gpu_cuda_2.cu"
+void findRangeK( long __cuda_0,knode *__cuda_1,long __cuda_2,long *__cuda_3,long *__cuda_4,long *__cuda_5,long *__cuda_6,int *__cuda_7,int *__cuda_8,int *__cuda_9,int *__cuda_10)
+# 19 "./kernel/./kernel_gpu_cuda_2.cu"
+{__device_stub__Z10findRangeKlP5knodelPlS1_S1_S1_PiS2_S2_S2_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10);
+# 66 "./kernel/./kernel_gpu_cuda_2.cu"
+}
+# 1 "/tmp/tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"
+static void __nv_cudaEntityRegisterCallback( void **__T28) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T28; }; __cudaRegisterFunction(__T28, (const char*)((void ( *)(long, knode *, long, long *, long *, long *, long *, int *, int *, int *, int *))findRangeK), (char*)"findRangeK", "findRangeK", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T28, (const char*)((void ( *)(long, knode *, long, record *, long *, long *, int *, record *))findK), (char*)"findK", "findK", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
+static void __sti____cudaRegisterAll_58_tmpxft_000298fe_00000000_6_kernel_gpu_cuda_wrapper_cpp1_ii_findK(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c" 2
+# 1 "tmpxft_000298fe_00000000-3_kernel_gpu_cuda_wrapper.cudafe1.stub.c"

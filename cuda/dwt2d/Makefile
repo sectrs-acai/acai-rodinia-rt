@@ -15,8 +15,9 @@ performancetest=1
 # Files
 CFILES := 
 CXXFILES := main.cpp common.cpp
-CUFILES :=  components.cu dwt_cuda/fdwt53.cu dwt_cuda/fdwt97.cu dwt_cuda/common.cu dwt_cuda/rdwt97.cu dwt_cuda/rdwt53.cu dwt.cu
-CU_CPP_FILES = components.cu.cpp dwt_cuda/fdwt53.cu.cpp dwt_cuda/fdwt97.cu.cpp dwt_cuda/common.cu.cpp dwt_cuda/rdwt97.cu.cpp dwt_cuda/rdwt53.cu.cpp dwt.cu.cpp
+# CUFILES :=  components.cu dwt_cuda/fdwt53.cu dwt_cuda/fdwt97.cu dwt_cuda/common.cu dwt_cuda/rdwt97.cu dwt_cuda/rdwt53.cu dwt.cu
+CUFILES :=  cu.cu
+# CU_CPP_FILES = components.cu.cpp dwt_cuda/fdwt53.cu.cpp dwt_cuda/fdwt97.cu.cpp dwt_cuda/common.cu.cpp dwt_cuda/rdwt97.cu.cpp dwt_cuda/rdwt53.cu.cpp dwt.cu.cpp
 
 # Includes
 #INCLUDES := -I. -I$(CUDA_DIR)/include
@@ -78,18 +79,24 @@ CXXOBJS=$(CXXFILES:.cpp=.cpp.o)
 
 .SUFFIXES: .c.o .cpp.o .cu.o .cu 
 
+
+all: $(EXECUTABLE)
+
 %.c.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
 
 
-%.cu.cpp: %.cu
+#%.cu.cpp: %.cu
+#	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -c $< -o $@  $(CUDA_FLAG)
+
+dwt.cu.cpp: dwt.cu
 	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -c $< -o $@  $(CUDA_FLAG)
 
-%.cpp.o: %.cpp
-	$(CC) $(CCFLAGS) -c $< -o $@
+#%.cpp.o: %.cpp
+#	$(CC) $(CCFLAGS) -c $< -o $@
 
-$(EXECUTABLE): $(COBJS) $(CXXOBJS) $(CUOBJS) $(CU_CPP_FILES)
+$(EXECUTABLE): main.cpp common.cpp dwt.cu.cpp
 	$(CC) $(CCFLAGS) -o $(EXECUTABLE) $? $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS)
 
 clean:

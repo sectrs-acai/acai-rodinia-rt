@@ -10,13 +10,13 @@ extern "C" {
 //	COMMON
 //======================================================================================================================================================150
 
-#include "../common.h"									// (in the main program folder)	needed to recognized input parameters
+//#include "../common.h"									// (in the main program folder)	needed to recognized input parameters
 
 //======================================================================================================================================================150
 //	UTILITIES
 //======================================================================================================================================================150
 
-#include "../util/cuda/cuda.h"							// (in library path specified to compiler)	needed by for device functions
+// #include "../util/cuda/cuda.h"							// (in library path specified to compiler)	needed by for device functions
 #include "../util/timer/timer.h"						// (in library path specified to compiler)	needed by timer
 
 //======================================================================================================================================================150
@@ -77,7 +77,9 @@ kernel_gpu_cuda_wrapper_2(	knode *knodes,
 	//	INITIAL DRIVER OVERHEAD
 	//====================================================================================================100
 
+
 	cudaThreadSynchronize();
+
 
 	//====================================================================================================100
 	//	EXECUTION PARAMETERS
@@ -103,6 +105,7 @@ kernel_gpu_cuda_wrapper_2(	knode *knodes,
 	//==================================================50
 	//	knodesD
 	//==================================================50
+
 
 	knode *knodesD;
 	cudaMalloc((void**)&knodesD, knodes_mem);

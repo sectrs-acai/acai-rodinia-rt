@@ -70,9 +70,10 @@ const float    VOLATILITY = 0.30f;
 ////////////////////////////////////////////////////////////////////////////////
 int do_main(int argc, char **argv)
 {
-    CCA_INIT;
+
     // Start logs
     printf("[%s] - Starting...\n", argv[0]);
+    CCA_MEMALLOC;
 
     //'h_' prefix - CPU (host) memory space
     float
@@ -106,8 +107,7 @@ int do_main(int argc, char **argv)
     findCudaDevice(argc, (const char **)argv);
 
     sdkCreateTimer(&hTimer);
-    CCA_INIT_STOP;
-    CCA_MEMALLOC;
+
 
     printf("Initializing data...\n");
     printf("...allocating CPU memory for options.\n");

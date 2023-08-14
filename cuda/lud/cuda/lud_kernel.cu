@@ -1,6 +1,7 @@
 #include <cuda.h>
 #include <stdio.h>
 
+
 //#ifdef RD_WG_SIZE_0_0
 //        #define BLOCK_SIZE RD_WG_SIZE_0_0
 //#elif defined(RD_WG_SIZE_0)

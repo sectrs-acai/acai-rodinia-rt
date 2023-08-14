@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
 # 1 "ex_particle_CUDA_float_seq.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -2754,51 +2754,31 @@ double4 t; (t.x) = x; (t.y) = y; (t.z) = z; (t.w) = w; return t;
 # 307 "/usr/local/cuda-5.0//include/vector_functions.h"
 }
 # 43 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
+extern "C" void *memcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
 # 44 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 47 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memmove(void * , const void * , size_t ) throw()
+extern "C" void *memmove(void * , const void * , size_t ) throw()
 # 48 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 54 "/usr/include/string.h" 3
 extern "C" void *memccpy(void *__restrict__ , const void *__restrict__ , int , size_t ) throw()
 # 56 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 61 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *memset(void * , int , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void *memset(void * , int , size_t ) throw() __attribute((__nonnull__(1)));
 # 64 "/usr/include/string.h" 3
 extern "C" int memcmp(const void * , const void * , size_t ) throw()
 # 65 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 71 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline void *memchr(void * , int , size_t ) throw() __asm__("memchr")
+extern void *memchr(void * , int , size_t ) throw() __asm__("memchr")
 # 72 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 73 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const void *memchr(const void * , int , size_t ) throw() __asm__("memchr")
+extern const void *memchr(const void * , int , size_t ) throw() __asm__("memchr")
 # 74 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 77 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline void *
-# 78 "/usr/include/string.h" 3
-memchr(void *__s, int __c, size_t __n) throw()
-# 79 "/usr/include/string.h" 3
-{
-# 80 "/usr/include/string.h" 3
-return __builtin_memchr(__s, __c, __n);
-# 81 "/usr/include/string.h" 3
-}
-# 83 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const void *
-# 84 "/usr/include/string.h" 3
-memchr(const void *__s, int __c, size_t __n) throw()
-# 85 "/usr/include/string.h" 3
-{
-# 86 "/usr/include/string.h" 3
-return __builtin_memchr(__s, __c, __n);
-# 87 "/usr/include/string.h" 3
-}
 # 99 "/usr/include/string.h" 3
 void *rawmemchr(void * , int ) throw() __asm__("rawmemchr")
 # 100 "/usr/include/string.h" 3
@@ -2816,21 +2796,21 @@ const void *memrchr(const void * , int , size_t ) throw() __asm__("memrchr")
 # 113 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 122 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strcpy(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *strcpy(char *__restrict__ , const char *__restrict__ ) throw()
 # 123 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 125 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *strncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 127 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 130 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strcat(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *strcat(char *__restrict__ , const char *__restrict__ ) throw()
 # 131 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 133 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *strncat(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *strncat(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 134 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 137 "/usr/include/string.h" 3
 extern "C" int strcmp(const char * , const char * ) throw()
 # 138 "/usr/include/string.h" 3
@@ -2882,61 +2862,21 @@ extern "C" char *strndup(const char * , size_t ) throw()
 # 176 "/usr/include/string.h" 3
  __attribute((__malloc__)) __attribute((__nonnull__(1)));
 # 206 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strchr(char * , int ) throw() __asm__("strchr")
+extern char *strchr(char * , int ) throw() __asm__("strchr")
 # 207 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 208 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strchr(const char * , int ) throw() __asm__("strchr")
+extern const char *strchr(const char * , int ) throw() __asm__("strchr")
 # 209 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 212 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 213 "/usr/include/string.h" 3
-strchr(char *__s, int __c) throw()
-# 214 "/usr/include/string.h" 3
-{
-# 215 "/usr/include/string.h" 3
-return __builtin_strchr(__s, __c);
-# 216 "/usr/include/string.h" 3
-}
-# 218 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 219 "/usr/include/string.h" 3
-strchr(const char *__s, int __c) throw()
-# 220 "/usr/include/string.h" 3
-{
-# 221 "/usr/include/string.h" 3
-return __builtin_strchr(__s, __c);
-# 222 "/usr/include/string.h" 3
-}
 # 233 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strrchr(char * , int ) throw() __asm__("strrchr")
+extern char *strrchr(char * , int ) throw() __asm__("strrchr")
 # 234 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 235 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strrchr(const char * , int ) throw() __asm__("strrchr")
+extern const char *strrchr(const char * , int ) throw() __asm__("strrchr")
 # 236 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 239 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 240 "/usr/include/string.h" 3
-strrchr(char *__s, int __c) throw()
-# 241 "/usr/include/string.h" 3
-{
-# 242 "/usr/include/string.h" 3
-return __builtin_strrchr(__s, __c);
-# 243 "/usr/include/string.h" 3
-}
-# 245 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 246 "/usr/include/string.h" 3
-strrchr(const char *__s, int __c) throw()
-# 247 "/usr/include/string.h" 3
-{
-# 248 "/usr/include/string.h" 3
-return __builtin_strrchr(__s, __c);
-# 249 "/usr/include/string.h" 3
-}
 # 261 "/usr/include/string.h" 3
 char *strchrnul(char * , int ) throw() __asm__("strchrnul")
 # 262 "/usr/include/string.h" 3
@@ -2954,61 +2894,21 @@ extern "C" size_t strspn(const char * , const char * ) throw()
 # 278 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 283 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strpbrk(char * , const char * ) throw() __asm__("strpbrk")
+extern char *strpbrk(char * , const char * ) throw() __asm__("strpbrk")
 # 284 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 285 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strpbrk(const char * , const char * ) throw() __asm__("strpbrk")
+extern const char *strpbrk(const char * , const char * ) throw() __asm__("strpbrk")
 # 286 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
-# 289 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 290 "/usr/include/string.h" 3
-strpbrk(char *__s, const char *__accept) throw()
-# 291 "/usr/include/string.h" 3
-{
-# 292 "/usr/include/string.h" 3
-return __builtin_strpbrk(__s, __accept);
-# 293 "/usr/include/string.h" 3
-}
-# 295 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 296 "/usr/include/string.h" 3
-strpbrk(const char *__s, const char *__accept) throw()
-# 297 "/usr/include/string.h" 3
-{
-# 298 "/usr/include/string.h" 3
-return __builtin_strpbrk(__s, __accept);
-# 299 "/usr/include/string.h" 3
-}
 # 310 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline char *strstr(char * , const char * ) throw() __asm__("strstr")
+extern char *strstr(char * , const char * ) throw() __asm__("strstr")
 # 311 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 312 "/usr/include/string.h" 3
-extern __attribute((gnu_inline)) inline const char *strstr(const char * , const char * ) throw() __asm__("strstr")
+extern const char *strstr(const char * , const char * ) throw() __asm__("strstr")
 # 313 "/usr/include/string.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
-# 316 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 317 "/usr/include/string.h" 3
-strstr(char *__haystack, const char *__needle) throw()
-# 318 "/usr/include/string.h" 3
-{
-# 319 "/usr/include/string.h" 3
-return __builtin_strstr(__haystack, __needle);
-# 320 "/usr/include/string.h" 3
-}
-# 322 "/usr/include/string.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 323 "/usr/include/string.h" 3
-strstr(const char *__haystack, const char *__needle) throw()
-# 324 "/usr/include/string.h" 3
-{
-# 325 "/usr/include/string.h" 3
-return __builtin_strstr(__haystack, __needle);
-# 326 "/usr/include/string.h" 3
-}
 # 336 "/usr/include/string.h" 3
 extern "C" char *strtok(char *__restrict__ , const char *__restrict__ ) throw()
 # 337 "/usr/include/string.h" 3
@@ -3038,9 +2938,9 @@ extern "C" void *__mempcpy(void *__restrict__ , const void *__restrict__ , size_
 # 377 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 378 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *mempcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
+extern "C" void *mempcpy(void *__restrict__ , const void *__restrict__ , size_t ) throw()
 # 380 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 385 "/usr/include/string.h" 3
 extern "C" size_t strlen(const char * ) throw()
 # 386 "/usr/include/string.h" 3
@@ -3054,7 +2954,7 @@ extern "C" char *strerror(int ) throw();
 # 421 "/usr/include/string.h" 3
 extern "C" char *strerror_r(int , char * , size_t ) throw()
 # 422 "/usr/include/string.h" 3
- __attribute((__nonnull__(2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(2)));
 # 428 "/usr/include/string.h" 3
 extern "C" char *strerror_l(int , locale_t ) throw();
 # 34 "/usr/include/strings.h" 3
@@ -3062,67 +2962,27 @@ extern "C" int bcmp(const void * , const void * , size_t ) throw()
 # 35 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2)));
 # 38 "/usr/include/strings.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void bcopy(const void * , void * , size_t ) throw()
+extern "C" void bcopy(const void * , void * , size_t ) throw()
 # 39 "/usr/include/strings.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 42 "/usr/include/strings.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void bzero(void * , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void bzero(void * , size_t ) throw() __attribute((__nonnull__(1)));
 # 48 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline char *index(char * , int ) throw() __asm__("index")
+extern char *index(char * , int ) throw() __asm__("index")
 # 49 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 50 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline const char *index(const char * , int ) throw() __asm__("index")
+extern const char *index(const char * , int ) throw() __asm__("index")
 # 51 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 54 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 55 "/usr/include/strings.h" 3
-index(char *__s, int __c) throw()
-# 56 "/usr/include/strings.h" 3
-{
-# 57 "/usr/include/strings.h" 3
-return __builtin_index(__s, __c);
-# 58 "/usr/include/strings.h" 3
-}
-# 60 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 61 "/usr/include/strings.h" 3
-index(const char *__s, int __c) throw()
-# 62 "/usr/include/strings.h" 3
-{
-# 63 "/usr/include/strings.h" 3
-return __builtin_index(__s, __c);
-# 64 "/usr/include/strings.h" 3
-}
 # 76 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline char *rindex(char * , int ) throw() __asm__("rindex")
+extern char *rindex(char * , int ) throw() __asm__("rindex")
 # 77 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 78 "/usr/include/strings.h" 3
-extern __attribute((gnu_inline)) inline const char *rindex(const char * , int ) throw() __asm__("rindex")
+extern const char *rindex(const char * , int ) throw() __asm__("rindex")
 # 79 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1)));
-# 82 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline char *
-# 83 "/usr/include/strings.h" 3
-rindex(char *__s, int __c) throw()
-# 84 "/usr/include/strings.h" 3
-{
-# 85 "/usr/include/strings.h" 3
-return __builtin_rindex(__s, __c);
-# 86 "/usr/include/strings.h" 3
-}
-# 88 "/usr/include/strings.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) extern inline const char *
-# 89 "/usr/include/strings.h" 3
-rindex(const char *__s, int __c) throw()
-# 90 "/usr/include/strings.h" 3
-{
-# 91 "/usr/include/strings.h" 3
-return __builtin_rindex(__s, __c);
-# 92 "/usr/include/strings.h" 3
-}
 # 104 "/usr/include/strings.h" 3
 extern "C" int ffs(int ) throw() __attribute((const));
 # 110 "/usr/include/strings.h" 3
@@ -3147,32 +3007,8 @@ extern "C" int strcasecmp_l(const char * , const char * , locale_t ) throw()
 extern "C" int strncasecmp_l(const char * , const char * , size_t , locale_t ) throw()
 # 135 "/usr/include/strings.h" 3
  __attribute((__pure__)) __attribute((__nonnull__(1, 2, 4)));
-# 23 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-extern "C" {
-# 22 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 23 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-bcopy(const void *__src, void *__dest, size_t __len) throw()
-# 24 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-{
-# 25 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-(void)__builtin___memmove_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 26 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-} }
-# 29 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-extern "C" {
-# 28 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 29 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-bzero(void *__dest, size_t __len) throw()
-# 30 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-{
-# 31 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-(void)__builtin___memset_chk(__dest, '\000', __len, __builtin_object_size(__dest, 0));
-# 32 "/usr/include/x86_64-linux-gnu/bits/strings_fortified.h" 3
-} }
 # 436 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void explicit_bzero(void * , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" void explicit_bzero(void * , size_t ) throw() __attribute((__nonnull__(1)));
 # 440 "/usr/include/string.h" 3
 extern "C" char *strsep(char **__restrict__ , const char *__restrict__ ) throw()
 # 442 "/usr/include/string.h" 3
@@ -3184,17 +3020,17 @@ extern "C" char *__stpcpy(char *__restrict__ , const char *__restrict__ ) throw(
 # 451 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 452 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *stpcpy(char *__restrict__ , const char *__restrict__ ) throw()
+extern "C" char *stpcpy(char *__restrict__ , const char *__restrict__ ) throw()
 # 453 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 457 "/usr/include/string.h" 3
 extern "C" char *__stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 459 "/usr/include/string.h" 3
  __attribute((__nonnull__(1, 2)));
 # 460 "/usr/include/string.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
+extern "C" char *stpncpy(char *__restrict__ , const char *__restrict__ , size_t ) throw()
 # 462 "/usr/include/string.h" 3
- __attribute((__nonnull__(1, 2))); }
+ __attribute((__nonnull__(1, 2)));
 # 467 "/usr/include/string.h" 3
 extern "C" int strverscmp(const char * , const char * ) throw()
 # 468 "/usr/include/string.h" 3
@@ -3211,162 +3047,6 @@ char *basename(char * ) throw() __asm__("basename")
 const char *basename(const char * ) throw() __asm__("basename")
 # 485 "/usr/include/string.h" 3
  __attribute((__nonnull__(1)));
-# 26 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" void __warn_memset_zero_len() __attribute((__warning__("memset used with constant zero length parameter; this could be due to transposed parameters")));
-# 31 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 30 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 31 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memcpy(void *__restrict__ __dest, const void *__restrict__ __src, size_t __len) throw()
-# 33 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 34 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memcpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 35 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 38 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 37 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 38 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memmove(void *__dest, const void *__src, size_t __len) throw()
-# 39 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 40 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memmove_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 41 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 45 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 44 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 45 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-mempcpy(void *__restrict__ __dest, const void *__restrict__ __src, size_t __len) throw()
-# 47 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 48 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___mempcpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 0));
-# 49 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 59 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 58 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void *
-# 59 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-memset(void *__dest, int __ch, size_t __len) throw()
-# 60 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 64 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-if (((0) && (__len == (0))) && ((!(0)) || (__ch != 0)))
-# 66 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 67 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__warn_memset_zero_len();
-# 68 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __dest;
-# 69 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-}
-# 71 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___memset_chk(__dest, __ch, __len, __builtin_object_size(__dest, 0));
-# 72 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" void __explicit_bzero_chk(void * , size_t , size_t ) throw()
-# 78 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
- __attribute((__nonnull__(1)));
-# 81 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 80 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline void
-# 81 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-explicit_bzero(void *__dest, size_t __len) throw()
-# 82 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 83 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__explicit_bzero_chk(__dest, __len, __builtin_object_size(__dest, 0));
-# 84 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 88 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 87 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 88 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strcpy(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 89 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 90 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strcpy_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 91 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 95 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 94 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 95 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-stpcpy(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 96 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 97 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___stpcpy_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 98 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 103 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 102 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 103 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strncpy(char *__restrict__ __dest, const char *__restrict__ __src, size_t __len) throw()
-# 105 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 106 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strncpy_chk(__dest, __src, __len, __builtin_object_size(__dest, 2 > 1));
-# 107 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 110 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" char *__stpncpy_chk(char * , const char * , size_t , size_t ) throw();
-# 112 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" char *__stpncpy_alias(char * , const char * , size_t ) throw() __asm__("stpncpy");
-# 116 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 115 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 116 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-stpncpy(char *__dest, const char *__src, size_t __n) throw()
-# 117 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 118 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-if ((__builtin_object_size(__dest, 2 > 1) != ((size_t)(-1))) && ((!(0)) || (__n > __builtin_object_size(__dest, 2 > 1)))) {
-# 120 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __stpncpy_chk(__dest, __src, __n, __builtin_object_size(__dest, 2 > 1)); }
-# 121 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __stpncpy_alias(__dest, __src, __n);
-# 122 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 126 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 125 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 126 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strcat(char *__restrict__ __dest, const char *__restrict__ __src) throw()
-# 127 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 128 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strcat_chk(__dest, __src, __builtin_object_size(__dest, 2 > 1));
-# 129 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
-# 133 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-extern "C" {
-# 132 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline char *
-# 133 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-strncat(char *__restrict__ __dest, const char *__restrict__ __src, size_t __len) throw()
-# 135 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-{
-# 136 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-return __builtin___strncat_chk(__dest, __src, __len, __builtin_object_size(__dest, 2 > 1));
-# 137 "/usr/include/x86_64-linux-gnu/bits/string_fortified.h" 3
-} }
 # 31 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
 typedef unsigned char __u_char;
 # 32 "/usr/include/x86_64-linux-gnu/bits/types.h" 3
@@ -3694,9 +3374,9 @@ extern "C" int getdate_r(const char *__restrict__ , tm *__restrict__ );
 # 69 "/usr/local/cuda-5.0//include/common_functions.h"
 extern "C" clock_t clock() throw();
 # 70 "/usr/local/cuda-5.0//include/common_functions.h"
-extern "C" { extern __attribute((gnu_inline)) inline void *memset(void *, int, size_t) throw(); }
+extern "C" void *memset(void *, int, size_t) throw();
 # 71 "/usr/local/cuda-5.0//include/common_functions.h"
-extern "C" { extern __attribute((gnu_inline)) inline void *memcpy(void *, const void *, size_t) throw(); }
+extern "C" void *memcpy(void *, const void *, size_t) throw();
 # 136 "/usr/local/cuda-5.0//include/math_functions.h"
 extern "C" int abs(int) throw();
 # 137 "/usr/local/cuda-5.0//include/math_functions.h"
@@ -5544,23 +5224,23 @@ long long rem;
 # 80 "/usr/include/stdlib.h" 3
 } lldiv_t; }
 # 97 "/usr/include/stdlib.h" 3
-extern "C" size_t __ctype_get_mb_cur_max() throw() __attribute((__warn_unused_result__));
+extern "C" size_t __ctype_get_mb_cur_max() throw();
 # 101 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline double atof(const char * ) throw()
+extern "C" double atof(const char * ) throw()
 # 102 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 104 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int atoi(const char * ) throw()
+extern "C" int atoi(const char * ) throw()
 # 105 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 107 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline long atol(const char * ) throw()
+extern "C" long atol(const char * ) throw()
 # 108 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 112 "/usr/include/stdlib.h" 3
-__extension__ extern "C" { extern __attribute((gnu_inline)) inline long long atoll(const char * ) throw()
+__extension__ extern "C" long long atoll(const char * ) throw()
 # 113 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 117 "/usr/include/stdlib.h" 3
 extern "C" double strtod(const char *__restrict__ , char **__restrict__ ) throw()
 # 119 "/usr/include/stdlib.h" 3
@@ -5685,48 +5365,12 @@ extern "C" _Float32x strtof32x_l(const char *__restrict__ , char **__restrict__ 
 extern "C" _Float64x strtof64x_l(const char *__restrict__ , char **__restrict__ , locale_t ) throw()
 # 347 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1, 3)));
-# 361 "/usr/include/stdlib.h" 3
-extern "C" {
-# 360 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 361 "/usr/include/stdlib.h" 3
-atoi(const char *__nptr) throw()
-# 362 "/usr/include/stdlib.h" 3
-{
-# 363 "/usr/include/stdlib.h" 3
-return (int)strtol(__nptr, (char **)__null, 10);
-# 364 "/usr/include/stdlib.h" 3
-} }
-# 366 "/usr/include/stdlib.h" 3
-extern "C" {
-# 365 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline long
-# 366 "/usr/include/stdlib.h" 3
-atol(const char *__nptr) throw()
-# 367 "/usr/include/stdlib.h" 3
-{
-# 368 "/usr/include/stdlib.h" 3
-return strtol(__nptr, (char **)__null, 10);
-# 369 "/usr/include/stdlib.h" 3
-} }
-# 373 "/usr/include/stdlib.h" 3
-__extension__ extern "C" {
-# 372 "/usr/include/stdlib.h" 3
-__attribute((__gnu_inline__)) extern inline long long
-# 373 "/usr/include/stdlib.h" 3
-atoll(const char *__nptr) throw()
-# 374 "/usr/include/stdlib.h" 3
-{
-# 375 "/usr/include/stdlib.h" 3
-return strtoll(__nptr, (char **)__null, 10);
-# 376 "/usr/include/stdlib.h" 3
-} }
 # 385 "/usr/include/stdlib.h" 3
-extern "C" char *l64a(long ) throw() __attribute((__warn_unused_result__));
+extern "C" char *l64a(long ) throw();
 # 388 "/usr/include/stdlib.h" 3
 extern "C" long a64l(const char * ) throw()
 # 389 "/usr/include/stdlib.h" 3
- __attribute((__pure__)) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__pure__)) __attribute((__nonnull__(1)));
 # 33 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 extern "C" { typedef __u_char u_char; }
 # 34 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
@@ -5873,12 +5517,6 @@ extern "C" { typedef __fd_mask fd_mask; }
 extern "C" int select(int , fd_set *__restrict__ , fd_set *__restrict__ , fd_set *__restrict__ , timeval *__restrict__ );
 # 113 "/usr/include/x86_64-linux-gnu/sys/select.h" 3
 extern "C" int pselect(int , fd_set *__restrict__ , fd_set *__restrict__ , fd_set *__restrict__ , const timespec *__restrict__ , const __sigset_t *__restrict__ );
-# 24 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
-extern "C" long __fdelt_chk(long );
-# 25 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
-extern "C" long __fdelt_warn(long )
-# 26 "/usr/include/x86_64-linux-gnu/bits/select2.h" 3
- __attribute((__warning__("bit outside of fd_set selected")));
 # 185 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
 extern "C" { typedef __blksize_t blksize_t; }
 # 192 "/usr/include/x86_64-linux-gnu/sys/types.h" 3
@@ -6232,11 +5870,11 @@ extern "C" int lcong48_r(unsigned short [7], drand48_data * ) throw()
 # 539 "/usr/include/stdlib.h" 3
 extern "C" void *malloc(size_t ) throw() __attribute((__malloc__))
 # 540 "/usr/include/stdlib.h" 3
- __attribute((__alloc_size__(1))) __attribute((__warn_unused_result__));
+ __attribute((__alloc_size__(1)));
 # 542 "/usr/include/stdlib.h" 3
 extern "C" void *calloc(size_t , size_t ) throw()
 # 543 "/usr/include/stdlib.h" 3
- __attribute((__malloc__)) __attribute((__alloc_size__(1, 2))) __attribute((__warn_unused_result__));
+ __attribute((__malloc__)) __attribute((__alloc_size__(1, 2)));
 # 550 "/usr/include/stdlib.h" 3
 extern "C" void *realloc(void * , size_t ) throw()
 # 551 "/usr/include/stdlib.h" 3
@@ -6254,15 +5892,15 @@ extern "C" void *alloca(size_t ) throw();
 # 574 "/usr/include/stdlib.h" 3
 extern "C" void *valloc(size_t ) throw() __attribute((__malloc__))
 # 575 "/usr/include/stdlib.h" 3
- __attribute((__alloc_size__(1))) __attribute((__warn_unused_result__));
+ __attribute((__alloc_size__(1)));
 # 580 "/usr/include/stdlib.h" 3
 extern "C" int posix_memalign(void ** , size_t , size_t ) throw()
 # 581 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 586 "/usr/include/stdlib.h" 3
 extern "C" void *aligned_alloc(size_t , size_t ) throw()
 # 587 "/usr/include/stdlib.h" 3
- __attribute((__malloc__)) __attribute((__alloc_size__(2))) __attribute((__warn_unused_result__));
+ __attribute((__malloc__)) __attribute((__alloc_size__(2)));
 # 591 "/usr/include/stdlib.h" 3
 extern "C" void abort() throw() __attribute((__noreturn__));
 # 595 "/usr/include/stdlib.h" 3
@@ -6282,11 +5920,11 @@ extern "C" void quick_exit(int ) throw() __attribute((__noreturn__));
 # 629 "/usr/include/stdlib.h" 3
 extern "C" void _Exit(int ) throw() __attribute((__noreturn__));
 # 634 "/usr/include/stdlib.h" 3
-extern "C" char *getenv(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" char *getenv(const char * ) throw() __attribute((__nonnull__(1)));
 # 639 "/usr/include/stdlib.h" 3
 extern "C" char *secure_getenv(const char * ) throw()
 # 640 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 647 "/usr/include/stdlib.h" 3
 extern "C" int putenv(char * ) throw() __attribute((__nonnull__(1)));
 # 653 "/usr/include/stdlib.h" 3
@@ -6300,39 +5938,37 @@ extern "C" int clearenv() throw();
 # 675 "/usr/include/stdlib.h" 3
 extern "C" char *mktemp(char * ) throw() __attribute((__nonnull__(1)));
 # 688 "/usr/include/stdlib.h" 3
-extern "C" int mkstemp(char * ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemp(char * ) __attribute((__nonnull__(1)));
 # 698 "/usr/include/stdlib.h" 3
-extern "C" int mkstemp64(char * ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemp64(char * ) __attribute((__nonnull__(1)));
 # 710 "/usr/include/stdlib.h" 3
-extern "C" int mkstemps(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkstemps(char * , int ) __attribute((__nonnull__(1)));
 # 720 "/usr/include/stdlib.h" 3
 extern "C" int mkstemps64(char * , int )
 # 721 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 731 "/usr/include/stdlib.h" 3
-extern "C" char *mkdtemp(char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" char *mkdtemp(char * ) throw() __attribute((__nonnull__(1)));
 # 742 "/usr/include/stdlib.h" 3
-extern "C" int mkostemp(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkostemp(char * , int ) __attribute((__nonnull__(1)));
 # 752 "/usr/include/stdlib.h" 3
-extern "C" int mkostemp64(char * , int ) __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int mkostemp64(char * , int ) __attribute((__nonnull__(1)));
 # 762 "/usr/include/stdlib.h" 3
 extern "C" int mkostemps(char * , int , int )
 # 763 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 774 "/usr/include/stdlib.h" 3
 extern "C" int mkostemps64(char * , int , int )
 # 775 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 784 "/usr/include/stdlib.h" 3
-extern "C" int system(const char * ) __attribute((__warn_unused_result__));
+extern "C" int system(const char * );
 # 790 "/usr/include/stdlib.h" 3
 extern "C" char *canonicalize_file_name(const char * ) throw()
 # 791 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 800 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *realpath(const char *__restrict__ , char *__restrict__ ) throw()
-# 801 "/usr/include/stdlib.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" char *realpath(const char *__restrict__ , char *__restrict__ ) throw();
 # 808 "/usr/include/stdlib.h" 3
 extern "C" { typedef int (*__compar_fn_t)(const void *, const void *); }
 # 811 "/usr/include/stdlib.h" 3
@@ -6340,55 +5976,9 @@ extern "C" { typedef __compar_fn_t comparison_fn_t; }
 # 815 "/usr/include/stdlib.h" 3
 extern "C" { typedef int (*__compar_d_fn_t)(const void *, const void *, void *); }
 # 820 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline void *bsearch(const void * , const void * , size_t , size_t , __compar_fn_t )
+extern "C" void *bsearch(const void * , const void * , size_t , size_t , __compar_fn_t )
 # 822 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1, 2, 5))) __attribute((__warn_unused_result__)); }
-# 20 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-extern "C" {
-# 19 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__attribute((__gnu_inline__)) extern inline void *
-# 20 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-bsearch(const void *__key, const void *__base, size_t __nmemb, size_t __size, __compar_fn_t
-# 21 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__compar)
-# 22 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-{
-# 23 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-size_t __l, __u, __idx;
-# 24 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-const void *__p;
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-int __comparison;
-# 27 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__l = (0);
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__u = __nmemb;
-# 29 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-while (__l < __u)
-# 30 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-{
-# 31 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__idx = ((__l + __u) / (2));
-# 32 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__p = ((void *)(((const char *)__base) + (__idx * __size)));
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__comparison = (*__compar)(__key, __p);
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-if (__comparison < 0) {
-# 35 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__u = __idx; } else {
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-if (__comparison > 0) {
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-__l = (__idx + (1)); } else {
-# 39 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-return (void *)__p; } }
-# 40 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-}
-# 42 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-return __null;
-# 43 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3
-} }
+ __attribute((__nonnull__(1, 2, 5)));
 # 830 "/usr/include/stdlib.h" 3
 extern "C" void qsort(void * , size_t , size_t , __compar_fn_t )
 # 831 "/usr/include/stdlib.h" 3
@@ -6398,49 +5988,49 @@ extern "C" void qsort_r(void * , size_t , size_t , __compar_d_fn_t , void * )
 # 835 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1, 4)));
 # 840 "/usr/include/stdlib.h" 3
-extern "C" int abs(int ) throw() __attribute((const)) __attribute((__warn_unused_result__));
+extern "C" int abs(int ) throw() __attribute((const));
 # 841 "/usr/include/stdlib.h" 3
-extern "C" long labs(long ) throw() __attribute((const)) __attribute((__warn_unused_result__));
+extern "C" long labs(long ) throw() __attribute((const));
 # 844 "/usr/include/stdlib.h" 3
 __extension__ extern "C" long long llabs(long long ) throw()
 # 845 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 852 "/usr/include/stdlib.h" 3
 extern "C" div_t div(int , int ) throw()
 # 853 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 854 "/usr/include/stdlib.h" 3
 extern "C" ldiv_t ldiv(long , long ) throw()
 # 855 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 858 "/usr/include/stdlib.h" 3
 __extension__ extern "C" lldiv_t lldiv(long long , long long ) throw()
 # 860 "/usr/include/stdlib.h" 3
- __attribute((const)) __attribute((__warn_unused_result__));
+ __attribute((const));
 # 872 "/usr/include/stdlib.h" 3
 extern "C" char *ecvt(double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 873 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 878 "/usr/include/stdlib.h" 3
 extern "C" char *fcvt(double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 879 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 884 "/usr/include/stdlib.h" 3
 extern "C" char *gcvt(double , int , char * ) throw()
 # 885 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3)));
 # 890 "/usr/include/stdlib.h" 3
 extern "C" char *qecvt(long double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 892 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 893 "/usr/include/stdlib.h" 3
 extern "C" char *qfcvt(long double , int , int *__restrict__ , int *__restrict__ ) throw()
 # 895 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3, 4)));
 # 896 "/usr/include/stdlib.h" 3
 extern "C" char *qgcvt(long double , int , char * ) throw()
 # 897 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(3)));
 # 902 "/usr/include/stdlib.h" 3
 extern "C" int ecvt_r(double , int , int *__restrict__ , int *__restrict__ , char *__restrict__ , size_t ) throw()
 # 904 "/usr/include/stdlib.h" 3
@@ -6462,209 +6052,35 @@ extern "C" int mblen(const char * , size_t ) throw();
 # 925 "/usr/include/stdlib.h" 3
 extern "C" int mbtowc(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw();
 # 929 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int wctomb(char * , wchar_t ) throw(); }
+extern "C" int wctomb(char * , wchar_t ) throw();
 # 933 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t mbstowcs(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw(); }
+extern "C" size_t mbstowcs(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw();
 # 936 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t wcstombs(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw(); }
+extern "C" size_t wcstombs(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw();
 # 946 "/usr/include/stdlib.h" 3
-extern "C" int rpmatch(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int rpmatch(const char * ) throw() __attribute((__nonnull__(1)));
 # 957 "/usr/include/stdlib.h" 3
 extern "C" int getsubopt(char **__restrict__ , char *const *__restrict__ , char **__restrict__ ) throw()
 # 960 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(1, 2, 3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1, 2, 3)));
 # 968 "/usr/include/stdlib.h" 3
-extern "C" int posix_openpt(int ) __attribute((__warn_unused_result__));
+extern "C" int posix_openpt(int );
 # 976 "/usr/include/stdlib.h" 3
 extern "C" int grantpt(int ) throw();
 # 980 "/usr/include/stdlib.h" 3
 extern "C" int unlockpt(int ) throw();
 # 985 "/usr/include/stdlib.h" 3
-extern "C" char *ptsname(int ) throw() __attribute((__warn_unused_result__));
+extern "C" char *ptsname(int ) throw();
 # 992 "/usr/include/stdlib.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int ptsname_r(int , char * , size_t ) throw()
+extern "C" int ptsname_r(int , char * , size_t ) throw()
 # 993 "/usr/include/stdlib.h" 3
- __attribute((__nonnull__(2))); }
+ __attribute((__nonnull__(2)));
 # 996 "/usr/include/stdlib.h" 3
 extern "C" int getpt();
 # 1003 "/usr/include/stdlib.h" 3
 extern "C" int getloadavg(double [], int ) throw()
 # 1004 "/usr/include/stdlib.h" 3
  __attribute((__nonnull__(1)));
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-extern "C" {
-# 24 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-__attribute((__gnu_inline__)) extern inline double
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-atof(const char *__nptr) throw()
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-{
-# 27 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-return strtod(__nptr, (char **)__null);
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3
-} }
-# 23 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_chk(const char *__restrict__ , char *__restrict__ , size_t ) throw()
-# 25 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warn_unused_result__));
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_alias(const char *__restrict__ , char *__restrict__ ) throw() __asm__("realpath") __attribute((__warn_unused_result__));
-# 29 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" char *__realpath_chk_warn(const char *__restrict__ , char *__restrict__ , size_t ) throw() __asm__("__realpath_chk") __attribute((__warn_unused_result__))
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("second argument of realpath must be either NULL or at least PATH_MAX bytes long buffer")));
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 37 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-realpath(const char *__restrict__ __name, char *__restrict__ __resolved) throw()
-# 38 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 39 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__resolved, 2 > 1) != ((size_t)(-1)))
-# 40 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 42 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__resolved, 2 > 1) < (4096)) {
-# 43 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_chk_warn(__name, __resolved, __builtin_object_size(__resolved, 2 > 1)); }
-# 45 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_chk(__name, __resolved, __builtin_object_size(__resolved, 2 > 1));
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __realpath_alias(__name, __resolved);
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 52 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_chk(int , char * , size_t , size_t ) throw()
-# 53 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2)));
-# 54 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_alias(int , char * , size_t ) throw() __asm__("ptsname_r")
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2)));
-# 57 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __ptsname_r_chk_warn(int , char * , size_t , size_t ) throw() __asm__("__ptsname_r_chk")
-# 60 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__nonnull__(2))) __attribute((__warning__("ptsname_r called with buflen bigger than size of buf")));
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 63 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-ptsname_r(int __fd, char *__buf, size_t __buflen) throw()
-# 65 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 68 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_chk(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 70 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 71 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_chk_warn(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 72 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __ptsname_r_alias(__fd, __buf, __buflen);
-# 74 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __wctomb_chk(char * , wchar_t , size_t ) throw()
-# 78 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warn_unused_result__));
-# 79 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" int __wctomb_alias(char * , wchar_t ) throw() __asm__("wctomb") __attribute((__warn_unused_result__));
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline int
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-wctomb(char *__s, wchar_t __wchar) throw()
-# 84 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 92 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if ((__builtin_object_size(__s, 2 > 1) != ((size_t)(-1))) && ((16) > __builtin_object_size(__s, 2 > 1))) {
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wctomb_chk(__s, __wchar, __builtin_object_size(__s, 2 > 1)); }
-# 94 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wctomb_alias(__s, __wchar);
-# 95 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_chk(wchar_t *__restrict__ , const char *__restrict__ , size_t , size_t ) throw();
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_alias(wchar_t *__restrict__ , const char *__restrict__ , size_t ) throw() __asm__("mbstowcs");
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __mbstowcs_chk_warn(wchar_t *__restrict__ , const char *__restrict__ , size_t , size_t ) throw() __asm__("__mbstowcs_chk")
-# 109 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("mbstowcs called with dst buffer smaller than len * sizeof (wchar_t)")));
-# 113 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 112 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline size_t
-# 113 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-mbstowcs(wchar_t *__restrict__ __dst, const char *__restrict__ __src, size_t __len) throw()
-# 115 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 116 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__dst, 2 > 1) != ((size_t)(-1)))
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 119 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_chk(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t)); }
-# 122 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__len > (__builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t))) {
-# 123 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_chk_warn(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1) / sizeof(wchar_t)); }
-# 125 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 126 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __mbstowcs_alias(__dst, __src, __len);
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_chk(char *__restrict__ , const wchar_t *__restrict__ , size_t , size_t ) throw();
-# 133 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_alias(char *__restrict__ , const wchar_t *__restrict__ , size_t ) throw() __asm__("wcstombs");
-# 137 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" size_t __wcstombs_chk_warn(char *__restrict__ , const wchar_t *__restrict__ , size_t , size_t ) throw() __asm__("__wcstombs_chk")
-# 141 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
- __attribute((__warning__("wcstombs called with dst buffer smaller than len")));
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-extern "C" {
-# 143 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline size_t
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-wcstombs(char *__restrict__ __dst, const wchar_t *__restrict__ __src, size_t __len) throw()
-# 146 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 147 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__builtin_object_size(__dst, 2 > 1) != ((size_t)(-1)))
-# 148 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-{
-# 149 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (!(0)) {
-# 150 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_chk(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1)); }
-# 151 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-if (__len > __builtin_object_size(__dst, 2 > 1)) {
-# 152 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_chk_warn(__dst, __src, __len, __builtin_object_size(__dst, 2 > 1)); }
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-}
-# 154 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-return __wcstombs_alias(__dst, __src, __len);
-# 155 "/usr/include/x86_64-linux-gnu/bits/stdlib.h" 3
-} }
 # 69 "/usr/include/c++/4.4/bits/cpp_type_traits.h" 3
 namespace __gnu_cxx __attribute((__visibility__("default"))) {
 # 71 "/usr/include/c++/4.4/bits/cpp_type_traits.h" 3
@@ -26781,17 +26197,17 @@ extern "C" int renameat(int , const char * , int , const char * ) throw();
 # 164 "/usr/include/stdio.h" 3
 extern "C" int renameat2(int , const char * , int , const char * , unsigned ) throw();
 # 173 "/usr/include/stdio.h" 3
-extern "C" FILE *tmpfile() __attribute((__warn_unused_result__));
+extern "C" FILE *tmpfile();
 # 183 "/usr/include/stdio.h" 3
-extern "C" FILE *tmpfile64() __attribute((__warn_unused_result__));
+extern "C" FILE *tmpfile64();
 # 187 "/usr/include/stdio.h" 3
-extern "C" char *tmpnam(char * ) throw() __attribute((__warn_unused_result__));
+extern "C" char *tmpnam(char * ) throw();
 # 192 "/usr/include/stdio.h" 3
-extern "C" char *tmpnam_r(char * ) throw() __attribute((__warn_unused_result__));
+extern "C" char *tmpnam_r(char * ) throw();
 # 204 "/usr/include/stdio.h" 3
 extern "C" char *tempnam(const char * , const char * ) throw()
 # 205 "/usr/include/stdio.h" 3
- __attribute((__malloc__)) __attribute((__warn_unused_result__));
+ __attribute((__malloc__));
 # 213 "/usr/include/stdio.h" 3
 extern "C" int fclose(FILE * );
 # 218 "/usr/include/stdio.h" 3
@@ -26801,33 +26217,21 @@ extern "C" int fflush_unlocked(FILE * );
 # 237 "/usr/include/stdio.h" 3
 extern "C" int fcloseall();
 # 246 "/usr/include/stdio.h" 3
-extern "C" FILE *fopen(const char *__restrict__ , const char *__restrict__ )
-# 247 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *fopen(const char *__restrict__ , const char *__restrict__ );
 # 252 "/usr/include/stdio.h" 3
-extern "C" FILE *freopen(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ )
-# 254 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *freopen(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ );
 # 270 "/usr/include/stdio.h" 3
-extern "C" FILE *fopen64(const char *__restrict__ , const char *__restrict__ )
-# 271 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *fopen64(const char *__restrict__ , const char *__restrict__ );
 # 272 "/usr/include/stdio.h" 3
-extern "C" FILE *freopen64(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ )
-# 274 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *freopen64(const char *__restrict__ , const char *__restrict__ , FILE *__restrict__ );
 # 279 "/usr/include/stdio.h" 3
-extern "C" FILE *fdopen(int , const char * ) throw() __attribute((__warn_unused_result__));
+extern "C" FILE *fdopen(int , const char * ) throw();
 # 285 "/usr/include/stdio.h" 3
-extern "C" FILE *fopencookie(void *__restrict__ , const char *__restrict__ , cookie_io_functions_t ) throw()
-# 287 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *fopencookie(void *__restrict__ , const char *__restrict__ , cookie_io_functions_t ) throw();
 # 292 "/usr/include/stdio.h" 3
-extern "C" FILE *fmemopen(void * , size_t , const char * ) throw()
-# 293 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" FILE *fmemopen(void * , size_t , const char * ) throw();
 # 298 "/usr/include/stdio.h" 3
-extern "C" FILE *open_memstream(char ** , size_t * ) throw() __attribute((__warn_unused_result__));
+extern "C" FILE *open_memstream(char ** , size_t * ) throw();
 # 304 "/usr/include/stdio.h" 3
 extern "C" void setbuf(FILE *__restrict__ , char *__restrict__ ) throw();
 # 308 "/usr/include/stdio.h" 3
@@ -26837,61 +26241,59 @@ extern "C" void setbuffer(FILE *__restrict__ , char *__restrict__ , size_t ) thr
 # 318 "/usr/include/stdio.h" 3
 extern "C" void setlinebuf(FILE * ) throw();
 # 326 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fprintf(FILE *__restrict__ , const char *__restrict__ , ...); }
+extern "C" int fprintf(FILE *__restrict__ , const char *__restrict__ , ...);
 # 332 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int printf(const char *__restrict__ , ...); }
+extern "C" int printf(const char *__restrict__ , ...);
 # 334 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int sprintf(char *__restrict__ , const char *__restrict__ , ...) throw(); }
+extern "C" int sprintf(char *__restrict__ , const char *__restrict__ , ...) throw();
 # 341 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vfprintf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list ); }
+extern "C" int vfprintf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list );
 # 347 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vprintf(const char *__restrict__ , __gnuc_va_list ); }
+extern "C" int vprintf(const char *__restrict__ , __gnuc_va_list );
 # 349 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vsprintf(char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw(); }
+extern "C" int vsprintf(char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw();
 # 354 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int snprintf(char *__restrict__ , size_t , const char *__restrict__ , ...) throw()
+extern "C" int snprintf(char *__restrict__ , size_t , const char *__restrict__ , ...) throw()
 # 356 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 3, 4))); }
+ __attribute((__format__(__printf__, 3, 4)));
 # 358 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vsnprintf(char *__restrict__ , size_t , const char *__restrict__ , __gnuc_va_list ) throw()
+extern "C" int vsnprintf(char *__restrict__ , size_t , const char *__restrict__ , __gnuc_va_list ) throw()
 # 360 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 3, 0))); }
+ __attribute((__format__(__printf__, 3, 0)));
 # 366 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vasprintf(char **__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
+extern "C" int vasprintf(char **__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
 # 368 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))) __attribute((__warn_unused_result__)); }
+ __attribute((__format__(__printf__, 2, 0)));
 # 369 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int __asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
+extern "C" int __asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
 # 371 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))) __attribute((__warn_unused_result__)); }
+ __attribute((__format__(__printf__, 2, 3)));
 # 372 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
+extern "C" int asprintf(char **__restrict__ , const char *__restrict__ , ...) throw()
 # 374 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))) __attribute((__warn_unused_result__)); }
+ __attribute((__format__(__printf__, 2, 3)));
 # 379 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int vdprintf(int , const char *__restrict__ , __gnuc_va_list )
+extern "C" int vdprintf(int , const char *__restrict__ , __gnuc_va_list )
 # 381 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))); }
+ __attribute((__format__(__printf__, 2, 0)));
 # 382 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int dprintf(int , const char *__restrict__ , ...)
+extern "C" int dprintf(int , const char *__restrict__ , ...)
 # 383 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))); }
+ __attribute((__format__(__printf__, 2, 3)));
 # 391 "/usr/include/stdio.h" 3
-extern "C" int fscanf(FILE *__restrict__ , const char *__restrict__ , ...)
-# 392 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" int fscanf(FILE *__restrict__ , const char *__restrict__ , ...);
 # 397 "/usr/include/stdio.h" 3
-extern "C" int scanf(const char *__restrict__ , ...) __attribute((__warn_unused_result__));
+extern "C" int scanf(const char *__restrict__ , ...);
 # 399 "/usr/include/stdio.h" 3
 extern "C" int sscanf(const char *__restrict__ , const char *__restrict__ , ...) throw();
 # 432 "/usr/include/stdio.h" 3
 extern "C" int vfscanf(FILE *__restrict__ , const char *__restrict__ , __gnuc_va_list )
 # 434 "/usr/include/stdio.h" 3
- __attribute((__format__(__scanf__, 2, 0))) __attribute((__warn_unused_result__));
+ __attribute((__format__(__scanf__, 2, 0)));
 # 440 "/usr/include/stdio.h" 3
 extern "C" int vscanf(const char *__restrict__ , __gnuc_va_list )
 # 441 "/usr/include/stdio.h" 3
- __attribute((__format__(__scanf__, 1, 0))) __attribute((__warn_unused_result__));
+ __attribute((__format__(__scanf__, 1, 0)));
 # 444 "/usr/include/stdio.h" 3
 extern "C" int vsscanf(const char *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
 # 446 "/usr/include/stdio.h" 3
@@ -26901,51 +26303,41 @@ extern "C" int fgetc(FILE * );
 # 486 "/usr/include/stdio.h" 3
 extern "C" int getc(FILE * );
 # 492 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getchar(); }
+extern "C" int getchar();
 # 499 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getc_unlocked(FILE * ); }
+extern "C" int getc_unlocked(FILE * );
 # 500 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getchar_unlocked(); }
+extern "C" int getchar_unlocked();
 # 510 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fgetc_unlocked(FILE * ); }
+extern "C" int fgetc_unlocked(FILE * );
 # 521 "/usr/include/stdio.h" 3
 extern "C" int fputc(int , FILE * );
 # 522 "/usr/include/stdio.h" 3
 extern "C" int putc(int , FILE * );
 # 528 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putchar(int ); }
+extern "C" int putchar(int );
 # 537 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int fputc_unlocked(int , FILE * ); }
+extern "C" int fputc_unlocked(int , FILE * );
 # 545 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putc_unlocked(int , FILE * ); }
+extern "C" int putc_unlocked(int , FILE * );
 # 546 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int putchar_unlocked(int ); }
+extern "C" int putchar_unlocked(int );
 # 553 "/usr/include/stdio.h" 3
 extern "C" int getw(FILE * );
 # 556 "/usr/include/stdio.h" 3
 extern "C" int putw(int , FILE * );
 # 564 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *fgets(char *__restrict__ , int , FILE *__restrict__ )
-# 565 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" char *fgets(char *__restrict__ , int , FILE *__restrict__ );
 # 577 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *gets(char * ) __attribute((__warn_unused_result__)) __attribute((__deprecated__)); }
+extern "C" char *gets(char * ) __attribute((__deprecated__));
 # 587 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *fgets_unlocked(char *__restrict__ , int , FILE *__restrict__ )
-# 588 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" char *fgets_unlocked(char *__restrict__ , int , FILE *__restrict__ );
 # 603 "/usr/include/stdio.h" 3
-extern "C" __ssize_t __getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ )
-# 605 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" __ssize_t __getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ );
 # 606 "/usr/include/stdio.h" 3
-extern "C" __ssize_t getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ )
-# 608 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__));
+extern "C" __ssize_t getdelim(char **__restrict__ , size_t *__restrict__ , int , FILE *__restrict__ );
 # 616 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline __ssize_t getline(char **__restrict__ , size_t *__restrict__ , FILE *__restrict__ )
-# 618 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" __ssize_t getline(char **__restrict__ , size_t *__restrict__ , FILE *__restrict__ );
 # 626 "/usr/include/stdio.h" 3
 extern "C" int fputs(const char *__restrict__ , FILE *__restrict__ );
 # 632 "/usr/include/stdio.h" 3
@@ -26953,29 +26345,25 @@ extern "C" int puts(const char * );
 # 639 "/usr/include/stdio.h" 3
 extern "C" int ungetc(int , FILE * );
 # 646 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t fread(void *__restrict__ , size_t , size_t , FILE *__restrict__ )
-# 647 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" size_t fread(void *__restrict__ , size_t , size_t , FILE *__restrict__ );
 # 652 "/usr/include/stdio.h" 3
 extern "C" size_t fwrite(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
 # 662 "/usr/include/stdio.h" 3
 extern "C" int fputs_unlocked(const char *__restrict__ , FILE *__restrict__ );
 # 673 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t fread_unlocked(void *__restrict__ , size_t , size_t , FILE *__restrict__ )
-# 674 "/usr/include/stdio.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" size_t fread_unlocked(void *__restrict__ , size_t , size_t , FILE *__restrict__ );
 # 675 "/usr/include/stdio.h" 3
 extern "C" size_t fwrite_unlocked(const void *__restrict__ , size_t , size_t , FILE *__restrict__ );
 # 684 "/usr/include/stdio.h" 3
 extern "C" int fseek(FILE * , long , int );
 # 689 "/usr/include/stdio.h" 3
-extern "C" long ftell(FILE * ) __attribute((__warn_unused_result__));
+extern "C" long ftell(FILE * );
 # 694 "/usr/include/stdio.h" 3
 extern "C" void rewind(FILE * );
 # 707 "/usr/include/stdio.h" 3
 extern "C" int fseeko(FILE * , __off_t , int );
 # 712 "/usr/include/stdio.h" 3
-extern "C" __off_t ftello(FILE * ) __attribute((__warn_unused_result__));
+extern "C" __off_t ftello(FILE * );
 # 731 "/usr/include/stdio.h" 3
 extern "C" int fgetpos(FILE *__restrict__ , fpos_t *__restrict__ );
 # 736 "/usr/include/stdio.h" 3
@@ -26983,7 +26371,7 @@ extern "C" int fsetpos(FILE * , const fpos_t * );
 # 750 "/usr/include/stdio.h" 3
 extern "C" int fseeko64(FILE * , __off64_t , int );
 # 751 "/usr/include/stdio.h" 3
-extern "C" __off64_t ftello64(FILE * ) __attribute((__warn_unused_result__));
+extern "C" __off64_t ftello64(FILE * );
 # 752 "/usr/include/stdio.h" 3
 extern "C" int fgetpos64(FILE *__restrict__ , fpos64_t *__restrict__ );
 # 753 "/usr/include/stdio.h" 3
@@ -26991,15 +26379,15 @@ extern "C" int fsetpos64(FILE * , const fpos64_t * );
 # 757 "/usr/include/stdio.h" 3
 extern "C" void clearerr(FILE * ) throw();
 # 759 "/usr/include/stdio.h" 3
-extern "C" int feof(FILE * ) throw() __attribute((__warn_unused_result__));
+extern "C" int feof(FILE * ) throw();
 # 761 "/usr/include/stdio.h" 3
-extern "C" int ferror(FILE * ) throw() __attribute((__warn_unused_result__));
+extern "C" int ferror(FILE * ) throw();
 # 765 "/usr/include/stdio.h" 3
 extern "C" void clearerr_unlocked(FILE * ) throw();
 # 766 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int feof_unlocked(FILE * ) throw() __attribute((__warn_unused_result__)); }
+extern "C" int feof_unlocked(FILE * ) throw();
 # 767 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int ferror_unlocked(FILE * ) throw() __attribute((__warn_unused_result__)); }
+extern "C" int ferror_unlocked(FILE * ) throw();
 # 775 "/usr/include/stdio.h" 3
 extern "C" void perror(const char * );
 # 26 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
@@ -27011,11 +26399,11 @@ extern "C" { extern int _sys_nerr; }
 # 31 "/usr/include/x86_64-linux-gnu/bits/sys_errlist.h" 3
 extern "C" { extern const char *const _sys_errlist[]; }
 # 786 "/usr/include/stdio.h" 3
-extern "C" int fileno(FILE * ) throw() __attribute((__warn_unused_result__));
+extern "C" int fileno(FILE * ) throw();
 # 791 "/usr/include/stdio.h" 3
-extern "C" int fileno_unlocked(FILE * ) throw() __attribute((__warn_unused_result__));
+extern "C" int fileno_unlocked(FILE * ) throw();
 # 800 "/usr/include/stdio.h" 3
-extern "C" FILE *popen(const char * , const char * ) __attribute((__warn_unused_result__));
+extern "C" FILE *popen(const char * , const char * );
 # 806 "/usr/include/stdio.h" 3
 extern "C" int pclose(FILE * );
 # 812 "/usr/include/stdio.h" 3
@@ -27025,577 +26413,23 @@ extern "C" char *cuserid(char * );
 # 823 "/usr/include/stdio.h" 3
 struct obstack;
 # 826 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int obstack_printf(obstack *__restrict__ , const char *__restrict__ , ...) throw()
+extern "C" int obstack_printf(obstack *__restrict__ , const char *__restrict__ , ...) throw()
 # 828 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 3))); }
+ __attribute((__format__(__printf__, 2, 3)));
 # 829 "/usr/include/stdio.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int obstack_vprintf(obstack *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
+extern "C" int obstack_vprintf(obstack *__restrict__ , const char *__restrict__ , __gnuc_va_list ) throw()
 # 832 "/usr/include/stdio.h" 3
- __attribute((__format__(__printf__, 2, 0))); }
+ __attribute((__format__(__printf__, 2, 0)));
 # 840 "/usr/include/stdio.h" 3
 extern "C" void flockfile(FILE * ) throw();
 # 844 "/usr/include/stdio.h" 3
-extern "C" int ftrylockfile(FILE * ) throw() __attribute((__warn_unused_result__));
+extern "C" int ftrylockfile(FILE * ) throw();
 # 847 "/usr/include/stdio.h" 3
 extern "C" void funlockfile(FILE * ) throw();
 # 858 "/usr/include/stdio.h" 3
 extern "C" int __uflow(FILE *);
 # 859 "/usr/include/stdio.h" 3
 extern "C" int __overflow(FILE *, int);
-# 47 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 47 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getchar()
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return getc(stdin);
-# 50 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 55 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 56 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-fgetc_unlocked(FILE *__fp)
-# 57 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 58 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__fp->_IO_read_ptr) >= (__fp->_IO_read_end), 0)) ? __uflow(__fp) : (*((unsigned char *)((__fp->_IO_read_ptr)++)));
-# 59 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 65 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getc_unlocked(FILE *__fp)
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 68 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__fp->_IO_read_ptr) >= (__fp->_IO_read_end), 0)) ? __uflow(__fp) : (*((unsigned char *)((__fp->_IO_read_ptr)++)));
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 72 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 73 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getchar_unlocked()
-# 74 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 75 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((stdin->_IO_read_ptr) >= (stdin->_IO_read_end), 0)) ? __uflow(stdin) : (*((unsigned char *)((stdin->_IO_read_ptr)++)));
-# 76 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 81 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putchar(int __c)
-# 83 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 84 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return putc(__c, stdout);
-# 85 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 90 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-fputc_unlocked(int __c, FILE *__stream)
-# 92 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__stream->_IO_write_ptr) >= (__stream->_IO_write_end), 0)) ? __overflow(__stream, (unsigned char)__c) : ((unsigned char)((*((__stream->_IO_write_ptr)++)) = __c));
-# 94 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 100 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 101 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putc_unlocked(int __c, FILE *__stream)
-# 102 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 103 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((__stream->_IO_write_ptr) >= (__stream->_IO_write_end), 0)) ? __overflow(__stream, (unsigned char)__c) : ((unsigned char)((*((__stream->_IO_write_ptr)++)) = __c));
-# 104 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 107 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-putchar_unlocked(int __c)
-# 109 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 110 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return (__builtin_expect((stdout->_IO_write_ptr) >= (stdout->_IO_write_end), 0)) ? __overflow(stdout, (unsigned char)__c) : ((unsigned char)((*((stdout->_IO_write_ptr)++)) = __c));
-# 111 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline __ssize_t
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-getline(char **__lineptr, size_t *__n, FILE *__stream)
-# 119 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 120 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return __getdelim(__lineptr, __n, '\n', __stream);
-# 121 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-feof_unlocked(FILE *__stream) throw()
-# 129 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return ((__stream->_flags) & 16) != 0;
-# 131 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-extern "C" {
-# 134 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-__attribute((__gnu_inline__)) extern inline int
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-ferror_unlocked(FILE *__stream) throw()
-# 136 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-{
-# 137 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-return ((__stream->_flags) & 32) != 0;
-# 138 "/usr/include/x86_64-linux-gnu/bits/stdio.h" 3
-} }
-# 26 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __sprintf_chk(char *__restrict__ , int , size_t , const char *__restrict__ , ...) throw();
-# 28 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vsprintf_chk(char *__restrict__ , int , size_t , const char *__restrict__ , __gnuc_va_list ) throw();
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 33 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 34 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-sprintf(char *__restrict__ __s, const char *__restrict__ __fmt, ...) throw()
-# 35 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 36 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___sprintf_chk(__s, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __builtin_va_arg_pack());
-# 38 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 45 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 46 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vsprintf(char *__restrict__ __s, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 48 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 49 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___vsprintf_chk(__s, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __ap);
-# 51 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 55 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __snprintf_chk(char *__restrict__ , size_t , int , size_t , const char *__restrict__ , ...) throw();
-# 58 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vsnprintf_chk(char *__restrict__ , size_t , int , size_t , const char *__restrict__ , __gnuc_va_list ) throw();
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 63 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 64 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-snprintf(char *__restrict__ __s, size_t __n, const char *__restrict__ __fmt, ...) throw()
-# 66 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 67 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___snprintf_chk(__s, __n, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __builtin_va_arg_pack());
-# 69 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 76 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 77 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vsnprintf(char *__restrict__ __s, size_t __n, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 79 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 80 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __builtin___vsnprintf_chk(__s, __n, 2 - 1, __builtin_object_size(__s, 2 > 1), __fmt, __ap);
-# 82 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 88 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __fprintf_chk(FILE *__restrict__ , int , const char *__restrict__ , ...);
-# 90 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __printf_chk(int , const char *__restrict__ , ...);
-# 91 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vfprintf_chk(FILE *__restrict__ , int , const char *__restrict__ , __gnuc_va_list );
-# 93 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vprintf_chk(int , const char *__restrict__ , __gnuc_va_list );
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 97 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 98 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fprintf(FILE *__restrict__ __stream, const char *__restrict__ __fmt, ...)
-# 99 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 100 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fprintf_chk(__stream, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 102 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 104 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 105 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-printf(const char *__restrict__ __fmt, ...)
-# 106 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 107 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __printf_chk(2 - 1, __fmt, __builtin_va_arg_pack());
-# 108 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 116 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 117 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vprintf(const char *__restrict__ __fmt, __gnuc_va_list __ap)
-# 118 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 120 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vfprintf_chk(stdout, 2 - 1, __fmt, __ap);
-# 124 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 126 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 127 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vfprintf(FILE *__restrict__ __stream, const char *__restrict__
-# 128 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__fmt, __gnuc_va_list __ap)
-# 129 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 130 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vfprintf_chk(__stream, 2 - 1, __fmt, __ap);
-# 131 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 134 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __dprintf_chk(int , int , const char *__restrict__ , ...)
-# 135 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4)));
-# 136 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vdprintf_chk(int , int , const char *__restrict__ , __gnuc_va_list )
-# 138 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0)));
-# 142 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 141 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 142 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-dprintf(int __fd, const char *__restrict__ __fmt, ...)
-# 143 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 144 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __dprintf_chk(__fd, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 146 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 152 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 153 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vdprintf(int __fd, const char *__restrict__ __fmt, __gnuc_va_list __ap)
-# 154 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 155 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vdprintf_chk(__fd, 2 - 1, __fmt, __ap);
-# 156 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 161 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __asprintf_chk(char **__restrict__ , int , const char *__restrict__ , ...) throw()
-# 163 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4))) __attribute((__warn_unused_result__));
-# 164 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __vasprintf_chk(char **__restrict__ , int , const char *__restrict__ , __gnuc_va_list ) throw()
-# 166 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0))) __attribute((__warn_unused_result__));
-# 167 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __obstack_printf_chk(obstack *__restrict__ , int , const char *__restrict__ , ...) throw()
-# 170 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 4)));
-# 171 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" int __obstack_vprintf_chk(obstack *__restrict__ , int , const char *__restrict__ , __gnuc_va_list ) throw()
-# 175 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__format__(__printf__, 3, 0)));
-# 179 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 178 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 179 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-asprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, ...) throw()
-# 180 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 181 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __asprintf_chk(__ptr, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 183 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 186 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 185 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 186 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__asprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, ...) throw()
-# 188 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 189 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __asprintf_chk(__ptr, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 191 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 194 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 193 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 194 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-obstack_printf(obstack *__restrict__ __obstack, const char *__restrict__ __fmt, ...) throw()
-# 196 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 197 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __obstack_printf_chk(__obstack, 2 - 1, __fmt, __builtin_va_arg_pack());
-# 199 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 210 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 209 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 210 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-vasprintf(char **__restrict__ __ptr, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 212 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 213 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __vasprintf_chk(__ptr, 2 - 1, __fmt, __ap);
-# 214 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 217 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 216 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 217 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-obstack_vprintf(obstack *__restrict__ __obstack, const char *__restrict__ __fmt, __gnuc_va_list __ap) throw()
-# 219 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 220 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __obstack_vprintf_chk(__obstack, 2 - 1, __fmt, __ap);
-# 222 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 229 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__gets_chk(char * , size_t) __attribute((__warn_unused_result__));
-# 230 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__gets_warn(char * ) __asm__("gets")
-# 231 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("please use fgets or getline instead, gets can\'t specify buffer size")));
-# 235 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 234 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 235 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-gets(char *__str)
-# 236 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 237 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__str, 2 > 1) != ((size_t)(-1))) {
-# 238 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __gets_chk(__str, __builtin_object_size(__str, 2 > 1)); }
-# 239 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __gets_warn(__str);
-# 240 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 243 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_chk(char *__restrict__ , size_t , int , FILE *__restrict__ )
-# 244 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 245 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_alias(char *__restrict__ , int , FILE *__restrict__ ) __asm__("fgets") __attribute((__warn_unused_result__));
-# 248 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_chk_warn(char *__restrict__ , size_t , int , FILE *__restrict__ ) __asm__("__fgets_chk")
-# 251 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fgets called with bigger size than length of destination buffer")));
-# 255 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 254 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 255 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fgets(char *__restrict__ __s, int __n, FILE *__restrict__ __stream)
-# 256 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 257 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__s, 2 > 1) != ((size_t)(-1)))
-# 258 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 259 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((!(0)) || (__n <= 0)) {
-# 260 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_chk(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 262 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((size_t)__n) > __builtin_object_size(__s, 2 > 1)) {
-# 263 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_chk_warn(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 264 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 265 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_alias(__s, __n, __stream);
-# 266 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 268 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_chk(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ )
-# 270 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 271 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_alias(void *__restrict__ , size_t , size_t , FILE *__restrict__ ) __asm__("fread") __attribute((__warn_unused_result__));
-# 275 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_chk_warn(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ ) __asm__("__fread_chk")
-# 280 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fread called with bigger size * nmemb than length of destination buffer")));
-# 284 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 283 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline size_t
-# 284 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fread(void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__
-# 285 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__stream)
-# 286 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 287 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__ptr, 0) != ((size_t)(-1)))
-# 288 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 289 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((!(0)) || (!(0))) || ((__size | __n) >= (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) {
-# 292 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_chk(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 294 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((__size * __n) > __builtin_object_size(__ptr, 0)) {
-# 295 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_chk_warn(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 296 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 297 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_alias(__ptr, __size, __n, __stream);
-# 298 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 301 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_chk(char *__restrict__ , size_t , int , FILE *__restrict__ )
-# 302 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 303 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_alias(char *__restrict__ , int , FILE *__restrict__ ) __asm__("fgets_unlocked") __attribute((__warn_unused_result__));
-# 306 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" char *__fgets_unlocked_chk_warn(char *__restrict__ , size_t , int , FILE *__restrict__ ) __asm__("__fgets_unlocked_chk")
-# 309 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fgets_unlocked called with bigger size than length of destination buffer")));
-# 313 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 312 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 313 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fgets_unlocked(char *__restrict__ __s, int __n, FILE *__restrict__ __stream)
-# 314 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 315 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__s, 2 > 1) != ((size_t)(-1)))
-# 316 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 317 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((!(0)) || (__n <= 0)) {
-# 318 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_chk(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 320 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((size_t)__n) > __builtin_object_size(__s, 2 > 1)) {
-# 321 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_chk_warn(__s, __builtin_object_size(__s, 2 > 1), __n, __stream); }
-# 322 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 323 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fgets_unlocked_alias(__s, __n, __stream);
-# 324 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
-# 329 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_chk(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ )
-# 331 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__));
-# 332 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_alias(void *__restrict__ , size_t , size_t , FILE *__restrict__ ) __asm__("fread_unlocked") __attribute((__warn_unused_result__));
-# 336 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" size_t __fread_unlocked_chk_warn(void *__restrict__ , size_t , size_t , size_t , FILE *__restrict__ ) __asm__("__fread_unlocked_chk")
-# 341 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("fread_unlocked called with bigger size * nmemb than length of destination buffer")));
-# 345 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-extern "C" {
-# 344 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline size_t
-# 345 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-fread_unlocked(void *__restrict__ __ptr, size_t __size, size_t __n, FILE *__restrict__
-# 346 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-__stream)
-# 347 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 348 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__builtin_object_size(__ptr, 0) != ((size_t)(-1)))
-# 349 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 350 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (((!(0)) || (!(0))) || ((__size | __n) >= (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) {
-# 353 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_chk(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 356 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((__size * __n) > __builtin_object_size(__ptr, 0)) {
-# 357 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_chk_warn(__ptr, __builtin_object_size(__ptr, 0), __size, __n, __stream); }
-# 359 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 362 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if ((((0) && (0)) && ((__size | __n) < (((size_t)1) << (((8) * sizeof(size_t)) / (2))))) && ((__size * __n) <= (8)))
-# 366 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 367 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-size_t __cnt = (__size * __n);
-# 368 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-char *__cptr = ((char *)__ptr);
-# 369 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__cnt == (0)) {
-# 370 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return 0; }
-# 372 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-for (; __cnt > (0); --__cnt)
-# 373 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-{
-# 374 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-int __c = getc_unlocked(__stream);
-# 375 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-if (__c == (-1)) {
-# 376 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-break; }
-# 377 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-(*(__cptr++)) = __c;
-# 378 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 379 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return (__cptr - ((char *)__ptr)) / __size;
-# 380 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-}
-# 382 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-return __fread_unlocked_alias(__ptr, __size, __n, __stream);
-# 383 "/usr/include/x86_64-linux-gnu/bits/stdio2.h" 3
-} }
 # 267 "/usr/include/unistd.h" 3
 extern "C" { typedef __intptr_t intptr_t; }
 # 274 "/usr/include/unistd.h" 3
@@ -27613,7 +26447,7 @@ extern "C" int eaccess(const char * , int ) throw()
 # 304 "/usr/include/unistd.h" 3
 extern "C" int faccessat(int , const char * , int , int ) throw()
 # 305 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(2)));
 # 334 "/usr/include/unistd.h" 3
 extern "C" __off_t lseek(int , __off_t , int ) throw();
 # 345 "/usr/include/unistd.h" 3
@@ -27621,29 +26455,21 @@ extern "C" __off64_t lseek64(int , __off64_t , int ) throw();
 # 353 "/usr/include/unistd.h" 3
 extern "C" int close(int );
 # 360 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline ssize_t read(int , void * , size_t ) __attribute((__warn_unused_result__)); }
+extern "C" ssize_t read(int , void * , size_t );
 # 366 "/usr/include/unistd.h" 3
-extern "C" ssize_t write(int , const void * , size_t ) __attribute((__warn_unused_result__));
+extern "C" ssize_t write(int , const void * , size_t );
 # 376 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline ssize_t pread(int , void * , size_t , __off_t )
-# 377 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" ssize_t pread(int , void * , size_t , __off_t );
 # 384 "/usr/include/unistd.h" 3
-extern "C" ssize_t pwrite(int , const void * , size_t , __off_t )
-# 385 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__));
+extern "C" ssize_t pwrite(int , const void * , size_t , __off_t );
 # 404 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline ssize_t pread64(int , void * , size_t , __off64_t )
-# 405 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__)); }
+extern "C" ssize_t pread64(int , void * , size_t , __off64_t );
 # 408 "/usr/include/unistd.h" 3
-extern "C" ssize_t pwrite64(int , const void * , size_t , __off64_t )
-# 409 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__));
+extern "C" ssize_t pwrite64(int , const void * , size_t , __off64_t );
 # 417 "/usr/include/unistd.h" 3
-extern "C" int pipe(int [2]) throw() __attribute((__warn_unused_result__));
+extern "C" int pipe(int [2]) throw();
 # 422 "/usr/include/unistd.h" 3
-extern "C" int pipe2(int [2], int ) throw() __attribute((__warn_unused_result__));
+extern "C" int pipe2(int [2], int ) throw();
 # 432 "/usr/include/unistd.h" 3
 extern "C" unsigned alarm(unsigned ) throw();
 # 444 "/usr/include/unistd.h" 3
@@ -27657,31 +26483,31 @@ extern "C" int pause();
 # 473 "/usr/include/unistd.h" 3
 extern "C" int chown(const char * , __uid_t , __gid_t ) throw()
 # 474 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 478 "/usr/include/unistd.h" 3
-extern "C" int fchown(int , __uid_t , __gid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int fchown(int , __uid_t , __gid_t ) throw();
 # 483 "/usr/include/unistd.h" 3
 extern "C" int lchown(const char * , __uid_t , __gid_t ) throw()
 # 484 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 491 "/usr/include/unistd.h" 3
 extern "C" int fchownat(int , const char * , __uid_t , __gid_t , int ) throw()
 # 493 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(2)));
 # 497 "/usr/include/unistd.h" 3
-extern "C" int chdir(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int chdir(const char * ) throw() __attribute((__nonnull__(1)));
 # 501 "/usr/include/unistd.h" 3
-extern "C" int fchdir(int ) throw() __attribute((__warn_unused_result__));
+extern "C" int fchdir(int ) throw();
 # 511 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *getcwd(char * , size_t ) throw() __attribute((__warn_unused_result__)); }
+extern "C" char *getcwd(char * , size_t ) throw();
 # 517 "/usr/include/unistd.h" 3
 extern "C" char *get_current_dir_name() throw();
 # 525 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline char *getwd(char * ) throw()
+extern "C" char *getwd(char * ) throw()
 # 526 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__deprecated__)) __attribute((__warn_unused_result__)); }
+ __attribute((__nonnull__(1))) __attribute((__deprecated__));
 # 531 "/usr/include/unistd.h" 3
-extern "C" int dup(int ) throw() __attribute((__warn_unused_result__));
+extern "C" int dup(int ) throw();
 # 534 "/usr/include/unistd.h" 3
 extern "C" int dup2(int , int ) throw();
 # 539 "/usr/include/unistd.h" 3
@@ -27723,7 +26549,7 @@ extern "C" int execvpe(const char * , char *const [], char *const []) throw()
 # 592 "/usr/include/unistd.h" 3
  __attribute((__nonnull__(1, 2)));
 # 598 "/usr/include/unistd.h" 3
-extern "C" int nice(int ) throw() __attribute((__warn_unused_result__));
+extern "C" int nice(int ) throw();
 # 603 "/usr/include/unistd.h" 3
 extern "C" void _exit(int ) __attribute((__noreturn__));
 # 25 "/usr/include/x86_64-linux-gnu/bits/confname.h" 3
@@ -28347,7 +27173,7 @@ extern "C" long fpathconf(int , int ) throw();
 # 619 "/usr/include/unistd.h" 3
 extern "C" long sysconf(int ) throw();
 # 623 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline size_t confstr(int , char * , size_t ) throw(); }
+extern "C" size_t confstr(int , char * , size_t ) throw();
 # 628 "/usr/include/unistd.h" 3
 extern "C" __pid_t getpid() throw();
 # 631 "/usr/include/unistd.h" 3
@@ -28375,33 +27201,29 @@ extern "C" __gid_t getgid() throw();
 # 684 "/usr/include/unistd.h" 3
 extern "C" __gid_t getegid() throw();
 # 689 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getgroups(int , __gid_t []) throw() __attribute((__warn_unused_result__)); }
+extern "C" int getgroups(int , __gid_t []) throw();
 # 693 "/usr/include/unistd.h" 3
 extern "C" int group_member(__gid_t ) throw();
 # 700 "/usr/include/unistd.h" 3
-extern "C" int setuid(__uid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int setuid(__uid_t ) throw();
 # 705 "/usr/include/unistd.h" 3
-extern "C" int setreuid(__uid_t , __uid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int setreuid(__uid_t , __uid_t ) throw();
 # 710 "/usr/include/unistd.h" 3
-extern "C" int seteuid(__uid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int seteuid(__uid_t ) throw();
 # 717 "/usr/include/unistd.h" 3
-extern "C" int setgid(__gid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int setgid(__gid_t ) throw();
 # 722 "/usr/include/unistd.h" 3
-extern "C" int setregid(__gid_t , __gid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int setregid(__gid_t , __gid_t ) throw();
 # 727 "/usr/include/unistd.h" 3
-extern "C" int setegid(__gid_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int setegid(__gid_t ) throw();
 # 733 "/usr/include/unistd.h" 3
 extern "C" int getresuid(__uid_t * , __uid_t * , __uid_t * ) throw();
 # 738 "/usr/include/unistd.h" 3
 extern "C" int getresgid(__gid_t * , __gid_t * , __gid_t * ) throw();
 # 743 "/usr/include/unistd.h" 3
-extern "C" int setresuid(__uid_t , __uid_t , __uid_t ) throw()
-# 744 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__));
+extern "C" int setresuid(__uid_t , __uid_t , __uid_t ) throw();
 # 748 "/usr/include/unistd.h" 3
-extern "C" int setresgid(__gid_t , __gid_t , __gid_t ) throw()
-# 749 "/usr/include/unistd.h" 3
- __attribute((__warn_unused_result__));
+extern "C" int setresgid(__gid_t , __gid_t , __gid_t ) throw();
 # 756 "/usr/include/unistd.h" 3
 extern "C" __pid_t fork() throw();
 # 764 "/usr/include/unistd.h" 3
@@ -28409,9 +27231,9 @@ extern "C" __pid_t vfork() throw();
 # 770 "/usr/include/unistd.h" 3
 extern "C" char *ttyname(int ) throw();
 # 774 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int ttyname_r(int , char * , size_t ) throw()
+extern "C" int ttyname_r(int , char * , size_t ) throw()
 # 775 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(2))) __attribute((__warn_unused_result__)); }
+ __attribute((__nonnull__(2)));
 # 779 "/usr/include/unistd.h" 3
 extern "C" int isatty(int ) throw();
 # 784 "/usr/include/unistd.h" 3
@@ -28419,27 +27241,27 @@ extern "C" int ttyslot() throw();
 # 789 "/usr/include/unistd.h" 3
 extern "C" int link(const char * , const char * ) throw()
 # 790 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1, 2)));
 # 795 "/usr/include/unistd.h" 3
 extern "C" int linkat(int , const char * , int , const char * , int ) throw()
 # 797 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(2, 4))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(2, 4)));
 # 802 "/usr/include/unistd.h" 3
 extern "C" int symlink(const char * , const char * ) throw()
 # 803 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1, 2)));
 # 808 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline ssize_t readlink(const char *__restrict__ , char *__restrict__ , size_t ) throw()
+extern "C" ssize_t readlink(const char *__restrict__ , char *__restrict__ , size_t ) throw()
 # 810 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__)); }
+ __attribute((__nonnull__(1, 2)));
 # 815 "/usr/include/unistd.h" 3
 extern "C" int symlinkat(const char * , int , const char * ) throw()
 # 816 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1, 3))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1, 3)));
 # 819 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline ssize_t readlinkat(int , const char *__restrict__ , char *__restrict__ , size_t ) throw()
+extern "C" ssize_t readlinkat(int , const char *__restrict__ , char *__restrict__ , size_t ) throw()
 # 821 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(2, 3))) __attribute((__warn_unused_result__)); }
+ __attribute((__nonnull__(2, 3)));
 # 825 "/usr/include/unistd.h" 3
 extern "C" int unlink(const char * ) throw() __attribute((__nonnull__(1)));
 # 829 "/usr/include/unistd.h" 3
@@ -28455,7 +27277,7 @@ extern "C" int tcsetpgrp(int , __pid_t ) throw();
 # 848 "/usr/include/unistd.h" 3
 extern "C" char *getlogin();
 # 856 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getlogin_r(char * , size_t ) __attribute((__nonnull__(1))); }
+extern "C" int getlogin_r(char * , size_t ) __attribute((__nonnull__(1)));
 # 861 "/usr/include/unistd.h" 3
 extern "C" int setlogin(const char * ) throw() __attribute((__nonnull__(1)));
 # 36 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3
@@ -28471,25 +27293,25 @@ extern "C" int getopt(int , char *const * , const char * ) throw()
 # 92 "/usr/include/x86_64-linux-gnu/bits/getopt_core.h" 3
  __attribute((__nonnull__(2, 3)));
 # 877 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int gethostname(char * , size_t ) throw() __attribute((__nonnull__(1))); }
+extern "C" int gethostname(char * , size_t ) throw() __attribute((__nonnull__(1)));
 # 884 "/usr/include/unistd.h" 3
 extern "C" int sethostname(const char * , size_t ) throw()
 # 885 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 889 "/usr/include/unistd.h" 3
-extern "C" int sethostid(long ) throw() __attribute((__warn_unused_result__));
+extern "C" int sethostid(long ) throw();
 # 895 "/usr/include/unistd.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int getdomainname(char * , size_t ) throw()
+extern "C" int getdomainname(char * , size_t ) throw()
 # 896 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)); }
+ __attribute((__nonnull__(1)));
 # 897 "/usr/include/unistd.h" 3
 extern "C" int setdomainname(const char * , size_t ) throw()
 # 898 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 904 "/usr/include/unistd.h" 3
 extern "C" int vhangup() throw();
 # 907 "/usr/include/unistd.h" 3
-extern "C" int revoke(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int revoke(const char * ) throw() __attribute((__nonnull__(1)));
 # 915 "/usr/include/unistd.h" 3
 extern "C" int profil(unsigned short * , size_t , size_t , unsigned ) throw()
 # 917 "/usr/include/unistd.h" 3
@@ -28503,9 +27325,9 @@ extern "C" void endusershell() throw();
 # 929 "/usr/include/unistd.h" 3
 extern "C" void setusershell() throw();
 # 935 "/usr/include/unistd.h" 3
-extern "C" int daemon(int , int ) throw() __attribute((__warn_unused_result__));
+extern "C" int daemon(int , int ) throw();
 # 942 "/usr/include/unistd.h" 3
-extern "C" int chroot(const char * ) throw() __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+extern "C" int chroot(const char * ) throw() __attribute((__nonnull__(1)));
 # 946 "/usr/include/unistd.h" 3
 extern "C" char *getpass(const char * ) __attribute((__nonnull__(1)));
 # 954 "/usr/include/unistd.h" 3
@@ -28523,25 +27345,25 @@ extern "C" int getdtablesize() throw();
 # 991 "/usr/include/unistd.h" 3
 extern "C" int truncate(const char * , __off_t ) throw()
 # 992 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 1003 "/usr/include/unistd.h" 3
 extern "C" int truncate64(const char * , __off64_t ) throw()
 # 1004 "/usr/include/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
+ __attribute((__nonnull__(1)));
 # 1014 "/usr/include/unistd.h" 3
-extern "C" int ftruncate(int , __off_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int ftruncate(int , __off_t ) throw();
 # 1024 "/usr/include/unistd.h" 3
-extern "C" int ftruncate64(int , __off64_t ) throw() __attribute((__warn_unused_result__));
+extern "C" int ftruncate64(int , __off64_t ) throw();
 # 1035 "/usr/include/unistd.h" 3
-extern "C" int brk(void * ) throw() __attribute((__warn_unused_result__));
+extern "C" int brk(void * ) throw();
 # 1041 "/usr/include/unistd.h" 3
 extern "C" void *sbrk(intptr_t ) throw();
 # 1056 "/usr/include/unistd.h" 3
 extern "C" long syscall(long , ...) throw();
 # 1079 "/usr/include/unistd.h" 3
-extern "C" int lockf(int , int , __off_t ) __attribute((__warn_unused_result__));
+extern "C" int lockf(int , int , __off_t );
 # 1089 "/usr/include/unistd.h" 3
-extern "C" int lockf64(int , int , __off64_t ) __attribute((__warn_unused_result__));
+extern "C" int lockf64(int , int , __off64_t );
 # 1107 "/usr/include/unistd.h" 3
 extern "C" ssize_t copy_file_range(int , __off64_t * , int , __off64_t * , size_t , unsigned );
 # 1115 "/usr/include/unistd.h" 3
@@ -28555,467 +27377,7 @@ extern "C" void swab(const void *__restrict__ , void *__restrict__ , ssize_t ) t
 # 1134 "/usr/include/unistd.h" 3
  __attribute((__nonnull__(1, 2)));
 # 1161 "/usr/include/unistd.h" 3
-extern "C" int getentropy(void * , size_t ) __attribute((__warn_unused_result__));
-# 23 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __read_chk(int , void * , size_t , size_t )
-# 24 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__));
-# 25 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __read_alias(int , void * , size_t ) __asm__("read") __attribute((__warn_unused_result__));
-# 27 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __read_chk_warn(int , void * , size_t , size_t ) __asm__("__read_chk")
-# 30 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("read called with bigger length than size of the destination buffer")));
-# 34 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 33 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline ssize_t
-# 34 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-read(int __fd, void *__buf, size_t __nbytes)
-# 35 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 36 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 0) != ((size_t)(-1)))
-# 37 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 38 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 39 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __read_chk(__fd, __buf, __nbytes, __builtin_object_size(__buf, 0)); }
-# 41 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__nbytes > __builtin_object_size(__buf, 0)) {
-# 42 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __read_chk_warn(__fd, __buf, __nbytes, __builtin_object_size(__buf, 0)); }
-# 43 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 44 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __read_alias(__fd, __buf, __nbytes);
-# 45 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 48 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread_chk(int , void * , size_t , __off_t , size_t )
-# 49 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__));
-# 50 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread64_chk(int , void * , size_t , __off64_t , size_t )
-# 51 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__));
-# 52 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread_alias(int , void * , size_t , __off_t ) __asm__("pread") __attribute((__warn_unused_result__));
-# 55 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread64_alias(int , void * , size_t , __off64_t ) __asm__("pread64") __attribute((__warn_unused_result__));
-# 58 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread_chk_warn(int , void * , size_t , __off_t , size_t ) __asm__("__pread_chk")
-# 61 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("pread called with bigger length than size of the destination buffer")));
-# 63 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __pread64_chk_warn(int , void * , size_t , __off64_t , size_t ) __asm__("__pread64_chk")
-# 67 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("pread64 called with bigger length than size of the destination buffer")));
-# 72 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 71 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline ssize_t
-# 72 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-pread(int __fd, void *__buf, size_t __nbytes, __off_t __offset)
-# 73 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 74 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 0) != ((size_t)(-1)))
-# 75 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 76 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 77 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread_chk(__fd, __buf, __nbytes, __offset, __builtin_object_size(__buf, 0)); }
-# 79 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__nbytes > __builtin_object_size(__buf, 0)) {
-# 80 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread_chk_warn(__fd, __buf, __nbytes, __offset, __builtin_object_size(__buf, 0)); }
-# 82 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 83 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread_alias(__fd, __buf, __nbytes, __offset);
-# 84 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 105 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 104 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline ssize_t
-# 105 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-pread64(int __fd, void *__buf, size_t __nbytes, __off64_t __offset)
-# 106 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 107 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 0) != ((size_t)(-1)))
-# 108 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 109 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 110 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread64_chk(__fd, __buf, __nbytes, __offset, __builtin_object_size(__buf, 0)); }
-# 112 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__nbytes > __builtin_object_size(__buf, 0)) {
-# 113 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread64_chk_warn(__fd, __buf, __nbytes, __offset, __builtin_object_size(__buf, 0)); }
-# 115 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 117 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __pread64_alias(__fd, __buf, __nbytes, __offset);
-# 118 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 123 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlink_chk(const char *__restrict__ , char *__restrict__ , size_t , size_t ) throw()
-# 126 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__));
-# 127 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlink_alias(const char *__restrict__ , char *__restrict__ , size_t ) throw() __asm__("readlink")
-# 130 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__));
-# 131 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlink_chk_warn(const char *__restrict__ , char *__restrict__ , size_t , size_t ) throw() __asm__("__readlink_chk")
-# 135 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__)) __attribute((__warning__("readlink called with bigger length than size of destination buffer")));
-# 139 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 138 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__nonnull__(1, 2))) __attribute((__warn_unused_result__)) extern inline ssize_t
-# 139 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-readlink(const char *__restrict__ __path, char *__restrict__ __buf, size_t __len) throw()
-# 141 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 142 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 143 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 144 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 145 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlink_chk(__path, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 147 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__len > __builtin_object_size(__buf, 2 > 1)) {
-# 148 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlink_chk_warn(__path, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 149 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 150 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlink_alias(__path, __buf, __len);
-# 151 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 155 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlinkat_chk(int , const char *__restrict__ , char *__restrict__ , size_t , size_t ) throw()
-# 158 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2, 3))) __attribute((__warn_unused_result__));
-# 159 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlinkat_alias(int , const char *__restrict__ , char *__restrict__ , size_t ) throw() __asm__("readlinkat")
-# 163 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2, 3))) __attribute((__warn_unused_result__));
-# 164 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" ssize_t __readlinkat_chk_warn(int , const char *__restrict__ , char *__restrict__ , size_t , size_t ) throw() __asm__("__readlinkat_chk")
-# 168 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2, 3))) __attribute((__warn_unused_result__)) __attribute((__warning__("readlinkat called with bigger length than size of destination buffer")));
-# 173 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 172 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__nonnull__(2, 3))) __attribute((__warn_unused_result__)) extern inline ssize_t
-# 173 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-readlinkat(int __fd, const char *__restrict__ __path, char *__restrict__ __buf, size_t __len) throw()
-# 175 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 176 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 177 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 178 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 179 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlinkat_chk(__fd, __path, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 181 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__len > __builtin_object_size(__buf, 2 > 1)) {
-# 182 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlinkat_chk_warn(__fd, __path, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 184 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 185 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __readlinkat_alias(__fd, __path, __buf, __len);
-# 186 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 189 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" char *__getcwd_chk(char * , size_t , size_t ) throw()
-# 190 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__));
-# 191 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" char *__getcwd_alias(char * , size_t ) throw() __asm__("getcwd") __attribute((__warn_unused_result__));
-# 193 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" char *__getcwd_chk_warn(char * , size_t , size_t ) throw() __asm__("__getcwd_chk")
-# 196 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("getcwd caller with bigger length than size of destination buffer")));
-# 200 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 199 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__warn_unused_result__)) extern inline char *
-# 200 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-getcwd(char *__buf, size_t __size) throw()
-# 201 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 202 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 203 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 204 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 205 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getcwd_chk(__buf, __size, __builtin_object_size(__buf, 2 > 1)); }
-# 207 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__size > __builtin_object_size(__buf, 2 > 1)) {
-# 208 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getcwd_chk_warn(__buf, __size, __builtin_object_size(__buf, 2 > 1)); }
-# 209 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 210 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getcwd_alias(__buf, __size);
-# 211 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 214 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" char *__getwd_chk(char * , size_t ) throw()
-# 215 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
-# 216 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" char *__getwd_warn(char * ) throw() __asm__("getwd")
-# 217 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)) __attribute((__warning__("please use getcwd instead, as getwd doesn\'t specify buffer size")));
-# 221 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 220 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) __attribute((__nonnull__(1))) __attribute((__deprecated__)) __attribute((__warn_unused_result__)) extern inline char *
-# 221 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-getwd(char *__buf) throw()
-# 222 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 223 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1))) {
-# 224 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getwd_chk(__buf, __builtin_object_size(__buf, 2 > 1)); }
-# 225 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getwd_warn(__buf);
-# 226 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 229 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" size_t __confstr_chk(int , char * , size_t , size_t ) throw();
-# 231 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" size_t __confstr_alias(int , char * , size_t ) throw() __asm__("confstr");
-# 233 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" size_t __confstr_chk_warn(int , char * , size_t , size_t ) throw() __asm__("__confstr_chk")
-# 236 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warning__("confstr called with bigger length than size of destination buffer")));
-# 240 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 239 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline size_t
-# 240 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-confstr(int __name, char *__buf, size_t __len) throw()
-# 241 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 242 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 243 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 244 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 245 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __confstr_chk(__name, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 247 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) < __len) {
-# 248 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __confstr_chk_warn(__name, __buf, __len, __builtin_object_size(__buf, 2 > 1)); }
-# 249 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 250 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __confstr_alias(__name, __buf, __len);
-# 251 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 254 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getgroups_chk(int , __gid_t [], size_t ) throw()
-# 255 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__));
-# 256 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getgroups_alias(int , __gid_t []) throw() __asm__("getgroups") __attribute((__warn_unused_result__));
-# 258 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getgroups_chk_warn(int , __gid_t [], size_t ) throw() __asm__("__getgroups_chk")
-# 261 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__warn_unused_result__)) __attribute((__warning__("getgroups called with bigger group count than what can fit into destination buffer")));
-# 265 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 264 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 265 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-getgroups(int __size, __gid_t __list[]) throw()
-# 266 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 267 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__list, 2 > 1) != ((size_t)(-1)))
-# 268 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 269 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if ((!(0)) || (__size < 0)) {
-# 270 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getgroups_chk(__size, __list, __builtin_object_size(__list, 2 > 1)); }
-# 272 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if ((__size * sizeof(__gid_t)) > __builtin_object_size(__list, 2 > 1)) {
-# 273 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getgroups_chk_warn(__size, __list, __builtin_object_size(__list, 2 > 1)); }
-# 274 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 275 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getgroups_alias(__size, __list);
-# 276 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 279 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __ttyname_r_chk(int , char * , size_t , size_t ) throw()
-# 280 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2)));
-# 281 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __ttyname_r_alias(int , char * , size_t ) throw() __asm__("ttyname_r")
-# 283 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2)));
-# 284 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __ttyname_r_chk_warn(int , char * , size_t , size_t ) throw() __asm__("__ttyname_r_chk")
-# 287 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(2))) __attribute((__warning__("ttyname_r called with bigger buflen than size of destination buffer")));
-# 291 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 290 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 291 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-ttyname_r(int __fd, char *__buf, size_t __buflen) throw()
-# 292 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 293 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 294 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 295 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 296 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __ttyname_r_chk(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 298 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 299 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __ttyname_r_chk_warn(__fd, __buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 300 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 301 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __ttyname_r_alias(__fd, __buf, __buflen);
-# 302 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 306 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getlogin_r_chk(char * , size_t , size_t )
-# 307 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1)));
-# 308 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getlogin_r_alias(char * , size_t ) __asm__("getlogin_r") __attribute((__nonnull__(1)));
-# 310 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getlogin_r_chk_warn(char * , size_t , size_t ) __asm__("__getlogin_r_chk")
-# 313 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warning__("getlogin_r called with bigger buflen than size of destination buffer")));
-# 317 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 316 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 317 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-getlogin_r(char *__buf, size_t __buflen)
-# 318 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 319 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 320 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 321 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 322 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getlogin_r_chk(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 324 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 325 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getlogin_r_chk_warn(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 326 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 327 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getlogin_r_alias(__buf, __buflen);
-# 328 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 333 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __gethostname_chk(char * , size_t , size_t ) throw()
-# 334 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1)));
-# 335 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __gethostname_alias(char * , size_t ) throw() __asm__("gethostname") __attribute((__nonnull__(1)));
-# 337 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __gethostname_chk_warn(char * , size_t , size_t ) throw() __asm__("__gethostname_chk")
-# 340 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warning__("gethostname called with bigger buflen than size of destination buffer")));
-# 344 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 343 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 344 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-gethostname(char *__buf, size_t __buflen) throw()
-# 345 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 346 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 347 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 348 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 349 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __gethostname_chk(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 351 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 352 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __gethostname_chk_warn(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 353 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 354 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __gethostname_alias(__buf, __buflen);
-# 355 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
-# 360 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getdomainname_chk(char * , size_t , size_t ) throw()
-# 361 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
-# 362 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getdomainname_alias(char * , size_t ) throw() __asm__("getdomainname") __attribute((__nonnull__(1))) __attribute((__warn_unused_result__));
-# 365 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" int __getdomainname_chk_warn(char * , size_t , size_t ) throw() __asm__("__getdomainname_chk")
-# 368 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
- __attribute((__nonnull__(1))) __attribute((__warn_unused_result__)) __attribute((__warning__("getdomainname called with bigger buflen than size of destination buffer")));
-# 373 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-extern "C" {
-# 372 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 373 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-getdomainname(char *__buf, size_t __buflen) throw()
-# 374 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 375 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__builtin_object_size(__buf, 2 > 1) != ((size_t)(-1)))
-# 376 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-{
-# 377 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (!(0)) {
-# 378 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getdomainname_chk(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 380 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-if (__buflen > __builtin_object_size(__buf, 2 > 1)) {
-# 381 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getdomainname_chk_warn(__buf, __buflen, __builtin_object_size(__buf, 2 > 1)); }
-# 382 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-}
-# 383 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-return __getdomainname_alias(__buf, __buflen);
-# 384 "/usr/include/x86_64-linux-gnu/bits/unistd.h" 3
-} }
+extern "C" int getentropy(void * , size_t );
 # 34 "/usr/include/x86_64-linux-gnu/bits/unistd_ext.h" 3
 extern "C" __pid_t gettid() throw();
 # 35 "/usr/include/x86_64-linux-gnu/bits/fcntl.h" 3
@@ -29175,17 +27537,17 @@ extern "C" int fcntl(int , int , ...);
 # 157 "/usr/include/fcntl.h" 3
 extern "C" int fcntl64(int , int , ...);
 # 168 "/usr/include/fcntl.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int open(const char * , int , ...) __attribute((__nonnull__(1))); }
+extern "C" int open(const char * , int , ...) __attribute((__nonnull__(1)));
 # 178 "/usr/include/fcntl.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int open64(const char * , int , ...) __attribute((__nonnull__(1))); }
+extern "C" int open64(const char * , int , ...) __attribute((__nonnull__(1)));
 # 192 "/usr/include/fcntl.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int openat(int , const char * , int , ...)
+extern "C" int openat(int , const char * , int , ...)
 # 193 "/usr/include/fcntl.h" 3
- __attribute((__nonnull__(2))); }
+ __attribute((__nonnull__(2)));
 # 203 "/usr/include/fcntl.h" 3
-extern "C" { extern __attribute((gnu_inline)) inline int openat64(int , const char * , int , ...)
+extern "C" int openat64(int , const char * , int , ...)
 # 204 "/usr/include/fcntl.h" 3
- __attribute((__nonnull__(2))); }
+ __attribute((__nonnull__(2)));
 # 214 "/usr/include/fcntl.h" 3
 extern "C" int creat(const char * , mode_t ) __attribute((__nonnull__(1)));
 # 224 "/usr/include/fcntl.h" 3
@@ -29198,198 +27560,6 @@ extern "C" int posix_fadvise64(int , off64_t , off64_t , int ) throw();
 extern "C" int posix_fallocate(int , off_t , off_t );
 # 293 "/usr/include/fcntl.h" 3
 extern "C" int posix_fallocate64(int , off64_t , off64_t );
-# 26 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __open_2(const char * , int ) __attribute((__nonnull__(1)));
-# 27 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __open_alias(const char * , int , ...) __asm__("open") __attribute((__nonnull__(1)));
-# 35 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __open_too_many_args() __attribute((__error__("open can be called either with 2 or 3 arguments, not more")));
-# 37 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __open_missing_mode() __attribute((__error__("open with O_CREAT or O_TMPFILE in second argument needs 3 arguments")));
-# 41 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" {
-# 40 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 41 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-open(const char *__path, int __oflag, ...)
-# 42 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 43 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() > 1) {
-# 44 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__open_too_many_args(); }
-# 46 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (0)
-# 47 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 48 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if ((((__oflag & 64) != 0) || ((__oflag & (4194304 | 65536)) == (4194304 | 65536))) && (__builtin_va_arg_pack_len() < 1))
-# 49 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 50 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__open_missing_mode();
-# 51 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open_2(__path, __oflag);
-# 52 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 53 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open_alias(__path, __oflag, __builtin_va_arg_pack());
-# 54 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 56 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() < 1) {
-# 57 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open_2(__path, __oflag); }
-# 59 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open_alias(__path, __oflag, __builtin_va_arg_pack());
-# 60 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-} }
-# 64 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __open64_2(const char * , int ) __attribute((__nonnull__(1)));
-# 65 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __open64_alias(const char * , int , ...) __asm__("open64") __attribute((__nonnull__(1)));
-# 67 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __open64_too_many_args() __attribute((__error__("open64 can be called either with 2 or 3 arguments, not more")));
-# 69 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __open64_missing_mode() __attribute((__error__("open64 with O_CREAT or O_TMPFILE in second argument needs 3 arguments")));
-# 73 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" {
-# 72 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 73 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-open64(const char *__path, int __oflag, ...)
-# 74 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 75 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() > 1) {
-# 76 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__open64_too_many_args(); }
-# 78 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (0)
-# 79 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 80 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if ((((__oflag & 64) != 0) || ((__oflag & (4194304 | 65536)) == (4194304 | 65536))) && (__builtin_va_arg_pack_len() < 1))
-# 81 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 82 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__open64_missing_mode();
-# 83 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open64_2(__path, __oflag);
-# 84 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 85 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open64_alias(__path, __oflag, __builtin_va_arg_pack());
-# 86 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 88 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() < 1) {
-# 89 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open64_2(__path, __oflag); }
-# 91 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __open64_alias(__path, __oflag, __builtin_va_arg_pack());
-# 92 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-} }
-# 98 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __openat_2(int , const char * , int )
-# 99 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
- __attribute((__nonnull__(2)));
-# 100 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __openat_alias(int , const char * , int , ...) __asm__("openat")
-# 102 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
- __attribute((__nonnull__(2)));
-# 111 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __openat_too_many_args() __attribute((__error__("openat can be called either with 3 or 4 arguments, not more")));
-# 113 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __openat_missing_mode() __attribute((__error__("openat with O_CREAT or O_TMPFILE in third argument needs 4 arguments")));
-# 117 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" {
-# 116 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 117 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-openat(int __fd, const char *__path, int __oflag, ...)
-# 118 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 119 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() > 1) {
-# 120 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__openat_too_many_args(); }
-# 122 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (0)
-# 123 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 124 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if ((((__oflag & 64) != 0) || ((__oflag & (4194304 | 65536)) == (4194304 | 65536))) && (__builtin_va_arg_pack_len() < 1))
-# 125 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 126 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__openat_missing_mode();
-# 127 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat_2(__fd, __path, __oflag);
-# 128 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 129 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat_alias(__fd, __path, __oflag, __builtin_va_arg_pack());
-# 130 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 132 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() < 1) {
-# 133 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat_2(__fd, __path, __oflag); }
-# 135 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat_alias(__fd, __path, __oflag, __builtin_va_arg_pack());
-# 136 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-} }
-# 140 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __openat64_2(int , const char * , int )
-# 141 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
- __attribute((__nonnull__(2)));
-# 142 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" int __openat64_alias(int , const char * , int , ...) __asm__("openat64")
-# 144 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
- __attribute((__nonnull__(2)));
-# 145 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __openat64_too_many_args() __attribute((__error__("openat64 can be called either with 3 or 4 arguments, not more")));
-# 147 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" void __openat64_missing_mode() __attribute((__error__("openat64 with O_CREAT or O_TMPFILE in third argument needs 4 arguments")));
-# 151 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-extern "C" {
-# 150 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__attribute((__always_inline__)) __attribute((__gnu_inline__)) __attribute((__artificial__)) extern inline int
-# 151 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-openat64(int __fd, const char *__path, int __oflag, ...)
-# 152 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 153 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() > 1) {
-# 154 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__openat64_too_many_args(); }
-# 156 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (0)
-# 157 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 158 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if ((((__oflag & 64) != 0) || ((__oflag & (4194304 | 65536)) == (4194304 | 65536))) && (__builtin_va_arg_pack_len() < 1))
-# 159 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-{
-# 160 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-__openat64_missing_mode();
-# 161 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat64_2(__fd, __path, __oflag);
-# 162 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 163 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat64_alias(__fd, __path, __oflag, __builtin_va_arg_pack());
-# 164 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-}
-# 166 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-if (__builtin_va_arg_pack_len() < 1) {
-# 167 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat64_2(__fd, __path, __oflag); }
-# 169 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-return __openat64_alias(__fd, __path, __oflag, __builtin_va_arg_pack());
-# 170 "/usr/include/x86_64-linux-gnu/bits/fcntl2.h" 3
-} }
 # 52 "/usr/include/x86_64-linux-gnu/sys/time.h" 3
 extern "C" { struct timezone {
 # 54 "/usr/include/x86_64-linux-gnu/sys/time.h" 3
@@ -30212,21 +28382,1483 @@ free(I);
 return 0;
 # 881 "ex_particle_CUDA_float_seq.cu"
 }
+# 148 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUdeviceptr; }
+# 155 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef int CUdevice; }
+# 156 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUctx_st *CUcontext; }
+# 157 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUmod_st *CUmodule; }
+# 158 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUfunc_st *CUfunction; }
+# 159 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUarray_st *CUarray; }
+# 160 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUmipmappedArray_st *CUmipmappedArray; }
+# 161 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUtexref_st *CUtexref; }
+# 162 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUsurfref_st *CUsurfref; }
+# 163 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef CUevent_st *CUevent; }
+# 164 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef CUstream_st *CUstream; }
+# 165 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef struct CUgraphicsResource_st *CUgraphicsResource; }
+# 166 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUtexObject; }
+# 167 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef unsigned long long CUsurfObject; }
+# 171 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 169 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUuuid_st {
+# 170 "/usr/local/cuda-5.0//include/cuda.h"
+char bytes[16];
+# 171 "/usr/local/cuda-5.0//include/cuda.h"
+} CUuuid; }
+# 186 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 184 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUipcEventHandle_st {
+# 185 "/usr/local/cuda-5.0//include/cuda.h"
+char reserved[64];
+# 186 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcEventHandle; }
+# 193 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 191 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUipcMemHandle_st {
+# 192 "/usr/local/cuda-5.0//include/cuda.h"
+char reserved[64];
+# 193 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcMemHandle; }
+# 200 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 198 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUipcMem_flags_enum {
+# 199 "/usr/local/cuda-5.0//include/cuda.h"
+CU_IPC_MEM_LAZY_ENABLE_PEER_ACCESS = 1
+# 200 "/usr/local/cuda-5.0//include/cuda.h"
+} CUipcMem_flags; }
+# 219 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 207 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUctx_flags_enum {
+# 208 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_AUTO,
+# 209 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_SPIN,
+# 210 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_YIELD,
+# 211 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_BLOCKING_SYNC = 4,
+# 212 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_BLOCKING_SYNC = 4,
+# 215 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_SCHED_MASK = 7,
+# 216 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_MAP_HOST,
+# 217 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_LMEM_RESIZE_TO_MAX = 16,
+# 218 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CTX_FLAGS_MASK = 31
+# 219 "/usr/local/cuda-5.0//include/cuda.h"
+} CUctx_flags; }
+# 227 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 224 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUstream_flags_enum {
+# 225 "/usr/local/cuda-5.0//include/cuda.h"
+CU_STREAM_DEFAULT,
+# 226 "/usr/local/cuda-5.0//include/cuda.h"
+CU_STREAM_NON_BLOCKING
+# 227 "/usr/local/cuda-5.0//include/cuda.h"
+} CUstream_flags; }
+# 237 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 232 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUevent_flags_enum {
+# 233 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_DEFAULT,
+# 234 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_BLOCKING_SYNC,
+# 235 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_DISABLE_TIMING,
+# 236 "/usr/local/cuda-5.0//include/cuda.h"
+CU_EVENT_INTERPROCESS = 4
+# 237 "/usr/local/cuda-5.0//include/cuda.h"
+} CUevent_flags; }
+# 251 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 242 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUarray_format_enum {
+# 243 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT8 = 1,
+# 244 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT16,
+# 245 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_UNSIGNED_INT32,
+# 246 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT8 = 8,
+# 247 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT16,
+# 248 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_SIGNED_INT32,
+# 249 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_HALF = 16,
+# 250 "/usr/local/cuda-5.0//include/cuda.h"
+CU_AD_FORMAT_FLOAT = 32
+# 251 "/usr/local/cuda-5.0//include/cuda.h"
+} CUarray_format; }
+# 261 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 256 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUaddress_mode_enum {
+# 257 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_WRAP,
+# 258 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_CLAMP,
+# 259 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_MIRROR,
+# 260 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_ADDRESS_MODE_BORDER
+# 261 "/usr/local/cuda-5.0//include/cuda.h"
+} CUaddress_mode; }
+# 269 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 266 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfilter_mode_enum {
+# 267 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_FILTER_MODE_POINT,
+# 268 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TR_FILTER_MODE_LINEAR
+# 269 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfilter_mode; }
+# 358 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 274 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUdevice_attribute_enum {
+# 275 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_THREADS_PER_BLOCK = 1,
+# 276 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_X,
+# 277 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_Y,
+# 278 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_BLOCK_DIM_Z,
+# 279 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_X,
+# 280 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_Y,
+# 281 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_GRID_DIM_Z,
+# 282 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_SHARED_MEMORY_PER_BLOCK,
+# 283 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_SHARED_MEMORY_PER_BLOCK = 8,
+# 284 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TOTAL_CONSTANT_MEMORY,
+# 285 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_WARP_SIZE,
+# 286 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_PITCH,
+# 287 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_REGISTERS_PER_BLOCK,
+# 288 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_REGISTERS_PER_BLOCK = 12,
+# 289 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CLOCK_RATE,
+# 290 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TEXTURE_ALIGNMENT,
+# 291 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_GPU_OVERLAP,
+# 292 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MULTIPROCESSOR_COUNT,
+# 293 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_KERNEL_EXEC_TIMEOUT,
+# 294 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_INTEGRATED,
+# 295 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CAN_MAP_HOST_MEMORY,
+# 296 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_MODE,
+# 297 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_WIDTH,
+# 298 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_WIDTH,
+# 299 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_HEIGHT,
+# 300 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_WIDTH,
+# 301 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_HEIGHT,
+# 302 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_DEPTH,
+# 303 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_WIDTH,
+# 304 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_HEIGHT,
+# 305 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LAYERED_LAYERS,
+# 306 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_WIDTH = 27,
+# 307 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_HEIGHT,
+# 308 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_ARRAY_NUMSLICES,
+# 309 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_SURFACE_ALIGNMENT,
+# 310 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CONCURRENT_KERNELS,
+# 311 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_ECC_ENABLED,
+# 312 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_BUS_ID,
+# 313 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_DEVICE_ID,
+# 314 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TCC_DRIVER,
+# 315 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MEMORY_CLOCK_RATE,
+# 316 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_GLOBAL_MEMORY_BUS_WIDTH,
+# 317 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_L2_CACHE_SIZE,
+# 318 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX_THREADS_PER_MULTIPROCESSOR,
+# 319 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_ASYNC_ENGINE_COUNT,
+# 320 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_UNIFIED_ADDRESSING,
+# 321 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LAYERED_WIDTH,
+# 322 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LAYERED_LAYERS,
+# 323 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_CAN_TEX2D_GATHER,
+# 324 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_GATHER_WIDTH,
+# 325 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_GATHER_HEIGHT,
+# 326 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_WIDTH_ALTERNATE,
+# 327 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_HEIGHT_ALTERNATE,
+# 328 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE3D_DEPTH_ALTERNATE,
+# 329 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_PCI_DOMAIN_ID,
+# 330 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_TEXTURE_PITCH_ALIGNMENT,
+# 331 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_WIDTH,
+# 332 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_LAYERED_WIDTH,
+# 333 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURECUBEMAP_LAYERED_LAYERS,
+# 334 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_WIDTH,
+# 335 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_WIDTH,
+# 336 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_HEIGHT,
+# 337 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_WIDTH,
+# 338 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_HEIGHT,
+# 339 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE3D_DEPTH,
+# 340 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_LAYERED_WIDTH,
+# 341 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE1D_LAYERED_LAYERS,
+# 342 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_WIDTH,
+# 343 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_HEIGHT,
+# 344 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACE2D_LAYERED_LAYERS,
+# 345 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_WIDTH,
+# 346 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_LAYERED_WIDTH,
+# 347 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_SURFACECUBEMAP_LAYERED_LAYERS,
+# 348 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_LINEAR_WIDTH,
+# 349 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_WIDTH,
+# 350 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_HEIGHT,
+# 351 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_LINEAR_PITCH,
+# 352 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_MIPMAPPED_WIDTH,
+# 353 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE2D_MIPMAPPED_HEIGHT,
+# 354 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MAJOR,
+# 355 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_COMPUTE_CAPABILITY_MINOR,
+# 356 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAXIMUM_TEXTURE1D_MIPMAPPED_WIDTH,
+# 357 "/usr/local/cuda-5.0//include/cuda.h"
+CU_DEVICE_ATTRIBUTE_MAX
+# 358 "/usr/local/cuda-5.0//include/cuda.h"
+} CUdevice_attribute; }
+# 374 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 363 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUdevprop_st {
+# 364 "/usr/local/cuda-5.0//include/cuda.h"
+int maxThreadsPerBlock;
+# 365 "/usr/local/cuda-5.0//include/cuda.h"
+int maxThreadsDim[3];
+# 366 "/usr/local/cuda-5.0//include/cuda.h"
+int maxGridSize[3];
+# 367 "/usr/local/cuda-5.0//include/cuda.h"
+int sharedMemPerBlock;
+# 368 "/usr/local/cuda-5.0//include/cuda.h"
+int totalConstantMemory;
+# 369 "/usr/local/cuda-5.0//include/cuda.h"
+int SIMDWidth;
+# 370 "/usr/local/cuda-5.0//include/cuda.h"
+int memPitch;
+# 371 "/usr/local/cuda-5.0//include/cuda.h"
+int regsPerBlock;
+# 372 "/usr/local/cuda-5.0//include/cuda.h"
+int clockRate;
+# 373 "/usr/local/cuda-5.0//include/cuda.h"
+int textureAlign;
+# 374 "/usr/local/cuda-5.0//include/cuda.h"
+} CUdevprop; }
+# 385 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 379 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUpointer_attribute_enum {
+# 380 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_CONTEXT = 1,
+# 381 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_MEMORY_TYPE,
+# 382 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_DEVICE_POINTER,
+# 383 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_HOST_POINTER,
+# 384 "/usr/local/cuda-5.0//include/cuda.h"
+CU_POINTER_ATTRIBUTE_P2P_TOKENS
+# 385 "/usr/local/cuda-5.0//include/cuda.h"
+} CUpointer_attribute; }
+# 440 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 390 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfunction_attribute_enum {
+# 396 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_MAX_THREADS_PER_BLOCK,
+# 403 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_SHARED_SIZE_BYTES,
+# 409 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_CONST_SIZE_BYTES,
+# 414 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_LOCAL_SIZE_BYTES,
+# 419 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_NUM_REGS,
+# 428 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_PTX_VERSION,
+# 437 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_BINARY_VERSION,
+# 439 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_ATTRIBUTE_MAX
+# 440 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfunction_attribute; }
+# 450 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 445 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUfunc_cache_enum {
+# 446 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_NONE,
+# 447 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_SHARED,
+# 448 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_L1,
+# 449 "/usr/local/cuda-5.0//include/cuda.h"
+CU_FUNC_CACHE_PREFER_EQUAL
+# 450 "/usr/local/cuda-5.0//include/cuda.h"
+} CUfunc_cache; }
+# 459 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 455 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUsharedconfig_enum {
+# 456 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_DEFAULT_BANK_SIZE,
+# 457 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_FOUR_BYTE_BANK_SIZE,
+# 458 "/usr/local/cuda-5.0//include/cuda.h"
+CU_SHARED_MEM_CONFIG_EIGHT_BYTE_BANK_SIZE
+# 459 "/usr/local/cuda-5.0//include/cuda.h"
+} CUsharedconfig; }
+# 469 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 464 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUmemorytype_enum {
+# 465 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_HOST = 1,
+# 466 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_DEVICE,
+# 467 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_ARRAY,
+# 468 "/usr/local/cuda-5.0//include/cuda.h"
+CU_MEMORYTYPE_UNIFIED
+# 469 "/usr/local/cuda-5.0//include/cuda.h"
+} CUmemorytype; }
+# 479 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 474 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUcomputemode_enum {
+# 475 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_DEFAULT,
+# 476 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_EXCLUSIVE,
+# 477 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_PROHIBITED,
+# 478 "/usr/local/cuda-5.0//include/cuda.h"
+CU_COMPUTEMODE_EXCLUSIVE_PROCESS
+# 479 "/usr/local/cuda-5.0//include/cuda.h"
+} CUcomputemode; }
+# 571 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 484 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_option_enum {
+# 490 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_MAX_REGISTERS,
+# 503 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_THREADS_PER_BLOCK,
+# 510 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_WALL_TIME,
+# 518 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_INFO_LOG_BUFFER,
+# 526 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_INFO_LOG_BUFFER_SIZE_BYTES,
+# 534 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_ERROR_LOG_BUFFER,
+# 542 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_ERROR_LOG_BUFFER_SIZE_BYTES,
+# 549 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_OPTIMIZATION_LEVEL,
+# 556 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_TARGET_FROM_CUCONTEXT,
+# 562 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_TARGET,
+# 569 "/usr/local/cuda-5.0//include/cuda.h"
+CU_JIT_FALLBACK_STRATEGY
+# 571 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_option; }
+# 586 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 576 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_target_enum {
+# 578 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_10,
+# 579 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_11,
+# 580 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_12,
+# 581 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_13,
+# 582 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_20,
+# 583 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_21,
+# 584 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_30,
+# 585 "/usr/local/cuda-5.0//include/cuda.h"
+CU_TARGET_COMPUTE_35
+# 586 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_target; }
+# 597 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 591 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUjit_fallback_enum {
+# 593 "/usr/local/cuda-5.0//include/cuda.h"
+CU_PREFER_PTX,
+# 595 "/usr/local/cuda-5.0//include/cuda.h"
+CU_PREFER_BINARY
+# 597 "/usr/local/cuda-5.0//include/cuda.h"
+} CUjit_fallback; }
+# 608 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 602 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUgraphicsRegisterFlags_enum {
+# 603 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_NONE,
+# 604 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_READ_ONLY,
+# 605 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_WRITE_DISCARD,
+# 606 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_SURFACE_LDST = 4,
+# 607 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_REGISTER_FLAGS_TEXTURE_GATHER = 8
+# 608 "/usr/local/cuda-5.0//include/cuda.h"
+} CUgraphicsRegisterFlags; }
+# 617 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 613 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUgraphicsMapResourceFlags_enum {
+# 614 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_NONE,
+# 615 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_READ_ONLY,
+# 616 "/usr/local/cuda-5.0//include/cuda.h"
+CU_GRAPHICS_MAP_RESOURCE_FLAGS_WRITE_DISCARD
+# 617 "/usr/local/cuda-5.0//include/cuda.h"
+} CUgraphicsMapResourceFlags; }
+# 629 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 622 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUarray_cubemap_face_enum {
+# 623 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_X,
+# 624 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_X,
+# 625 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_Y,
+# 626 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_Y,
+# 627 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_POSITIVE_Z,
+# 628 "/usr/local/cuda-5.0//include/cuda.h"
+CU_CUBEMAP_FACE_NEGATIVE_Z
+# 629 "/usr/local/cuda-5.0//include/cuda.h"
+} CUarray_cubemap_face; }
+# 640 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 634 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUlimit_enum {
+# 635 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_STACK_SIZE,
+# 636 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_PRINTF_FIFO_SIZE,
+# 637 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_MALLOC_HEAP_SIZE,
+# 638 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_DEV_RUNTIME_SYNC_DEPTH,
+# 639 "/usr/local/cuda-5.0//include/cuda.h"
+CU_LIMIT_DEV_RUNTIME_PENDING_LAUNCH_COUNT
+# 640 "/usr/local/cuda-5.0//include/cuda.h"
+} CUlimit; }
+# 650 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 645 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUresourcetype_enum {
+# 646 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_ARRAY,
+# 647 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_MIPMAPPED_ARRAY,
+# 648 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_LINEAR,
+# 649 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RESOURCE_TYPE_PITCH2D
+# 650 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresourcetype; }
+# 985 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 655 "/usr/local/cuda-5.0//include/cuda.h"
+enum cudaError_enum {
+# 661 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_SUCCESS,
+# 667 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_VALUE,
+# 673 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_OUT_OF_MEMORY,
+# 679 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_INITIALIZED,
+# 684 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_DEINITIALIZED,
+# 691 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_DISABLED,
+# 699 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_NOT_INITIALIZED,
+# 706 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_ALREADY_STARTED,
+# 713 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PROFILER_ALREADY_STOPPED,
+# 719 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NO_DEVICE = 100,
+# 725 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_DEVICE,
+# 732 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_IMAGE = 200,
+# 742 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_CONTEXT,
+# 751 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_ALREADY_CURRENT,
+# 756 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_MAP_FAILED = 205,
+# 761 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNMAP_FAILED,
+# 767 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ARRAY_IS_MAPPED,
+# 772 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ALREADY_MAPPED,
+# 780 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NO_BINARY_FOR_GPU,
+# 785 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ALREADY_ACQUIRED,
+# 790 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED,
+# 796 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED_AS_ARRAY,
+# 802 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_MAPPED_AS_POINTER,
+# 808 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ECC_UNCORRECTABLE,
+# 814 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNSUPPORTED_LIMIT,
+# 821 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_ALREADY_IN_USE,
+# 827 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_UNSUPPORTED,
+# 832 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_SOURCE = 300,
+# 837 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_FILE_NOT_FOUND,
+# 842 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_SHARED_OBJECT_SYMBOL_NOT_FOUND,
+# 847 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_SHARED_OBJECT_INIT_FAILED,
+# 852 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_OPERATING_SYSTEM,
+# 859 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_INVALID_HANDLE = 400,
+# 866 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_FOUND = 500,
+# 875 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_READY = 600,
+# 886 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_FAILED = 700,
+# 897 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_OUT_OF_RESOURCES,
+# 908 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_TIMEOUT,
+# 914 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_LAUNCH_INCOMPATIBLE_TEXTURING,
+# 921 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_ALREADY_ENABLED,
+# 928 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PEER_ACCESS_NOT_ENABLED,
+# 934 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_PRIMARY_CONTEXT_ACTIVE = 708,
+# 941 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_CONTEXT_IS_DESTROYED,
+# 949 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_ASSERT,
+# 956 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_TOO_MANY_PEERS,
+# 962 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_HOST_MEMORY_ALREADY_REGISTERED,
+# 968 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_HOST_MEMORY_NOT_REGISTERED,
+# 973 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_PERMITTED = 800,
+# 979 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_NOT_SUPPORTED,
+# 984 "/usr/local/cuda-5.0//include/cuda.h"
+CUDA_ERROR_UNKNOWN = 999
+# 985 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresult; }
+# 999 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef void (*CUstreamCallback)(CUstream , CUresult , void * ); }
+# 1061 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1040 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY2D_st {
+# 1041 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1042 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1044 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1045 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1046 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1047 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1048 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1050 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1051 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1053 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1054 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1055 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1056 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1057 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1059 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1060 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1061 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY2D; }
+# 1094 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1066 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY3D_st {
+# 1067 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1068 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1069 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcZ;
+# 1070 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcLOD;
+# 1071 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1072 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1073 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1074 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1075 "/usr/local/cuda-5.0//include/cuda.h"
+void *reserved0;
+# 1076 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1077 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcHeight;
+# 1079 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1080 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1081 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstZ;
+# 1082 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstLOD;
+# 1083 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1084 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1085 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1086 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1087 "/usr/local/cuda-5.0//include/cuda.h"
+void *reserved1;
+# 1088 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1089 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstHeight;
+# 1091 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1092 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1093 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1094 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY3D; }
+# 1127 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1099 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_MEMCPY3D_PEER_st {
+# 1100 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcXInBytes;
+# 1101 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcY;
+# 1102 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcZ;
+# 1103 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcLOD;
+# 1104 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype srcMemoryType;
+# 1105 "/usr/local/cuda-5.0//include/cuda.h"
+const void *srcHost;
+# 1106 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr srcDevice;
+# 1107 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray srcArray;
+# 1108 "/usr/local/cuda-5.0//include/cuda.h"
+CUcontext srcContext;
+# 1109 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcPitch;
+# 1110 "/usr/local/cuda-5.0//include/cuda.h"
+size_t srcHeight;
+# 1112 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstXInBytes;
+# 1113 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstY;
+# 1114 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstZ;
+# 1115 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstLOD;
+# 1116 "/usr/local/cuda-5.0//include/cuda.h"
+CUmemorytype dstMemoryType;
+# 1117 "/usr/local/cuda-5.0//include/cuda.h"
+void *dstHost;
+# 1118 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr dstDevice;
+# 1119 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray dstArray;
+# 1120 "/usr/local/cuda-5.0//include/cuda.h"
+CUcontext dstContext;
+# 1121 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstPitch;
+# 1122 "/usr/local/cuda-5.0//include/cuda.h"
+size_t dstHeight;
+# 1124 "/usr/local/cuda-5.0//include/cuda.h"
+size_t WidthInBytes;
+# 1125 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1126 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1127 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_MEMCPY3D_PEER; }
+# 1139 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1132 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_ARRAY_DESCRIPTOR_st {
+# 1134 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Width;
+# 1135 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1137 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format Format;
+# 1138 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned NumChannels;
+# 1139 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_ARRAY_DESCRIPTOR; }
+# 1153 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1144 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_ARRAY3D_DESCRIPTOR_st {
+# 1146 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Width;
+# 1147 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Height;
+# 1148 "/usr/local/cuda-5.0//include/cuda.h"
+size_t Depth;
+# 1150 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format Format;
+# 1151 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned NumChannels;
+# 1152 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned Flags;
+# 1153 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_ARRAY3D_DESCRIPTOR; }
+# 1193 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1162 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_RESOURCE_DESC_st {
+# 1164 "/usr/local/cuda-5.0//include/cuda.h"
+CUresourcetype resType;
+# 1166 "/usr/local/cuda-5.0//include/cuda.h"
+union {
+# 1167 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1168 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray hArray;
+# 1169 "/usr/local/cuda-5.0//include/cuda.h"
+} array;
+# 1170 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1171 "/usr/local/cuda-5.0//include/cuda.h"
+CUmipmappedArray hMipmappedArray;
+# 1172 "/usr/local/cuda-5.0//include/cuda.h"
+} mipmap;
+# 1173 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1174 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr devPtr;
+# 1175 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format format;
+# 1176 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned numChannels;
+# 1177 "/usr/local/cuda-5.0//include/cuda.h"
+size_t sizeInBytes;
+# 1178 "/usr/local/cuda-5.0//include/cuda.h"
+} linear;
+# 1179 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1180 "/usr/local/cuda-5.0//include/cuda.h"
+CUdeviceptr devPtr;
+# 1181 "/usr/local/cuda-5.0//include/cuda.h"
+CUarray_format format;
+# 1182 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned numChannels;
+# 1183 "/usr/local/cuda-5.0//include/cuda.h"
+size_t width;
+# 1184 "/usr/local/cuda-5.0//include/cuda.h"
+size_t height;
+# 1185 "/usr/local/cuda-5.0//include/cuda.h"
+size_t pitchInBytes;
+# 1186 "/usr/local/cuda-5.0//include/cuda.h"
+} pitch2D;
+# 1187 "/usr/local/cuda-5.0//include/cuda.h"
+struct {
+# 1188 "/usr/local/cuda-5.0//include/cuda.h"
+int reserved[32];
+# 1189 "/usr/local/cuda-5.0//include/cuda.h"
+} reserved;
+# 1190 "/usr/local/cuda-5.0//include/cuda.h"
+} res;
+# 1192 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned flags;
+# 1193 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_RESOURCE_DESC; }
+# 1208 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1198 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_TEXTURE_DESC_st {
+# 1199 "/usr/local/cuda-5.0//include/cuda.h"
+CUaddress_mode addressMode[3];
+# 1200 "/usr/local/cuda-5.0//include/cuda.h"
+CUfilter_mode filterMode;
+# 1201 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned flags;
+# 1202 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned maxAnisotropy;
+# 1203 "/usr/local/cuda-5.0//include/cuda.h"
+CUfilter_mode mipmapFilterMode;
+# 1204 "/usr/local/cuda-5.0//include/cuda.h"
+float mipmapLevelBias;
+# 1205 "/usr/local/cuda-5.0//include/cuda.h"
+float minMipmapLevelClamp;
+# 1206 "/usr/local/cuda-5.0//include/cuda.h"
+float maxMipmapLevelClamp;
+# 1207 "/usr/local/cuda-5.0//include/cuda.h"
+int reserved[16];
+# 1208 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_TEXTURE_DESC; }
+# 1250 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1213 "/usr/local/cuda-5.0//include/cuda.h"
+enum CUresourceViewFormat_enum {
+# 1215 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_NONE,
+# 1216 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X8,
+# 1217 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X8,
+# 1218 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X8,
+# 1219 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X8,
+# 1220 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X8,
+# 1221 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X8,
+# 1222 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X16,
+# 1223 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X16,
+# 1224 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X16,
+# 1225 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X16,
+# 1226 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X16,
+# 1227 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X16,
+# 1228 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_1X32,
+# 1229 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_2X32,
+# 1230 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UINT_4X32,
+# 1231 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_1X32,
+# 1232 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_2X32,
+# 1233 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SINT_4X32,
+# 1234 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_1X16,
+# 1235 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_2X16,
+# 1236 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_4X16,
+# 1237 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_1X32,
+# 1238 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_2X32,
+# 1239 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_FLOAT_4X32,
+# 1240 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC1,
+# 1241 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC2,
+# 1242 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC3,
+# 1243 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC4,
+# 1244 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC4,
+# 1245 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC5,
+# 1246 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC5,
+# 1247 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC6H,
+# 1248 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_SIGNED_BC6H,
+# 1249 "/usr/local/cuda-5.0//include/cuda.h"
+CU_RES_VIEW_FORMAT_UNSIGNED_BC7
+# 1250 "/usr/local/cuda-5.0//include/cuda.h"
+} CUresourceViewFormat; }
+# 1266 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1255 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_RESOURCE_VIEW_DESC_st {
+# 1257 "/usr/local/cuda-5.0//include/cuda.h"
+CUresourceViewFormat format;
+# 1258 "/usr/local/cuda-5.0//include/cuda.h"
+size_t width;
+# 1259 "/usr/local/cuda-5.0//include/cuda.h"
+size_t height;
+# 1260 "/usr/local/cuda-5.0//include/cuda.h"
+size_t depth;
+# 1261 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned firstMipmapLevel;
+# 1262 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned lastMipmapLevel;
+# 1263 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned firstLayer;
+# 1264 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned lastLayer;
+# 1265 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned reserved[16];
+# 1266 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_RESOURCE_VIEW_DESC; }
+# 1274 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" { typedef
+# 1271 "/usr/local/cuda-5.0//include/cuda.h"
+struct CUDA_POINTER_ATTRIBUTE_P2P_TOKENS_st {
+# 1272 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned long long p2pToken;
+# 1273 "/usr/local/cuda-5.0//include/cuda.h"
+unsigned vaSpaceToken;
+# 1274 "/usr/local/cuda-5.0//include/cuda.h"
+} CUDA_POINTER_ATTRIBUTE_P2P_TOKENS; }
+# 1401 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuInit(unsigned );
+# 1428 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDriverGetVersion(int * );
+# 1465 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGet(CUdevice * , int );
+# 1490 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetCount(int * );
+# 1518 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetName(char * , int , CUdevice );
+# 1545 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceTotalMem_v2(size_t * , CUdevice );
+# 1718 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetAttribute(int * , CUdevice_attribute , CUdevice );
+# 1792 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetProperties(CUdevprop * , CUdevice );
+# 1825 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceComputeCapability(int * , int * , CUdevice );
+# 1924 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxCreate_v2(CUcontext * , unsigned , CUdevice );
+# 1963 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDestroy_v2(CUcontext );
+# 1998 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxPushCurrent_v2(CUcontext );
+# 2031 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxPopCurrent_v2(CUcontext * );
+# 2057 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetCurrent(CUcontext );
+# 2076 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetCurrent(CUcontext * );
+# 2105 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetDevice(CUdevice * );
+# 2133 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSynchronize();
+# 2227 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetLimit(CUlimit , size_t );
+# 2265 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetLimit(size_t * , CUlimit );
+# 2307 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetCacheConfig(CUfunc_cache * );
+# 2356 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetCacheConfig(CUfunc_cache );
+# 2397 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetSharedMemConfig(CUsharedconfig * );
+# 2448 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxSetSharedMemConfig(CUsharedconfig );
+# 2485 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxGetApiVersion(CUcontext , unsigned * );
+# 2536 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxAttach(CUcontext * , unsigned );
+# 2571 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDetach(CUcontext );
+# 2620 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoad(CUmodule * , const char * );
+# 2654 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadData(CUmodule * , const void * );
+# 2733 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadDataEx(CUmodule * , const void * , unsigned , CUjit_option * , void ** );
+# 2773 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleLoadFatBinary(CUmodule * , const void * );
+# 2798 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleUnload(CUmodule );
+# 2828 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetFunction(CUfunction * , CUmodule , const char * );
+# 2862 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetGlobal_v2(CUdeviceptr * , size_t * , CUmodule , const char * );
+# 2896 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetTexRef(CUtexref * , CUmodule , const char * );
+# 2927 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuModuleGetSurfRef(CUsurfref * , CUmodule , const char * );
+# 2970 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemGetInfo_v2(size_t * , size_t * );
+# 3003 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAlloc_v2(CUdeviceptr * , size_t );
+# 3064 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAllocPitch_v2(CUdeviceptr * , size_t * , size_t , size_t , unsigned );
+# 3093 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemFree_v2(CUdeviceptr );
+# 3126 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemGetAddressRange_v2(CUdeviceptr * , size_t * , CUdeviceptr );
+# 3172 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemAllocHost_v2(void ** , size_t );
+# 3202 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemFreeHost(void * );
+# 3284 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostAlloc(void ** , size_t , unsigned );
+# 3322 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostGetDevicePointer_v2(CUdeviceptr * , void * , unsigned );
+# 3347 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostGetFlags(unsigned * , void * );
+# 3374 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetByPCIBusId(CUdevice * , char * );
+# 3402 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceGetPCIBusId(char * , int , CUdevice );
+# 3444 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcGetEventHandle(CUipcEventHandle * , CUevent );
+# 3481 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcOpenEventHandle(CUevent * , CUipcEventHandle );
+# 3518 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcGetMemHandle(CUipcMemHandle * , CUdeviceptr );
+# 3566 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcOpenMemHandle(CUdeviceptr * , CUipcMemHandle , unsigned );
+# 3597 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuIpcCloseMemHandle(CUdeviceptr );
+# 3660 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostRegister(void * , size_t , unsigned );
+# 3684 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemHostUnregister(void * );
+# 3720 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy(CUdeviceptr , CUdeviceptr , size_t );
+# 3753 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyPeer(CUdeviceptr , CUcontext , CUdeviceptr , CUcontext , size_t );
+# 3789 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoD_v2(CUdeviceptr , const void * , size_t );
+# 3822 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoH_v2(void * , CUdeviceptr , size_t );
+# 3855 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoD_v2(CUdeviceptr , CUdeviceptr , size_t );
+# 3889 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoA_v2(CUarray , size_t , CUdeviceptr , size_t );
+# 3925 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoD_v2(CUdeviceptr , CUarray , size_t , size_t );
+# 3959 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoA_v2(CUarray , size_t , const void * , size_t );
+# 3993 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoH_v2(void * , CUarray , size_t , size_t );
+# 4031 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoA_v2(CUarray , size_t , CUarray , size_t , size_t );
+# 4191 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2D_v2(const CUDA_MEMCPY2D * );
+# 4349 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2DUnaligned_v2(const CUDA_MEMCPY2D * );
+# 4516 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3D_v2(const CUDA_MEMCPY3D * );
+# 4547 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DPeer(const CUDA_MEMCPY3D_PEER * );
+# 4587 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAsync(CUdeviceptr , CUdeviceptr , size_t , CUstream );
+# 4618 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyPeerAsync(CUdeviceptr , CUcontext , CUdeviceptr , CUcontext , size_t , CUstream );
+# 4660 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoDAsync_v2(CUdeviceptr , const void * , size_t , CUstream );
+# 4700 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoHAsync_v2(void * , CUdeviceptr , size_t , CUstream );
+# 4737 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyDtoDAsync_v2(CUdeviceptr , CUdeviceptr , size_t , CUstream );
+# 4779 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyHtoAAsync_v2(CUarray , size_t , const void * , size_t , CUstream );
+# 4821 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpyAtoHAsync_v2(void * , CUarray , size_t , size_t , CUstream );
+# 4992 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy2DAsync_v2(const CUDA_MEMCPY2D * , CUstream );
+# 5167 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DAsync_v2(const CUDA_MEMCPY3D * , CUstream );
+# 5192 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemcpy3DPeerAsync(const CUDA_MEMCPY3D_PEER * , CUstream );
+# 5230 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD8_v2(CUdeviceptr , unsigned char , size_t );
+# 5266 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD16_v2(CUdeviceptr , unsigned short , size_t );
+# 5302 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD32_v2(CUdeviceptr , unsigned , size_t );
+# 5343 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D8_v2(CUdeviceptr , size_t , unsigned char , size_t , size_t );
+# 5385 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D16_v2(CUdeviceptr , size_t , unsigned short , size_t , size_t );
+# 5427 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D32_v2(CUdeviceptr , size_t , unsigned , size_t , size_t );
+# 5464 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD8Async(CUdeviceptr , unsigned char , size_t , CUstream );
+# 5501 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD16Async(CUdeviceptr , unsigned short , size_t , CUstream );
+# 5537 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD32Async(CUdeviceptr , unsigned , size_t , CUstream );
+# 5579 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D8Async(CUdeviceptr , size_t , unsigned char , size_t , size_t , CUstream );
+# 5622 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D16Async(CUdeviceptr , size_t , unsigned short , size_t , size_t , CUstream );
+# 5665 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMemsetD2D32Async(CUdeviceptr , size_t , unsigned , size_t , size_t , CUstream );
+# 5768 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayCreate_v2(CUarray * , const CUDA_ARRAY_DESCRIPTOR * );
+# 5801 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayGetDescriptor_v2(CUDA_ARRAY_DESCRIPTOR * , CUarray );
+# 5832 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArrayDestroy(CUarray );
+# 6012 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArray3DCreate_v2(CUarray * , const CUDA_ARRAY3D_DESCRIPTOR * );
+# 6048 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuArray3DGetDescriptor_v2(CUDA_ARRAY3D_DESCRIPTOR * , CUarray );
+# 6175 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayCreate(CUmipmappedArray * , const CUDA_ARRAY3D_DESCRIPTOR * , unsigned );
+# 6201 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayGetLevel(CUarray * , CUmipmappedArray , unsigned );
+# 6221 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuMipmappedArrayDestroy(CUmipmappedArray );
+# 6437 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuPointerGetAttribute(void * , CUpointer_attribute , CUdeviceptr );
+# 6479 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamCreate(CUstream * , unsigned );
+# 6522 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamWaitEvent(CUstream , CUevent , unsigned );
+# 6567 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamAddCallback(CUstream , CUstreamCallback , void * , unsigned );
+# 6592 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamQuery(CUstream );
+# 6618 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamSynchronize(CUstream );
+# 6647 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuStreamDestroy_v2(CUstream );
+# 6699 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventCreate(CUevent * , unsigned );
+# 6737 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventRecord(CUevent , CUstream );
+# 6768 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventQuery(CUevent );
+# 6802 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventSynchronize(CUevent );
+# 6831 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventDestroy_v2(CUevent );
+# 6875 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuEventElapsedTime(float * , CUevent , CUevent );
+# 6938 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncGetAttribute(int * , CUfunction_attribute , CUfunction );
+# 6981 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetCacheConfig(CUfunction , CUfunc_cache );
+# 7033 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetSharedMemConfig(CUfunction , CUsharedconfig );
+# 7150 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchKernel(CUfunction , unsigned , unsigned , unsigned , unsigned , unsigned , unsigned , unsigned , CUstream , void ** , void ** );
+# 7208 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetBlockShape(CUfunction , int , int , int );
+# 7242 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuFuncSetSharedSize(CUfunction , unsigned );
+# 7274 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetSize(CUfunction , unsigned );
+# 7307 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSeti(CUfunction , int , unsigned );
+# 7340 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetf(CUfunction , int , float );
+# 7375 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetv(CUfunction , int , void * , unsigned );
+# 7412 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunch(CUfunction );
+# 7451 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchGrid(CUfunction , int , int );
+# 7495 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuLaunchGridAsync(CUfunction , int , int , CUstream );
+# 7520 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuParamSetTexRef(CUfunction , int , CUtexref );
+# 7559 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetArray(CUtexref , CUarray , unsigned );
+# 7586 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmappedArray(CUtexref , CUmipmappedArray , unsigned );
+# 7630 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddress_v2(size_t * , CUtexref , CUdeviceptr , size_t );
+# 7682 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddress2D_v3(CUtexref , const CUDA_ARRAY_DESCRIPTOR * , CUdeviceptr , size_t );
+# 7711 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFormat(CUtexref , CUarray_format , int );
+# 7751 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetAddressMode(CUtexref , int , CUaddress_mode );
+# 7784 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFilterMode(CUtexref , CUfilter_mode );
+# 7817 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapFilterMode(CUtexref , CUfilter_mode );
+# 7843 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapLevelBias(CUtexref , float );
+# 7871 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMipmapLevelClamp(CUtexref , float , float );
+# 7897 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetMaxAnisotropy(CUtexref , unsigned );
+# 7932 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefSetFlags(CUtexref , unsigned );
+# 7958 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetAddress_v2(CUdeviceptr * , CUtexref );
+# 7984 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetArray(CUarray * , CUtexref );
+# 8009 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmappedArray(CUmipmappedArray * , CUtexref );
+# 8035 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetAddressMode(CUaddress_mode * , CUtexref , int );
+# 8059 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFilterMode(CUfilter_mode * , CUtexref );
+# 8085 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFormat(CUarray_format * , int * , CUtexref );
+# 8109 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapFilterMode(CUfilter_mode * , CUtexref );
+# 8133 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapLevelBias(float * , CUtexref );
+# 8158 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMipmapLevelClamp(float * , float * , CUtexref );
+# 8182 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetMaxAnisotropy(int * , CUtexref );
+# 8205 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefGetFlags(unsigned * , CUtexref );
+# 8241 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefCreate(CUtexref * );
+# 8261 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexRefDestroy(CUtexref );
+# 8297 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfRefSetArray(CUsurfref , CUarray , unsigned );
+# 8318 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfRefGetArray(CUarray * , CUsurfref );
+# 8535 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectCreate(CUtexObject * , const CUDA_RESOURCE_DESC * , const CUDA_TEXTURE_DESC * , const CUDA_RESOURCE_VIEW_DESC * );
+# 8553 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectDestroy(CUtexObject );
+# 8572 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetResourceDesc(CUDA_RESOURCE_DESC * , CUtexObject );
+# 8591 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetTextureDesc(CUDA_TEXTURE_DESC * , CUtexObject );
+# 8611 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuTexObjectGetResourceViewDesc(CUDA_RESOURCE_VIEW_DESC * , CUtexObject );
+# 8647 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectCreate(CUsurfObject * , const CUDA_RESOURCE_DESC * );
+# 8665 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectDestroy(CUsurfObject );
+# 8684 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuSurfObjectGetResourceDesc(CUDA_RESOURCE_DESC * , CUsurfObject );
+# 8723 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuDeviceCanAccessPeer(int * , CUdevice , CUdevice );
+# 8770 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxEnablePeerAccess(CUcontext , unsigned );
+# 8795 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuCtxDisablePeerAccess(CUcontext );
+# 8836 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsUnregisterResource(CUgraphicsResource );
+# 8874 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsSubResourceGetMappedArray(CUarray * , CUgraphicsResource , unsigned , unsigned );
+# 8905 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceGetMappedMipmappedArray(CUmipmappedArray * , CUgraphicsResource );
+# 8941 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceGetMappedPointer_v2(CUdeviceptr * , size_t * , CUgraphicsResource );
+# 8982 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsResourceSetMapFlags(CUgraphicsResource , unsigned );
+# 9020 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsMapResources(unsigned , CUgraphicsResource * , CUstream );
+# 9055 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGraphicsUnmapResources(unsigned , CUgraphicsResource * , CUstream );
+# 9059 "/usr/local/cuda-5.0//include/cuda.h"
+extern "C" CUresult cuGetExportTable(const void ** , const CUuuid * );
+# 10 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" CUresult cuda_enc_setup(char * , char * );
+# 11 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+extern "C" CUresult cuda_enc_release();
+# 123 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+static inline int _benchmark_init()
+# 124 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 125 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("_benchmark_init\n");
+# 128 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 129 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("calling cuda_enc_setup\n");
+# 131 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+char static_key[] = "0123456789abcdeF0123456789abcdeF";
+# 132 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+char static_iv[] = "12345678876543211234567887654321";
+# 134 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+CUresult ret = cuda_enc_setup(static_key, static_iv);
+# 135 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+if (ret != (CUDA_SUCCESS)) {
+# 136 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+fprintf(stderr, "cuda_enc_setup failed\n");
+# 137 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return ret;
+# 138 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 144 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return CUDA_SUCCESS;
+# 145 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 147 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+static inline int _benchmark_cleanup()
+# 148 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 152 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 153 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+CUresult ret = cuda_enc_release();
+# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+if (ret != (CUDA_SUCCESS)) {
+# 155 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+fprintf(stderr, "cuda_enc_release failed\n");
+# 156 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return ret;
+# 157 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 158 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 160 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+return CUDA_SUCCESS;
+# 161 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
 # 884 "ex_particle_CUDA_float_seq.cu"
 int main(int argc, char **argv) {
 # 885 "ex_particle_CUDA_float_seq.cu"
-;
+_benchmark_init();
 # 886 "ex_particle_CUDA_float_seq.cu"
 int ret = do_main(argc, argv);
 # 887 "ex_particle_CUDA_float_seq.cu"
-;
+_benchmark_cleanup();
 # 888 "ex_particle_CUDA_float_seq.cu"
 return ret;
 # 889 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
-# 1 "tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 1 3
+# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -30812,8 +30444,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0000e700_00000000-1_ex_particle_CUDA_float_seq.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_000298b7_00000000-1_ex_particle_CUDA_float_seq.fatbin.c" 1 3
 
 
 asm(
@@ -30884,7 +30516,7 @@ asm(
 ".quad 0x73645f30326d735f,0x665f6e725f747271,0x70776f6c735f3436,0x75635f5f00687461\n"
 ".quad 0x5f30326d735f6164,0x003436665f706372,0x6e7265746e695f5f,0x5f676972745f6c61\n"
 ".quad 0x6f69746375646572,0x6170776f6c735f6e,0x75635f5f00646874,0x6c61636f6c5f6164\n"
-".quad 0x3638335f7261765f,0x6f6e5f36335f3230,0x5f74736e6f635f6e,0x2e00726566667562\n"
+".quad 0x3237335f7261765f,0x6f6e5f36335f3131,0x5f74736e6f635f6e,0x2e00726566667562\n"
 ".quad 0x74736e6f632e766e,0x315a5f2e30746e61,0x68696c656b696c37,0x6e72656b5f646f6f\n"
 ".quad 0x5f535f5364506c65,0x305369505f535f53,0x535f5368505f535f,0x536969696969695f\n"
 ".quad 0x325a5f005f535f30,0x696c616d726f6e34,0x68676965775f657a,0x656e72656b5f7374\n"
@@ -30895,8 +30527,8 @@ asm(
 ".quad 0x6965775f657a696c,0x72656b5f73746867,0x5f536964506c656e,0x2e0069505f535f53\n"
 ".quad 0x74736e6f632e766e,0x5a5f2e3631746e61,0x6c616d726f6e3432,0x676965775f657a69\n"
 ".quad 0x6e72656b5f737468,0x535f536964506c65,0x5f5f0069505f535f,0x636f6c5f61647563\n"
-".quad 0x335f7261765f6c61,0x5f36335f31353538,0x736e6f635f6e6f6e,0x635f5f0031755f74\n"
-".quad 0x61636f6c5f616475,0x38335f7261765f6c,0x6e5f30345f313535,0x74736e6f635f6e6f\n"
+".quad 0x335f7261765f6c61,0x5f36335f30363137,0x736e6f635f6e6f6e,0x635f5f0031755f74\n"
+".quad 0x61636f6c5f616475,0x37335f7261765f6c,0x6e5f30345f303631,0x74736e6f635f6e6f\n"
 ".quad 0x676965576d75735f,0x2e766e2e00737468,0x746e6174736e6f63,0x6f6e34325a5f2e30\n"
 ".quad 0x5f657a696c616d72,0x5f73746867696577,0x64506c656e72656b,0x505f535f535f5369\n"
 ".quad 0x6f632e766e2e0069,0x0032746e6174736e,0x7472616475635f5f,0x645f69706f32695f\n"
@@ -31481,415 +31113,415 @@ asm(
 ".quad 0x4891efbff51bbaba,0xb078ebeb9ce3d44a,0x8a24a257be387a9b,0xfe20e0f227f22892\n"
 ".quad 0xedd5fddde5ebfd79,0x9c3f5e0e2d7aa1cd,0xedff7870f97cfddf,0xee2e2fcfaf074e4c\n"
 ".quad 0x71feafeecfefef2e,0xf5d5ebf85cf56879,0xbe1e6f0ff0e20fe5,0x9b387d7dbf7fe36d\n"
-".quad 0xe25fd29a6e973fe6,0xedb3b7f2ece1579f,0xb3cbeb97d5c3ddf9,0xebd7d9f1fdebff77\n"
-".quad 0x7affcbfbb387f3db,0x80feafaf55bb65fd,0xcdeefef1eb4ce4b4,0x1e5f37ebf397edf5\n"
-".quad 0x9b9bd3d7995fce2f,0xd9d5cbe6f6fd7f5f,0xd7cb8bc7eb97cdd5,0x0b06ff2e357950bf\n"
-".quad 0xd7d9cbf0fe76f9be,0xcfee98f30f2f9bc7,0x537e1f6d9f5f3e2e,0xedfb72fc099e8085\n"
-".quad 0x7cf9b5f237e7cdf2,0xbcb97e1edf37f7fe,0xf7ff7378f57fbabf,0xe7ffb777b66f2f9b\n"
-".quad 0xc7bb879bfdc3cbf2,0xbbcbdb578bcb87fb,0xfcde6e6eaf2fedab,0x75717b77757c7dbc\n"
-".quad 0x9c63437e9a9e7573,0xf51b59bdde5c3f29,0x71d28235ecc07523,0x5f57afe5c5dea3bb\n"
-".quad 0x1c3cbfe65f9a9b2e,0xd0e6f9fabebf3ebe,0x62cecf0fecfebe1f,0xbdbb792bb387bbdd\n"
-".quad 0xf874feb428f8bb3a,0x6d418737e9ff0f3f,0x27ff35439b16850e,0xe269439b313f9b9c\n"
-".quad 0xb0163a549bfcd36f,0x8ab9a8bfe72f439b,0xd7fe6ffe66e7f3d4,0x49bfe70fc55272c6\n"
-".quad 0xdff30880998d6219,0x173117f8a9ab9f84,0xb1f18406c5a906d5,0xfe69bb2b9da49981\n"
-".quad 0x052624897f98552f,0x1319339082ec6515,0x988bfc67ec0531bb,0x1b12fe29f629852b\n"
-".quad 0xda6606a4bf8ddd48,0xb127d270e32945b1,0x53d397330903da87,0x9bea4e901bb520fc\n"
-".quad 0xa461a97e3635238a,0xc4886d8b55225fb1,0x554c3d8359bf0312,0x434c8848f2324cfd\n"
-".quad 0x34763ee7e3692429,0xe917b157d3f58e91,0xa42a69efc6c558fb,0x4fc41646be267647\n"
-".quad 0x8d1c8082c8c86cd2,0x52c65cfc5699b81f,0xdd4b9c8d80913791,0xf4d4c8e1c4b2fd89\n"
-".quad 0x36e6e121c49bd8bf,0xc571a52d81799ce3,0xdbd4e7c8d91ec7f1,0x42cb2225bb10aec8\n"
-".quad 0xd4a438917c8cae64,0x0938fc5f4d3648af,0x26624bea3be18086,0xf6c5d68fdfcadef0\n"
-".quad 0xfcfdedcbece6eafe,0xf4851ff7afd7e5df,0x3217388578937a49,0xa314496bb024e44f\n"
-".quad 0x2e6e10fc4ad94674,0xfa4f89354454071e,0x1b91712c8ca9625f,0xc9865940655fc193\n"
-".quad 0x6631283232f06c11,0xe8f348690dbf1b26,0xfe666f52ffab1c41,0x88e983ffe9bdf8f9\n"
-".quad 0xf484d315ff3da614,0x49b989bb24a09c65,0x451445d650e641e6,0xe260b4dbd9692158\n"
-".quad 0x5327d22940305082,0xb4a5569507112492,0x71ef68102bc4a1c8,0x92508099a41b39e6\n"
-".quad 0xfe3c9af924ed8526,0x1590da4a340e2de6,0xe126b1faaf22f251,0x966ab4238c92e05e\n"
-".quad 0x4ff0f14dc5c674a5,0x4d2cdbfcf9cde7af,0x1f2eeece4fc61f56,0xd70b3cfe9ebf3d7e\n"
-".quad 0x9f5f9cdf81bccdd5,0xf1717f3cfd5ddc3d,0xbfdbebfbb3d17698,0xbc074fe2f91de76d\n"
-".quad 0xd367e2a59c2a13fa,0xfe0f9fc1c51599e6,0x4852edf76d3af079,0xa61f6f6e5c5d9e1f\n"
-".quad 0xcbbb992f34fa7a8f,0xe6a7f5fe3f85a19f,0x876b73b7dfa77fd7,0x1f42ff4c45fedc7f\n"
-".quad 0x68bfbbc7f8792bdd,0xe2fe2eee95893e5f,0xfe2f5f47e35f47cb,0xafeddbf3f225fea2\n"
-".quad 0xd1cce9a6f2911faf,0xd3cd2a970c05f5c1,0x1e14627d6e0f71f3,0x312662123f6a27a1\n"
-".quad 0xd3d03b2cf6b92e2b,0x845e72879b9173b9,0x6a50cf90349a1c21,0xa50ea12c57d8ca16\n"
-".quad 0x0a82e6fce0ea8713,0x859c82af72845944,0x673b46f592a7cdde,0xffbbd7393d59e4fc\n"
-".quad 0x47919ea9af372ee5,0x69397bf18202a09c,0x8b19bdc7de467d07,0x747ba676b0741968\n"
-".quad 0x224a8fd787d7e5f0,0xb6a55b6b2c650169,0xc8f316da8e1373af,0x76fc52e873e8ef6e\n"
-".quad 0xdc4909258d0c58c7,0xe006499373b35336,0x67e3d2b6d93c78d3,0x557eb132c1b92c94\n"
-".quad 0xe9eaaf9eac891d2f,0xb24ed315072177d4,0xc55d42c5d1a45158,0x28818f9821672474\n"
-".quad 0x44cb06e2d4375703,0x9febed87cbf92d1a,0xa83a068d36e4a12f,0x291644859872ca8f\n"
-".quad 0x7cfc3f973affaaa3,0x79a99d3272787e77,0x3851ad5388b334fd,0x0991a24b7830a7a0\n"
-".quad 0x06fcc502724da946,0x9b0299a7959abf0b,0x90d588f602c1b0ab,0xb3502030d6218530\n"
-".quad 0xa72b7d3a1797e1c8,0xe84a4d92993641a6,0x4a30ea3948c627eb,0xb88fe5cd0d8aaa5e\n"
-".quad 0x0e5aaa32a1b56ab8,0xbf870d57bf1d451e,0x65c5d5dbfebf5e3d,0x3b357d5f60de86ee\n"
-".quad 0xec1dbadf95692151,0x3883db9c3d4cac16,0xff9ddfa7bcedf28d,0x8fb7370ff0fcedfc\n"
-".quad 0x46687fd7d7b77737,0xcfadc98b4962ef3d,0xa088a9f23531f9b3,0x9572fffee7045177\n"
-".quad 0x104c1720d5a2c1cb,0x33dfe62fcf6588bd,0x023cfd0376557d3b,0x9f73c8b7a6c6bd71\n"
-".quad 0xebcbdd9c6514cebf,0x61b23b83a43b6e6d,0x983f009120d66b2b,0x9539c03c89157a4c\n"
-".quad 0x336ad84f8a51a508,0x0f347f93a6b4fd59,0x71964c4f5d5d47f1,0xe1e75ab4694d4601\n"
-".quad 0xa3979d6ad5556ac3,0x6cb7aa7ce251cbca,0x04b2be3b4c2a489b,0x434ace111265af12\n"
-".quad 0x991b2839a9528363,0x91dae69581a88ad5,0x671d6f2ccdd24a9b,0xce6a98644f96720d\n"
-".quad 0x82fae16dc4c99d0a,0x3f52a288155588d1,0x575e67899189fd4a,0xd2dec2b2c2c2e758\n"
-".quad 0xab606ce9e4869901,0x930c02f98c9a4833,0x42679a4ad3e63a91,0xf1053623379899e7\n"
-".quad 0x2a073d43f44cb7c4,0x74120262bc4aa309,0x15eb320313f6552c,0xd4fb0601b2a76396\n"
-".quad 0xf8f791e8e1f9251d,0xe22335f434d97383,0x8d9a63fb9547367b,0x92c00ef1d6255f1f\n"
-".quad 0x34254b2001d06635,0x1d6ae23a5b79a8ca,0xa809a9db503cb8c3,0xaea7e56764b61880\n"
-".quad 0x90c43e7d6240f3ef,0x29a2b116847dd729,0x3291075aa69ab1a7,0xa7607ba894ac96d3\n"
-".quad 0x3b63f6008dd10232,0x55ad5524541223f1,0x2583fe82156ac935,0x9fcb9ba4f5162b35\n"
-".quad 0x56454772851a58a9,0xae2fc546cd09bed3,0x885361d3624db8c3,0xb238eb68c35bbac7\n"
-".quad 0x67155cb036587dd4,0xf54e8ea58596e991,0xb579d44f10320399,0xf16a16aee65abcd8\n"
-".quad 0xdc5b86207db9b908,0xbc7122c7d06b1d55,0x41d245cd932a2738,0x4f865947951f0d5f\n"
-".quad 0xea495ac129cb2593,0xb001058081c5df14,0xd2637ec93c449a6c,0x512c0748563d3854\n"
-".quad 0x489bd4acdbdc2cb8,0xf8e86c903ff5cbf6,0x1fb40fa9a7c67a20,0xbd6c2c38c0e1ccf9\n"
-".quad 0x6b817c691e6e2dee,0x69d166b0b7deba98,0x6076d50a4b402b13,0xb0d4b46303812b71\n"
-".quad 0xf12b9cb78771a584,0x8464dde3054afc92,0xab1282ca5998c671,0x621300de1bb5869a\n"
-".quad 0xb801a501f79d6539,0x670d149570572d69,0xa2b4949ba7c52e5c,0x6976e95e9b9f58b8\n"
-".quad 0x29a4e1e1fb0a30a1,0x37420f5083b0726c,0xaa10ac28b17cb898,0x9a8f0ad50db0b911\n"
-".quad 0xe193867af1122be8,0xc938e65f201caf91,0x99daba13bca0a832,0x59bc370ab2c36340\n"
-".quad 0xad8a081c2e468691,0x592ae8e7620762f6,0x9512e388d9039a56,0xaeba752e58583958\n"
-".quad 0xe81805574cef7302,0xbefa32980d790a60,0x8b26f1160acc3e66,0xf5fda2fc96d17cdd\n"
-".quad 0x0d93669217037602,0xa71f98f6e47c3f05,0xb6a2ff1965ce67b8,0x59747bf0747d7f31\n"
-".quad 0xdc3cbebe7d5fdd5c,0xf913e6e10ff9d76d,0xd5f5e5e7fd5fbfcb,0xf6fc7d7f17b7b72f\n"
-".quad 0xf6355d5d5d3f2fd3,0x159d9c760b82e59c,0x720aeeeb4f30ab04,0x4769b5442c0a0adf\n"
-".quad 0x2b0ed33ba91da6b5,0xdb5a76d9223b4d94,0xd5819bc09efe544b,0x83666aa8a6a93cc6\n"
-".quad 0xa4f94d41ca6a13c2,0x8aef387d58b48a9a,0x529602a9802eb9a2,0x174e833450645b94\n"
-".quad 0xa2faaec426a7f353,0x3692fe7e97f3d19c,0x46ca8b47bb29e840,0xe4f1519959a4f4c1\n"
-".quad 0x84eb6ad54f7cff3e,0x7a298cf1d5b55799,0xb40a14116a64d011,0x4453b10ac306828d\n"
-".quad 0x2dbb3518ec80acc8,0x58dc5af1162d744d,0x6a1b23ecd32ed204,0x76ed88f1547f7e2a\n"
-".quad 0xd1b0dab06e24dbb8,0xc68a5b000490bea0,0xb079554f856fa8a9,0xd1f2798058d5e13c\n"
-".quad 0x6e42d64e6e90bfcf,0x7cb6c132a0c93151,0x125bcfdf01991377,0x4d2e8775cc57c88c\n"
-".quad 0x74e8a059192d322f,0x202b5778687c3ea1,0x9d34e6546ccc0f89,0x6b726d688dd24447\n"
-".quad 0xba1aac534dd2d95b,0x550a0ee718cdc266,0xdbd53671a6716297,0x9ae7825c26a547b6\n"
-".quad 0xb6fcb87be144fdb4,0x140db7f10ffa2acd,0x7083b9e3f9b9d815,0xf2a3cfdc45af840b\n"
-".quad 0xde256dd89c57db8a,0xea9bb09c42dea146,0x2faf310d8844eac7,0x3f5eb821fb31623b\n"
-".quad 0x1a7061ae0cae435a,0xecd15ded5725cdeb,0x85338bd6a55de719,0x33c4c155ab6fd79c\n"
-".quad 0xd709e287e94a7890,0xa2c775b015cab0f0,0x42965851635cf123,0x6c24726c2cb85289\n"
-".quad 0x592ddb613a6c8716,0x2d1258568ad493c9,0xf54df96c8adcca41,0xcbe92c436a8b9563\n"
-".quad 0x315baac47ec7188e,0x2ab8070b301708ad,0x7288c2b84950425e,0xea29c5adade41902\n"
-".quad 0xc7313cc95d2fd4aa,0x7eae2eb85468a746,0x9a550d9bdf4b0145,0x912424f8c3a4f42e\n"
-".quad 0x3dbd4d21f9484765,0xdf06967e081a7ccb,0x2dc1eac5ffe3ad19,0x643323543c70b937\n"
-".quad 0xddc5f7cc66448666,0x0b437309c362a78a,0x5f172fb87fd9e78a,0x3d7f174fc6cacddf\n"
-".quad 0x722d25cbeaca34eb,0x40e485471cd3a854,0xdd23e8ee3f74ebf9,0x2e7eaa1d9fba744f\n"
-".quad 0xbf3dd40c41c35329,0xb2c2c5a9e2a07a58,0xb3afeb33126266e8,0xc3aba53fed89e120\n"
-".quad 0xaac331983a873457,0xa3a62c36074eb1c9,0x542b446972e1b4c9,0xc571034eb9133b31\n"
-".quad 0x441e7092144690b9,0xa011aaaba96df2a2,0xc1819473a84c5525,0x5c1e30b8360e3097\n"
-".quad 0x66e86496b53165df,0x726c24f3f13286e8,0x7614543727b857d7,0x0d8ac87127f9996f\n"
-".quad 0xc5dcd45d67ca1cd9,0x5fd4fe3fc3bcddd9,0xa42b04658357d8cd,0xbd0d5e58fad8222b\n"
-".quad 0x0649dc03170f5b8f,0x5436cc1c2af2611d,0xaa9f14542e54bd44,0xf517755ae45a3dcb\n"
-".quad 0x1fdd2bca057ff4d6,0x9884793de3447ca2,0x309308ca35509f62,0x65d04824cd2a4238\n"
-".quad 0x53931102e047f2a4,0x21756e69b71f0b4e,0x8f49ab38d6aadbad,0xb96c8cdf152bc58f\n"
-".quad 0xe7d0ddb73ae09068,0x85258a9125bea8fa,0xd2c5293d1b2bda76,0xae2dc477603437e2\n"
-".quad 0x1e69cbd8995c193a,0x23a583ee552baf71,0xffbc4f03e725836f,0xea1e4f03f1de7f00\n"
-".quad 0x5e323c4e8d25e0c9,0x0b1df97a69a0e13c,0x385eecdce17966e7,0xc7ba2770a9c2dd37\n"
-".quad 0x6e89d86f7a8fe89d,0xf2b34bfaca6327cf,0x22a35ba1581fd317,0x77924e8a2455e4ad\n"
-".quad 0xdd8369fd7f323dce,0xd5ea6f48b577576a,0xed2132201b24a1cd,0xeae9d793e1dadb87\n"
-".quad 0x4304766b1a17a08e,0xc451b4b0477ad717,0x5bb6d1e3c0477c22,0x54029bfecc096202\n"
-".quad 0xbbf7a2be42bb8b74,0x3e42db674374f082,0xc63571e0416dfb39,0x20a41adabb85c02a\n"
-".quad 0xdc01522039bc6f65,0xb03211205ee762b0,0xcd6440fde4fc028f,0x9842e0966a8b92b7\n"
-".quad 0xb9003409673dfe14,0x89a34c4409a379bc,0x2d48a66a88c27892,0x4cb9efbe0573469f\n"
-".quad 0xc5e3eede2ddc5935,0x5058537e5930be1b,0x6ef772e66d36e66f,0x6029939fb5d81d8e\n"
-".quad 0x638caba11ba419bf,0x696141264bd61d70,0xf8a416ae509beaba,0x37c93df2d6b46270\n"
-".quad 0x395f934baa64cc49,0x2f29b51ae6ba406c,0x9cad7adef0a57b02,0xf62cb144a8ae6e94\n"
-".quad 0x1bdf714440d07986,0xded08f973740bd97,0xeb4ea55546c35a16,0x99315ca1e3720ea4\n"
-".quad 0xcbb0e37a5d345546,0xd4c5400733c8d104,0x27f4694a8756ab59,0x5389e68954aa3b51\n"
-".quad 0xde177fbec9a83e6d,0x81de46527b4aaf79,0x06770201b9455ce8,0x5e8144d0e865a86f\n"
-".quad 0x980730d72b8230a0,0xcee7c1185ec51e8a,0x1c67d4ce5d09ea0b,0x446c3264adcdae9e\n"
-".quad 0xb7ebec3792e04703,0x6cf44d120530c673,0x82ef3d6c08540d2d,0xc779b4252ad2b638\n"
-".quad 0x0161745437486266,0xc1561d64e8017aa8,0x8cf391a58e15789d,0x6ae9cb262b275bbe\n"
-".quad 0x3c04cd7016587d64,0x504c964f94655373,0xb1cc8da76aea34d5,0x5a1f83ce164e8b6b\n"
-".quad 0x954767f3c31e1303,0x7c1cdab53afe951a,0x5824adaef41c7a4a,0x28a04a8092b9cfa5\n"
-".quad 0x3c4651b1d2a82ab0,0x1d5cde00b37f2ccb,0x13c1e1cdbe5489fe,0x27401d3fa973b0c0\n"
-".quad 0xe1ae7f07c342bfe7,0x696a2c7c84d03fb9,0x2215b05dc87f3f52,0x5f51ed2d06d6ed28\n"
-".quad 0x0d465b2dbf534b49,0x201183795065c283,0xe40275700a604d7b,0x00392d32c03ba0af\n"
-".quad 0x607a82cdbbe2254c,0xadc3d8c1564b5415,0xea5bed3a75acaa3a,0xe087cd627f79a9fd\n"
-".quad 0xbc9d9f8e393d39bc,0x0fa725783e1ff63f,0xf7732df92e48bdef,0x9f05cbe888d1cb3b\n"
-".quad 0xcee888640d501c4d,0x261d0c89b50d3785,0xfea42c82a3daea78,0xf5a7fd1fb84b9c22\n"
-".quad 0xae7f9c22f86c35ed,0x0b4b0d09360d562e,0xa3a40e72a5f432ea,0x05b17829bdc98dee\n"
-".quad 0x65b3e9066c0dd0fa,0x17e9977d1d7cc09e,0x19b0b5d87d02daf0,0x87e88c2e20f0cfa4\n"
-".quad 0x607078fa75c95f4c,0xa034fdfd399f4833,0x81f41da7afa6446f,0x79296c37d00cd8f1\n"
-".quad 0xfa75fb41a45fa231,0xa8ed46bf3e1b0802,0x5bb1492f6aac36e2,0x56b6b86f3acf600a\n"
-".quad 0x5da93c3d715e8c0c,0xc0e516c81dc6abec,0x45b8634808960aeb,0x37644c38b0320ed5\n"
-".quad 0x7659ace9beb3b937,0x6f3c9f6c74915281,0x11c18d1f00d3f03c,0x90ee3441d26b02f9\n"
-".quad 0xff6f6b30ef8da63f,0x640efc467ded23fc,0x3aef9c24099736e3,0x8096e3f10424bb81\n"
-".quad 0xb5b4e16a8382743a,0xf042b09035011864,0x6e716f9e93562ba5,0x6b7858b9d84df370\n"
-".quad 0x45ee2e8b3e95f82b,0xbe707622ea38c08d,0x222803e912bc1532,0xde61b183ccb3b2ae\n"
-".quad 0xda0aa6b4a16b631a,0xad415927bf1139cb,0x42a781d4511b5a77,0xbcd44c406a62724c\n"
-".quad 0xdf133dae4f8267e3,0xf5175270211178a7,0x21ca297f11d9d7af,0x991e7a59c72c5b99\n"
-".quad 0x7737bef1b6554c1b,0x4ee501d3a9162938,0x86c1b08939db3d14,0x03025d58abaa5a90\n"
-".quad 0x6025517ad8b13b0e,0x3c0f0f323d5c90d1,0xde05b836567ed546,0xe0913aa6c1067828\n"
-".quad 0xca4766cb05b9a06e,0xccad66994267a7da,0x642231eb39e5b5c2,0xceb86e8502416fbf\n"
-".quad 0xce84d4e81ecaeb11,0x89c9b603668cfbc4,0x7667400cbf01d9df,0xd96009442a253bac\n"
-".quad 0xc646ddf5f357f562,0x91ddcdbc41abfa10,0xccb553b5664aa836,0xeff2b9be347fb7a6\n"
-".quad 0x1ca79d7e534561ac,0x1e33a421bac0677a,0xc59b2fa9ccaa9d6f,0x45d9b602349b78d3\n"
-".quad 0x7aed609acfefe98c,0xb786440d7428f312,0x4fb5c944ea1e1a17,0x9990673d04621060\n"
-".quad 0xc8a7be4d409bb605,0x8e96825ea105260a,0x1cacd03b3fc705ec,0x7974baee81f83917\n"
-".quad 0xe0eefc7489362afe,0xeddbe7d7db2fbb87,0x731fe1e2506feddd,0x1dac7df010973909\n"
-".quad 0xf9e5508deb60c9af,0xafa85390df72a3eb,0xb530fd76f6ae16c9,0x5cac63d8615240a0\n"
-".quad 0xd63f4aaa501703af,0xc11db15547a9c0eb,0x0be59c772c37c7e6,0x60881a8b4f5cc20a\n"
-".quad 0xb292b2d6eac4a341,0x24760fc30ba855ef,0xa81040eea3247ba4,0x9d4fdda5dea6a85e\n"
-".quad 0xee27f1a54f4e9fbe,0x7481c295b54c9fd8,0xc7513dc359889e9c,0xe739574e20fa7ea7\n"
-".quad 0x5701d89a681c6a60,0xd41fa785681cec23,0xf675a4987c36b489,0x648ea20998593ac3\n"
-".quad 0xde6d38454da2de9b,0xf5982993e3871c9d,0x6b24751256038f7b,0xde273bd48ab8b26b\n"
-".quad 0xc5d661189c5ef939,0x15f5923a89c301c7,0x10ea560f95260f59,0xb255f133a72755ff\n"
-".quad 0x2f5f5903a890e41e,0xac73fa07da0b8f68,0x3a895303d6f7adde,0x0c4fe45459359592\n"
-".quad 0x5357d5302c83b3fb,0x43eb7a19da25cbe6,0x7b9d72a1de256c15,0xae8c50b678cb14f8\n"
-".quad 0x01deb5fd73ef1795,0x670213d8feb57d13,0x0f9d57c4c296bd4c,0x093d23024a6ba4ac\n"
-".quad 0x5f04c95e023f6ad5,0x2653665618ed81a9,0x1015ebea38063c37,0xc3f2d53cad4e9670\n"
-".quad 0x5617d74e156387e9,0xde6ba0a598065e80,0x2e0381293d15f6c5,0xceb639c13e83bb50\n"
-".quad 0x0c1837960eac00f8,0xedd2f01162d7506b,0x590f7224a6d9aefa,0x469a212f14b7af5a\n"
-".quad 0x544eaa70bbc9f1dd,0x512b0a4e675a93f0,0x9a1f7817021023b8,0x7cedd640dfd48083\n"
-".quad 0xda9337889d028760,0xde0c7929e7ee800b,0x65e911e96c8f1775,0xeea4bd543ddd7fda\n"
-".quad 0x09b6a6e1373841d1,0x45adb8a7bb0ba9bd,0xdb8f57c6859e113c,0xf5797dffcb87f38b\n"
-".quad 0xa8d4d843f70f2ff3,0xbf0f6cb97f0622cc,0x1231f552c23b2e5f,0x369be753d37deca4\n"
-".quad 0xd8cafa68007d2063,0x55b1ec836b554116,0x8c6af2b10e1d576e,0xdfc3acddfc2d7295\n"
-".quad 0x29466c9906731081,0xa748f851fcfdb268,0xadd4be9f168acd42,0x02baf2c40603d883\n"
-".quad 0xdc59d0ef1582a962,0x4045c2404dcfba84,0x39660433bcc06bb3,0x8d2852b3df00ac79\n"
-".quad 0xcb07830747137332,0x1241f3f6ac15dd32,0x13ac9b8b75f37eef,0x2e99cd688f5556dc\n"
-".quad 0xc532ec904f79db77,0x7a026d1f3dec5e4c,0x3ce796df5d7cc4c4,0x314cd7a0d0db6bbd\n"
-".quad 0x1a1266d9ad322c68,0xd12dc20d0e4433ef,0x8eaaf1ab5106a849,0x33982ab72c4f13a4\n"
-".quad 0xdadac10a6c506287,0x6e3b6e97b51c2873,0xa7cfc4f2359ce0d6,0x6dc98aef49b41e64\n"
-".quad 0x51208e1b582fae98,0xc1ff03f91d6083d4,0x804f4736b9b88c3d,0xa02cbe32c71ec14b\n"
-".quad 0xfe93a53b89f10386,0xa470808679cfb27e,0x7ce745a17af9a04a,0xaa9dd2c7f483ce54\n"
-".quad 0xea2422deb63183e9,0xb408e8ead4f8e6ef,0xe945403206f0eede,0x674fdfd059355487\n"
-".quad 0xfb7b499fa9fdfb3d,0xa9bf2f4593ac9ede,0xae67dfc23bfad6c8,0x7eada913db1c224f\n"
-".quad 0x6455db7c22c9d667,0xec99cbbfa85549eb,0x2c9d78f84b8baffc,0x3bcd55903a89d33a\n"
-".quad 0x7fe6277d8ddfd41c,0x016bf5f9de1907dd,0x77f5ad923a89c57a,0x7a9639fd05ef9285\n"
-".quad 0x1d9155610e4726fd,0xb10a409df38fb1bb,0x91dac89b1b95b7a3,0x4f50d9763bc3fb17\n"
-".quad 0x8bc8fca6535762f3,0xfa194faf1972a1fd,0xbd329eba653555a4,0xd5d54c0b23594360\n"
-".quad 0xd9ab0d8c761de994,0x215bbb5d24779956,0xb4dfa0dc096741e0,0xcd4b00d04f75e037\n"
-".quad 0x8e000dc46d87501a,0x67cbbe2004ad3325,0x96732a1d06bfb314,0xbe76526a10b05720\n"
-".quad 0x02338eef8cd67afd,0x7e5aaea681d17680,0x0f1c90c081d18bd9,0x6e3175f7b1a8820d\n"
-".quad 0xc32fa3c1855ea89a,0x67195e7ae10b5620,0x41c3c8c0f59eb09d,0xaa34605324fd1ecc\n"
-".quad 0xaa33bf72330733fe,0x5fe60a4da3474d8d,0x6d34e7a69cb4d1af,0x78e163f0b23c9343\n"
-".quad 0xad9855088a763cb5,0xb59175c38d0771be,0x5b61debc6db8cdad,0x40a8440578e8d1ae\n"
-".quad 0xf322866bd18230b5,0x0d8512e6f43eae66,0x1e7b080bb8a8d67c,0xaaf021bdd87360f6\n"
-".quad 0xfbd054517c23de01,0x163c30b9361e3281,0xca7f89e44921790b,0xe34029ee1c6a9683\n"
-".quad 0xdd5ebf26f2eef9b9,0x276fe5c5cddbfc5c,0x41b55d5c5d3f3757,0x45cbc780964546f1\n"
-".quad 0x085dd95162db9bfb,0x6480774b1f0e8b17,0xc378afed9e3bbaa5,0x7f40e65e3e3e1e1b\n"
-".quad 0x4efdc19d47669357,0xc2ecd187aa751dea,0x7c620c27761ccab3,0xea8b74e56c8c4427\n"
-".quad 0x7819ed00c1512bce,0x4ce835ab2899ecf3,0xbaab345dc9ae1e93,0xadf88e704b65bf0c\n"
-".quad 0x59642f077c6d27c1,0xc67b9b3789bcb444,0xabc39069d532c747,0x477216a4e3701555\n"
-".quad 0x2deb70af4b9c00ec,0x0afc55b180b6ae02,0x50ae80270ab20a2a,0x3b32a97608c75f2a\n"
-".quad 0xae30fc8dd2c24be2,0x7a5a09939ed4b98e,0xceea86ce1b20df57,0x7ba5f2be3f6fb12c\n"
-".quad 0xc6ec77a8dad43bd8,0x33b478e1b695b1ee,0x1604b29cb2d545d4,0x6b66ef609bada9e0\n"
-".quad 0x5ddc7b2980f2c806,0xa222d2a4d81cbccd,0x9b0179dc426c31c8,0x7e501fa252f3bd50\n"
-".quad 0xfda36cfeca3ffad8,0x8ecb4b8f16971ca3,0x8922d0b1875e9930,0x1eb638e0ceaa854c\n"
-".quad 0xc661cdbbcc5d8060,0xc0f4d24c6278f1cb,0x7a0ea18d1d3e61d8,0xc6259274fed02ccc\n"
-".quad 0x9e3adb0be14fa4ac,0x3b0b31cfd64bf201,0x80a33adeae87633c,0xc0a6f218da6e720a\n"
-".quad 0xe5ec77749d1c9529,0x268ed83a0e8a14a6,0x0dc9b7c2daa856d6,0xd508b60652093d9f\n"
-".quad 0xde4105e92c56524a,0xea22bb1d4a19b67e,0x61042b9be85f68f6,0x4a45c8222bff8327\n"
-".quad 0x9ebf9717b57e6fec,0xdc5d9c5cde3edddd,0x422fbc13fab5ce3e,0x88442e4ea0ff57e7\n"
-".quad 0x6e6ccd235d80c61d,0x8e464a1b7a0fc132,0xdb48043f19a4c310,0xe5d06af4cbc313f3\n"
-".quad 0x7895ec53dfddc3cd,0x3fecf2c3c55d9e56,0xb511a3af2e6eef2f,0x9db9c08fd6ecc3fc\n"
-".quad 0xd9e29acf68557a35,0xd4d767aa6bb3e535,0x9ab2d35d9e69aecf,0x87e81ba6b53e3ba0\n"
-".quad 0x5d675e16002e09e6,0xe064a593c00f443f,0x119791f64e41480f,0xf721a2390d1fb10d\n"
-".quad 0xf4347ed43446a1a3,0x69d5e9868fde8688,0xfbfdbca9f7051fb3,0xe84ff8fb73f6faf9\n"
-".quad 0xe5f7d2d549e9efa5,0x9615a8787bf8cdfd,0xbbc3dfc6b28f2ebe,0x23f52a2d4ff6c141\n"
-".quad 0x1bfd78bab879b816,0xe5f43aa24555322b,0x14ea89935329bce1,0x780db06e219fa952\n"
-".quad 0x03aded7c8119ebd5,0x53e16eea99ffa72c,0x02c001e0315c8b4c,0x067257bbfddc390e\n"
-".quad 0xf0333bc8eb2e8e49,0x6a49238b46c41d35,0x99aabd05e0568d5f,0x93efc898cd470a5a\n"
-".quad 0x01b69db7d428c4c6,0xd3c5f160bf59047c,0x3f39b16bc6e86c43,0x50096f00c2804c7a\n"
-".quad 0x8ef834ff882bea4e,0xa8a3927ee96e00ae,0xd863c595d59003b7,0x17c7a348dd22cf17\n"
-".quad 0x8e243a98c830d917,0x14bad746555e5342,0x3c2b3492f10e098f,0x31030d74cd99557c\n"
-".quad 0x61762f57d0303200,0xdf12d5f0eb0451a8,0x904b180d3e2e8305,0x531f97d82db100fd\n"
-".quad 0xc57f5934b8b1f6fd,0x8c65dd45f4532426,0x9480cbc79b9629f6,0x4cce70cf9a15e6e3\n"
-".quad 0xbe7cf9fcf91b3399,0x6dea993d567dff30,0x680bd6c554881473,0xbb45c2e92c29bd52\n"
-".quad 0xbea4cc5435bed1f5,0x8ff57d7e76fbbdb9,0xd8ef3b7781bfb3cb,0x4f66e9d4ff59b057\n"
-".quad 0x4fb10a92cf5034aa,0xa4a772a7db434ee5,0xdca9f6d3d3b953ed,0xc9cd033654fb6aa9\n"
-".quad 0x4eba42609f539a77,0xefaf0fc1d5fa4a73,0x588bd64a848f397f,0xcf5fff23e14b5e00\n"
-".quad 0x7b299c463794ceef,0x3fdcdd4f9f1b7376,0xd589ebebbd8a3d9c,0x41a3899086fc7fbf\n"
-".quad 0x25a612f659501010,0xf67d565aa12f638d,0x54337bfd9911af12,0xdb9cfa8664deece6\n"
-".quad 0x0a1dd990a5d98c9b,0x6c85759990a1db99,0x62bbcc2159336159,0x6ae35bbf5971a9d8\n"
-".quad 0x171ad64b8d0588c8,0x398e35f62c9d1e3b,0x2670ea0e8a18f411,0xf8e3d19a20e1a299\n"
-".quad 0xc383cac0787030f4,0x75c0994fc705bf63,0xcd3ae7194e16672e,0xa54336998b2d7351\n"
-".quad 0xda9957bf23e5b932,0x23fc832c9cc63f13,0xd84383a873daa604,0x01842173f5201d32\n"
-".quad 0xa90f5473adc0c47a,0x95b21cbefa05bc3f,0xa1f8b5b02c5e5c29,0x86dab310e43078b2\n"
-".quad 0x919d1abae14c5eca,0x8f05aa87bbea2a85,0xea821145400831d0,0x93a2b8cc4121e830\n"
-".quad 0x15e8c2ef84ac60d3,0x0319d91d25df89aa,0x1e4c7aaf005232f7,0x8ce442f1c75b25f5\n"
-".quad 0xc0616652e81a43cf,0x6b4391468fe230fd,0xdc36d185ea0f59ae,0x9715ad18b95eb0ae\n"
-".quad 0x6c7eb3acc2d24b19,0x1ee8fcbe3d580b6d,0x2da1c2453ed28696,0x662e5e57126b3b32\n"
-".quad 0xd248d6839697de0d,0x0a1a3ac8d6c25783,0x483db82868c3d729,0xc51148a6ba16dff9\n"
-".quad 0x977ae185141090a1,0x1476167909d55c42,0x31915cc33db6d781,0x8475f1c242d51e5c\n"
-".quad 0x72f024b46a1f862e,0x16eafe568fe36823,0xad85f943be00c648,0xb2c88c3f443e442b\n"
-".quad 0xbf822ce00c753f5c,0x53e48bbdc30ee914,0x9a1c51746b68f93c,0x3a3d6851dbc516a1\n"
-".quad 0x8e0ce8d2d46772ae,0xda927466a9d1964e,0xc3a40e4d72680762,0x57dade1caf83c362\n"
-".quad 0xd51ec3f08ff086e5,0x6507cb08a4e7760d,0xcc41f945637ab8cb,0xcdb330923bcdefa7\n"
-".quad 0x49f8a1c9e7e3c98e,0xe718c50b16723b8d,0x8f9a608fb30cc187,0xebfa810e7699a2f4\n"
-".quad 0xaa5c1898b8e5eba5,0x68f7bb43e882b43a,0x8e9d3468e686a105,0x1d8b8ad65adfd8fb\n"
-".quad 0xcb2f38158151783a,0x976f5356055ed62b,0xac75a07d9560556c,0x3998e9d9564074c0\n"
-".quad 0x2574f28b468dd732,0xe6f59bab09b239a0,0x31904dc4c5205950,0x76978bc16568caf9\n"
-".quad 0xb7a5c4a47827f0f5,0x611c9e76a084635e,0x9a7ba349ec770adb,0x0cca74e3c12fcccb\n"
-".quad 0x0b17bf85d9f68c33,0x5b2a463a1179df6f,0x7bc004bf5d30cce5,0x3550ec589de3c411\n"
-".quad 0xb28199a1bf0d8be5,0x03d8e3e1c0e28a1c,0x915f9e4c301f68d9,0x596742a32ebe65ac\n"
-".quad 0x0c5cb0c476979514,0x3c47c75540edcf0c,0x4f7f6289ec1c7934,0x627cbc6bc957434c\n"
-".quad 0x58efad45561a1666,0x3f1cfce845a73aee,0x0e497e3f8a75fd5d,0x9f3a3bd07d27f48f\n"
-".quad 0x03627cf9f7d96441,0xcfa43c0d89f3e877,0xc0d89f3e9a703627,0xf3ead703627cfa8f\n"
-".quad 0x98925ee62497d989,0x57b68545e162497f,0xf26a51789a87be00,0x945fa6a517a9a945\n"
-".quad 0xc410ba2f6a51799a,0x57cf169fe104ae8b,0x76c6be80df7e8f88,0x7fa1be88da237e66\n"
-".quad 0xfd345a84cc7aa935,0xb24ec1a5d5efdce7,0xf2f5fafc7e7c34be,0x85accb34429ea3ee\n"
-".quad 0xa719c0d89f621606,0x3be1741ade871df0,0xe1075dff9ed97666,0x5901c48ebbff7db2\n"
-".quad 0x0bcb0f23099fbe29,0xb27efc8daf201d90,0xa84c05fbe655ac83,0xfb203d301017d901\n"
-".quad 0x17ef9c30462602fd,0x9817b093b06d14b0,0x756be031f1c05733,0x1975d2ac0b83757f\n"
-".quad 0x1782c284b6c1ba3f,0xf708578642a33207,0x0f6a740126c5d865,0x32df512d6088ba48\n"
-".quad 0x61dc8f9012023fa2,0xd65b3ee28bbf877a,0x31a0f52d609918bc,0xc5ede68d514260c6\n"
-".quad 0x36c63b51ac767c76,0xeaaa4cfaba347226,0x63707084745d7751,0x3742a19849390384\n"
-".quad 0x62fc1b6723807956,0x86bbdee581c155ef,0xec397bdf45ff2214,0x48a1f634d5219a3d\n"
-".quad 0x012ed0f48461bdec,0x0a7af6d458a31f59,0xd4e30d952a3cb349,0xa3b74e7255476b84\n"
-".quad 0x739bcb42ac6bc3d2,0xa12e1c80321da8ac,0xcb43d1dbe86fefb9,0x137cafaf6c989185\n"
-".quad 0x6292bac52c8dcbdd,0x42a10554644bfb48,0x1add6b94bc7a2d9f,0xa4073f233dd3c190\n"
-".quad 0x712721de41cb7628,0x0aa83f3035bbd72a,0xce95426342035b95,0x144cf575439981ad\n"
-".quad 0xc48eb25d72be07c4,0xc421e5dde418b718,0xedd45290175d3bb2,0x4e78528831eee788\n"
-".quad 0x164d5032b53f0e86,0xb1bf0482c9ff6076,0x4621907c6964c2fe,0x4b27acb45a61e593\n"
-".quad 0x2ab3347964dd2a95,0x68a55f02353e593e,0xcc5cba2730b27c50,0x7c8d5e059937a2ad\n"
-".quad 0x2673bd159a41ca50,0x304999b4399d0bb1,0x6aa514509d3df9da,0x4dc1f991e9ea9714\n"
-".quad 0x8f1357e6072d6b95,0x08a31df7cb82c150,0xfbbd17c609b2b6fe,0x31868976a74141c5\n"
-".quad 0x15c057c21d8fcb8c,0xbb1ece41624041f4,0x98f4fd391a7e607f,0xd252396489e52fb9\n"
-".quad 0xdbb171629b78e16b,0x4e7a912bb518fd80,0x11216eb870a97ec0,0x445d0fa699a6468b\n"
-".quad 0x85f8767825f98d7f,0xfea0db2577defe98,0x3bda6b7e1d587a39,0xb55fb8a30ac53fa8\n"
-".quad 0x8c7f5077b9215128,0x5a28d8c829744558,0x26310615fd413ed8,0xb60475656bbd18ba\n"
-".quad 0x0c31fd410737323a,0x1b908a6fea0c5999,0xe248ae0a37e48344,0x7695b76e87fb46cb\n"
-".quad 0xfbffc87b3117fb44,0x9ff78af6ae69ff78,0x3d66f35a162e1b56,0x961ff31cb2aa7fe4\n"
-".quad 0x5fe369c3dff31b52,0x114ff98a5dbfe62a,0xf989f760a13c79a7,0x3843fe628fc863cf\n"
-".quad 0xc0c431ff98da1f3c,0xdb31d03c1bfe6253,0xdf05180ffcc7d4f1,0xa1944505ff319d88\n"
-".quad 0xcf581811efadd75d,0xffd451e23e34be56,0xf1cffd45767f7210,0x8c3f9b8b02d57cf2\n"
-".quad 0x02bb1361eea29ffb,0x85236f1379c897ff,0x38a7ff828c8dcbdd,0x7625ffe8aec8d878\n"
-".quad 0x19861219611bac9e,0x0a57646c1aa25200,0xa3b08dd75f601280,0x46a796052006986d\n"
-".quad 0x6eb67fe0a001e576,0x16a81384d4505d63,0x769b657002a58be4,0x2de9f88e18b22eb5\n"
-".quad 0x3e62dc9eda7afee7,0xf69007c839460c00,0x6a67e8b1540db4a4,0xd3170bedd871eda1\n"
-".quad 0x39747954680129de,0x79dd128571a042c7,0xd80a911d631f9310,0xe504764dd1ce5d3c\n"
-".quad 0x795ff92d92ea1e4f,0x8461fa322671614a,0x1873763465f91308,0x0695750405032e0e\n"
-".quad 0xe582bdc497f36395,0xc686d6afce8a5802,0x51ffac556a478563,0x72df6f91b35d7e78\n"
-".quad 0x1299a8f302fcf0bf,0xc9a9955f9f10698f,0xf735d705d071b675,0xfa21cb046949f11b\n"
-".quad 0xf48397adae5d9689,0x7ff8e834cb513dd7,0xeaeb80eaa975bc6a,0x85852d32a5d6e1b9\n"
-".quad 0x05730cde6ef80154,0x329530059396e548,0x82016c9a05280e3e,0x13c3c80ba4cbddcb\n"
-".quad 0xd23265a0309ded42,0x16f8d203398d47e8,0x0ac7581990840693,0x41628e80422f0a93\n"
-".quad 0x8902f87001bc9b6f,0x9f050ba40800e671,0x350f37adc5403b94,0xe9f58a803d91dfd6\n"
-".quad 0xfe67b470e59b2c03,0xb9e14f3c99f23800,0x833e8d3d0bab3d12,0x42793f4977ff9c00\n"
-".quad 0x5ed63474146230e0,0x3e0413d4279022ce,0x122da080913964f1,0x71d842024cd5c20e\n"
-".quad 0xfbf76d220254a599,0x4c91df8af31012e7,0xd417e71b35521040,0x54b918f2e6b60221\n"
-".quad 0xe7eb9aa010f51dd8,0x53eb9adf08f5eb9f,0xe0405a9b75fe2c7b,0x1016e7a7849c036b\n"
-".quad 0xee178d141253ee14,0x93f8f2daa9080bd3,0x5d4921018a6d6a9d,0x699d9a4e0c0dcaa5\n"
-".quad 0x80cf23dcfe450406,0xd30fd56ea99ce0c0,0x20364f4f9ff0a6d0,0x7137688369674230\n"
-".quad 0x0407191ee806295d,0x0e26ed206dccf1a5,0x101da47ba040a0a8,0x4365b441b7331f94\n"
-".quad 0xcec060407b9def5b,0x048525ccdda646dc,0xb99da8c0810123dd,0x59defdb436db4c8d\n"
-".quad 0xda646dccee860408,0xa9e840899b466f2c,0x4aaa514776aa0959,0x0811f36acad9a72a\n"
-".quad 0xcf68629eb5910b2d,0xacda4779611a9e52,0xa2984f5268934204,0xcb30e69a102626d3\n"
-".quad 0x179a65d0511e8ede,0x409f90b0e2cb21ea,0xefda853d4d678768,0x118c68085040a29d\n"
-".quad 0x8029a7da186fb429,0x830673a0fcd0b2ac,0xc06706157f07ac2d,0xd26800279ac3754c\n"
-".quad 0xbd572b97b24c0815,0x6ece4528e2616db4,0x81692bdbd0262a56,0x1de1888a0cbb3531\n"
-".quad 0x635e6410ba190e69,0x4a803b781b74ba7e,0xba012df966f000bd,0xf9a447d7df8c45e0\n"
-".quad 0x79ce74dcb4c9007e,0xa029bee49e2444dd,0xae3f535f6396d4e9,0xb7c1ad04ad074017\n"
-".quad 0x82c62d20acf9ed6d,0x2a181302ab946e1f,0xfa5282ab9bec7c30,0x5c185573e81b0299\n"
-".quad 0x04fde8626fd39467,0xaf03d6849e25681c,0x6931835df04f3545,0x18b2c7ab6190b95d\n"
-".quad 0x1e93d37469f80792,0x9df063063d0c60ed,0x7a4a2bd730621916,0x3262c211908dd645\n"
-".quad 0x6b28f453279ae35e,0x0371890fb0963a6d,0x7663428805c583ec,0xdd4ec6311814efbe\n"
-".quad 0xf1919e22c90c4f0b,0xbb0745e851adc2de,0x2a605d83a1da0e85,0xfa752aadd87b5b5d\n"
-".quad 0x8b95b0bc93709e57,0x00a666bc553be05d,0x2c4c8a302ecbdc42,0xdc4a237c0bb3f636\n"
-".quad 0xf989e8d05ee79dd8,0x7696381e2cf38f4b,0x3150ed85edf9dd9c,0xbde7d8d6b3e19cd5\n"
-".quad 0x8673cb4f6ee30ce7,0xad76cf867387a2b3,0xa19cfd3a96cce7a9,0xbc38c83c69f4c698\n"
-".quad 0x2673b452b657c1d4,0x13d160ce716aa7b1,0x782c23c3d4b6a237,0xaaa338bb108f04fd\n"
-".quad 0xb55b6278a338ba2e,0xaf5613a92605467b,0xd84953c5af64469c,0x78a2f876961f54b5\n"
-".quad 0xee26283df908a10e,0x638bc400f30b7b02,0x11e37b5b3cc4cea5,0x96ab66caa2f4efa8\n"
-".quad 0xda3d8cccb3eb6f94,0xd46557a6763d1955,0xce7c96ce9ccf91d8,0xf766041fa2dbadcc\n"
-".quad 0x4a07f039eea6f053,0x9180160ff017e27e,0x23d60ff0e8bd35d6,0xc20ff016df7981fe\n"
-".quad 0xcf9810800b68ae86,0x20113026b348ec4d,0x9ea96b646a935795,0x941249ebefd1ea6e\n"
-".quad 0xc08af4e1d5c3db68,0x0efc852087e05ebb,0xc527730414c22eda,0x7b8ba90901a5e30d\n"
-".quad 0xa484781fffec1202,0xf5b35f404787ec23,0xf23d03578b208f19,0xeebd17d1dc72a92c\n"
-".quad 0x5a9b13060c06300b,0x90ad9526b58031c6,0x32c7f7afa5bfa80c,0x8c7733c433003f08\n"
-".quad 0xe5906f1076788066,0x01b303401f6e7274,0x69d50eb40e0d118e,0xd076c1efc4e800c2\n"
-".quad 0xb04ed4ebbf09a2b9,0x5f5882d02197a502,0x8fe5570a5eb302d8,0x7e1057847db38e11\n"
-".quad 0x981cc05809da7dca,0x9086d339e23518d4,0x9e0b213b23732f05,0x191ac911ba894492\n"
-".quad 0x2c84ec8dcebc1642,0x6da81846eaaaa278,0xb213b23736f0590c,0xb0c2372c6a3ef080\n"
-".quad 0x0bb2722f82c8635e,0xf779ebe232d0a0b2,0x20bb3b2e457696eb,0xdb65b62720b20c65\n"
-".quad 0xda3d8f9e0bf16346,0xa88bb4bee7671ea6,0x2dc3a19da6533005,0xb9920b908e995c48\n"
-".quad 0xe612161e3a6fa5eb,0x1c1a05d8fec46555,0x1a764228c1103241,0xf544f8fbc69ccf4b\n"
-".quad 0x268977f7e9320e04,0x08631231d3f16c8b,0xa20d6baa45ea4e45,0x32267a0f38274b40\n"
-".quad 0x12edb88780840514,0x306bd5c80e4bfb1e,0x3028e1ad8b52508a,0x732428e11f1519bf\n"
-".quad 0x933e814703b52b66,0xe4aa6bcc7245d1a5,0xe4bccb49e505200e,0xc7808a489ef520d9\n"
-".quad 0x378614908f31330c,0x1901597711b69509,0x322941ae4a725e54,0x5452835ab6a97a98\n"
-".quad 0x0c64030a997e915d,0x0c69ea49c6f00c80,0xce9920c81172d064,0x30bb0101901aeca9\n"
-".quad 0x133b55a064842ff1,0x1761fa348b65eeff,0xc77006488bb28324,0x90aabc03281b0b00\n"
-".quad 0x0658b4d772a31ef0,0x1111032c058d322d,0x8305ee480832c54f,0x6a6ba80cb1d7f58d\n"
-".quad 0xf7ed1360641961d9,0xd0832c30262432c6,0x6018d3dd6832c6cf,0x2032c34fd2c1b419\n"
-".quad 0x81960af6b1a3a0a3,0x582bf2832c315466,0xabd13e3d0ba24206,0x403660cb193dd183\n"
-".quad 0x8c6622e760cb057c,0x20658abb3bf10865,0xd7ecc2ace1d86cf4,0x29dc1d614e2a3ca5\n"
-".quad 0xea3b9fe7eb9e40c9,0x4f1d8f69a9d0fa51,0xd3c24f924e41962d,0x32404406ed120cb1\n"
-".quad 0xc05ed120cb08ef80,0x0658b67fb64fe3ca,0x8ab8c9b95282c689,0x7b72720cb0d658cf\n"
-".quad 0x6b022540e2241963,0xd9c308a64c9a3f4b,0x20da57b1d120cb07,0x32c6f62b26c9a1da\n"
-".quad 0x885b481b4baad448,0x7a1120cb1bdab686,0xc2b1a49bb4c8db94,0xb7384c9890658dec\n"
-".quad 0xcb1bdbb6869b6991,0x0d76d0db5d727320,0x3f93a2419637b0ed,0x658b747f336991b7\n"
-".quad 0x97cd422cafcd3990,0x41b8724e54c26924,0x7abb4f17a4906583,0x44a1cb659b7e894a\n"
-".quad 0xab5a5f1a5241962d,0x0e9241962d80e992,0x866511e8edecb32b,0x02d5e8321ea179a5\n"
-".quad 0x0c9e88d66a924196,0xba92eec2a419637b,0xb068a90e2780c948,0x9ce83f352dc8f00c\n"
-".quad 0x7394555ac762ad42,0x06daebb62b0dd459,0x5e8392aff92920cb,0x1aad39147130b6da\n"
-".quad 0x5b2a419637b32976,0x0e91de2b06d28bb3,0x60bcaad7908540cb,0x589dff0c832c030c\n"
-".quad 0xf5b50f9920720a06,0x9ed99b0c8a4a4ba9,0x3ecb2a267580753e,0x2ea3c56150257275\n"
-".quad 0xe5b53d79c3739724,0x18c3941f6f50f7f1,0x5bbd383397175d27,0x23d0e11a085ba0ff\n"
-".quad 0x68ef5ee9b672fc8e,0xea00acea7a030e77,0x2f4c4be28a02ab0a,0x5c9b8246c3c8d3cb\n"
-".quad 0x8cadb5885fe8ee4a,0x85ed75c7c6d6026a,0x612554d4e4a48d95,0x99203f610845094a\n"
-".quad 0x9d11586cc1fc8c46,0xc28cec47eff29035,0x2335d277e8e724ae,0xbfd74f655665e2ba\n"
-".quad 0x0cafda9b9aa87c08,0x53c317f951037b7e,0xc16ab101a617da38,0x021a41ad523075c0\n"
-".quad 0x8a3198b725208bc3,0xe0224600a9623f90,0xe2f18bc64a3184a8,0x60edcbf1920d9b05\n"
-".quad 0x60582206320ac44f,0xa9c9d78a18675f49,0xd3568ceaa15e04fe,0x464918c619a8ca2c\n"
-".quad 0x814bb03ccf490800,0xbd7e0b352f05d155,0xcf1876adaf108f94,0x3b58cf0bfb036506\n"
-".quad 0x50c7b54edd0122f6,0x28492287d514c03a,0x096a1a7f49ce9480,0x3c6f76aff7e4a8c0\n"
-".quad 0xccbe284f3cad292a,0x5e038d334debda13,0xa23c5d37601492db,0x2b7b1331af027db4\n"
-".quad 0xf1f98c44dc631d49,0xf0d4effd306f12d5,0x03184ff5c343ba86,0xc01d0b1de6a5bbfa\n"
-".quad 0x92b027b4434ce1c6,0x0a0d260a5376d744,0xedc1482653e9081b,0x9818748e2e7df3fa\n"
-".quad 0x1422fa01d1fd4ecc,0x97c384f0536e7536,0x001e8c3344a8dbc9,0x64ecdbac512c2023\n"
-".quad 0xb1370e5ee4535adc,0x8122a9a604d753f4,0x367477a6154d9f09,0x7b2efe306f294dca\n"
-".quad 0x1f8d742cde55a866,0x53e52c6c133e0b91,0xc870696218db0e6f,0xfaf0f0fc643eefb8\n"
-".quad 0xedf7978729abec7e,0xc2c738120a32a5d9,0xec1ecb2e49bdc749,0x593b65e65aa32250\n"
-".quad 0x454a52842adb2b6d,0x09331719a02c5545,0xb4c415f7fb8c5e5b,0x6d0c596cf05c385e\n"
-".quad 0x749c5f117d40b015,0xc68518114a58ca7e,0x9de7ff2611736dbe,0xb27187bdcc6cf66a\n"
-".quad 0x5079c9d2cef9a9bc,0x04f840717a85637d,0x6a377652818c591c,0x066aaa7fde121119\n"
-".quad 0xf6c8f3d1c8618a38,0x7d30d80e8afb1f45,0x2bedf895d07330aa,0x062152dd9ab5a181\n"
-".quad 0x9069ed5d0a6abbd2,0xd76ac2af0b7d0c86,0xe4554e05329dc826,0xd29bb30d0cfbf6a7\n"
-".quad 0xc7661c4342ce36e4,0xe49a67d684cdc436,0x9d34ee60bf60c500,0xc77a59457a6b9b5f\n"
-".quad 0xbbfc6e2a6a036012,0x6a1fa1a937081fa1,0xad956e1fba459031,0xd37612888b6aaffa\n"
-".quad 0x61bae472219f5cfc,0x55bfa84fd9eb21f1,0x6b43863f8325656e,0x64281054ac9be70a\n"
-".quad 0x30a4c39f00bbf4ea,0xd7725d210ece973f,0x34927eb05b6b5f78,0x9bb810a2097c394b\n"
-".quad 0x629077c2bc0b04e1,0x820886df12c1842d,0x5cb18cc6cdbba14d,0x9d0a4b6534b905fa\n"
-".quad 0xc193b844c116ee5c,0x6d7b7260cb1f9d78,0xae7e69bf419758b5,0xc87c5861327c95f3\n"
-".quad 0x3e6eb36fea13f64b,0x0a55768d1fe44192,0x4479a16109e4a7c9,0xdc712d5335c8eccd\n"
-".quad 0x81d96ad0475f9608,0x270a6013968696de,0xb63f368907bac61d,0x455e95096d194fd8\n"
-".quad 0x130ab306b4ab8669,0xa536d16da155a57c,0x2a94cb38148aa55a,0x188cd8db3a0e70cd\n"
-".quad 0x2a1bb15a205ed8d8,0x5035f976fb102f44,0x06ab1d17609bac40,0x330462f7c720e2f7\n"
-".quad 0x0d7b859919209d20,0x606f079091dd7e46,0x0596b7b9437df265,0x8c0620d31766c0cc\n"
-".quad 0x033fb1b69a23cb0b,0x05e1a03568b1f760,0x1f7005d8619e92d0,0x9fb3b7639a39334f\n"
-".quad 0xdb80f443024d5679,0x7cfc9eb374fdf41c,0xf103b56b441d193a,0xdf1719ded5b47745\n"
-".quad 0xb41d2e4de5dedcb6,0xed00c7ae8c15b61a,0xddf32424c46b2186,0x35d52a981a9e0363\n"
-".quad 0x6de128068bf7473a,0x8ecb16e6a77305ce,0x5b0a14dd7b50ed28,0x119be0839fed6d76\n"
-".quad 0x8c2ae890021f1f86,0xf33d1a53bc09a5c5,0x127b475c94c22899,0xd29584edc9d2ddaa\n"
-".quad 0xfd94d4658d836280,0x48edb26d827180a5,0xda309d135258d734,0xb09c50fcbc4f2359\n"
-".quad 0xee125affb7866826,0x0713716d21797c48,0x74c9f55d5f2608eb,0xdedae035b0071b62\n"
-".quad 0x26f34a282f842bc7,0x97b275869d22aeb3,0xde78d21420df0507,0xa41cb7d16cb7c6d8\n"
-".quad 0xb18c1f4d54ee963f,0x7353f77bc1d71f8d,0xddbd615a7c756a7c,0x50a00ff23a503111\n"
-".quad 0xddef0767fe34fee6,0xf4cfd4fef139df4f,0xab46d0764f6f7dbd,0x6b686c9db441b515\n"
-".quad 0x93db1c224f1f9bf4,0x1d0bf876efd318f9,0xedd3376991b52f4e,0x2ebff3da672382f0\n"
-".quad 0x501ce368bbc72bee,0xd8f014273376991b,0xe1907dd7fe6277d8,0x6e72e846dbe1df9d\n"
-".quad 0xb18f4b621faed323,0xc0ef52c73fa0bc0b,0x53f6d350cb9a7829,0xb6c7671c17631b43\n"
-".quad 0x9b2e213dbf476214,0x9df08f4abe026cb9,0x27a0c876ae6dcc77,0x4f4b99be97335e88\n"
-".quad 0x3d2e63ba5ef94a61,0xfa5ccdf4b99b1f81,0xdb99b30c499fa3fd,0x7cd4b4cfc1d7b4c8\n"
-".quad 0xc0fd741a66054d3b,0x599810062ec60f01,0x10233add43d87693,0x68af606b182c0768\n"
-".quad 0x6c0521f7b7c488e8,0xca66a2dc32bee092,0x04bea39e65661b19,0xb3526a11fd8b7546\n"
-".quad 0x4320777ca0f92fb2,0xaeaf080071cec580,0x7b6217b806843166,0x044b142c94302b49\n"
-".quad 0x0e28253ca48d1ca2,0x0008d5fcd6858790,0x9613ace32be0a01c,0xe89b3fa2460830bd\n"
-".quad 0x64e88127f830de01,0xfada984713fcfd34,0x26de884f116e919d,0x965359652ad30989\n"
-".quad 0x07ae74826e6db29c,0x5f96f3744f9729fa,0x050fdc6eb9962778,0x7587279b0984ca78\n"
-".quad 0x6e681c286ea59b43,0x41aa391b914716d4,0xae6054a87d3a0602,0xe973385dcc991379\n"
-".quad 0x049cc0705338e019,0x6556fac737dce832,0x74cb71183a47c05e,0xd127a7ac04534771\n"
-".quad 0xd6f09f89688cafa9,0x74146559690d4d33,0x70e23e7f530eb398,0xb81cbb13b828c484\n"
-".quad 0xee53a251caa74485,0x7e33806cbf74ef15,0x112b09c0817cb774,0x50c4c07348bc2621\n"
-".quad 0x8c18312f57723060,0x0ca1d320f49a90a4,0x9ccf58641a768494,0x3f1411423f33054d\n"
-".quad 0x98b0024049b8f02d,0x13562f02a4099536,0x06ca2362a6dd2183,0x999b1822a76d7055\n"
-".quad 0x7589d8aef66c5779,0x1ade21467e69bb2e,0x6f662101689c2245,0xd986f94abd232cb1\n"
-".quad 0x857ee559ba8f089e,0xdf27de69f6436180,0xd281977aa41db9c8,0x93476bf69f2263b4\n"
-".quad 0x88b69e0dfcf79645,0x599936bb7f119587,0xbc7bc85afc64adb8,0xaee5c953cd864f34\n"
-".quad 0x42779b1b066279db,0xc543723d29e65ccb,0x9e5a41330891ab10,0x9cb3480386c9b522\n"
-".quad 0xc7b0902fb65fa70e,0x286db0f7725b2caf,0x2745d4502a5ed1c8,0x51434d6884248229\n"
-".quad 0x530ee7b0bc76c858,0xa333643c914dccbb,0x3c91e842533ed965,0x09712ffe0f8b8954\n"
-".quad 0x00000000000094c7\n"
+".quad 0xa4bfc5d9ff0649a6,0xdb676fe5d9c2af3f,0x6797d72fab87bbf3,0xd7afb3e3fbd7feef\n"
+".quad 0xf5ff97f7670fe7b7,0x01fd5f5eab76cbfa,0x9bddfde3d699c969,0x3cbe6fd7e72fdbeb\n"
+".quad 0x3737a7af32bf9c5e,0xb3ab97cdedfafebf,0xaf97178fd72f9bab,0x160dfe5c6af2a17f\n"
+".quad 0xafb397e1fcedf37c,0x9fdd31e61e5f378f,0xa6fc3edb3ebe7c5d,0xdbf6e5f8133d010a\n"
+".quad 0xf9f36be46fcf9be5,0x7972fc3dbe6feffc,0xeffee6f1eaff757f,0xcfff6eef6cde5f37\n"
+".quad 0x8f770f37fb8797e5,0x7797b6af17970ff7,0xf9bcdcdd5e5fdb57,0xeae2f6eeeaf8fb79\n"
+".quad 0x38c686fd353ceae6,0xea36b37bbcb87e53,0xe3a5046bd980ea47,0xbeaf5fcb8bbd4776\n"
+".quad 0x38797fccbf35365c,0xa1cdf3f57d7e7d7c,0xc59d9e1fd9fd7c3f,0x7b76f257670f77ba\n"
+".quad 0xf0e9fd6851f17675,0xda830e6fd3fe1e7f,0x4ffe6a87362d0a1c,0xc4d28736627f3738\n"
+".quad 0x602c74a937f9a6df,0x1573517fce5e8737,0xaffcdffccdcfe7a9,0x937fce1f8aa4e58d\n"
+".quad 0xbfe61101331ac432,0x2e622ff153573f09,0x63e3080d8b520daa,0xfcd376573b493303\n"
+".quad 0x0a4c4912ff30aa5f,0x2632672105d8ca2a,0x3117f8cfd80a6376,0x3625fc53ec530a57\n"
+".quad 0xb4cc0d497f1bba90,0x624fa4e1c6528b63,0xa7a72e661207b50f,0x37d49d20376a41f8\n"
+".quad 0x48c352fc6c6a4715,0x8910db16aa44bf63,0xaa987b06b37e0625,0x86991091e46499fa\n"
+".quad 0x68ec7dcfc6d24852,0xd22f62afa7eb1d22,0x4854d3df8d8ab1f7,0x9f882c8d7c4cec8f\n"
+".quad 0x1a3901059190d9a4,0xa58cb9f8ad33703f,0xba97391b01226f22,0xe9a991c38965fb13\n"
+".quad 0x6dcdc2438937b17f,0x8ae34a5b02f339c6,0xb7a9cf91b23d8fe3,0x8596444b76215d91\n"
+".quad 0xa9487122f9195cc8,0x1271f8be9a6c915f,0x4cc497d477c3010c,0xed8bad1fbf95bde0\n"
+".quad 0xf9fbdb97d9cdd5fd,0xe90a3fef5fafcbbf,0x642e710af126f493,0x462892d76049c89e\n"
+".quad 0x5cdc21f895b28ce9,0xf49f126a88a80e3c,0x3722e2591952c4bf,0x930cb280cabf8326\n"
+".quad 0xcc62506465e0d823,0xd1e690d21b7e364c,0xfcccdea5ff563883,0x11d307ffd37bf1f3\n"
+".quad 0xe909a62bfe7b4c29,0x93731376494138cb,0x8a288baca1cc83cc,0xc4c169b7b2d242b0\n"
+".quad 0xa64fa4528060a105,0x694aad2a0e224924,0xe3ded02057894391,0x24a10133483673cc\n"
+".quad 0xfc7935f249db0a4d,0x2b21b494681c5bcd,0xc24d63f55e45e4a2,0x2cd568471925c0bd\n"
+".quad 0x9fe1e29b8b8ce94b,0x9a59b7f9f39bcf5e,0x3e5ddd9c9f8c3eac,0xae1679fd3d7e7afc\n"
+".quad 0x3ebf39bf03799bab,0xe2e2fe79fabbb87b,0x7fb7d7f767a2ed31,0x780e9fc5f23bcedb\n"
+".quad 0xa6cfc54b385427f5,0xfc1f3f838a2b33cd,0x90a5dbeeda75e0f3,0x4c3ededcb8bb3c3e\n"
+".quad 0x9777325e69f4f51f,0xcd4febfc7f0b433f,0x0ed6e76fbf4effaf,0x3e85fe988bfdb8ff\n"
+".quad 0xd17f778ff0f257ba,0xc5fc5ddd2b127cbe,0xfc5ebe8fc6be8f97,0x5fdbb7e7e44bfd45\n"
+".quad 0xa399d34de5223f5f,0xa79a552e180beb83,0x3c28c4fadc1ee3e7,0x624cc4247ed44f42\n"
+".quad 0xa7a07659ed725c56,0x08bce50f3722e773,0xd4a19f2069343843,0x4a1d4258afb1942c\n"
+".quad 0x1505cdf9c1d50e27,0x0b39055ee508b288,0xce768deb254f9bbd,0xff77ae727ab3c9f8\n"
+".quad 0x8f233d535e6e5dcb,0xd272f7e304054138,0x16337b8fbc8cfa0e,0xe8f74ced60e832d1\n"
+".quad 0x44951faf0fafcbe0,0x6d4ab6d658ca02d2,0x91e62db51c26e75f,0xedf8a5d0e7d1dedd\n"
+".quad 0xb892124b1a18b18e,0xc00c9326e766a66d,0xcfc7a56db278f1a7,0xaafd626583725928\n"
+".quad 0xd3d55f3d59123a5e,0x649da62a0e42efa9,0x8aba858ba348a2b1,0x51031f3042ce48e9\n"
+".quad 0x89960dc5a86eae06,0x3fd7db0f97f25a34,0x50740d1a6dc9425f,0x522c890b30e5951f\n"
+".quad 0xf9f87f2e75ff5546,0xf3533a64e4f0fcee,0x70a35aa7116669fa,0x13234496f0614f40\n"
+".quad 0x0df98a04e49b528c,0x3605334f2b357e16,0x21ab11ec05836157,0x66a04061ac430a61\n"
+".quad 0x4e56fa742f2fc391,0xd0949b25326c834d,0x9461d472918c4fd7,0x711fcb9a1b1554bc\n"
+".quad 0x1cb55465436ad571,0x7f0e1aaf7e3a8a3c,0xcb8babb7fd7ebc7b,0x766afabec1bd0ddc\n"
+".quad 0xd83b75bf2ad242a2,0x7107b7387a99582d,0xff3bbf4f79dbe51a,0x1f6e6e1fe1f9dbf9\n"
+".quad 0x8cd0ffafaf6eee6f,0x9f5b931692c5de7a,0x411153e46a63f367,0x2ae5fffdce08a2ef\n"
+".quad 0x20982e41ab458397,0x67bfcc5f9ecb117a,0x0479fa06ecaafa76,0x3ee7916f4d8d7ae2\n"
+".quad 0xd797bb38ca299d7f,0xc36477074876dcdb,0x307e012241acd656,0x2a738079122af499\n"
+".quad 0x66d5b09f14a34a11,0x1e68ff274d69fab2,0xe32c989ebaba8fe2,0xc3ceb568d29a8c02\n"
+".quad 0x472f3ad5aaaad587,0xd96f54f9c4a39795,0x09657c7698549136,0x86959c2224cb5e24\n"
+".quad 0x3236507352a506c6,0x23b5cd2b035115ab,0xce3ade599ba49537,0x9cd530c89f2ce41a\n"
+".quad 0x05f5c2db89933a15,0x7ea545102aab11a3,0xaebccf132313fa94,0xa5bd85658585ceb0\n"
+".quad 0x56c0d9d3c90d3203,0x261805f319349067,0x84cf3495a7cc7523,0xe20a6c466f3133ce\n"
+".quad 0x540e7a87e8996f89,0xe82404c578954612,0x2bd6640627ecaa58,0xa9f60c03654ec72c\n"
+".quad 0xf1ef23d1c3f24a3b,0xc4466be869b2e707,0x1b34c7f72a8e6cf7,0x25801de3ac4abe3f\n"
+".quad 0x684a964003a0cc6b,0x3ad5c474b6f35194,0x501353b6a0797186,0x5d4fcacec96c3101\n"
+".quad 0x21887cfac481e7df,0x5345622d08fbae53,0x65220eb54d35634e,0x4ec0f75129592da6\n"
+".quad 0x76c7ec011ba20465,0xab5aaa48a82447e2,0x4b07fd042ad5926a,0x3f973749ea2c566a\n"
+".quad 0xac8a8ee50a34b153,0x5c5f8a8d9a137da6,0x10a6c3a6c49b7187,0x6471d6d186b7758f\n"
+".quad 0xce2ab9606cb0fba9,0xea9d1d4b0b2dd322,0x6af3a89e20640733,0xe2d42d5dccb579b1\n"
+".quad 0xb8b70c40fb737211,0x78e2458fa0d63aab,0x83a48b9b26544e71,0x9f0cb28f2a3e1abe\n"
+".quad 0xd492b58253964b26,0x60020b01038bbe29,0xa4c6fd92788934d9,0xa2580e90ac7a70a9\n"
+".quad 0x9137a959b7b85970,0xf1d0d9207feb97ec,0x3f681f534f8cf441,0x7ad8587181c399f2\n"
+".quad 0xd702f8d23cdc5bdd,0xd3a2cd616fbd7530,0xc0edaa1496805626,0x61a968c6070256e2\n"
+".quad 0xe257396f0ee34b09,0x08c9bbc60a95f925,0x56250594b3318ce3,0xc42601bc376b0d35\n"
+".quad 0x70034a03ef3aca72,0xce1a292ae0ae5ad3,0x456929374f8a5cb8,0xd2edd2bd373eb171\n"
+".quad 0x5349c3c3f6146142,0x6e841ea10760e4d8,0x5421585162f97130,0x351e15aa1b617223\n"
+".quad 0xc3270cf5e22457d1,0x9271ccbe40395f23,0x33b5742779415065,0xb3786e156586c681\n"
+".quad 0x5b1410385c8d0d22,0xb255d1cec40ec5ed,0x2a25c711b20734ac,0x5d74ea5cb0b072b1\n"
+".quad 0xd0300aae99dee605,0x7df465301af214c1,0x164de22c15987ccd,0xebfb45f92da2f9bb\n"
+".quad 0x1b26cd242e06ec05,0x4e3f31edc8f87e0a,0x6d45fe32cb9ccf71,0xb2e8f7e0e8fafe63\n"
+".quad 0xb8797d7cfabfbab8,0xf227cdc21ff3aedb,0xabebcbcffabf7f97,0xedf8fafe2f6f6e5f\n"
+".quad 0xec6abababa7e5fa7,0x2b3b38ec1705cb39,0xe415ddd69e615608,0x8ed36a88581415be\n"
+".quad 0x561da677523b4d6a,0xb6b4edb244769b28,0xab0337813dfca897,0x06ccd5514d52798d\n"
+".quad 0x49f29a8394d42785,0x15de70fab1691535,0xa52c0553005d7345,0x2e9d0668a0c8b728\n"
+".quad 0x45f55d884d4fe6a6,0x6d25fcfd2fe7a339,0x8d95168f7653d080,0xc9e2a332b349e982\n"
+".quad 0x09d6d5aa9ef9fe7d,0xf45319e3ab6aaf33,0x68142822d4c9a022,0x88a76215860d051b\n"
+".quad 0x5b766a31d9015990,0xb1b8b5e22c5ae89a,0xd43647d9a65da408,0xeddb11e2a8fefc54\n"
+".quad 0xa361b560dc49b770,0x8d14b60009217d41,0x60f2aa9f0adf5153,0xa3e4f300b1abc279\n"
+".quad 0xdc85ac9cdd217f9f,0xf96d8265419262a2,0x24b79fbe033226ee,0x9a5d0eeb98af9118\n"
+".quad 0xe9d140b2325a645e,0x4056aef0d0f87d42,0x3a69cca8d9981f12,0xd6e4dad11ba4888f\n"
+".quad 0x743558a69ba5b2b6,0xaa141dce319b84cd,0xb7aa6ce34ce2c52e,0x35cf04b84d4a8f6d\n"
+".quad 0x6df970f7c289fb69,0x281b6fe21ff4559b,0xe10773c7f373b02a,0xe5479fb88b5f0816\n"
+".quad 0xbc4adbb138afb715,0xd537613885bd428d,0x5f5e621b1089d58f,0x7ebd7043f662c476\n"
+".quad 0x34e0c35c195c86b4,0xd9a2bbdaae4b9bd6,0x0a6717ad4abbce33,0x678982ab56dfaf39\n"
+".quad 0xae13c50fd294f120,0x458eeb602b9561e1,0x852cb0a2c6b9e247,0xd848e4d85970a512\n"
+".quad 0xb25bb6c274d90e2c,0x5a24b0ad15a92792,0xea9bf2d915b99482,0x97d25886d5172ac7\n"
+".quad 0x62b75588fd8e311d,0x55700e16602e115a,0xe511857092a084bc,0xd4538b5b5bc83204\n"
+".quad 0x8e627992ba5fa955,0xfd5c5d70a8d14e8d,0x34aa1b37be96028a,0x224849f18749e85d\n"
+".quad 0x7b7a9a43f2908ecb,0xbe0d2cfc1034f996,0x5b83d58bffc75a33,0xc86646a878e1726e\n"
+".quad 0xbb8bef98cc890ccc,0x1686e61386c54f15,0xbe2e5f70ffb3cf14,0x7afe2e9f8d959bbe\n"
+".quad 0xe45a4b97d59469d6,0x81c90a8e39a750a8,0xba47d1dc7ee9d7f2,0x5cfd543b3f74e89f\n"
+".quad 0x7e7ba8188386a652,0x65858b53c540f4b1,0x675fd66624c4cdd1,0x87574a7fdb13c241\n"
+".quad 0x55866330750e68af,0x474c586c0e9d6393,0xa85688d2e5c36993,0x8ae2069d72267662\n"
+".quad 0x883ce124288d2173,0x4023555752dbe544,0x830328e75098aa4b,0xb83c61706c1c612f\n"
+".quad 0xcdd0c92d6a62cbbe,0xe4d849e7e2650dd0,0xec28a86e4f70afae,0x1b1590e24ff332de\n"
+".quad 0x8bb9a8bacf9439b2,0xbfa9fc7f8779bbb3,0x485608cb06afb19a,0x7a1abcb1f5b04457\n"
+".quad 0x0c93b8062e1eb71f,0xa86d983855e4c23a,0x553e28a85ca97a88,0xea2eeab5c8b47b97\n"
+".quad 0x3fba57940affe9ad,0x3108f27bc688f944,0x612611946aa13ec5,0xcba090499a548470\n"
+".quad 0xa7262205c08fe548,0x42eadcd36e3e169c,0x1e935671ad55b75a,0x72d919be2a578b1f\n"
+".quad 0xcfa1bb6e75c120d1,0x0a4b15224b7d51f5,0xa58a527a3657b4ed,0x5c5b88eec0686fc5\n"
+".quad 0x3cd397b132b83275,0x474b07dcaa575ee2,0xff789e07ce4b06de,0xd43c9e07e3bcfe01\n"
+".quad 0xbc64789d1a4bc193,0x163bf2f4d341c278,0x70bdd9b9c2f2cdce,0x8f744ee15385ba6e\n"
+".quad 0xdd13b0def51fd13b,0xe56697f594c64f9e,0x4546b742b03fa62f,0xef249d1448abc95a\n"
+".quad 0xbb06d3fafe647b9c,0xabd4de916aeeaed5,0xda4264403649439b,0xd5d3af27c3b5b70f\n"
+".quad 0x8608ecd6342f411d,0x88a369608ef5ae2e,0xb76da3c7808ef845,0xa80537fd9812c404\n"
+".quad 0x77ef457c857716e8,0x7c85b6ce86e9e105,0x8c6ae3c082dbf672,0x414835b5770b8055\n"
+".quad 0xb802a4407378deca,0x60642240bdcec561,0x9ac881fbc9f8051f,0x3085c12cd517256f\n"
+".quad 0x72006812ce7bfc29,0x134698881346f379,0x5a914cd51184f125,0x9973df7c0ae68d3e\n"
+".quad 0x8bc7ddbc5bb8b26a,0xa0b0a6fcb2617c37,0xddeee5ccda6dccde,0xc053273f6bb03b1c\n"
+".quad 0xc71957423748337e,0xd2c2824c97ac3ae0,0xf1482d5ca137d574,0x6f927be5ad68c4e1\n"
+".quad 0x72bf269754c99892,0x5e536a35cd7480d8,0x395af5bde14af604,0xec596289515cdd29\n"
+".quad 0x37bee28881a0f30d,0xbda11f2e6e817b2e,0xd69d4aaa8d86b42d,0x3262b943c6e41d49\n"
+".quad 0x9761c6f4ba68aa8d,0xa98a800e6791a209,0x4fe8d2950ead56b3,0xa713cd12a95476a2\n"
+".quad 0xbc2eff7d93507cda,0x03bc8ca4f6955ef3,0x0cee0403728ab9d1,0xbd0289a1d0cb50de\n"
+".quad 0x300e61ae57046140,0x9dcf8230bd8a3d15,0x38cfa99cba13d417,0x88d864c95b9b5d3c\n"
+".quad 0x6fd7d86f25c08e06,0xd9e89a240a618ce7,0x05de7ad810a81a5a,0x8ef3684a55a56c71\n"
+".quad 0x02c2e8a86e90c4cd,0x82ac3ac9d002f550,0x19e7234b1c2af13b,0xd5d3964c564eb77d\n"
+".quad 0x78099ae02cb0fac8,0xa0992c9f28caa6e6,0x63991b4ed5d469aa,0xb43f079c2c9d16d7\n"
+".quad 0x2a8ecfe7863c2606,0xf839b56a75fd2a35,0xb0495b5de838f494,0x5140950125739f4a\n"
+".quad 0x788ca363a5505560,0x3ab9bc0166fe5996,0x2783c39b7ca913fc,0x4e803a7f52e76180\n"
+".quad 0xc35cfe0f86857fce,0xd2d458f909a07f73,0x442b60bb90fe7ea4,0xbea3da5a0dadda50\n"
+".quad 0x1a8cb65b7ea69692,0x402306f2a0cb8506,0xc804eae014c09af6,0x00725a658077415f\n"
+".quad 0xc0f5059b77c44a98,0x5b87b182ac96a82a,0xd4b7da74eb595475,0xc10f9ac4fef353fb\n"
+".quad 0x793b3f1c727a7379,0x1f4e4af07c3fec7f,0xeee65bf25c917bde,0x3e0b97d111a39677\n"
+".quad 0x9dd110c81aa0389b,0x4c3a19136a1a6f0b,0xfd48590547b5d4f0,0xeb4ffa3f70973845\n"
+".quad 0x5cff3845f0d86bdb,0x16961a126c1aac5d,0x47481ce54be865d4,0x0b62f0537b931bdd\n"
+".quad 0xcb67d20cd81ba1f4,0x2fd32efa3af9813c,0x33616bb0fa05b5e0,0x0fd1185c41e19f48\n"
+".quad 0xc0e0f1f4eb92be99,0x4069fbfa733e9066,0x03e83b4f5f4c88df,0xf252d86fa019b1e3\n"
+".quad 0xf4ebf68348bf4462,0x51da8d7e7c361005,0xb762925ed5586dc5,0xad6d70de759ec014\n"
+".quad 0xbb52787ae2bd1818,0x81ca2d903b8d57d8,0x8b70c690112c15d7,0x6ec8987160641daa\n"
+".quad 0xecb359d37d67726e,0xde793ed8e922a502,0x23831a3e01a7e078,0x21dc6883a4d605f2\n"
+".quad 0xfeded661df1b4c7f,0xc81df88cfbda47f9,0x75df3848132e6dc6,0x012dc7e208497702\n"
+".quad 0x6b69c2d50704e875,0xe08561206a0230c9,0xdce2df3d26ac574b,0xd6f0b173b09be6e0\n"
+".quad 0x8bdc5d167d2bf056,0x7ce0ec45d471811a,0x445007d225782a65,0xbcc363079967655c\n"
+".quad 0xb4154d6942d6c635,0x5a82b24f7e227397,0x854f03a8a236b4ef,0x79a89880d4c4e498\n"
+".quad 0xbe267b5c9f04cfc7,0xea2ea4e04222f14f,0x439452fe23b3af5f,0x323cf4b38e58b732\n"
+".quad 0xee6f7de36caa9837,0x9dca03a7522c5270,0x0d83611273b67a28,0x0604bab15754b521\n"
+".quad 0xc04aa2f5b162761c,0x781e1e647ab921a2,0xbc0b706cacfdaa8c,0xc122754d820cf051\n"
+".quad 0x948ecd960b7340dd,0x995acd3284cf4fb5,0xc84463d673cb6b85,0x9d70dd0a0482df7e\n"
+".quad 0x9d09a9d03d95d623,0x13936c06cd19f789,0xecce80197e03b3bf,0xb2c01288544a7758\n"
+".quad 0x8c8dbbebe6afeac5,0x23bb9b788357f421,0x996aa76acc95506d,0xdfe5737c68ff6f4d\n"
+".quad 0x394f3afca68ac359,0x3c6748437580cef4,0x8b365f5399553ade,0x8bb36c046936f1a7\n"
+".quad 0xf5dac1359fdfd318,0x6f0c881ae851e624,0x9f6b9289d43c342f,0x3320ce7a08c420c0\n"
+".quad 0x914f7c9a81376c0b,0x1d2d04bd420a4c15,0x3959a0767f8e0bd9,0xf2e975dd03f0722e\n"
+".quad 0xc1ddf8e9126c55fc,0xdbb7cfafb65f770f,0xe63fc3c4a0dfdbbb,0x3b58fbe0212e7212\n"
+".quad 0xf3caa11bd6c1935e,0x5f50a721bee547d7,0x6a61faeded5c2d93,0xb958c7b0c2a48141\n"
+".quad 0xac7e9554a02e075e,0x823b62aa8f5381d7,0x17cb38ee586f8fcd,0xc11035169eb98414\n"
+".quad 0x652565add5894682,0x48ec1f861750abdf,0x502081dd4648f748,0x3a9fbb4bbd4d50bd\n"
+".quad 0xdc4fe34a9e9d3f7d,0xe903852b6a993fb1,0x8ea27b86b3113d38,0xce72ae9c41f4fd4f\n"
+".quad 0xae03b134d038d4c1,0xa83f4f0ad039d846,0xeceb4930f86d6913,0xc91d441330b27587\n"
+".quad 0xbcda708a9b45bd36,0xeb305327c70e393b,0xd648ea24ac071ef7,0xbc4e77a9157164d6\n"
+".quad 0x8bacc23138bdf273,0x2beb24751386038f,0x21d4ac1f2a4c1eb2,0x64abe2674e4eabfe\n"
+".quad 0x5ebeb2075121c83d,0x58e7f40fb4171ed0,0x7512a607adef5bbd,0x189fc8a8b26b2b24\n"
+".quad 0xa6afaa60590767f6,0x87d6f433b44b97cc,0xf73ae543bc4ad82a,0x5d18a16cf19629f0\n"
+".quad 0x03bd6bfae7de2f2b,0xce0427b1fd6afa26,0x1f3aaf89852d7a98,0x127a460494d74958\n"
+".quad 0xbe0992bc047ed5aa,0x4ca6ccac31db0352,0x202bd7d4700c786e,0x87e5aa795a9d2ce0\n"
+".quad 0xac2fae9c2ac70fd3,0xbcd7414b300cbd00,0x5c0702527a2bed8b,0x9d6c73827d0776a0\n"
+".quad 0x18306f2c1d5801f1,0xdba5e022c5aea0d6,0xb21ee4494db35df5,0x8d34425e296f5eb4\n"
+".quad 0xa89d54e17793e3ba,0xa256149cceb527e0,0x343ef02e04204770,0xf9dbac81bfa90107\n"
+".quad 0xb5266f113a050ec0,0xbc18f253cfdd0017,0xcbd223d2d91e2eeb,0xdd497aa87bbaffb4\n"
+".quad 0x136d4dc26e7083a3,0x8b5b714f7617537a,0xb71eaf8d0b3c2278,0xeaf2fbff970fe717\n"
+".quad 0x51a9b087ee1e5fe7,0x7e1ed972fe0c4599,0x2463eaa584765cbf,0x6d37cea7a6fbd948\n"
+".quad 0xb195f4d000fa40c6,0xab63d906d6aa822d,0x18d5e5621c3aaedc,0xbf8759bbf85ae52b\n"
+".quad 0x528cd9320ce62103,0x4e91f0a3f9fb64d0,0x5ba97d3e2d159a85,0x0575e5880c07b107\n"
+".quad 0xb8b3a1de2b0552c4,0x808b84809b9f7509,0x72cc08677980d766,0x1a50a567be0158f2\n"
+".quad 0x960f060e8e26e665,0x2483e7ed582bba65,0x27593716ebe6fdde,0x5d339ad11eaaadb8\n"
+".quad 0x8a65d9209ef3b6ee,0xf404da3e7bd8bc99,0x79cf2dbebaf98988,0x6299af41a1b6d77a\n"
+".quad 0x3424cdb35a6458d0,0xa25b841a1c8867de,0x1d55e356a20d5093,0x6730556e589e2749\n"
+".quad 0xb5b58214d8a0c50e,0xdc76dd2f6a3850e7,0x4f9f89e46b39c1ac,0xdb9315de93683cc9\n"
+".quad 0xa2411c36b05f5d30,0x83fe07f23ac107a8,0x009e8e6d7371187b,0x40597c658e3d8297\n"
+".quad 0xfd274a7713e2070d,0x48e1010cf39f64fd,0xf9ce8b42f5f34095,0x553ba58fe9079ca8\n"
+".quad 0xd44845bd6c6307d3,0x6811d1d5a9f1cddf,0xd28a80640de1ddbd,0xce9fbfa0b26aa90f\n"
+".quad 0xf6f6933f53fbf67a,0x537e5e8b27593dbd,0x5ccfbf8477f5ad91,0xfd5b5227b638449f\n"
+".quad 0xc8abb6f84593acce,0xd933977f50aa93d6,0x593af1f097175ff9,0x779aab207513a674\n"
+".quad 0xffcc4efb1bbfa838,0x02d7ebf3bc320fba,0xefeb5b2475138af4,0xf52c73fa0bdf250a\n"
+".quad 0x3b22aac21c8e4dfa,0x6214813be71f6376,0x23b59136372b6f47,0x9ea1b2ec7787f62f\n"
+".quad 0x1791f94ca6aec5e6,0xf4329f5e32e543fb,0x7a653d74ca6aab49,0xabaa981646b286c1\n"
+".quad 0xb3561b18ec3bd329,0x42b776ba48ef32ad,0x69bf41b812ce83c0,0x9a9601a09eebc06f\n"
+".quad 0x1c001b88db0ea035,0xcf977c40095a664b,0x2ce6543a0d7f6628,0x7ceca4d42160ae41\n"
+".quad 0x04671ddf19acf5fb,0xfcb55d4d03a2ed00,0x1e39218103a317b2,0xdc62ebef6351041a\n"
+".quad 0x865f47830abd5134,0xce32bcf5c216ac41,0x83879181eb3d613a,0x5468c0a649fa3d98\n"
+".quad 0x54677ee4660e67fd,0xbfcc149b468e9b1b,0xda69cf4d3969a35e,0xf1c2c7e164792686\n"
+".quad 0x5b30aa1114ec796a,0x6b22eb871a0ee37d,0xb6c3bd78db719b5b,0x8150880af1d1a35c\n"
+".quad 0xe6450cd7a304616a,0x1b0a25cde87d5ccd,0x3cf610177151acf8,0x55e0437bb0e6c1ec\n"
+".quad 0xf7a0a8a2f847bc03,0x2c7861726c3c6503,0x94ff13c89242f216,0xc68053dc38d52d07\n"
+".quad 0xbabd7e4de5ddf373,0x4edfcb8b9bb7f8b9,0x836abab8ba7e6eae,0x8b978f012c8a8de2\n"
+".quad 0x10bbb2a2c5b737f6,0xc900ee963e1d162e,0x86f15fdb3c77754a,0xfe81ccbc7c7c3c37\n"
+".quad 0x9dfb833a8ecd26ae,0x85d9a30f54ea3bd4,0xf8c4184eec399567,0xd516e9cad918884e\n"
+".quad 0xf033da0182a2579d,0x99d06b565133d9e6,0x755668bb935c3d26,0x5bf11ce096cb7e19\n"
+".quad 0xb2c85e0ef8da4f83,0x8cf7366f13796888,0x578720d3aa658e8f,0x8ee42d49c6e02aab\n"
+".quad 0x5bd6e15e973801d8,0x15f8ab63016d5c04,0xa15d004e15641454,0x766552ec118ebe54\n"
+".quad 0x5c61f91ba58497c4,0xf4b413273da9731d,0x9dd50d9c3641beae,0xf74be57c7edf6259\n"
+".quad 0x8dd8ef51b5a877b0,0x6768f1c36d2b63dd,0x2c09653965aa8ba8,0xd6cddec1375b53c0\n"
+".quad 0xbbb8f65301e5900c,0x4445a549b039799a,0x3602f3b884d86391,0xfca03f44a5e77aa1\n"
+".quad 0xfb46d9fd947ff5b0,0x1d96971e2d2e3947,0x1245a1630ebd3261,0x3d6c71c19d550a99\n"
+".quad 0x8cc39b7798bb00c0,0x81e9a498c4f1e397,0xf41d431a3a7cc3b1,0x8c4b24e9fda05998\n"
+".quad 0x3c75b617c29f4959,0x7616639fac97e403,0x014675bd5d0ec678,0x814de431b4dce415\n"
+".quad 0xcbd8eee93a392a53,0x4d1db0741d14294d,0x1b936f85b550adac,0xaa116c0ca4127b3e\n"
+".quad 0xbc820bd258aca495,0xd445763a94336cfd,0xc2085737d0bed1ed,0x948b904457ff064e\n"
+".quad 0x3d7f2e2f6afcdfd8,0xb8bb38b9bc7dbbbb,0x845f7827f56b9c7d,0x10885c9d41feafce\n"
+".quad 0xdcd99a46bb018c3b,0x1c8c9436f41f8264,0xb690087e33498621,0xcba0d5e9978627e7\n"
+".quad 0xf12bd8a7bfbb879b,0x7fd9e5878abb3cac,0x6a23475e5cddde5e,0x3b73811fadd987f9\n"
+".quad 0xb3c5359ed0aaf46b,0xa9aecf54d767ca6b,0x3565a6bb3cd35d9f,0x0fd0374d6a7c7741\n"
+".quad 0xbacebc2c005c13cd,0xc0c94b27801e887e,0x232f23ec9c82901f,0xee4344721a3f621a\n"
+".quad 0xe868fda8688d4347,0xd3abd30d1fbd0d11,0xf7fb7953ee0a3f66,0xd09ff1f6e7edf5f3\n"
+".quad 0xcbefa5aa93d3df4b,0x2c2b50f0f7f19bfb,0x7787bf8d651e5d7d,0x47ea545a9fed8283\n"
+".quad 0x37faf17570f3702c,0xcbe875448aaa6456,0x29d51326a65379c3,0xf01b60dc433f52a4\n"
+".quad 0x075bdaf90233d7aa,0xa7c2ddd533ff4e58,0x058003c062b91698,0x0ce4af77fbb8721c\n"
+".quad 0xe0667791d65d1c92,0xd49247168d883a6b,0x33557a0bc0ad1abe,0x27df91319a8e14b5\n"
+".quad 0x036d3b6fa851898d,0xa78be2c17eb208f8,0x7e7362d78dd0d887,0xa012de01850098f4\n"
+".quad 0x1df069ff1057d49c,0x514724fdd2dc015d,0xb0c78b2bab20076f,0x2f8f4691ba459e2f\n"
+".quad 0x1c4875319061b22e,0x2975ae8caabca685,0x78566925e21c131e,0x62061ae99b32aaf8\n"
+".quad 0xc2ec5eafa0606400,0xbe25abe1d608a350,0x2096301a7c5d060b,0xa63f2fb05b6201fb\n"
+".quad 0x8afeb2697163edfa,0x18cbba8be8a6484d,0x2901978f372c53ed,0x999ce19f342bcdc7\n"
+".quad 0x7cf9f3f9f2366732,0xdbd5327aacfbfe61,0xd017ad8aa91028e6,0x768b85d258537aa4\n"
+".quad 0x7d4998a86b7da3eb,0x1feafafcedf77b73,0xb1de76ef037f6797,0x9ecdd3a9feb360af\n"
+".quad 0x9f6215259ea06954,0x494ee54fb6869dca,0xb953eda7a772a7db,0x939a066ca9f6d553\n"
+".quad 0x9d7484c13ea734ef,0xdf5e1f83abf494e6,0xb117ac95091e72ff,0x9ebffe47c296bc00\n"
+".quad 0xeca674ec27299ddf,0xff73753e7c6dcdd9,0x5627afaef628f670,0x068e26421bf1feff\n"
+".quad 0x96984bd965404041,0xd9f5596a84bd8e34,0x50cdeff66446bc4b,0x6e73ea19937bb399\n"
+".quad 0x287766429766326f,0xb215d66642876e64,0x8aef308564cd8565,0xab8d6efd65c6a761\n"
+".quad 0x5c6b592e34162321,0xe638d7d8b27478ec,0x99c3a83a2863d044,0xe38f466883868a64\n"
+".quad 0x0e0f2b01e1c0c3d3,0xd702653f1c16fd8f,0x34eb9c6538599cb9,0x950cda662cb5cd47\n"
+".quad 0x6a655efc8f96e4ca,0x8ff20cb27318fc4f,0x610e0ea1cf6a9810,0x061085cfd48074cb\n"
+".quad 0xa43d51ceb70311e8,0x56c872fbe816f0fe,0x87e2d6c0b17970a6,0x1b6acc4390c1e2ca\n"
+".quad 0x46746aeb85317b2a,0x3c16aa1eefa8aa16,0xaa0845150020c742,0x4e8ae3310487a0c3\n"
+".quad 0x57a30bbe12b1834e,0x0c676474977e26a8,0x7931eabc0148cbdc,0x33910bc71d6c97d4\n"
+".quad 0x0185994ba0690f3e,0xad0e451a3f88c3f7,0x70db4617a83d66b9,0x5c56b462e57ac2bb\n"
+".quad 0xb1faceb30b492c66,0x7ba3f2f8f5602db5,0xb6870914fb4a1a58,0x98b9795c49acecc8\n"
+".quad 0x49235a0e5a5f7835,0x2868eb235b095e0f,0x20f6e0a1a30f5ca4,0x1445229ae85b7fe5\n"
+".quad 0x5deb861450424287,0x51d859e42755710a,0xc645730cf6db5e04,0x11d7c7090b547970\n"
+".quad 0xcbc092d1a87e18ba,0x5babf95a3f8da08d,0xb617e50ef8031920,0xcb2230fd10f910ae\n"
+".quad 0xfe08b38031d4fd72,0x4f922ef70c3ba452,0x687145d1ada3e4f1,0xe8f5a1476f145a86\n"
+".quad 0x3833a34b519dcab8,0x6a49d19aa746593a,0x0e903935c9a01d8b,0x5f6b7872be0f0d8b\n"
+".quad 0x547b0fc23fc21b95,0x941f2c22939dd837,0x3107e5158deae32d,0x36ccc248ef37be9f\n"
+".quad 0x27e287279f8f263b,0x9c63142c59c8ee35,0x3e69823ecc33061f,0xafea0439da668bd2\n"
+".quad 0xa9706262e397ae97,0xa3deed0fa20ad0ea,0x3a74d1a39a1a8415,0x762e2b596b7f63ee\n"
+".quad 0x2cbce0560545e0e8,0x5dbd4d58157b58af,0xb1d681f6558155b2,0xe663a7655901d302\n"
+".quad 0x95d3ca2d1a375cc8,0x9bd66eac26c8e680,0xc641371314816543,0xda5e2f0595a32be4\n"
+".quad 0xde971291e09fc3d5,0x847279da82118d7a,0x69ee8d27b1dc2b6d,0x3329d38f04bf332e\n"
+".quad 0x2c5efe1767da30cc,0x6ca918e845e77dbc,0xef0012fd74c33395,0xd543b162778f1045\n"
+".quad 0xca066686fc362f94,0x0f638f87038a2872,0x457e7930c07da364,0x659d0a8cbaf996b2\n"
+".quad 0x3172c311da5e5451,0xf11f1d5503b73c30,0x3dfd8a27b071e4d0,0x89f2f1af255d0d31\n"
+".quad 0x63beb51558685999,0xfc73f3a1169cebb9,0x3925f8fe29d7f574,0x7ce8ef41f49fd23c\n"
+".quad 0x0d89f3e7df659106,0x3e90f03627cfa1dc,0x03627cfa69c0d89f,0xcfab5c0d89f3ea3f\n"
+".quad 0x62497b98925f6627,0x5eda1517858925fe,0xc9a945e26a1ef801,0x517e9a945ea6a517\n"
+".quad 0x1042e8bda945e66a,0x5f3c5a7f8412ba2f,0xdb1afa037dfa3e21,0xfe86fa23688df999\n"
+".quad 0xf4d16a1331eaa4d5,0x4429069757bf739f,0xe5ebf5f8fcf8697d,0x0b599668853d47dd\n"
+".quad 0x4e3381b13ec42c0d,0x77c2e835bd0e3be1,0xc20ebbff3db2eccc,0xb203891d77fefb65\n"
+".quad 0x17961e46133f7c52,0x64fdf91b5e403b20,0x50980bf7ccab5907,0xf6407a60202fb203\n"
+".quad 0x2fdf38608c4c05fb,0x302f612760da2960,0xead7c063e380ae67,0x32eba5581706eafe\n"
+".quad 0x2f0585096d83747e,0xee10af0c8546640e,0x1ed4e8024d8bb0cb,0x65bea25ac1117490\n"
+".quad 0xa61dc96d46f8b388,0xcd65b3ee28bbf877,0x631a0f52d609918b,0x6c5ede68d514260c\n"
+".quad 0x636c63b51ac767c7,0x1eaaa4cfaba34722,0x463707084745d775,0x63742a1984939038\n"
+".quad 0xf62fc1b672380795,0x486bbdee581c155e,0xdec397bdf45ff221,0xc48a1f634d5219a3\n"
+".quad 0x9012ed0f48461bde,0x90a7af6d458a31f5,0x4d4e30d952a3cb34,0x2a3b74e7255476b8\n"
+".quad 0xc739bcb42ac6bc3d,0x9a12e1c80321da8a,0x5cb43d1dbe86fefb,0xd137cafaf6c98918\n"
+".quad 0x86292bac52c8dcbd,0xf42a10554644bfb4,0x01add6b94bc7a2d9,0x8a4073f233dd3c19\n"
+".quad 0xa712721de41cb762,0x50aa83f3035bbd72,0xdce95426342035b9,0x4144cf575439981a\n"
+".quad 0x8c48eb25d72be07c,0x2c421e5dde418b71,0x8edd45290175d3bb,0x64e78528831eee78\n"
+".quad 0x6164d5032b53f0e8,0xeb1bf0482c9ff607,0x34621907c6964c2f,0x54b27acb45a61e59\n"
+".quad 0xe2ab3347964dd2a9,0x068a55f02353e593,0xdcc5cba2730b27c5,0x07c8d5e059937a2a\n"
+".quad 0x12673bd159a41ca5,0xa304999b4399d0bb,0x46aa514509d3df9d,0x54dc1f991e9ea971\n"
+".quad 0x08f1357e6072d6b9,0xe08a31df7cb82c15,0x5fbbd17c609b2b6f,0xc31868976a74141c\n"
+".quad 0x415c057c21d8fcb8,0xfbb1ece41624041f,0x998f4fd391a7e607,0xbd252396489e52fb\n"
+".quad 0x0dbb171629b78e16,0x04e7a912bb518fd8,0xb11216eb870a97ec,0xf445d0fa699a6468\n"
+".quad 0x885f8767825f98d7,0x9fea0db2577defe9,0x83bda6b7e1d587a3,0x8b55fb8a30ac53fa\n"
+".quad 0x88c7f5077b921512,0x85a28d8c82974455,0xa26310615fd413ed,0xab60475656bbd18b\n"
+".quad 0x90c31fd410737323,0x41b908a6fea0c599,0xbe248ae0a37e4834,0x47695b76e87fb46c\n"
+".quad 0x8fbffc87b3117fb4,0x69ff78af6ae69ff7,0x43d66f35a162e1b5,0x2961ff31cb2aa7fe\n"
+".quad 0xa5fe369c3dff31b5,0x7114ff98a5dbfe62,0xff989f760a13c79a,0xc3843fe628fc863c\n"
+".quad 0x3c0c431ff98da1f3,0x1db31d03c1bfe625,0x8df05180ffcc7d4f,0xda1944505ff319d8\n"
+".quad 0x6cf581811efadd75,0x0ffd451e23e34be5,0x2f1cffd45767f721,0xb8c3f9b8b02d57cf\n"
+".quad 0xf02bb1361eea29ff,0xd85236f1379c897f,0x838a7ff828c8dcbd,0xe7625ffe8aec8d87\n"
+".quad 0x019861219611bac9,0x00a57646c1aa2520,0xda3b08dd75f60128,0x646a796052006986\n"
+".quad 0x36eb67fe0a001e57,0x416a81384d4505d6,0x5769b657002a58be,0x72de9f88e18b22eb\n"
+".quad 0x03e62dc9eda7afee,0x4f69007c839460c0,0x16a67e8b1540db4a,0xed3170bedd871eda\n"
+".quad 0x739747954680129d,0x079dd128571a042c,0xcd80a911d631f931,0xfe504764dd1ce5d3\n"
+".quad 0xa795ff92d92ea1e4,0x88461fa322671614,0xe1873763465f9130,0x50695750405032e0\n"
+".quad 0x2e582bdc497f3639,0x3c686d6afce8a580,0x851ffac556a47856,0xf72df6f91b35d7e7\n"
+".quad 0xf1299a8f302fcf0b,0x5c9a9955f9f10698,0xbf735d705d071b67,0x9fa21cb046949f11\n"
+".quad 0x7f48397adae5d968,0xa7ff8e834cb513dd,0x9eaeb80eaa975bc6,0x485852d32a5d6e1b\n"
+".quad 0x805730cde6ef8015,0xe329530059396e54,0xb82016c9a05280e3,0x213c3c80ba4cbddc\n"
+".quad 0x8d23265a0309ded4,0x316f8d203398d47e,0x30ac758199084069,0xf41628e80422f0a9\n"
+".quad 0x18902f87001bc9b6,0x49f050ba40800e67,0x6350f37adc5403b9,0x3e9f58a803d91dfd\n"
+".quad 0x0fe67b470e59b2c0,0x2b9e14f3c99f2380,0x0833e8d3d0bab3d1,0x042793f4977ff9c0\n"
+".quad 0xe5ed63474146230e,0x13e0413d4279022c,0xe122da080913964f,0x971d842024cd5c20\n"
+".quad 0x7fbf76d220254a59,0x04c91df8af31012e,0x1d417e71b3552104,0x854b918f2e6b6022\n"
+".quad 0xfe7eb9aa010f51dd,0xb53eb9adf08f5eb9,0xbe0405a9b75fe2c7,0x41016e7a7849c036\n"
+".quad 0x3ee178d141253ee1,0xd93f8f2daa9080bd,0x55d4921018a6d6a9,0x6699d9a4e0c0dcaa\n"
+".quad 0x080cf23dcfe45040,0x0d30fd56ea99ce0c,0x020364f4f9ff0a6d,0xd713768836967423\n"
+".quad 0x50407191ee806295,0x80e26ed206dccf1a,0x4101da47ba040a0a,0xb4365b441b7331f9\n"
+".quad 0xccec060407b9def5,0xd048525ccdda646d,0xdb99da8c0810123d,0x859defdb436db4c8\n"
+".quad 0xcda646dccee86040,0x9a9e840899b466f2,0xa4aaa514776aa095,0xd0811f36acad9a72\n"
+".quad 0x2cf68629eb5910b2,0x4acda4779611a9e5,0x3a2984f526893420,0xecb30e69a102626d\n"
+".quad 0xa179a65d0511e8ed,0x8409f90b0e2cb21e,0xdefda853d4d67876,0x9118c68085040a29\n"
+".quad 0xc8029a7da186fb42,0xd830673a0fcd0b2a,0xcc06706157f07ac2,0x5d26800279ac3754\n"
+".quad 0x4bd572b97b24c081,0x66ece4528e2616db,0x181692bdbd0262a5,0x91de1888a0cbb353\n"
+".quad 0xe635e6410ba190e6,0xd4a803b781b74ba7,0x0ba012df966f000b,0xef9a447d7df8c45e\n"
+".quad 0xd79ce74dcb4c9007,0x9a029bee49e2444d,0x7ae3f535f6396d4e,0xdb7c1ad04ad07401\n"
+".quad 0xf82c62d20acf9ed6,0x02a181302ab946e1,0x9fa5282ab9bec7c3,0x75c185573e81b029\n"
+".quad 0xc04fde8626fd3946,0x5af03d6849e25681,0xd6931835df04f354,0x218b2c7ab6190b95\n"
+".quad 0xd1e93d37469f8079,0x69df063063d0c60e,0x57a4a2bd73062191,0xe3262c211908dd64\n"
+".quad 0xd6b28f453279ae35,0xc0371890fb0963a6,0xe7663428805c583e,0xbdd4ec6311814efb\n"
+".quad 0xef1919e22c90c4f0,0x5bb0745e851adc2d,0xd2a605d83a1da0e8,0x7fa752aadd87b5b5\n"
+".quad 0xd8b95b0bc93709e5,0x200a666bc553be05,0x62c4c8a302ecbdc4,0x8dc4a237c0bb3f63\n"
+".quad 0xbf989e8d05ee79dd,0xc7696381e2cf38f4,0x53150ed85edf9dd9,0x7bde7d8d6b3e19cd\n"
+".quad 0x38673cb4f6ee30ce,0x9ad76cf867387a2b,0x8a19cfd3a96cce7a,0x4bc38c83c69f4c69\n"
+".quad 0x12673b452b657c1d,0x713d160ce716aa7b,0xd782c23c3d4b6a23,0xeaaa338bb108f04f\n"
+".quad 0xbb55b6278a338ba2,0xcaf5613a92605467,0x5d84953c5af64469,0xe78a2f876961f54b\n"
+".quad 0x2ee26283df908a10,0x5638bc400f30b7b0,0x811e37b5b3cc4cea,0x496ab66caa2f4efa\n"
+".quad 0x5da3d8cccb3eb6f9,0x8d46557a6763d195,0xcce7c96ce9ccf91d,0x3f766041fa2dbadc\n"
+".quad 0xe4a07f039eea6f05,0x69180160ff017e27,0xe23d60ff0e8bd35d,0x6c20ff016df7981f\n"
+".quad 0xdcf9810800b68ae8,0x520113026b348ec4,0xe9ea96b646a93579,0x8941249ebefd1ea6\n"
+".quad 0xbc08af4e1d5c3db6,0xa0efc852087e05eb,0xdc527730414c22ed,0x27b8ba90901a5e30\n"
+".quad 0x3a484781fffec120,0x9f5b35f404787ec2,0xcf23d03578b208f1,0xbeebd17d1dc72a92\n"
+".quad 0x65a9b13060c06300,0xc90ad9526b58031c,0x832c7f7afa5bfa80,0x68c7733c433003f0\n"
+".quad 0x4e5906f107678806,0xe01b303401f6e727,0x269d50eb40e0d118,0x9d076c1efc4e800c\n"
+".quad 0x2b04ed4ebbf09a2b,0x85f5882d02197a50,0x18fe5570a5eb302d,0xa7e1057847db38e1\n"
+".quad 0x4981cc05809da7dc,0x59086d339e23518d,0x29e0b213b23732f0,0x2191ac911ba89449\n"
+".quad 0x82c84ec8dcebc164,0xc6da81846eaaaa27,0x0b213b23736f0590,0xeb0c2372c6a3ef08\n"
+".quad 0x20bb2722f82c8635,0xbf779ebe232d0a0b,0x520bb3b2e457696e,0x6db65b62720b20c6\n"
+".quad 0x6da3d8f9e0bf1634,0x5a88bb4bee7671ea,0x82dc3a19da653300,0xbb9920b908e995c4\n"
+".quad 0x5e612161e3a6fa5e,0x11c1a05d8fec4655,0xb1a764228c110324,0x4f544f8fbc69ccf4\n"
+".quad 0xb268977f7e9320e0,0x508631231d3f16c8,0x0a20d6baa45ea4e4,0x432267a0f38274b4\n"
+".quad 0xe12edb8878084051,0xa306bd5c80e4bfb1,0xf3028e1ad8b52508,0x6732428e11f1519b\n"
+".quad 0x5933e814703b52b6,0xee4aa6bcc7245d1a,0x9e4bccb49e505200,0xcc7808a489ef520d\n"
+".quad 0x9378614908f31330,0x41901597711b6950,0x8322941ae4a725e5,0xd5452835ab6a97a9\n"
+".quad 0x00c64030a997e915,0x40c69ea49c6f00c8,0x9ce9920c81172d06,0x130bb0101901aeca\n"
+".quad 0xf133b55a064842ff,0x41761fa348b65eef,0x0c77006488bb2832,0x090aabc03281b0b0\n"
+".quad 0xd0658b4d772a31ef,0xf1111032c058d322,0xd8305ee480832c54,0x96a6ba80cb1d7f58\n"
+".quad 0x6f7ed1360641961d,0xfd0832c30262432c,0x96018d3dd6832c6c,0x32032c34fd2c1b41\n"
+".quad 0x681960af6b1a3a0a,0x6582bf2832c31546,0x3abd13e3d0ba2420,0xc403660cb193dd18\n"
+".quad 0x58c6622e760cb057,0x420658abb3bf1086,0x5d7ecc2ace1d86cf,0x929dc1d614e2a3ca\n"
+".quad 0x1ea3b9fe7eb9e40c,0xd4f1d8f69a9d0fa5,0x1d3c24f924e41962,0x032404406ed120cb\n"
+".quad 0xac05ed120cb08ef8,0x90658b67fb64fe3c,0xf8ab8c9b95282c68,0x37b72720cb0d658c\n"
+".quad 0xb6b022540e224196,0x7d9c308a64c9a3f4,0xa20da57b1d120cb0,0x832c6f62b26c9a1d\n"
+".quad 0x6885b481b4baad44,0x47a1120cb1bdab68,0xcc2b1a49bb4c8db9,0x1b7384c9890658de\n"
+".quad 0x0cb1bdbb6869b699,0xd0d76d0db5d72732,0x73f93a2419637b0e,0x0658b747f336991b\n"
+".quad 0x497cd422cafcd399,0x341b8724e54c2692,0xa7abb4f17a490658,0xd44a1cb659b7e894\n"
+".quad 0x2ab5a5f1a5241962,0xb0e9241962d80e99,0x5866511e8edecb32,0x602d5e8321ea179a\n"
+".quad 0xb0c9e88d66a92419,0x8ba92eec2a419637,0xcb068a90e2780c94,0x29ce83f352dc8f00\n"
+".quad 0x97394555ac762ad4,0xb06daebb62b0dd45,0xa5e8392aff92920c,0x61aad39147130b6d\n"
+".quad 0x35b2a419637b3297,0xb0e91de2b06d28bb,0xc60bcaad7908540c,0x6589dff0c832c030\n"
+".quad 0x9f5b50f9920720a0,0xe9ed99b0c8a4a4ba,0x53ecb2a267580753,0x42ea3c5615025727\n"
+".quad 0x1e5b53d79c373972,0x718c3941f6f50f7f,0xf5bbd383397175d2,0xe23d0e11a085ba0f\n"
+".quad 0x768ef5ee9b672fc8,0xaea00acea7a030e7,0xb2f4c4be28a02ab0,0xa5c9b8246c3c8d3c\n"
+".quad 0xa8cadb5885fe8ee4,0x585ed75c7c6d6026,0xa612554d4e4a48d9,0x699203f610845094\n"
+".quad 0x59d11586cc1fc8c4,0xec28cec47eff2903,0xa2335d277e8e724a,0x8bfd74f655665e2b\n"
+".quad 0xe0cafda9b9aa87c0,0x853c317f951037b7,0x0c16ab101a617da3,0x3021a41ad523075c\n"
+".quad 0x08a3198b725208bc,0x8e0224600a9623f9,0x5e2f18bc64a3184a,0xf60edcbf1920d9b0\n"
+".quad 0x960582206320ac44,0xea9c9d78a18675f4,0xcd3568ceaa15e04f,0x0464918c619a8ca2\n"
+".quad 0x5814bb03ccf49080,0x4bd7e0b352f05d15,0x6cf1876adaf108f9,0x63b58cf0bfb03650\n"
+".quad 0xa50c7b54edd0122f,0x028492287d514c03,0x0096a1a7f49ce948,0xa3c6f76aff7e4a8c\n"
+".quad 0x3ccbe284f3cad292,0xb5e038d334debda1,0x4a23c5d37601492d,0x92b7b1331af027db\n"
+".quad 0x5f1f98c44dc631d4,0x6f0d4effd306f12d,0xa03184ff5c343ba8,0x6c01d0b1de6a5bbf\n"
+".quad 0x492b027b4434ce1c,0xb0a0d260a5376d74,0xaedc1482653e9081,0xc9818748e2e7df3f\n"
+".quad 0x61422fa01d1fd4ec,0x997c384f0536e753,0x3001e8c3344a8dbc,0xc64ecdbac512c202\n"
+".quad 0x4b1370e5ee4535ad,0x98122a9a604d753f,0xa367477a6154d9f0,0x67b2efe306f294dc\n"
+".quad 0x11f8d742cde55a86,0xf53e52c6c133e0b9,0x8c870696218db0e6,0xefaf0f0fc643eefb\n"
+".quad 0x9edf7978729abec7,0x9c2c738120a32a5d,0x0ec1ecb2e49bdc74,0xd593b65e65aa3225\n"
+".quad 0x5454a52842adb2b6,0xb09331719a02c554,0xeb4c415f7fb8c5e5,0x56d0c596cf05c385\n"
+".quad 0xe749c5f117d40b01,0xec68518114a58ca7,0xa9de7ff2611736db,0xcb27187bdcc6cf66\n"
+".quad 0xd5079c9d2cef9a9b,0xc04f840717a85637,0x96a377652818c591,0x8066aaa7fde12111\n"
+".quad 0x5f6c8f3d1c8618a3,0xa7d30d80e8afb1f4,0x12bedf895d07330a,0x2062152dd9ab5a18\n"
+".quad 0x69069ed5d0a6abbd,0x6d76ac2af0b7d0c8,0x7e4554e05329dc82,0x4d29bb30d0cfbf6a\n"
+".quad 0x6c7661c4342ce36e,0x0e49a67d684cdc43,0xf9d34ee60bf60c50,0x2c77a59457a6b9b5\n"
+".quad 0x1bbfc6e2a6a03601,0x16a1fa1a937081fa,0xaad956e1fba45903,0xcd37612888b6aaff\n"
+".quad 0x161bae472219f5cf,0xe55bfa84fd9eb21f,0xa6b43863f8325656,0xa64281054ac9be70\n"
+".quad 0xf30a4c39f00bbf4e,0x8d7725d210ece973,0xb34927eb05b6b5f7,0x19bb810a2097c394\n"
+".quad 0xd629077c2bc0b04e,0xd820886df12c1842,0xa5cb18cc6cdbba14,0xc9d0a4b6534b905f\n"
+".quad 0x8c193b844c116ee5,0x56d7b7260cb1f9d7,0x3ae7e69bf419758b,0xbc87c5861327c95f\n"
+".quad 0x23e6eb36fea13f64,0x90a55768d1fe4419,0xd4479a16109e4a7c,0x8dc712d5335c8ecc\n"
+".quad 0xe81d96ad0475f960,0xd270a6013968696d,0x8b63f368907bac61,0x9455e95096d194fd\n"
+".quad 0xc130ab306b4ab866,0xaa536d16da155a57,0xd2a94cb38148aa55,0x8188cd8db3a0e70c\n"
+".quad 0x42a1bb15a205ed8d,0x05035f976fb102f4,0x706ab1d17609bac4,0x0330462f7c720e2f\n"
+".quad 0x60d7b859919209d2,0x5606f079091dd7e4,0xc0596b7b9437df26,0xb8c0620d31766c0c\n"
+".quad 0x0033fb1b69a23cb0,0x005e1a03568b1f76,0xf1f7005d8619e92d,0x99fb3b7639a39334\n"
+".quad 0xcdb80f443024d567,0xa7cfc9eb374fdf41,0x5f103b56b441d193,0x6df1719ded5b4774\n"
+".quad 0xab41d2e4de5dedcb,0x6ed00c7ae8c15b61,0x3ddf32424c46b218,0xa35d52a981a9e036\n"
+".quad 0xe6de128068bf7473,0x88ecb16e6a77305c,0x65b0a14dd7b50ed2,0x6119be0839fed6d7\n"
+".quad 0x58c2ae890021f1f8,0x9f33d1a53bc09a5c,0xa127b475c94c2289,0x0d29584edc9d2dda\n"
+".quad 0x5fd94d4658d83628,0x448edb26d827180a,0x9da309d135258d73,0x6b09c50fcbc4f235\n"
+".quad 0x8ee125affb786682,0xb0713716d21797c4,0x274c9f55d5f2608e,0x7dedae035b0071b6\n"
+".quad 0x326f34a282f842bc,0x797b275869d22aeb,0x8de78d21420df050,0xfa41cb7d16cb7c6d\n"
+".quad 0xdb18c1f4d54ee963,0xc7353f77bc1d71f8,0x1ddbd615a7c756a7,0x650a00ff23a50311\n"
+".quad 0xfddef0767fe34fee,0xdf4cfd4fef139df4,0x5ab46d0764f6f7db,0x46b686c9db441b51\n"
+".quad 0x993db1c224f1f9bf,0xe1d0bf876efd318f,0x0edd3376991b52f4,0xe2ebff3da672382f\n"
+".quad 0xb501ce368bbc72be,0x8d8f014273376991,0xde1907dd7fe6277d,0x36e72e846dbe1df9\n"
+".quad 0xbb18f4b621faed32,0x9c0ef52c73fa0bc0,0x353f6d350cb9a782,0x4b6c7671c17631b4\n"
+".quad 0x99b2e213dbf47621,0x79df08f4abe026cb,0x827a0c876ae6dcc7,0x14f4b99be97335e8\n"
+".quad 0x13d2e63ba5ef94a6,0xdfa5ccdf4b99b1f8,0x8db99b30c499fa3f,0xb7cd4b4cfc1d7b4c\n"
+".quad 0x1c0fd741a66054d3,0x3599810062ec60f0,0x810233add43d8769,0x868af606b182c076\n"
+".quad 0x26c0521f7b7c488e,0x9ca66a2dc32bee09,0x604bea39e65661b1,0x2b3526a11fd8b754\n"
+".quad 0x04320777ca0f92fb,0x6aeaf080071cec58,0x97b6217b80684316,0x2044b142c94302b4\n"
+".quad 0x00e28253ca48d1ca,0xc0008d5fcd685879,0xd9613ace32be0a01,0x1e89b3fa2460830b\n"
+".quad 0x464e88127f830de0,0xdfada984713fcfd3,0x926de884f116e919,0xc965359652ad3098\n"
+".quad 0xa07ae74826e6db29,0x85f96f3744f9729f,0x8050fdc6eb996277,0x37587279b0984ca7\n"
+".quad 0x46e681c286ea59b4,0x241aa391b914716d,0x9ae6054a87d3a060,0x9e973385dcc99137\n"
+".quad 0x2049cc0705338e01,0xe6556fac737dce83,0x174cb71183a47c05,0x9d127a7ac0453477\n"
+".quad 0x3d6f09f89688cafa,0x874146559690d4d3,0x470e23e7f530eb39,0x5b81cbb13b828c48\n"
+".quad 0x5ee53a251caa7448,0x47e33806cbf74ef1,0x1112b09c0817cb77,0x050c4c07348bc262\n"
+".quad 0x48c18312f5772306,0x40ca1d320f49a90a,0xd9ccf58641a76849,0xd3f1411423f33054\n"
+".quad 0x698b0024049b8f02,0x313562f02a409953,0x506ca2362a6dd218,0x9999b1822a76d705\n"
+".quad 0xe7589d8aef66c577,0x51ade21467e69bb2,0x16f662101689c224,0xed986f94abd232cb\n"
+".quad 0x0857ee559ba8f089,0x8df27de69f643618,0x4d281977aa41db9c,0x593476bf69f2263b\n"
+".quad 0x788b69e0dfcf7964,0x8599936bb7f11958,0x4bc7bc85afc64adb,0xbaee5c953cd864f3\n"
+".quad 0xb42779b1b066279d,0x0c543723d29e65cc,0x29e5a41330891ab1,0xe9cb3480386c9b52\n"
+".quad 0xfc7b0902fb65fa70,0x8286db0f7725b2ca,0x92745d4502a5ed1c,0x851434d688424822\n"
+".quad 0xb530ee7b0bc76c85,0x5a333643c914dccb,0x43c91e842533ed96,0x872802ffe0f8b895\n"
+".quad 0x00000000000077c7\n"
 ".text");
 
 extern "C" {
@@ -31905,13 +31537,13 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
 extern void __device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i(double *, double *, double *, double *, double *, double *, double *, int);
 extern void __device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi(double *, int, double *, double *, double *, int *);
 extern void __device_stub__Z10sum_kernelPdi(double *, int);
 extern void __device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_61_tmpxft_0000e700_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_61_tmpxft_000298b7_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) __attribute__((__constructor__));
 void __device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i(double *__par0, double *__par1, double *__par2, double *__par3, double *__par4, double *__par5, double *__par6, int __par7){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel))); };}
 # 239 "ex_particle_CUDA_float_seq.cu"
 void find_index_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,double *__cuda_5,double *__cuda_6,int __cuda_7)
@@ -31919,7 +31551,7 @@ void find_index_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,doubl
 {__device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7);
 # 265 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi( double *__par0, int __par1, double *__par2, double *__par3, double *__par4, int *__par5) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel))); }; }
 # 267 "ex_particle_CUDA_float_seq.cu"
 void normalize_weights_kernel( double *__cuda_0,int __cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,int *__cuda_5)
@@ -31927,7 +31559,7 @@ void normalize_weights_kernel( double *__cuda_0,int __cuda_1,double *__cuda_2,do
 {__device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5);
 # 298 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z10sum_kernelPdi( double *__par0, int __par1) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, int))sum_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, int))sum_kernel))); }; }
 # 300 "ex_particle_CUDA_float_seq.cu"
 void sum_kernel( double *__cuda_0,int __cuda_1)
@@ -31935,7 +31567,7 @@ void sum_kernel( double *__cuda_0,int __cuda_1)
 {__device_stub__Z10sum_kernelPdi( __cuda_0,__cuda_1);
 # 313 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_( double *__par0, double *__par1, double *__par2, double *__par3, double *__par4, int *__par5, int *__par6, double *__par7, unsigned char *__par8, double *__par9, double *__par10, int __par11, int __par12, int __par13, int __par14, int __par15, int __par16, int *__par17, double *__par18) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)64UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)72UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)80UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par11, sizeof(__par11), (size_t)88UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par12, sizeof(__par12), (size_t)92UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par13, sizeof(__par13), (size_t)96UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par14, sizeof(__par14), (size_t)100UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par15, sizeof(__par15), (size_t)104UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par16, sizeof(__par16), (size_t)108UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par17, sizeof(__par17), (size_t)112UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par18, sizeof(__par18), (size_t)120UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel))); }; }
 # 333 "ex_particle_CUDA_float_seq.cu"
 void likelihood_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,int *__cuda_5,int *__cuda_6,double *__cuda_7,unsigned char *__cuda_8,double *__cuda_9,double *__cuda_10,int __cuda_11,int __cuda_12,int __cuda_13,int __cuda_14,int __cuda_15,int __cuda_16,int *__cuda_17,double *__cuda_18)
@@ -31943,8 +31575,8 @@ void likelihood_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,doubl
 {__device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10,__cuda_11,__cuda_12,__cuda_13,__cuda_14,__cuda_15,__cuda_16,__cuda_17,__cuda_18);
 # 398 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T222) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T222; }; __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel), (char*)"_Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_", "_Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, int))sum_kernel), (char*)"_Z10sum_kernelPdi", "_Z10sum_kernelPdi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel), (char*)"_Z24normalize_weights_kernelPdiS_S_S_Pi", "_Z24normalize_weights_kernelPdiS_S_S_Pi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel), (char*)"_Z17find_index_kernelPdS_S_S_S_S_S_i", "_Z17find_index_kernelPdS_S_S_S_S_S_i", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_61_tmpxft_0000e700_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2
-# 1 "tmpxft_0000e700_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_61_tmpxft_000298b7_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2
+# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"

@@ -300,3 +300,6 @@ kernel_gpu_cuda_wrapper(record *records,
 #ifdef __cplusplus
 }
 #endif
+
+#include "kernel_gpu_cuda_wrapper_2.cu"
+#include "../util/cuda/cuda.cu"

@@ -42,6 +42,9 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
+ #define HERE printf("[fh] %s/%s: %d\n", __FILE__, __FUNCTION__, __LINE__)
+//#define HERE
+
 struct dwt {
     char * srcFilename;
     char * outFilename;
@@ -238,10 +241,10 @@ int do_main(int argc, char **argv)
         {"help",        no_argument,       0, 'h'}  
     };
     
-    int pixWidth    = 0; //<real pixWidth
-    int pixHeight   = 0; //<real pixHeight
+    int pixWidth    = 8; //<real pixWidth
+    int pixHeight   = 8; //<real pixHeight
     int compCount   = 3; //number of components; 3 for RGB or YUV, 4 for RGBA
-    int bitDepth    = 8; 
+    int bitDepth    = 8;
     int dwtLvls     = 3; //default numuber of DWT levels
     int device      = 0;
     int forward     = 1; //forward transform
@@ -249,6 +252,7 @@ int do_main(int argc, char **argv)
     int writeVisual = 0; //write output (subbands) in visual (tiled) order instead of linear
     char * pos;
 
+    #if 0
     while ((ch = getopt_long(argc, argv, "d:c:b:l:D:fr95wh", longopts, &optindex)) != -1) {
         switch (ch) {
         case 'd':
@@ -295,7 +299,8 @@ int do_main(int argc, char **argv)
         default :
             usage();
             printf("character: %c\n", ch);
-            return -1;
+            break;
+            // return -1;
         }
     }
 	argc -= optind;
@@ -316,6 +321,8 @@ int do_main(int argc, char **argv)
     if (forward == 0) {
         writeVisual = 0; //do not write visual when RDWT
     }
+#endif
+    HERE;
 
     // device init
     int devCount;
@@ -330,6 +337,8 @@ int do_main(int argc, char **argv)
                device, 0, devCount -1);
         return -1;
     }
+
+    HERE;
     cudaDeviceProp devProp;                                          
     cudaGetDeviceProperties(&devProp, device);  
     cudaCheckError("Get device properties");
@@ -340,6 +349,7 @@ int do_main(int argc, char **argv)
     printf("Using device %d: %s\n", device, devProp.name);
     cudaSetDevice(device);
     cudaCheckError("Set selected device");
+    HERE;
 
     struct dwt *d;
     d = (struct dwt *)malloc(sizeof(struct dwt));
@@ -348,17 +358,22 @@ int do_main(int argc, char **argv)
     d->pixHeight = pixHeight;
     d->components = compCount;
     d->dwtLvls  = dwtLvls;
+    HERE;
 
     // file names
-    d->srcFilename = (char *)malloc(strlen(argv[0]));
-    strcpy(d->srcFilename, argv[0]);
-    if (argc == 1) { // only one filename supplyed
-        d->outFilename = (char *)malloc(strlen(d->srcFilename)+4);
-        strcpy(d->outFilename, d->srcFilename);
-        strcpy(d->outFilename+strlen(d->srcFilename), ".dwt");
-    } else {
-        d->outFilename = strdup(argv[1]);
-    }
+
+
+    d->srcFilename = (char *)malloc(60);
+
+    strcpy(d->srcFilename, "192.bmp");
+//    if (argc == 1) { // only one filename supplyed
+//        d->outFilename = (char *)malloc(strlen(d->srcFilename)+4);
+//        strcpy(d->outFilename, d->srcFilename);
+//        strcpy(d->outFilename+strlen(d->srcFilename), ".dwt");
+//    } else {
+//        d->outFilename = strdup(argv[1]);
+//    }
+    HERE;
 
     //Input review
     printf("Source file:\t\t%s\n", d->srcFilename);
@@ -368,36 +383,56 @@ int do_main(int argc, char **argv)
     printf(" DWT levels:\t\t%d\n", dwtLvls);
     printf(" Forward transform:\t%d\n", forward);
     printf(" 9/7 transform:\t\t%d\n", dwt97);
+    HERE;
     
     //data sizes
     int inputSize = pixWidth*pixHeight*compCount; //<amount of data (in bytes) to proccess
 
+    HERE;
+    printf("input size: %d\n", inputSize);
     //load img source image
-    cudaMallocHost((void **)&d->srcImg, inputSize);
-    cudaCheckError("Alloc host memory");
-    if (getImg(d->srcFilename, d->srcImg, inputSize) == -1) 
-        return -1;
+    d->srcImg = (unsigned char*) malloc(inputSize);
+    // cudaCheckError("Alloc host memory");
+//    if (getImg(d->srcFilename, d->srcImg, inputSize) == -1)
+//        return -1;
+
+    HERE;
 
     /* DWT */
     if (forward == 1) {
-        if(dwt97 == 1 )
+        if(dwt97 == 1 ) {
+            HERE;
             processDWT<float>(d, forward, writeVisual);
+        }
+
         else // 5/3
+        {
+            HERE;
             processDWT<int>(d, forward, writeVisual);
+        }
+
     }
     else { // reverse
-        if(dwt97 == 1 )
+        if(dwt97 == 1 ) {
+            HERE;
             processDWT<float>(d, forward, writeVisual);
-        else // 5/3
+        }
+
+        else { // 5/3
+            HERE;
             processDWT<int>(d, forward, writeVisual);
+        }
+
     }
 
     //writeComponent(r_cuda, pixWidth, pixHeight, srcFilename, ".g");
     //writeComponent(g_wave_cuda, 512000, ".g");
     //writeComponent(g_cuda, componentSize, ".g");
     //writeComponent(b_wave_cuda, componentSize, ".b");
-    cudaFreeHost(d->srcImg);
+    HERE;
+    // cudaFreeHost(d->srcImg);
     cudaCheckError("Cuda free host");
+    HERE;
 
     return 0;
 }
@@ -405,9 +440,7 @@ int do_main(int argc, char **argv)
 
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
-    printf("hello\n");
-    // int ret = do_main(argc, argv);
-    int ret = 0;
+    int ret = do_main(argc, argv);
     CCA_BENCHMARK_CLEANUP;
     return ret;
 }

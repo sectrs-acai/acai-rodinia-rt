@@ -221,8 +221,6 @@ int do_main(int argc, char **argv)
     pArgc = &argc;
     pArgv = argv;
 
-    CCA_INIT;
-
     printf("%s Starting...\n\n", argv[0]);
 
     if (checkCmdLineFlag(argc, (const char **)argv, "qatest"))
@@ -345,7 +343,6 @@ int do_main(int argc, char **argv)
     }
 
     printf("main(): starting %i host threads...\n", GPU_N);
-    CCA_INIT_STOP;
 
 
     //Get option count for each GPU

@@ -31,7 +31,7 @@
 
 
 
-
+#include "cca_benchmark.h"
 #define RD_WG_SIZE_0_0 2
 #define BLOCK_SIZE RD_WG_SIZE_0_0
 
@@ -149,8 +149,12 @@ do_main ( int argc, char *argv[] )
     matrix_duplicate(m, &mm, matrix_dim);
   }
 
+  CCA_MEMALLOC;
   cudaMalloc((void**)&d_m, 
              matrix_dim*matrix_dim*sizeof(float));
+
+  CCA_MEMALLOC_STOP;
+  CCA_H_TO_D;
 
   /* beginning of timing point */
   stopwatch_start(&sw);
@@ -161,7 +165,11 @@ do_main ( int argc, char *argv[] )
   gettimeofday(&tv_kernel_start, NULL);
 #endif
 
+  CCA_H_TO_D_STOP;
+  CCA_EXEC;
   lud_cuda(d_m, matrix_dim);
+  CCA_EXEC_STOP;
+  CCA_D_TO_H;
 
 #ifdef  TIMING
   gettimeofday(&tv_kernel_end, NULL);
@@ -171,12 +179,15 @@ do_main ( int argc, char *argv[] )
 
   cudaMemcpy(m, d_m, matrix_dim*matrix_dim*sizeof(float), 
 	     cudaMemcpyDeviceToHost);
+  CCA_D_TO_H_STOP;
+  CCA_CLOSE;
 
   /* end of timing point */
   stopwatch_stop(&sw);
   printf("Time consumed(ms): %lf\n", 1000*get_interval_by_sec(&sw));
 
   cudaFree(d_m);
+  CCA_CLOSE_STOP;
 
 
   if (do_verify){
@@ -196,7 +207,7 @@ do_main ( int argc, char *argv[] )
   return EXIT_SUCCESS;
 }				/* ----------  end of function main  ---------- */
 
-#include "cca_benchmark.h"
+
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
      int ret = do_main(argc, argv);

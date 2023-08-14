@@ -15,6 +15,7 @@
 #define PI 3.1415926535897932
 #define BLOCK_X 16
 #define BLOCK_Y 16
+#include "cca_benchmark.h"
 
 /**
 @var M value for Linear Congruential Generator (LCG); use GCC's value
@@ -411,6 +412,7 @@ int findIndex(double * CDF, int lengthCDF, double value){
 void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparticles){
 	int max_size = IszX*IszY*Nfr;
 	long long start = get_time();
+    CCA_MEMALLOC;
 	//original particle centroid
 	double xe = roundDouble(IszY/2.0);
 	double ye = roundDouble(IszX/2.0);
@@ -466,6 +468,7 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 	check_error(cudaMalloc((void **) &yj_GPU, sizeof(double)*Nparticles));
 	check_error(cudaMalloc((void **) &CDF_GPU, sizeof(double)*Nparticles));
 	check_error(cudaMalloc((void **) &u_GPU, sizeof(double)*Nparticles));
+    CCA_MEMALLOC_STOP;
 	
 	for(x = 0; x < Nparticles; x++){
 		arrayX[x] = xe;
@@ -558,6 +561,7 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 		long long u_time = get_time();
 		// printf("TIME TO CALC U TOOK: %f\n", elapsed_time(cum_sum, u_time));
 		long long start_copy = get_time();
+        CCA_H_TO_D;
 		//CUDA memory copying from CPU memory to GPU memory
 		cudaMemcpy(arrayX_GPU, arrayX, sizeof(double)*Nparticles, cudaMemcpyHostToDevice);
 		cudaMemcpy(arrayY_GPU, arrayY, sizeof(double)*Nparticles, cudaMemcpyHostToDevice);
@@ -568,14 +572,21 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 		long long end_copy = get_time();
 		//Set number of threads
 		int num_blocks = ceil((double) Nparticles/(double) threads_per_block);
+
+        CCA_H_TO_D_STOP;
+        CCA_EXEC;
 		
 		//KERNEL FUNCTION CALL
 		kernel <<< num_blocks, threads_per_block >>> (arrayX_GPU, arrayY_GPU, CDF_GPU, u_GPU, xj_GPU, yj_GPU, Nparticles);
                 cudaThreadSynchronize();
                 long long start_copy_back = get_time();
 		//CUDA memory copying back from GPU to CPU memory
-		cudaMemcpy(yj, yj_GPU, sizeof(double)*Nparticles, cudaMemcpyDeviceToHost);
+		CCA_EXEC_STOP;
+        CCA_D_TO_H;
+        cudaMemcpy(yj, yj_GPU, sizeof(double)*Nparticles, cudaMemcpyDeviceToHost);
 		cudaMemcpy(xj, xj_GPU, sizeof(double)*Nparticles, cudaMemcpyDeviceToHost);
+        CCA_D_TO_H_STOP;
+        CCA_CLOSE;
 		long long end_copy_back = get_time();
 		// printf("SENDING TO GPU TOOK: %lf\n", elapsed_time(start_copy, end_copy));
 		// printf("CUDA EXEC TOOK: %lf\n", elapsed_time(end_copy, start_copy_back));
@@ -613,6 +624,7 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 	free(CDF);
 	free(u);
 	free(ind);
+    CCA_CLOSE_STOP;
 }
 int do_main(int argc, char * argv[]){
 	

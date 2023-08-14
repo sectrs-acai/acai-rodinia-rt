@@ -191,6 +191,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	cudaEventRecord(start,0);
 #endif
 
+    CCA_MEMALLOC;
 	//=======================================
 	// ALLOCATE GPU MEMORY
 	//=======================================
@@ -200,6 +201,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	{
 		allocDevMem(num, dim);
 	}
+    CCA_MEMALLOC_STOP;
 	
 #ifdef CUDATIME
 	cudaEventRecord(stop,0);
@@ -210,6 +212,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	cudaEventRecord(start,0);
 #endif
 
+    CCA_H_TO_D;
 	//=======================================
 	// CPU-TO-GPU MEMORY COPY
 	//=======================================
@@ -232,6 +235,8 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	
 	cudaEventRecord(start,0);
 #endif
+    CCA_H_TO_D_STOP;
+    CCA_EXEC;
 	
 	//=======================================
 	// KERNEL: CALCULATE COST
@@ -255,6 +260,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 															switch_membership_d		// out:  changes in membership
 															);
 	cudaThreadSynchronize();
+    CCA_EXEC_STOP;
 	
 	// error check
 	error = cudaGetLastError();
@@ -272,7 +278,8 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	
 	cudaEventRecord(start,0);
 #endif
-	
+
+    CCA_D_TO_H;
 	//=======================================
 	// GPU-TO-CPU MEMORY COPY
 	//=======================================
@@ -287,6 +294,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	
 	cudaEventRecord(start,0);
 #endif
+    CCA_D_TO_H_STOP;
 	
 	//=======================================
 	// CPU (SERIAL) WORK
@@ -363,6 +371,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	cudaEventRecord(start,0);
 #endif
 
+    CCA_CLOSE;
 	//=======================================
 	// DEALLOCATE GPU MEMORY
 	//=======================================
@@ -376,5 +385,6 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	*free_t += (double) tmp_t;
 #endif
 	iter++;
+    CCA_CLOSE_STOP;
 	return -gl_cost_of_opening_x;
 }

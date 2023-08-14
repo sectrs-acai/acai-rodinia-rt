@@ -1,5 +1,23 @@
 #ifndef CCA_BENCHMARK_H_
 #define CCA_BENCHMARK_H_
+#include <stdio.h>
+
+#ifdef ENC_CUDA
+#ifdef __cplusplus
+extern "C" {
+   #include <cuda.h>
+
+CUresult cuda_enc_setup(char *key, char *iv);
+CUresult cuda_enc_release();
+}
+#else
+#include <cuda.h>
+#include <stdio.h>
+CUresult cuda_enc_setup(char *key, char *iv);
+CUresult cuda_enc_release();
+#endif
+#endif
+
 
 #if defined(__x86_64__) || defined(_M_X64)
 #define CCA_MARKER(marker)
@@ -51,8 +69,8 @@
 
 #if defined(__x86_64__) || defined(_M_X64)
 #define CCA_FLUSH
-#define CCA_BENCHMARK_INIT
-#define CCA_BENCHMARK_CLEANUP
+#define CCA_BENCHMARK_INIT _benchmark_init()
+#define CCA_BENCHMARK_CLEANUP _benchmark_cleanup()
 #define CCA_TRACE_START
 #define CCA_TRACE_STOP
 
@@ -91,31 +109,36 @@ static void __cca_sighandler(int signo, siginfo_t *si, void *data) {
 #define CCA_BENCHMARK_CLEANUP _benchmark_cleanup()
 
 
+#endif
 
 #ifdef __cplusplus
 extern "C" {
-#include <enc_cuda/enc_cuda.h>
     #include <cuda.h>
 }
 #else
-#include <enc_cuda/enc_cuda.h>
 #include <cuda.h>
 #endif
 
 
 static inline int _benchmark_init(void)
 {
+    printf("_benchmark_init\n");
     /* load encryption */
     #ifdef ENC_CUDA
     {
+        printf("calling cuda_enc_setup\n");
+
         char static_key[] = "0123456789abcdeF0123456789abcdeF";
         char static_iv[] = "12345678876543211234567887654321";
+
         CUresult ret = cuda_enc_setup(static_key, static_iv);
         if (ret != CUDA_SUCCESS) {
           fprintf(stderr, "cuda_enc_setup failed\n");
           return ret;
         }
   }
+    #else
+    printf("no cuda_enc_setup compiled\n");
     #endif
 
     return CUDA_SUCCESS;
@@ -137,7 +160,7 @@ static inline int _benchmark_cleanup(void)
     return CUDA_SUCCESS;
 }
 
-#endif
+
 
 #endif // CCA_BENCHMARK_H_
 

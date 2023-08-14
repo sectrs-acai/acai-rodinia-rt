@@ -28,7 +28,7 @@
 /// POSSIBILITY OF SUCH DAMAGE.
 ///
  
-#include "common.h"
+//#include "common.h"
 
 namespace dwt_cuda {
   bool CudaDWTTester::testRunning = false;

@@ -51,6 +51,13 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
+#include "components.cu"
+#include "dwt_cuda/fdwt53.cu"
+#include "dwt_cuda/fdwt97.cu"
+#include "dwt_cuda/rdwt53.cu"
+#include "dwt_cuda/rdwt97.cu"
+
+
 
 
 inline void fdwt(float *in, float *out, int width, int height, int levels)
@@ -96,7 +103,7 @@ int nStage2dDWT(T * in, T * out, T * backup, int pixWidth, int pixHeight, int st
     
     /* create backup of input, because each test iteration overwrites it */
     const int size = pixHeight * pixWidth * sizeof(T);
-    cudaMemcpy(backup, in, size, cudaMemcpyDeviceToDevice);
+    // cudaMemcpy(backup, in, size, cudaMemcpyDeviceToDevice);
     cudaCheckError("Memcopy device to device");
     
     /* Measure time of individual levels. */
