@@ -1,3 +1,5 @@
+#include "op1.h"
+
 long long get_time() {
 	struct timeval tv;
 	gettimeofday(&tv, NULL);

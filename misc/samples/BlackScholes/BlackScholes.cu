@@ -71,8 +71,11 @@ const float    VOLATILITY = 0.30f;
 int do_main(int argc, char **argv)
 {
 
+    CCA_BENCHMARK_START;
+    CCA_INIT;
     // Start logs
     printf("[%s] - Starting...\n", argv[0]);
+    CCA_INIT_STOP;
     CCA_MEMALLOC;
 
     //'h_' prefix - CPU (host) memory space
@@ -257,6 +260,7 @@ int do_main(int argc, char **argv)
 
     cudaDeviceReset();
     CCA_CLOSE_STOP;
+    CCA_BENCHMARK_STOP;
 
     printf("Test done\n");
     exit(EXIT_SUCCESS);

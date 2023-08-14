@@ -39,6 +39,28 @@ function do_run {
     done
 }
 
+function do_run_devmem {
+    SCRIPT_DIR=${0:a:h}
+    TS=$(date +"%Y-%m-%d_%H-%M-%S")
+    DIR=$BENCH_OUT_DIR/$TS
+    mkdir -p $DIR
+    set +x
+    DEVMEM_UNDELGATE=$SCRIPT_DIR/../../../../scripts/fvp/reset_devmem.sh
+
+    for b in ${b_fvp[@]}; do
+        for i in {1..$ITERS}; do
+            NAME=$(basename $b)
+            LOG=$DIR/$NAME
+            echo "executing $b"
+
+            cd $SCRIPT_DIR/$b
+            cat ./run | tee -a $LOG
+            exec time ./run 2>&1 | tee -a $LOG
+            echo "--------------" >> $LOG
+        done
+    done
+}
+
 function do_nvcc {
     SCRIPT_DIR=${0:a:h}
     set +x

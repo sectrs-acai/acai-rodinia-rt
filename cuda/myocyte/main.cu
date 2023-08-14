@@ -97,6 +97,8 @@
 //====================================================================================================100
 
 int do_main(int argc, char *argv []){
+    CCA_BENCHMARK_START;
+    CCA_INIT;
 
 	//================================================================================80
 	//		VARIABLES
@@ -166,6 +168,7 @@ int do_main(int argc, char *argv []){
 	//		EXECUTION IF THERE IS 1 WORKLOAD, PARALLELIZE INSIDE 1 WORKLOAD
 	//================================================================================80
 
+    CCA_INIT_STOP;
 	if(mode == 0){
 
 		work(	xmax,
@@ -184,6 +187,8 @@ int do_main(int argc, char *argv []){
 						workload);
 
 	}
+
+    CCA_BENCHMARK_STOP;
 
 //====================================================================================================100
 //		END OF FILE

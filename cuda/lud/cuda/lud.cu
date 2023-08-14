@@ -76,6 +76,8 @@ int
 do_main ( int argc, char *argv[] )
 {
   printf("WG size of kernel = %d X %d\n", BLOCK_SIZE, BLOCK_SIZE);
+    CCA_BENCHMARK_START;
+    CCA_INIT;
 
   int matrix_dim = 32; /* default matrix_dim */
   int opt, option_index=0;
@@ -148,6 +150,7 @@ do_main ( int argc, char *argv[] )
     // print_matrix(m, matrix_dim);
     matrix_duplicate(m, &mm, matrix_dim);
   }
+  CCA_INIT_STOP;
 
   CCA_MEMALLOC;
   cudaMalloc((void**)&d_m, 
@@ -188,6 +191,8 @@ do_main ( int argc, char *argv[] )
 
   cudaFree(d_m);
   CCA_CLOSE_STOP;
+
+  CCA_BENCHMARK_STOP;
 
 
   if (do_verify){

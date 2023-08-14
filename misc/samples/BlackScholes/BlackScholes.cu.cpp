@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.cpp"
 # 1 "BlackScholes.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -48104,6 +48104,942 @@ return (0.0F);
 }
 # 493 "../common/inc/helper_timer.h"
 }
+# 14 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union arm_sigval {
+# 16 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int sival_int;
+# 17 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *sival_ptr;
+# 18 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+};
+# 20 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef arm_sigval arm___sigval_t;
+# 80 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 21 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 22 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_signo;
+# 23 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_errno;
+# 24 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_code;
+# 25 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int __pad0;
+# 26 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 27 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int _pad[((128) / sizeof(int)) - (4)];
+# 28 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 29 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 30 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 31 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _kill;
+# 33 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 34 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_tid;
+# 35 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_overrun;
+# 36 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm___sigval_t si_sigval;
+# 37 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _timer;
+# 39 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 40 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 41 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 42 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm___sigval_t si_sigval;
+# 43 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _rt;
+# 45 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 46 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 47 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 48 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_status;
+# 49 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__clock_t si_utime;
+# 50 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__clock_t si_stime;
+# 51 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigchld;
+# 53 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 54 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *si_addr;
+# 56 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+short si_addr_lsb;
+# 57 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 59 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 60 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_lower;
+# 61 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_upper;
+# 62 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _addr_bnd;
+# 64 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uint32_t _pkey;
+# 65 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _bounds;
+# 66 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigfault;
+# 68 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 69 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+long si_band;
+# 70 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_fd;
+# 71 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigpoll;
+# 73 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 74 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_call_addr;
+# 75 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int _syscall;
+# 76 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned _arch;
+# 77 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigsys;
+# 79 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sifields;
+# 80 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} w;
+# 82 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef void (*__arm_sighandler_t)(int);
+# 86 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 84 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 85 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long __val[(1024) / ((8) * sizeof(unsigned long))];
+# 86 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} __arm_sigset_t;
+# 88 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef __arm_sigset_t arm_sigset_t;
+# 90 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct arm_sigaction {
+# 91 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 92 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__arm_sighandler_t sa_handler;
+# 94 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void (*sa_arm_sigaction)(int, void *, void *);
+# 95 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} __arm_sigaction_handler;
+# 96 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__arm_sigset_t sa_mask;
+# 97 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int sa_flags;
+# 98 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void (*sa_restorer)(void);
+# 99 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+};
+# 105 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 101 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 102 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *ss_sp;
+# 103 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int ss_flags;
+# 104 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+size_t ss_size;
+# 105 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_stack_t;
+# 114 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 107 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 108 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long fault_address;
+# 109 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long regs[31];
+# 110 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long sp;
+# 111 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long pc;
+# 112 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long pstate;
+# 113 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned char __reserved[4096] __attribute((__aligned__(16)));
+# 114 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_mcontext_t;
+# 122 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 116 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct arm_ucontext_t {
+# 117 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long uc_flags;
+# 118 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_ucontext_t *uc_link;
+# 119 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_stack_t uc_stack;
+# 120 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_sigset_t uc_sigmask;
+# 121 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_mcontext_t uc_mcontext;
+# 122 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_ucontext_t;
+# 8 "/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h" 3
+extern "C" { typedef __sig_atomic_t sig_atomic_t; }
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+extern "C" { union sigval {
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+int sival_int;
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+void *sival_ptr;
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+}; }
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+extern "C" { typedef sigval __sigval_t; }
+# 124 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+extern "C" { typedef
+# 37 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 38 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_signo;
+# 40 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_errno;
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_code;
+# 48 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int __pad0;
+# 52 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+union {
+# 53 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int _pad[((128) / sizeof(int)) - (4)];
+# 57 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 58 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 59 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 60 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _kill;
+# 64 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 65 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_tid;
+# 66 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_overrun;
+# 67 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__sigval_t si_sigval;
+# 68 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _timer;
+# 72 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 73 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 74 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 75 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__sigval_t si_sigval;
+# 76 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _rt;
+# 80 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 81 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 82 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 83 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_status;
+# 84 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__clock_t si_utime;
+# 85 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__clock_t si_stime;
+# 86 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigchld;
+# 90 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 91 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *si_addr;
+# 93 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+short si_addr_lsb;
+# 95 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+union {
+# 98 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 99 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_lower;
+# 100 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_upper;
+# 101 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _addr_bnd;
+# 103 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uint32_t _pkey;
+# 104 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _bounds;
+# 105 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigfault;
+# 109 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 110 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+long si_band;
+# 111 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_fd;
+# 112 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigpoll;
+# 117 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 118 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_call_addr;
+# 119 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int _syscall;
+# 120 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+unsigned _arch;
+# 121 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigsys;
+# 123 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sifields;
+# 124 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} siginfo_t; }
+# 36 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 37 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_ASYNCNL = (-60),
+# 38 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_DETHREAD = (-7),
+# 40 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_TKILL,
+# 41 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_SIGIO,
+# 43 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_ASYNCIO,
+# 44 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_MESGQ,
+# 45 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_TIMER,
+# 51 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_QUEUE,
+# 52 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_USER = 0,
+# 53 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_KERNEL = 128
+# 66 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 72 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 73 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLOPC = 1,
+# 75 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLOPN,
+# 77 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLADR,
+# 79 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLTRP,
+# 81 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_PRVOPC,
+# 83 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_PRVREG,
+# 85 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_COPROC,
+# 87 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_BADSTK,
+# 89 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_BADIADDR
+# 91 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 95 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 96 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_INTDIV = 1,
+# 98 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_INTOVF,
+# 100 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTDIV,
+# 102 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTOVF,
+# 104 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTUND,
+# 106 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTRES,
+# 108 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTINV,
+# 110 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTSUB,
+# 112 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTUNK = 14,
+# 114 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_CONDTRAP
+# 116 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 120 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 121 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_MAPERR = 1,
+# 123 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ACCERR,
+# 125 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_BNDERR,
+# 127 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_PKUERR,
+# 129 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ACCADI,
+# 131 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ADIDERR,
+# 133 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ADIPERR
+# 135 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 139 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 140 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_ADRALN = 1,
+# 142 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_ADRERR,
+# 144 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_OBJERR,
+# 146 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_MCEERR_AR,
+# 148 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_MCEERR_AO
+# 150 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 156 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 157 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_BRKPT = 1,
+# 159 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_TRACE,
+# 161 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_BRANCH,
+# 163 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_HWBKPT,
+# 165 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_UNK
+# 167 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 173 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 174 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_EXITED = 1,
+# 176 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_KILLED,
+# 178 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_DUMPED,
+# 180 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_TRAPPED,
+# 182 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_STOPPED,
+# 184 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_CONTINUED
+# 186 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 190 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 191 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_IN = 1,
+# 193 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_OUT,
+# 195 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_MSG,
+# 197 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_ERR,
+# 199 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_PRI,
+# 201 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_HUP
+# 203 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 16 "/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h" 3
+extern "C" { typedef __sigval_t sigval_t; }
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+extern "C" { typedef
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+struct sigevent {
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+__sigval_t sigev_value;
+# 25 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int sigev_signo;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int sigev_notify;
+# 29 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+union {
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int _pad[((64) / sizeof(int)) - (4)];
+# 34 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+__pid_t _tid;
+# 37 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+struct {
+# 38 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+void (*_function)(__sigval_t);
+# 39 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+pthread_attr_t *_attribute;
+# 40 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} _sigev_thread;
+# 41 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} _sigev_un;
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} sigevent_t; }
+# 28 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+enum {
+# 29 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_SIGNAL,
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_NONE,
+# 33 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_THREAD,
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_THREAD_ID = 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+};
+# 72 "/usr/include/signal.h" 3
+extern "C" { typedef void (*__sighandler_t)(int); }
+# 77 "/usr/include/signal.h" 3
+extern "C" __sighandler_t __sysv_signal(int , __sighandler_t ) throw();
+# 80 "/usr/include/signal.h" 3
+extern "C" __sighandler_t sysv_signal(int , __sighandler_t ) throw();
+# 88 "/usr/include/signal.h" 3
+extern "C" __sighandler_t signal(int , __sighandler_t ) throw();
+# 112 "/usr/include/signal.h" 3
+extern "C" int kill(__pid_t , int ) throw();
+# 119 "/usr/include/signal.h" 3
+extern "C" int killpg(__pid_t , int ) throw();
+# 123 "/usr/include/signal.h" 3
+extern "C" int raise(int ) throw();
+# 127 "/usr/include/signal.h" 3
+extern "C" __sighandler_t ssignal(int , __sighandler_t ) throw();
+# 129 "/usr/include/signal.h" 3
+extern "C" int gsignal(int ) throw();
+# 134 "/usr/include/signal.h" 3
+extern "C" void psignal(int , const char * );
+# 137 "/usr/include/signal.h" 3
+extern "C" void psiginfo(const siginfo_t * , const char * );
+# 151 "/usr/include/signal.h" 3
+extern "C" int sigpause(int ) __asm__("__xpg_sigpause");
+# 170 "/usr/include/signal.h" 3
+extern "C" int sigblock(int ) throw() __attribute((__deprecated__));
+# 173 "/usr/include/signal.h" 3
+extern "C" int sigsetmask(int ) throw() __attribute((__deprecated__));
+# 176 "/usr/include/signal.h" 3
+extern "C" int siggetmask() throw() __attribute((__deprecated__));
+# 185 "/usr/include/signal.h" 3
+extern "C" { typedef __sighandler_t sighandler_t; }
+# 190 "/usr/include/signal.h" 3
+extern "C" { typedef __sighandler_t sig_t; }
+# 196 "/usr/include/signal.h" 3
+extern "C" int sigemptyset(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 199 "/usr/include/signal.h" 3
+extern "C" int sigfillset(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 202 "/usr/include/signal.h" 3
+extern "C" int sigaddset(sigset_t * , int ) throw() __attribute((__nonnull__(1)));
+# 205 "/usr/include/signal.h" 3
+extern "C" int sigdelset(sigset_t * , int ) throw() __attribute((__nonnull__(1)));
+# 208 "/usr/include/signal.h" 3
+extern "C" int sigismember(const sigset_t * , int ) throw()
+# 209 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 213 "/usr/include/signal.h" 3
+extern "C" int sigisemptyset(const sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 216 "/usr/include/signal.h" 3
+extern "C" int sigandset(sigset_t * , const sigset_t * , const sigset_t * ) throw()
+# 217 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2, 3)));
+# 220 "/usr/include/signal.h" 3
+extern "C" int sigorset(sigset_t * , const sigset_t * , const sigset_t * ) throw()
+# 221 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2, 3)));
+# 27 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+extern "C" { struct sigaction {
+# 32 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+union {
+# 34 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+__sighandler_t sa_handler;
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+void (*sa_sigaction)(int, siginfo_t *, void *);
+# 38 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+} __sigaction_handler;
+# 46 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+__sigset_t sa_mask;
+# 49 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+int sa_flags;
+# 52 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+void (*sa_restorer)(void);
+# 53 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+}; }
+# 229 "/usr/include/signal.h" 3
+extern "C" int sigprocmask(int , const sigset_t *__restrict__ , sigset_t *__restrict__ ) throw();
+# 237 "/usr/include/signal.h" 3
+extern "C" int sigsuspend(const sigset_t * ) __attribute((__nonnull__(1)));
+# 240 "/usr/include/signal.h" 3
+extern "C" int sigaction(int , const struct sigaction *__restrict__ , struct sigaction *__restrict__ ) throw();
+# 244 "/usr/include/signal.h" 3
+extern "C" int sigpending(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 252 "/usr/include/signal.h" 3
+extern "C" int sigwait(const sigset_t *__restrict__ , int *__restrict__ )
+# 253 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2)));
+# 261 "/usr/include/signal.h" 3
+extern "C" int sigwaitinfo(const sigset_t *__restrict__ , siginfo_t *__restrict__ )
+# 262 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 269 "/usr/include/signal.h" 3
+extern "C" int sigtimedwait(const sigset_t *__restrict__ , siginfo_t *__restrict__ , const timespec *__restrict__ )
+# 272 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 276 "/usr/include/signal.h" 3
+extern "C" int sigqueue(__pid_t , int , const sigval ) throw();
+# 286 "/usr/include/signal.h" 3
+extern "C" { extern const char *const _sys_siglist[64 + 1]; }
+# 287 "/usr/include/signal.h" 3
+extern "C" { extern const char *const sys_siglist[64 + 1]; }
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpx_sw_bytes {
+# 33 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t magic1;
+# 34 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t extended_size;
+# 35 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t xstate_bv;
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t xstate_size;
+# 37 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t __glibc_reserved1[7];
+# 38 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 40 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpreg {
+# 42 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short significand[4];
+# 43 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short exponent;
+# 44 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 46 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpxreg {
+# 48 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short significand[4];
+# 49 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short exponent;
+# 50 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short __glibc_reserved1[3];
+# 51 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 53 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xmmreg {
+# 55 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t element[4];
+# 56 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 123 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpstate {
+# 126 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t cwd;
+# 127 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t swd;
+# 128 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t ftw;
+# 129 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t fop;
+# 130 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rip;
+# 131 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdp;
+# 132 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t mxcsr;
+# 133 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t mxcr_mask;
+# 134 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpxreg _st[8];
+# 135 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_xmmreg _xmm[16];
+# 136 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t __glibc_reserved1[24];
+# 137 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 139 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct sigcontext {
+# 141 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r8;
+# 142 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r9;
+# 143 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r10;
+# 144 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r11;
+# 145 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r12;
+# 146 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r13;
+# 147 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r14;
+# 148 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r15;
+# 149 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdi;
+# 150 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rsi;
+# 151 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rbp;
+# 152 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rbx;
+# 153 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdx;
+# 154 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rax;
+# 155 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rcx;
+# 156 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rsp;
+# 157 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rip;
+# 158 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t eflags;
+# 159 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short cs;
+# 160 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short gs;
+# 161 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short fs;
+# 162 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short __pad0;
+# 163 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t err;
+# 164 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t trapno;
+# 165 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t oldmask;
+# 166 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t cr2;
+# 168 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+union {
+# 169 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpstate *fpstate;
+# 170 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __fpstate_word;
+# 171 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+};
+# 172 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __reserved1[8];
+# 173 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 177 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xsave_hdr {
+# 179 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t xstate_bv;
+# 180 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __glibc_reserved1[2];
+# 181 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __glibc_reserved2[5];
+# 182 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 184 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _ymmh_state {
+# 186 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t ymmh_space[64];
+# 187 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 189 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xstate {
+# 191 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpstate fpstate;
+# 192 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_xsave_hdr xstate_hdr;
+# 193 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_ymmh_state ymmh;
+# 194 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 294 "/usr/include/signal.h" 3
+extern "C" int sigreturn(sigcontext * ) throw();
+# 31 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+extern "C" { typedef
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+struct {
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+void *ss_sp;
+# 29 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+int ss_flags;
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+size_t ss_size;
+# 31 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+} stack_t; }
+# 37 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ extern "C" { typedef long long greg_t; }
+# 46 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef greg_t gregset_t[23]; }
+# 51 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+enum {
+# 52 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R8,
+# 54 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R9,
+# 56 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R10,
+# 58 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R11,
+# 60 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R12,
+# 62 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R13,
+# 64 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R14,
+# 66 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R15,
+# 68 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RDI,
+# 70 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RSI,
+# 72 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RBP,
+# 74 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RBX,
+# 76 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RDX,
+# 78 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RAX,
+# 80 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RCX,
+# 82 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RSP,
+# 84 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RIP,
+# 86 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_EFL,
+# 88 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_CSGSFS,
+# 90 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_ERR,
+# 92 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_TRAPNO,
+# 94 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_OLDMASK,
+# 96 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_CR2
+# 98 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+};
+# 101 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_fpxreg {
+# 103 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short significand[4];
+# 104 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short exponent;
+# 105 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short __glibc_reserved1[3];
+# 106 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 108 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_xmmreg {
+# 110 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t element[4];
+# 111 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 113 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_fpstate {
+# 116 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t cwd;
+# 117 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t swd;
+# 118 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t ftw;
+# 119 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t fop;
+# 120 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint64_t rip;
+# 121 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint64_t rdp;
+# 122 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t mxcsr;
+# 123 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t mxcr_mask;
+# 124 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_fpxreg _st[8];
+# 125 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_xmmreg _xmm[16];
+# 126 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t __glibc_reserved1[24];
+# 127 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 130 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef _libc_fpstate *fpregset_t; }
+# 139 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef
+# 134 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+struct {
+# 135 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+gregset_t gregs;
+# 137 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+fpregset_t fpregs;
+# 138 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ unsigned long long __reserved1[8];
+# 139 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+} mcontext_t; }
+# 151 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef
+# 142 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+struct ucontext_t {
+# 144 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned long uc_flags;
+# 145 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+ucontext_t *uc_link;
+# 146 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+stack_t uc_stack;
+# 147 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+mcontext_t uc_mcontext;
+# 148 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+sigset_t uc_sigmask;
+# 149 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_fpstate __fpregs_mem;
+# 150 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ unsigned long long __ssp[4];
+# 151 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+} ucontext_t; }
+# 314 "/usr/include/signal.h" 3
+extern "C" int siginterrupt(int , int ) throw();
+# 28 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+enum {
+# 29 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+SS_ONSTACK = 1,
+# 31 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+SS_DISABLE
+# 33 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+};
+# 321 "/usr/include/signal.h" 3
+extern "C" int sigaltstack(const stack_t *__restrict__ , stack_t *__restrict__ ) throw();
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+extern "C" { struct sigstack {
+# 25 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+void *ss_sp;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+int ss_onstack;
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+}; }
+# 335 "/usr/include/signal.h" 3
+extern "C" int sigstack(struct sigstack * , struct sigstack * ) throw()
+# 336 "/usr/include/signal.h" 3
+ __attribute((__deprecated__));
+# 343 "/usr/include/signal.h" 3
+extern "C" int sighold(int ) throw();
+# 346 "/usr/include/signal.h" 3
+extern "C" int sigrelse(int ) throw();
+# 349 "/usr/include/signal.h" 3
+extern "C" int sigignore(int ) throw();
+# 352 "/usr/include/signal.h" 3
+extern "C" __sighandler_t sigset(int , __sighandler_t ) throw();
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_sigmask(int , const __sigset_t *__restrict__ , __sigset_t *__restrict__ ) throw();
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_kill(pthread_t , int ) throw();
+# 40 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_sigqueue(pthread_t , int , const sigval ) throw();
+# 366 "/usr/include/signal.h" 3
+extern "C" int __libc_current_sigrtmin() throw();
+# 368 "/usr/include/signal.h" 3
+extern "C" int __libc_current_sigrtmax() throw();
+# 29 "/usr/include/x86_64-linux-gnu/bits/signal_ext.h" 3
+extern "C" int tgkill(__pid_t , __pid_t , int );
 # 148 "/usr/local/cuda-5.0//include/cuda.h"
 extern "C" { typedef unsigned long long CUdeviceptr; }
 # 155 "/usr/local/cuda-5.0//include/cuda.h"
@@ -49510,61 +50446,35 @@ extern "C" CUresult cuGraphicsMapResources(unsigned , CUgraphicsResource * , CUs
 extern "C" CUresult cuGraphicsUnmapResources(unsigned , CUgraphicsResource * , CUstream );
 # 9059 "/usr/local/cuda-5.0//include/cuda.h"
 extern "C" CUresult cuGetExportTable(const void ** , const CUuuid * );
-# 10 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-extern "C" CUresult cuda_enc_setup(char * , char * );
-# 11 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-extern "C" CUresult cuda_enc_release();
-# 123 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 46 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+static void __cca_sighandler(int signo, void *si, void *data)
+# 47 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 48 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+arm_ucontext_t *uc = ((arm_ucontext_t *)data);
+# 49 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+((uc->uc_mcontext).pc) += (4);
+# 50 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 116 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 static inline int _benchmark_init()
-# 124 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 117 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 {
-# 125 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-printf("_benchmark_init\n");
-# 128 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-{
-# 129 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-printf("calling cuda_enc_setup\n");
-# 131 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-char static_key[] = "0123456789abcdeF0123456789abcdeF";
 # 132 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-char static_iv[] = "12345678876543211234567887654321";
-# 134 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-CUresult ret = cuda_enc_setup(static_key, static_iv);
+printf("init: ENC_CUDA=0\n");
 # 135 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-if (ret != (CUDA_SUCCESS)) {
+return CUDA_SUCCESS;
 # 136 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-fprintf(stderr, "cuda_enc_setup failed\n");
-# 137 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return ret;
+}
 # 138 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 144 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return CUDA_SUCCESS;
-# 145 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 147 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 static inline int _benchmark_cleanup()
-# 148 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 {
-# 152 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-{
+# 151 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("cleanup: ENC_CUDA=0\n");
 # 153 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-CUresult ret = cuda_enc_release();
-# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-if (ret != (CUDA_SUCCESS)) {
-# 155 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-fprintf(stderr, "cuda_enc_release failed\n");
-# 156 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return ret;
-# 157 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 158 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 160 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 return CUDA_SUCCESS;
-# 161 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 }
 # 31 "BlackScholes.cu"
 extern "C" void BlackScholesCPU(float * , float * , float * , float * , float * , float , float , int );
@@ -49636,263 +50546,271 @@ const float VOLATILITY = (0.3000000119F);
 int do_main(int argc, char **argv)
 # 72 "BlackScholes.cu"
 {
+# 74 "BlackScholes.cu"
+__asm__("HLT 0x1337"); ; __asm__("ISB"); ; __asm__("MOV XZR, 0x1");
 # 75 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1010");
+# 77 "BlackScholes.cu"
 printf("[%s] - Starting...\n", argv[0]);
-# 76 "BlackScholes.cu"
-;
-# 81 "BlackScholes.cu"
-float *h_CallResultCPU,
-# 82 "BlackScholes.cu"
-*h_PutResultCPU,
+# 78 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1011");
+# 79 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1012");
 # 84 "BlackScholes.cu"
-*h_CallResultGPU,
+float *h_CallResultCPU,
 # 85 "BlackScholes.cu"
-*h_PutResultGPU,
+*h_PutResultCPU,
 # 87 "BlackScholes.cu"
-*h_StockPrice,
+*h_CallResultGPU,
 # 88 "BlackScholes.cu"
+*h_PutResultGPU,
+# 90 "BlackScholes.cu"
+*h_StockPrice,
+# 91 "BlackScholes.cu"
 *h_OptionStrike,
-# 89 "BlackScholes.cu"
+# 92 "BlackScholes.cu"
 *h_OptionYears;
-# 94 "BlackScholes.cu"
-float *d_CallResult,
-# 95 "BlackScholes.cu"
-*d_PutResult,
 # 97 "BlackScholes.cu"
-*d_StockPrice,
+float *d_CallResult,
 # 98 "BlackScholes.cu"
+*d_PutResult,
+# 100 "BlackScholes.cu"
+*d_StockPrice,
+# 101 "BlackScholes.cu"
 *d_OptionStrike,
-# 99 "BlackScholes.cu"
-*d_OptionYears;
 # 102 "BlackScholes.cu"
-double delta, ref, sum_delta, sum_ref, max_delta, L1norm, gpuTime;
-# 104 "BlackScholes.cu"
-StopWatchInterface *hTimer = (__null);
+*d_OptionYears;
 # 105 "BlackScholes.cu"
-int i;
+double delta, ref, sum_delta, sum_ref, max_delta, L1norm, gpuTime;
 # 107 "BlackScholes.cu"
+StopWatchInterface *hTimer = (__null);
+# 108 "BlackScholes.cu"
+int i;
+# 110 "BlackScholes.cu"
 findCudaDevice(argc, (const char **)argv);
-# 109 "BlackScholes.cu"
-sdkCreateTimer(&hTimer);
 # 112 "BlackScholes.cu"
-printf("Initializing data...\n");
-# 113 "BlackScholes.cu"
-printf("...allocating CPU memory for options.\n");
-# 114 "BlackScholes.cu"
-h_CallResultCPU = ((float *)malloc(OPT_SZ));
+sdkCreateTimer(&hTimer);
 # 115 "BlackScholes.cu"
-h_PutResultCPU = ((float *)malloc(OPT_SZ));
+printf("Initializing data...\n");
 # 116 "BlackScholes.cu"
-h_CallResultGPU = ((float *)malloc(OPT_SZ));
+printf("...allocating CPU memory for options.\n");
 # 117 "BlackScholes.cu"
-h_PutResultGPU = ((float *)malloc(OPT_SZ));
+h_CallResultCPU = ((float *)malloc(OPT_SZ));
 # 118 "BlackScholes.cu"
-h_StockPrice = ((float *)malloc(OPT_SZ));
+h_PutResultCPU = ((float *)malloc(OPT_SZ));
 # 119 "BlackScholes.cu"
-h_OptionStrike = ((float *)malloc(OPT_SZ));
+h_CallResultGPU = ((float *)malloc(OPT_SZ));
 # 120 "BlackScholes.cu"
-h_OptionYears = ((float *)malloc(OPT_SZ));
+h_PutResultGPU = ((float *)malloc(OPT_SZ));
+# 121 "BlackScholes.cu"
+h_StockPrice = ((float *)malloc(OPT_SZ));
 # 122 "BlackScholes.cu"
-printf("...allocating GPU memory for options.\n");
+h_OptionStrike = ((float *)malloc(OPT_SZ));
 # 123 "BlackScholes.cu"
-check(cudaMalloc((void **)(&d_CallResult), OPT_SZ), "cudaMalloc((void **)&d_CallResult, OPT_SZ)", "BlackScholes.cu", 123);
-# 124 "BlackScholes.cu"
-check(cudaMalloc((void **)(&d_PutResult), OPT_SZ), "cudaMalloc((void **)&d_PutResult, OPT_SZ)", "BlackScholes.cu", 124);
+h_OptionYears = ((float *)malloc(OPT_SZ));
 # 125 "BlackScholes.cu"
-check(cudaMalloc((void **)(&d_StockPrice), OPT_SZ), "cudaMalloc((void **)&d_StockPrice, OPT_SZ)", "BlackScholes.cu", 125);
+printf("...allocating GPU memory for options.\n");
 # 126 "BlackScholes.cu"
-check(cudaMalloc((void **)(&d_OptionStrike), OPT_SZ), "cudaMalloc((void **)&d_OptionStrike, OPT_SZ)", "BlackScholes.cu", 126);
+check(cudaMalloc((void **)(&d_CallResult), OPT_SZ), "cudaMalloc((void **)&d_CallResult, OPT_SZ)", "BlackScholes.cu", 126);
 # 127 "BlackScholes.cu"
-check(cudaMalloc((void **)(&d_OptionYears), OPT_SZ), "cudaMalloc((void **)&d_OptionYears, OPT_SZ)", "BlackScholes.cu", 127);
+check(cudaMalloc((void **)(&d_PutResult), OPT_SZ), "cudaMalloc((void **)&d_PutResult, OPT_SZ)", "BlackScholes.cu", 127);
+# 128 "BlackScholes.cu"
+check(cudaMalloc((void **)(&d_StockPrice), OPT_SZ), "cudaMalloc((void **)&d_StockPrice, OPT_SZ)", "BlackScholes.cu", 128);
 # 129 "BlackScholes.cu"
-printf("...generating input data in CPU mem.\n");
+check(cudaMalloc((void **)(&d_OptionStrike), OPT_SZ), "cudaMalloc((void **)&d_OptionStrike, OPT_SZ)", "BlackScholes.cu", 129);
 # 130 "BlackScholes.cu"
-srand(5347);
+check(cudaMalloc((void **)(&d_OptionYears), OPT_SZ), "cudaMalloc((void **)&d_OptionYears, OPT_SZ)", "BlackScholes.cu", 130);
+# 132 "BlackScholes.cu"
+printf("...generating input data in CPU mem.\n");
 # 133 "BlackScholes.cu"
-for (i = 0; i < OPT_N; i++)
-# 134 "BlackScholes.cu"
-{
-# 135 "BlackScholes.cu"
-(h_CallResultCPU[i]) = (0.0F);
+srand(5347);
 # 136 "BlackScholes.cu"
-(h_PutResultCPU[i]) = (-(1.0F));
-# 137 "BlackScholes.cu"
-(h_StockPrice[i]) = RandFloat((5.0F), (30.0F));
-# 138 "BlackScholes.cu"
-(h_OptionStrike[i]) = RandFloat((1.0F), (100.0F));
-# 139 "BlackScholes.cu"
-(h_OptionYears[i]) = RandFloat((0.25F), (10.0F));
-# 140 "BlackScholes.cu"
-}
-# 141 "BlackScholes.cu"
-;
-# 142 "BlackScholes.cu"
-;
-# 144 "BlackScholes.cu"
-printf("...copying input data to GPU mem.\n");
-# 146 "BlackScholes.cu"
-check(cudaMemcpy(d_StockPrice, h_StockPrice, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_StockPrice, h_StockPrice, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 146);
-# 147 "BlackScholes.cu"
-check(cudaMemcpy(d_OptionStrike, h_OptionStrike, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_OptionStrike, h_OptionStrike, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 147);
-# 148 "BlackScholes.cu"
-check(cudaMemcpy(d_OptionYears, h_OptionYears, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_OptionYears, h_OptionYears, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 148);
-# 149 "BlackScholes.cu"
-printf("Data init done.\n\n");
-# 152 "BlackScholes.cu"
-printf("Executing Black-Scholes GPU kernel (%i iterations)...\n", NUM_ITERATIONS);
-# 153 "BlackScholes.cu"
-check(cudaDeviceSynchronize(), "cudaDeviceSynchronize()", "BlackScholes.cu", 153);
-# 154 "BlackScholes.cu"
-sdkResetTimer(&hTimer);
-# 155 "BlackScholes.cu"
-sdkStartTimer(&hTimer);
-# 156 "BlackScholes.cu"
-;
-# 157 "BlackScholes.cu"
-;
-# 159 "BlackScholes.cu"
-for (i = 0; i < NUM_ITERATIONS; i++)
-# 160 "BlackScholes.cu"
-{
-# 161 "BlackScholes.cu"
-(cudaConfigureCall(480, 128)) ? ((void)0) : BlackScholesGPU(d_CallResult, d_PutResult, d_StockPrice, d_OptionStrike, d_OptionYears, RISKFREE, VOLATILITY, OPT_N);
-# 171 "BlackScholes.cu"
-__getLastCudaError("BlackScholesGPU() execution failed\n", "BlackScholes.cu", 171);
-# 172 "BlackScholes.cu"
-}
-# 174 "BlackScholes.cu"
-check(cudaDeviceSynchronize(), "cudaDeviceSynchronize()", "BlackScholes.cu", 174);
-# 175 "BlackScholes.cu"
-sdkStopTimer(&hTimer);
-# 176 "BlackScholes.cu"
-gpuTime = (sdkGetTimerValue(&hTimer) / NUM_ITERATIONS);
-# 179 "BlackScholes.cu"
-printf("Options count             : %i     \n", 2 * OPT_N);
-# 180 "BlackScholes.cu"
-printf("BlackScholesGPU() time    : %f msec\n", gpuTime);
-# 181 "BlackScholes.cu"
-printf("Effective memory bandwidth: %f GB/s\n", (((double)((5 * OPT_N) * sizeof(float))) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)));
-# 182 "BlackScholes.cu"
-printf("Gigaoptions per second    : %f     \n\n", (((double)(2 * OPT_N)) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)));
-# 184 "BlackScholes.cu"
-printf("BlackScholes, Throughput = %.4f GOptions/s, Time = %.5f s, Size = %u options, NumDevsUsed = %u, Workgroup = %u\n", (((double)((2.0) * OPT_N)) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)), gpuTime * (0.001000000000000000021), 2 * OPT_N, 1, 128);
-# 187 "BlackScholes.cu"
-;
-# 188 "BlackScholes.cu"
-printf("\nReading back GPU results...\n");
-# 189 "BlackScholes.cu"
-;
-# 191 "BlackScholes.cu"
-check(cudaMemcpy(h_CallResultGPU, d_CallResult, OPT_SZ, cudaMemcpyDeviceToHost), "cudaMemcpy(h_CallResultGPU, d_CallResult, OPT_SZ, cudaMemcpyDeviceToHost)", "BlackScholes.cu", 191);
-# 192 "BlackScholes.cu"
-check(cudaMemcpy(h_PutResultGPU, d_PutResult, OPT_SZ, cudaMemcpyDeviceToHost), "cudaMemcpy(h_PutResultGPU, d_PutResult, OPT_SZ, cudaMemcpyDeviceToHost)", "BlackScholes.cu", 192);
-# 194 "BlackScholes.cu"
-;
-# 197 "BlackScholes.cu"
-printf("Checking the results...\n");
-# 198 "BlackScholes.cu"
-printf("...running CPU calculations.\n\n");
-# 200 "BlackScholes.cu"
-BlackScholesCPU(h_CallResultCPU, h_PutResultCPU, h_StockPrice, h_OptionStrike, h_OptionYears, RISKFREE, VOLATILITY, OPT_N);
-# 211 "BlackScholes.cu"
-printf("Comparing the results...\n");
-# 214 "BlackScholes.cu"
-sum_delta = (0);
-# 215 "BlackScholes.cu"
-sum_ref = (0);
-# 216 "BlackScholes.cu"
-max_delta = (0);
-# 218 "BlackScholes.cu"
 for (i = 0; i < OPT_N; i++)
+# 137 "BlackScholes.cu"
+{
+# 138 "BlackScholes.cu"
+(h_CallResultCPU[i]) = (0.0F);
+# 139 "BlackScholes.cu"
+(h_PutResultCPU[i]) = (-(1.0F));
+# 140 "BlackScholes.cu"
+(h_StockPrice[i]) = RandFloat((5.0F), (30.0F));
+# 141 "BlackScholes.cu"
+(h_OptionStrike[i]) = RandFloat((1.0F), (100.0F));
+# 142 "BlackScholes.cu"
+(h_OptionYears[i]) = RandFloat((0.25F), (10.0F));
+# 143 "BlackScholes.cu"
+}
+# 144 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1013");
+# 145 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1018");
+# 147 "BlackScholes.cu"
+printf("...copying input data to GPU mem.\n");
+# 149 "BlackScholes.cu"
+check(cudaMemcpy(d_StockPrice, h_StockPrice, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_StockPrice, h_StockPrice, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 149);
+# 150 "BlackScholes.cu"
+check(cudaMemcpy(d_OptionStrike, h_OptionStrike, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_OptionStrike, h_OptionStrike, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 150);
+# 151 "BlackScholes.cu"
+check(cudaMemcpy(d_OptionYears, h_OptionYears, OPT_SZ, cudaMemcpyHostToDevice), "cudaMemcpy(d_OptionYears, h_OptionYears, OPT_SZ, cudaMemcpyHostToDevice)", "BlackScholes.cu", 151);
+# 152 "BlackScholes.cu"
+printf("Data init done.\n\n");
+# 155 "BlackScholes.cu"
+printf("Executing Black-Scholes GPU kernel (%i iterations)...\n", NUM_ITERATIONS);
+# 156 "BlackScholes.cu"
+check(cudaDeviceSynchronize(), "cudaDeviceSynchronize()", "BlackScholes.cu", 156);
+# 157 "BlackScholes.cu"
+sdkResetTimer(&hTimer);
+# 158 "BlackScholes.cu"
+sdkStartTimer(&hTimer);
+# 159 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1019");
+# 160 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1014");
+# 162 "BlackScholes.cu"
+for (i = 0; i < NUM_ITERATIONS; i++)
+# 163 "BlackScholes.cu"
+{
+# 164 "BlackScholes.cu"
+(cudaConfigureCall(480, 128)) ? ((void)0) : BlackScholesGPU(d_CallResult, d_PutResult, d_StockPrice, d_OptionStrike, d_OptionYears, RISKFREE, VOLATILITY, OPT_N);
+# 174 "BlackScholes.cu"
+__getLastCudaError("BlackScholesGPU() execution failed\n", "BlackScholes.cu", 174);
+# 175 "BlackScholes.cu"
+}
+# 177 "BlackScholes.cu"
+check(cudaDeviceSynchronize(), "cudaDeviceSynchronize()", "BlackScholes.cu", 177);
+# 178 "BlackScholes.cu"
+sdkStopTimer(&hTimer);
+# 179 "BlackScholes.cu"
+gpuTime = (sdkGetTimerValue(&hTimer) / NUM_ITERATIONS);
+# 182 "BlackScholes.cu"
+printf("Options count             : %i     \n", 2 * OPT_N);
+# 183 "BlackScholes.cu"
+printf("BlackScholesGPU() time    : %f msec\n", gpuTime);
+# 184 "BlackScholes.cu"
+printf("Effective memory bandwidth: %f GB/s\n", (((double)((5 * OPT_N) * sizeof(float))) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)));
+# 185 "BlackScholes.cu"
+printf("Gigaoptions per second    : %f     \n\n", (((double)(2 * OPT_N)) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)));
+# 187 "BlackScholes.cu"
+printf("BlackScholes, Throughput = %.4f GOptions/s, Time = %.5f s, Size = %u options, NumDevsUsed = %u, Workgroup = %u\n", (((double)((2.0) * OPT_N)) * (1.000000000000000062e-09)) / (gpuTime * (0.001000000000000000021)), gpuTime * (0.001000000000000000021), 2 * OPT_N, 1, 128);
+# 190 "BlackScholes.cu"
+__asm__("MOV XZR, 0x1015");
+# 191 "BlackScholes.cu"
+printf("\nReading back GPU results...\n");
+# 192 "BlackScholes.cu"
+__asm__("MOV XZR, 0x101A");
+# 194 "BlackScholes.cu"
+check(cudaMemcpy(h_CallResultGPU, d_CallResult, OPT_SZ, cudaMemcpyDeviceToHost), "cudaMemcpy(h_CallResultGPU, d_CallResult, OPT_SZ, cudaMemcpyDeviceToHost)", "BlackScholes.cu", 194);
+# 195 "BlackScholes.cu"
+check(cudaMemcpy(h_PutResultGPU, d_PutResult, OPT_SZ, cudaMemcpyDeviceToHost), "cudaMemcpy(h_PutResultGPU, d_PutResult, OPT_SZ, cudaMemcpyDeviceToHost)", "BlackScholes.cu", 195);
+# 197 "BlackScholes.cu"
+__asm__("MOV XZR, 0x101B");
+# 200 "BlackScholes.cu"
+printf("Checking the results...\n");
+# 201 "BlackScholes.cu"
+printf("...running CPU calculations.\n\n");
+# 203 "BlackScholes.cu"
+BlackScholesCPU(h_CallResultCPU, h_PutResultCPU, h_StockPrice, h_OptionStrike, h_OptionYears, RISKFREE, VOLATILITY, OPT_N);
+# 214 "BlackScholes.cu"
+printf("Comparing the results...\n");
+# 217 "BlackScholes.cu"
+sum_delta = (0);
+# 218 "BlackScholes.cu"
+sum_ref = (0);
 # 219 "BlackScholes.cu"
-{
-# 220 "BlackScholes.cu"
-ref = (h_CallResultCPU[i]);
+max_delta = (0);
 # 221 "BlackScholes.cu"
-delta = (fabs((h_CallResultCPU[i]) - (h_CallResultGPU[i])));
-# 223 "BlackScholes.cu"
-if (delta > max_delta)
-# 224 "BlackScholes.cu"
+for (i = 0; i < OPT_N; i++)
+# 222 "BlackScholes.cu"
 {
-# 225 "BlackScholes.cu"
-max_delta = delta;
+# 223 "BlackScholes.cu"
+ref = (h_CallResultCPU[i]);
+# 224 "BlackScholes.cu"
+delta = (fabs((h_CallResultCPU[i]) - (h_CallResultGPU[i])));
 # 226 "BlackScholes.cu"
-}
+if (delta > max_delta)
+# 227 "BlackScholes.cu"
+{
 # 228 "BlackScholes.cu"
-sum_delta += delta;
+max_delta = delta;
 # 229 "BlackScholes.cu"
-sum_ref += fabs(ref);
-# 230 "BlackScholes.cu"
 }
+# 231 "BlackScholes.cu"
+sum_delta += delta;
 # 232 "BlackScholes.cu"
-L1norm = (sum_delta / sum_ref);
+sum_ref += fabs(ref);
 # 233 "BlackScholes.cu"
-printf("L1 norm: %E\n", L1norm);
-# 234 "BlackScholes.cu"
-printf("Max absolute error: %E\n\n", max_delta);
+}
+# 235 "BlackScholes.cu"
+L1norm = (sum_delta / sum_ref);
 # 236 "BlackScholes.cu"
-printf("Shutting down...\n");
+printf("L1 norm: %E\n", L1norm);
 # 237 "BlackScholes.cu"
-printf("...releasing GPU memory.\n");
-# 238 "BlackScholes.cu"
-;
+printf("Max absolute error: %E\n\n", max_delta);
 # 239 "BlackScholes.cu"
-check(cudaFree(d_OptionYears), "cudaFree(d_OptionYears)", "BlackScholes.cu", 239);
+printf("Shutting down...\n");
 # 240 "BlackScholes.cu"
-check(cudaFree(d_OptionStrike), "cudaFree(d_OptionStrike)", "BlackScholes.cu", 240);
+printf("...releasing GPU memory.\n");
 # 241 "BlackScholes.cu"
-check(cudaFree(d_StockPrice), "cudaFree(d_StockPrice)", "BlackScholes.cu", 241);
+__asm__("MOV XZR, 0x1016");
 # 242 "BlackScholes.cu"
-check(cudaFree(d_PutResult), "cudaFree(d_PutResult)", "BlackScholes.cu", 242);
+check(cudaFree(d_OptionYears), "cudaFree(d_OptionYears)", "BlackScholes.cu", 242);
 # 243 "BlackScholes.cu"
-check(cudaFree(d_CallResult), "cudaFree(d_CallResult)", "BlackScholes.cu", 243);
+check(cudaFree(d_OptionStrike), "cudaFree(d_OptionStrike)", "BlackScholes.cu", 243);
+# 244 "BlackScholes.cu"
+check(cudaFree(d_StockPrice), "cudaFree(d_StockPrice)", "BlackScholes.cu", 244);
 # 245 "BlackScholes.cu"
-printf("...releasing CPU memory.\n");
+check(cudaFree(d_PutResult), "cudaFree(d_PutResult)", "BlackScholes.cu", 245);
 # 246 "BlackScholes.cu"
-free(h_OptionYears);
-# 247 "BlackScholes.cu"
-free(h_OptionStrike);
+check(cudaFree(d_CallResult), "cudaFree(d_CallResult)", "BlackScholes.cu", 246);
 # 248 "BlackScholes.cu"
-free(h_StockPrice);
+printf("...releasing CPU memory.\n");
 # 249 "BlackScholes.cu"
-free(h_PutResultGPU);
+free(h_OptionYears);
 # 250 "BlackScholes.cu"
-free(h_CallResultGPU);
+free(h_OptionStrike);
 # 251 "BlackScholes.cu"
-free(h_PutResultCPU);
+free(h_StockPrice);
 # 252 "BlackScholes.cu"
-free(h_CallResultCPU);
+free(h_PutResultGPU);
 # 253 "BlackScholes.cu"
-sdkDeleteTimer(&hTimer);
+free(h_CallResultGPU);
 # 254 "BlackScholes.cu"
-printf("Shutdown done.\n");
+free(h_PutResultCPU);
+# 255 "BlackScholes.cu"
+free(h_CallResultCPU);
 # 256 "BlackScholes.cu"
-printf("\n[BlackScholes] - Test Summary\n");
-# 258 "BlackScholes.cu"
-cudaDeviceReset();
+sdkDeleteTimer(&hTimer);
+# 257 "BlackScholes.cu"
+printf("Shutdown done.\n");
 # 259 "BlackScholes.cu"
-;
+printf("\n[BlackScholes] - Test Summary\n");
 # 261 "BlackScholes.cu"
-printf("Test done\n");
+cudaDeviceReset();
 # 262 "BlackScholes.cu"
-exit(0);
+__asm__("MOV XZR, 0x1017");
 # 263 "BlackScholes.cu"
-}
+__asm__("MOV XZR, 0x2"); __asm__("ISB"); ; __asm__("HLT 0x1337"); ;
 # 265 "BlackScholes.cu"
-int main(int argc, char **argv) {
+printf("Test done\n");
 # 266 "BlackScholes.cu"
-_benchmark_init();
+exit(0);
 # 267 "BlackScholes.cu"
-int ret = do_main(argc, argv);
-# 268 "BlackScholes.cu"
-_benchmark_cleanup();
-# 269 "BlackScholes.cu"
-return ret;
-# 270 "BlackScholes.cu"
 }
-# 1 "tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c"
-# 1 "tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c" 1 3
+# 269 "BlackScholes.cu"
+int main(int argc, char **argv) {
+# 270 "BlackScholes.cu"
+{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
+# 271 "BlackScholes.cu"
+int ret = do_main(argc, argv);
+# 272 "BlackScholes.cu"
+_benchmark_cleanup();
+# 273 "BlackScholes.cu"
+return ret;
+# 274 "BlackScholes.cu"
+}
+# 1 "tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c"
+# 1 "tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -50478,8 +51396,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_0002997c_00000000-1_BlackScholes.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_00022f33_00000000-1_BlackScholes.fatbin.c" 1 3
 
 
 asm(
@@ -50665,49 +51583,49 @@ asm(
 ".quad 0x0000000000000000,0x0000000000000090,0x0000000000000008,0x0000007001010001\n"
 ".quad 0x0000000000000520,0x0000004000000000,0x0000001400030001,0x0000000f00000060\n"
 ".quad 0x0000000000001015,0x0000000000000000,0x0000000000001119,0x0000001200000048\n"
-".quad 0x6765727278616d2d,0x36313d746e756f63,0x0000000001002020,0x6863536b63616c42\n"
+".quad 0x6765727278616d2d,0x36313d746e756f63,0x0000000002002020,0x6863536b63616c42\n"
 ".quad 0x0075632e73656c6f,0x46a36f6b579d9c78,0x52c95a057e5cfd14,0x6aaa3a813cc0392b\n"
 ".quad 0x7d29587ea5559d6f,0x8ba1c18616455d48,0x3bdffaad26ec0531,0x471bd498e0c78773\n"
 ".quad 0xdcf7b9dce7b99289,0xa24e71f52cb13303,0x4e5907136143b3aa,0x837ef5d8d13b5513\n"
 ".quad 0xbd7512a49289cb3d,0xa704a9cd85bfb3a9,0xd9b73bf642be2e59,0xe79e366d29fbea97\n"
-".quad 0x6e7c0bf563f430e1,0xf1f7cfe28f2acdc2,0x71259713b51721e3,0x61e3f64b1b2d77b2\n"
-".quad 0x9e8db61d8baddc2f,0x39beacea28f37ddd,0xf87565bb1173f516,0x6eb1d536ed4dc443\n"
-".quad 0x6f1f2b2a8a537244,0x90ea9bc795ddc28a,0xdd8eacfbb9164564,0x6fdcd70b7297da3a\n"
-".quad 0x3b910aa8b3e6c7f4,0x8e02c8802bb1f1f1,0xf8ddca3887e6e575,0x74e2dcf1cc374498\n"
-".quad 0x3f388ac9b671bbda,0x6dde32f4f1e9c226,0xe9362c594e226e81,0x5dcc0d64291b88b1\n"
-".quad 0xb67944edb946d87e,0xf9bd81b676c0ec2b,0xca1cdf70515fe7fd,0x4468b1fc7e26a2df\n"
-".quad 0xc587e3e4f8b14695,0xe38aca7e53da142b,0xcdb67565c1cb8693,0x14259ea9a288ed85\n"
-".quad 0x98f97f1f0ff3b331,0x5b5f669a57f46fde,0x9c8e76ded155194e,0x7f378dd8037a2ffe\n"
-".quad 0x22c4df8589bd0b0b,0x2d7c129581d1626f,0x67af0a8dc589bd8b,0x8953963fd637d6f9\n"
-".quad 0x7959ec489594ed9d,0x344cb52bb45bbecb,0xb3415457ef116eab,0x5598e52301e396f4\n"
-".quad 0x89e56592e5f22dc9,0x7f6e7ceb926402ae,0xff74e76fd205d6ba,0xe3a7ae0f40ba3a7a\n"
-".quad 0x4740b93a7af0f40b,0xe4cab5f26a7cf5de,0xf9b3d7a6c97b367a,0x4bed9ebb399876a8\n"
-".quad 0x2fb439a7226a7c76,0x8c2a708c39ffbe97,0x9c35ae64c2a7cc21,0xe10661538788538a\n"
-".quad 0x076c6d51be54da40,0x941b6a70fed646cc,0xd3ce25944dc59cbe,0xf9cd159b7e9658c2\n"
-".quad 0x99128c5bacd1b4aa,0x0152a26c10327db0,0x2a85bb47f37632b1,0x0a80721f31ddb0ed\n"
-".quad 0x5aec9221d9e8a421,0x9682561a13b3a534,0xf60b97beb0b63f7a,0xf510dbcad5ec8ab6\n"
-".quad 0x6bd32b6d58896e9a,0x3b92978232b8280f,0x55391f74ac2e687d,0xb71d251ed65402d1\n"
-".quad 0xb15db8636bb10ab0,0x95fc5b17dbf81ed4,0x74797d4a72716d25,0x3d202b7bbcf3c961\n"
-".quad 0x603d31c6840b3d63,0xf6931f4957a6317a,0xc015af538babc76c,0x31aa943b11a2b43d\n"
-".quad 0x54d4fe866ab3feab,0x682a9e7ed518be52,0x31b61628f04fb553,0x26d0c24c6d436ddc\n"
-".quad 0x06b9bd190c9d9256,0x9eb2fa8c3d7d6ccb,0xa78d9794a89d877c,0x199e5f5b2b9a0b0e\n"
-".quad 0xe645a7cfc307a648,0x028c7c825035026d,0x3a128c01330bc158,0xd2936f830d57afa7\n"
-".quad 0x7cf8a1db71f53d71,0x5dd932123bbed2c0,0x34e361af983badb4,0xe6bf943eb175f2e3\n"
-".quad 0xf5a095ba8412103f,0x4cc459ec5a607aa6,0x28f4831490e5c55a,0x574bd92ba8c01530\n"
-".quad 0x0ca1dc48388df1bd,0x8d20703235247c8d,0x564972c15652ab42,0x1b3a789bb28978c3\n"
-".quad 0x062f1a9931f5062f,0x53dfefd7287eb121,0x6ab8a0c66367978c,0x74efce525cbb6d4c\n"
-".quad 0xfee02fd7ad10eb2b,0x3d4d69155141d7bc,0x2984018181ce0fdf,0x39fe05dc1e2bd6ac\n"
-".quad 0x024974ae81803430,0x0a819e245534b776,0xf2a44a7756501147,0xe1878968e8d64dfa\n"
-".quad 0xe3a237e185f95774,0x085d979c8a410250,0xfd278947b001a1e6,0xa247e2bf880e6048\n"
-".quad 0xc08d391c7ed3a40b,0xa7cf5daa751b0858,0x34ed350ef240469c,0x941469c4be0ddba2\n"
-".quad 0x7a814c28d394e127,0x4e95f9296a8d38af,0x4e2bf140ebde64a3,0x99469c579200d4a3\n"
-".quad 0x8d40dca34e53a401,0xe7e53ba735faa7f4,0x068d392e70c3234e,0x8bd51a723fa8d383\n"
-".quad 0x0cb6e624a3dbbcc1,0x3e9950f4e98fd7a4,0x3089832a192fbd5d,0x8c8693fa46543534\n"
-".quad 0x0e3a3660a1c9024b,0x67fb3434c3ac4818,0xd5fcf8d8c8ce80d0,0x0f31badfcfee3627\n"
-".quad 0x28f91003d9133846,0x60b0277a3a486fa5,0xf03c684e23f98328,0xe551b2ac70f89ea3\n"
-".quad 0x9cae37b9290b2b5c,0x2a1ce544e7ab87cf,0x18b3ac616fbcc8e7,0xe595b85f13fd3af7\n"
-".quad 0xda32b7e7a32b7b4d,0xcdfd22737b70cadf,0xc2cd12ab1b727909,0xb7851ff4a7fe57fa\n"
-".quad 0x0000000000000cb4\n"
+".quad 0x4dcf817ea2129c61,0x7e3ef9fc51e559b8,0x4e24b2e276a2e43c,0xec3c7ec96365aef6\n"
+".quad 0xb3d1b6c3b175bb85,0xc737d59d451e6fbb,0x7f0eacb7622e7ea2,0x8dd63aa6dda9b888\n"
+".quad 0x4de3e565514a6e48,0x921d5378f2bbb851,0x5bb1d59f7722c8ac,0x8dfb9ae16e52fb47\n"
+".quad 0x27722155167cd8fe,0xb1c0591005763e3e,0x1f1bb94710fcdcae,0x4e9c5b9e3986e893\n"
+".quad 0xc7e7115936ce377b,0x2dbbc65e9e3d3844,0x3d26c58b29c44dd0,0xcbb981ac85237116\n"
+".quad 0x76cf289db728db0f,0xbf37b036ced81d85,0xf9439bee0a2bfcff,0xa88d163f8fc4d45b\n"
+".quad 0x78b0fc7c9f1628d2,0x7c71594fca7b4285,0xb9b6ceacb83970d2,0x2284b3d534511db0\n"
+".quad 0xd31f2fe3e1fe7666,0xcb6becd34afe8dfb,0xd391cedbda2aa329,0x6fe6f1bb006f45ff\n"
+".quad 0xe4589bf0b137a161,0x65af8252b03a2c4d,0x2cf5e151b8b137b1,0xb12a72c7fac6fadf\n"
+".quad 0x6f2b3d8912b29db3,0x668996a5768b77d9,0x96682a8afde22dd5,0x2ab31ca4603c72de\n"
+".quad 0xd13cacb25cbe45b9,0x4fedcf9d724c8055,0x5fee9cedfa40bad7,0x7c74f5c1e817474f\n"
+".quad 0xc8e817274f5e1e81,0x5c9956be4d4f9ebb,0x1f367af4d92f66cf,0xc97db3d767330ed5\n"
+".quad 0xe5f68734e44d4f8e,0x31854e11873ff7d2,0x5386b5cc9854f984,0x1c20cc2a70f10a71\n"
+".quad 0x80ed8daa37ca9b48,0xd2836d4e1fdac8d9,0x5a79c4b289b8b397,0x5f39a2b36fd2cb18\n"
+".quad 0x1322518b759a3695,0x202a544d82064fb6,0xa550b768fe6ec656,0x21500e43e63bb61d\n"
+".quad 0x8b5d92443b3d1484,0x52d04ac3427674a6,0xdec172f7d616c7ef,0x5ea21b795abd9156\n"
+".quad 0xed7a656dab112dd3,0xa77252f046570501,0x2aa723ee9585cd0f,0x16e3a4a3daca805a\n"
+".quad 0x962bb70c6d762156,0xb2bf8b62fb7f03da,0x2e8f2fa94e4e2da4,0x67a4056f779e792c\n"
+".quad 0x4c07a638d08167ac,0x9ed263e92af4c62f,0xb802b5ea717578ed,0x6635528762345687\n"
+".quad 0x4a9a9fd0cd567fd5,0x6d0553cfdaa317ca,0x8636c2c51e09f6aa,0xc4da18498da86dbb\n"
+".quad 0x60d737a32193b24a,0x93d65f5187afad99,0xd4f1b2f29513b0ef,0x0333cbeb65734161\n"
+".quad 0xbcc8b4f9f860f4c9,0x00518f904a06a04d,0xe74251802661782b,0x3a526df061aaf5f4\n"
+".quad 0x0f9f143b6e3ea7ae,0x8bbb26424777da58,0x669c6c35f30775b6,0xfcd7f287d62ebe5c\n"
+".quad 0xdeb412b750824207,0x49988b3d8b4c0f54,0x051e9062921cb8ab,0xaae97b25751802a6\n"
+".quad 0xa1943b890711be37,0x51a40e0646a48f91,0x6ac92e582aca5568,0xe3674f1376512f18\n"
+".quad 0x20c5e353263ea0c5,0x8a7bfdfae50fd624,0x8d571418cc6cf2f1,0x6e9df9ca4b976da9\n"
+".quad 0x9fdc05faf5a21d65,0xe7a9ad22aa283af7,0x853080303039c1fb,0x073fc0bb83c57ad5\n"
+".quad 0xc0492e95d0300686,0xe15033c48aa696ee,0x5e54894eeaca0228,0x9c30f12d1d1ac9bf\n"
+".quad 0x1c7446fc30bf2aee,0xc10bb2f39148204a,0x1fa4f128f600343c,0x7448fc57f101cc09\n"
+".quad 0x1811a7238fda7481,0x94f9ebb54ea3610b,0x469da6a1de4808d3,0xf2828d3897c1bb74\n"
+".quad 0xef5029851a729c24,0x69d2bf252d51a715,0x69c57e281d7bcc94,0x3328d38af2401a94\n"
+".quad 0x91a81b9469ca7480,0xdcfca774e6bf54fe,0x60d1a725ce186469,0x317aa34e47f51a70\n"
+".quad 0x8196dcc4947b7798,0xa7d32a1e9d31faf4,0x861130654325f7ab,0x7190d27f48ca86a6\n"
+".quad 0x01c746cc14392049,0x0cff668698758903,0xfabf9f1b1919d01a,0xc1e6375bf9fdc6c4\n"
+".quad 0xa51f22007b226708,0x0c1604ef47490df4,0x7e078d09c47f3065,0x9caa36558e1f13d4\n"
+".quad 0xf395c6f72521656b,0xe5439ca89cf570f9,0xe316758c2df7991c,0xbcb2b70be27fa75e\n"
+".quad 0xfb4656fcf4656f69,0x39bfa44e6f6e195b,0x5859a255636e4f21,0xdd9a03fe94ffcaff\n"
+".quad 0x000000000000feb3\n"
 ".text");
 
 extern "C" {
@@ -50723,10 +51641,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c" 2 3
 extern void __device_stub__Z15BlackScholesGPUPfS_S_S_S_ffi(float *, float *, float *, float *, float *, float, float, int);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_47_tmpxft_0002997c_00000000_6_BlackScholes_cpp1_ii_cec09074(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_47_tmpxft_00022f33_00000000_6_BlackScholes_cpp1_ii_cec09074(void) __attribute__((__constructor__));
 void __device_stub__Z15BlackScholesGPUPfS_S_S_S_ffi(float *__par0, float *__par1, float *__par2, float *__par3, float *__par4, float __par5, float __par6, int __par7){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)44UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)48UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(float *, float *, float *, float *, float *, float, float, int))BlackScholesGPU)); (void)cudaLaunch(((char *)((void ( *)(float *, float *, float *, float *, float *, float, float, int))BlackScholesGPU))); };}
 # 73 "BlackScholes_kernel.cuh"
 void BlackScholesGPU( float *__cuda_0,float *__cuda_1,float *__cuda_2,float *__cuda_3,float *__cuda_4,float __cuda_5,float __cuda_6,int __cuda_7)
@@ -50734,8 +51652,8 @@ void BlackScholesGPU( float *__cuda_0,float *__cuda_1,float *__cuda_2,float *__c
 {__device_stub__Z15BlackScholesGPUPfS_S_S_S_ffi( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7);
 # 101 "BlackScholes_kernel.cuh"
 }
-# 1 "/tmp/tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T237) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T237; }; __cudaRegisterFunction(__T237, (const char*)((void ( *)(float *, float *, float *, float *, float *, float, float, int))BlackScholesGPU), (char*)"_Z15BlackScholesGPUPfS_S_S_S_ffi", "_Z15BlackScholesGPUPfS_S_S_S_ffi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_47_tmpxft_0002997c_00000000_6_BlackScholes_cpp1_ii_cec09074(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c" 2
-# 1 "tmpxft_0002997c_00000000-3_BlackScholes.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_47_tmpxft_00022f33_00000000_6_BlackScholes_cpp1_ii_cec09074(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c" 2
+# 1 "tmpxft_00022f33_00000000-3_BlackScholes.cudafe1.stub.c"

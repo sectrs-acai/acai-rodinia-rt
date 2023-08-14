@@ -12,8 +12,9 @@
 	Department of Computer Science
 	
 ***********************************************/
-
+#include "cca_benchmark.h"
 #include "streamcluster_header.h"
+
 
 using namespace std;
 
@@ -851,6 +852,8 @@ void streamCluster( PStream* stream,
 
 int do_main(int argc, char **argv)
 {
+    CCA_BENCHMARK_START;
+    CCA_INIT;
   char *outfilename = new char[MAXNAMESIZE];
   char *infilename = new char[MAXNAMESIZE];
   long kmin, kmax, n, chunksize, clustersize;
@@ -893,6 +896,7 @@ int do_main(int argc, char **argv)
   strcpy(infilename, argv[7]);
   strcpy(outfilename, argv[8]);
   nproc = atoi(argv[9]);
+  CCA_INIT_STOP;
 
   srand48(SEED);
   PStream* stream;
@@ -954,11 +958,13 @@ int do_main(int argc, char **argv)
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_bench_end();
 #endif
+
+  CCA_BENCHMARK_STOP;
   
   return 0;
 }
 
-#include "cca_benchmark.h"
+
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
     int ret = do_main(argc, argv);

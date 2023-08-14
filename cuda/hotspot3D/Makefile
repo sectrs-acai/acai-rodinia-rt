@@ -11,4 +11,4 @@ release: 3D.cu.cpp
 	$(NVCC) $(OUTPUT) $(NVCC_FLAGS) -c $< -o $@  $(CUDA_FLAG)
 
 clean:
-	rm -f 3D 3D.cu.cpp
+	rm -f 3D *.cu.cpp

@@ -627,6 +627,8 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
     CCA_CLOSE_STOP;
 }
 int do_main(int argc, char * argv[]){
+    CCA_BENCHMARK_START;
+    CCA_INIT;
 	
 	char* usage = "naive.out -x <dimX> -y <dimY> -z <Nfr> -np <Nparticles>";
 	//check number of arguments
@@ -698,6 +700,9 @@ int do_main(int argc, char * argv[]){
 	videoSequence(I, IszX, IszY, Nfr, seed);
 	long long endVideoSequence = get_time();
 	printf("VIDEO SEQUENCE TOOK %f\n", elapsed_time(start, endVideoSequence));
+    CCA_INIT_STOP;
+
+
 	//call particle filter
 	particleFilter(I, IszX, IszY, Nfr, seed, Nparticles);
 	long long endParticleFilter = get_time();
@@ -706,6 +711,7 @@ int do_main(int argc, char * argv[]){
 	
 	free(seed);
 	free(I);
+    CCA_BENCHMARK_STOP;
 	return 0;
 }
 

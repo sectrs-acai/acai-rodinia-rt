@@ -121,6 +121,8 @@ void write_data(	char* filename,
 //===============================================================================================================================================================================================================
 int do_main(int argc, char *argv []){
 
+    CCA_BENCHMARK_START;
+    CCA_INIT;
   printf("WG size of kernel = %d \n", NUMBER_THREADS);
 	//======================================================================================================================================================
 	//	VARIABLES
@@ -162,7 +164,7 @@ int do_main(int argc, char *argv []){
 	common.frame_cols = AVI_video_width(frames);
 	common.frame_elem = common.frame_rows * common.frame_cols;
 	common.frame_mem = sizeof(fp) * common.frame_elem;
-
+    CCA_INIT_STOP;
     CCA_MEMALLOC;
 	// pointers
 	cudaMalloc((void **)&common_change.d_frame, common.frame_mem);
@@ -799,6 +801,7 @@ int do_main(int argc, char *argv []){
 	}
 
     CCA_CLOSE_STOP;
+    CCA_BENCHMARK_STOP;
     return 0;
 }
 

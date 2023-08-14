@@ -4,23 +4,10 @@
 #include <stdlib.h> 
 #include <math.h> 
 #include <sys/time.h>
+#include "op1.h"
+
 #include "cca_benchmark.h"
-
-#define BLOCK_SIZE 16
-#define STR_SIZE 256
-
-#define block_x_ 128 
-#define block_y_ 2
-#define block_z_ 1
-#define MAX_PD	(3.0e6)
-/* required precision in degrees	*/
-#define PRECISION	0.001
-#define SPEC_HEAT_SI 1.75e6
-#define K_SI 100
-/* capacitance fitting factor	*/
-#define FACTOR_CHIP	0.5
-
-#include "opt1.cu"
+ #include "opt1.cu"
 
 /* chip parameters	*/
 float t_chip = 0.0005;
@@ -152,6 +139,8 @@ int do_main(int argc, char** argv)
     {
         usage(argc,argv);
     }
+    CCA_BENCHMARK_START;
+    CCA_INIT;
 
     char *pfile, *tfile, *ofile;
     int iterations = atoi(argv[3]);
@@ -192,6 +181,8 @@ int do_main(int argc, char** argv)
 
     memcpy(tempCopy,tempIn, size * sizeof(float));
 
+    CCA_INIT_STOP;
+
     hotspot_opt1(powerIn, tempIn, tempOut, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt,iterations);
 
     computeTempCPU(powerIn, tempCopy, answer, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt,iterations);
@@ -201,10 +192,11 @@ int do_main(int argc, char** argv)
     writeoutput(tempOut,numRows, numCols, layers, ofile);
     free(tempIn);
     free(tempOut); free(powerIn);
+    CCA_BENCHMARK_STOP;
     return 0;
 }
 
-#include "cca_benchmark.h"
+
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
     int ret = do_main(argc, argv);

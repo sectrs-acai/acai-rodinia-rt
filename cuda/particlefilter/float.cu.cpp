@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.cpp"
 # 1 "ex_particle_CUDA_float_seq.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -28382,6 +28382,942 @@ free(I);
 return 0;
 # 881 "ex_particle_CUDA_float_seq.cu"
 }
+# 14 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union arm_sigval {
+# 16 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int sival_int;
+# 17 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *sival_ptr;
+# 18 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+};
+# 20 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef arm_sigval arm___sigval_t;
+# 80 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 21 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 22 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_signo;
+# 23 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_errno;
+# 24 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_code;
+# 25 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int __pad0;
+# 26 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 27 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int _pad[((128) / sizeof(int)) - (4)];
+# 28 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 29 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 30 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 31 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _kill;
+# 33 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 34 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_tid;
+# 35 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_overrun;
+# 36 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm___sigval_t si_sigval;
+# 37 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _timer;
+# 39 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 40 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 41 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 42 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm___sigval_t si_sigval;
+# 43 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _rt;
+# 45 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 46 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__pid_t si_pid;
+# 47 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uid_t si_uid;
+# 48 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_status;
+# 49 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__clock_t si_utime;
+# 50 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__clock_t si_stime;
+# 51 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigchld;
+# 53 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 54 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *si_addr;
+# 56 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+short si_addr_lsb;
+# 57 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 59 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 60 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_lower;
+# 61 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_upper;
+# 62 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _addr_bnd;
+# 64 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__uint32_t _pkey;
+# 65 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _bounds;
+# 66 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigfault;
+# 68 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 69 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+long si_band;
+# 70 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int si_fd;
+# 71 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigpoll;
+# 73 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 74 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *_call_addr;
+# 75 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int _syscall;
+# 76 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned _arch;
+# 77 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sigsys;
+# 79 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} _sifields;
+# 80 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} w;
+# 82 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef void (*__arm_sighandler_t)(int);
+# 86 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 84 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 85 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long __val[(1024) / ((8) * sizeof(unsigned long))];
+# 86 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} __arm_sigset_t;
+# 88 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef __arm_sigset_t arm_sigset_t;
+# 90 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct arm_sigaction {
+# 91 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+union {
+# 92 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__arm_sighandler_t sa_handler;
+# 94 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void (*sa_arm_sigaction)(int, void *, void *);
+# 95 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} __arm_sigaction_handler;
+# 96 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+__arm_sigset_t sa_mask;
+# 97 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int sa_flags;
+# 98 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void (*sa_restorer)(void);
+# 99 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+};
+# 105 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 101 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 102 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+void *ss_sp;
+# 103 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+int ss_flags;
+# 104 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+size_t ss_size;
+# 105 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_stack_t;
+# 114 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 107 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct {
+# 108 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long fault_address;
+# 109 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long regs[31];
+# 110 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long sp;
+# 111 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long pc;
+# 112 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long long pstate;
+# 113 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned char __reserved[4096] __attribute((__aligned__(16)));
+# 114 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_mcontext_t;
+# 122 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+typedef
+# 116 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+struct arm_ucontext_t {
+# 117 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+unsigned long uc_flags;
+# 118 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_ucontext_t *uc_link;
+# 119 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_stack_t uc_stack;
+# 120 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_sigset_t uc_sigmask;
+# 121 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+arm_mcontext_t uc_mcontext;
+# 122 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/arm_bench.h"
+} arm_ucontext_t;
+# 8 "/usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h" 3
+extern "C" { typedef __sig_atomic_t sig_atomic_t; }
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+extern "C" { union sigval {
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+int sival_int;
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+void *sival_ptr;
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+}; }
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h" 3
+extern "C" { typedef sigval __sigval_t; }
+# 124 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+extern "C" { typedef
+# 37 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 38 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_signo;
+# 40 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_errno;
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_code;
+# 48 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int __pad0;
+# 52 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+union {
+# 53 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int _pad[((128) / sizeof(int)) - (4)];
+# 57 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 58 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 59 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 60 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _kill;
+# 64 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 65 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_tid;
+# 66 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_overrun;
+# 67 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__sigval_t si_sigval;
+# 68 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _timer;
+# 72 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 73 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 74 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 75 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__sigval_t si_sigval;
+# 76 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _rt;
+# 80 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 81 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__pid_t si_pid;
+# 82 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uid_t si_uid;
+# 83 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_status;
+# 84 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__clock_t si_utime;
+# 85 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__clock_t si_stime;
+# 86 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigchld;
+# 90 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 91 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *si_addr;
+# 93 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+short si_addr_lsb;
+# 95 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+union {
+# 98 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 99 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_lower;
+# 100 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_upper;
+# 101 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _addr_bnd;
+# 103 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+__uint32_t _pkey;
+# 104 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _bounds;
+# 105 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigfault;
+# 109 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 110 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+long si_band;
+# 111 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int si_fd;
+# 112 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigpoll;
+# 117 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+struct {
+# 118 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+void *_call_addr;
+# 119 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+int _syscall;
+# 120 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+unsigned _arch;
+# 121 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sigsys;
+# 123 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} _sifields;
+# 124 "/usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h" 3
+} siginfo_t; }
+# 36 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 37 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_ASYNCNL = (-60),
+# 38 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_DETHREAD = (-7),
+# 40 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_TKILL,
+# 41 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_SIGIO,
+# 43 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_ASYNCIO,
+# 44 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_MESGQ,
+# 45 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_TIMER,
+# 51 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_QUEUE,
+# 52 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_USER = 0,
+# 53 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SI_KERNEL = 128
+# 66 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 72 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 73 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLOPC = 1,
+# 75 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLOPN,
+# 77 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLADR,
+# 79 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_ILLTRP,
+# 81 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_PRVOPC,
+# 83 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_PRVREG,
+# 85 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_COPROC,
+# 87 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_BADSTK,
+# 89 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+ILL_BADIADDR
+# 91 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 95 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 96 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_INTDIV = 1,
+# 98 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_INTOVF,
+# 100 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTDIV,
+# 102 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTOVF,
+# 104 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTUND,
+# 106 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTRES,
+# 108 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTINV,
+# 110 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTSUB,
+# 112 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_FLTUNK = 14,
+# 114 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+FPE_CONDTRAP
+# 116 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 120 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 121 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_MAPERR = 1,
+# 123 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ACCERR,
+# 125 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_BNDERR,
+# 127 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_PKUERR,
+# 129 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ACCADI,
+# 131 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ADIDERR,
+# 133 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+SEGV_ADIPERR
+# 135 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 139 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 140 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_ADRALN = 1,
+# 142 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_ADRERR,
+# 144 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_OBJERR,
+# 146 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_MCEERR_AR,
+# 148 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+BUS_MCEERR_AO
+# 150 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 156 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 157 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_BRKPT = 1,
+# 159 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_TRACE,
+# 161 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_BRANCH,
+# 163 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_HWBKPT,
+# 165 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+TRAP_UNK
+# 167 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 173 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 174 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_EXITED = 1,
+# 176 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_KILLED,
+# 178 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_DUMPED,
+# 180 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_TRAPPED,
+# 182 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_STOPPED,
+# 184 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+CLD_CONTINUED
+# 186 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 190 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+enum {
+# 191 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_IN = 1,
+# 193 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_OUT,
+# 195 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_MSG,
+# 197 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_ERR,
+# 199 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_PRI,
+# 201 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+POLL_HUP
+# 203 "/usr/include/x86_64-linux-gnu/bits/siginfo-consts.h" 3
+};
+# 16 "/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h" 3
+extern "C" { typedef __sigval_t sigval_t; }
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+extern "C" { typedef
+# 22 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+struct sigevent {
+# 24 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+__sigval_t sigev_value;
+# 25 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int sigev_signo;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int sigev_notify;
+# 29 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+union {
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+int _pad[((64) / sizeof(int)) - (4)];
+# 34 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+__pid_t _tid;
+# 37 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+struct {
+# 38 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+void (*_function)(__sigval_t);
+# 39 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+pthread_attr_t *_attribute;
+# 40 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} _sigev_thread;
+# 41 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} _sigev_un;
+# 42 "/usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h" 3
+} sigevent_t; }
+# 28 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+enum {
+# 29 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_SIGNAL,
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_NONE,
+# 33 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_THREAD,
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+SIGEV_THREAD_ID = 4
+# 39 "/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h" 3
+};
+# 72 "/usr/include/signal.h" 3
+extern "C" { typedef void (*__sighandler_t)(int); }
+# 77 "/usr/include/signal.h" 3
+extern "C" __sighandler_t __sysv_signal(int , __sighandler_t ) throw();
+# 80 "/usr/include/signal.h" 3
+extern "C" __sighandler_t sysv_signal(int , __sighandler_t ) throw();
+# 88 "/usr/include/signal.h" 3
+extern "C" __sighandler_t signal(int , __sighandler_t ) throw();
+# 112 "/usr/include/signal.h" 3
+extern "C" int kill(__pid_t , int ) throw();
+# 119 "/usr/include/signal.h" 3
+extern "C" int killpg(__pid_t , int ) throw();
+# 123 "/usr/include/signal.h" 3
+extern "C" int raise(int ) throw();
+# 127 "/usr/include/signal.h" 3
+extern "C" __sighandler_t ssignal(int , __sighandler_t ) throw();
+# 129 "/usr/include/signal.h" 3
+extern "C" int gsignal(int ) throw();
+# 134 "/usr/include/signal.h" 3
+extern "C" void psignal(int , const char * );
+# 137 "/usr/include/signal.h" 3
+extern "C" void psiginfo(const siginfo_t * , const char * );
+# 151 "/usr/include/signal.h" 3
+extern "C" int sigpause(int ) __asm__("__xpg_sigpause");
+# 170 "/usr/include/signal.h" 3
+extern "C" int sigblock(int ) throw() __attribute((__deprecated__));
+# 173 "/usr/include/signal.h" 3
+extern "C" int sigsetmask(int ) throw() __attribute((__deprecated__));
+# 176 "/usr/include/signal.h" 3
+extern "C" int siggetmask() throw() __attribute((__deprecated__));
+# 185 "/usr/include/signal.h" 3
+extern "C" { typedef __sighandler_t sighandler_t; }
+# 190 "/usr/include/signal.h" 3
+extern "C" { typedef __sighandler_t sig_t; }
+# 196 "/usr/include/signal.h" 3
+extern "C" int sigemptyset(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 199 "/usr/include/signal.h" 3
+extern "C" int sigfillset(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 202 "/usr/include/signal.h" 3
+extern "C" int sigaddset(sigset_t * , int ) throw() __attribute((__nonnull__(1)));
+# 205 "/usr/include/signal.h" 3
+extern "C" int sigdelset(sigset_t * , int ) throw() __attribute((__nonnull__(1)));
+# 208 "/usr/include/signal.h" 3
+extern "C" int sigismember(const sigset_t * , int ) throw()
+# 209 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 213 "/usr/include/signal.h" 3
+extern "C" int sigisemptyset(const sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 216 "/usr/include/signal.h" 3
+extern "C" int sigandset(sigset_t * , const sigset_t * , const sigset_t * ) throw()
+# 217 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2, 3)));
+# 220 "/usr/include/signal.h" 3
+extern "C" int sigorset(sigset_t * , const sigset_t * , const sigset_t * ) throw()
+# 221 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2, 3)));
+# 27 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+extern "C" { struct sigaction {
+# 32 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+union {
+# 34 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+__sighandler_t sa_handler;
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+void (*sa_sigaction)(int, siginfo_t *, void *);
+# 38 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+} __sigaction_handler;
+# 46 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+__sigset_t sa_mask;
+# 49 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+int sa_flags;
+# 52 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+void (*sa_restorer)(void);
+# 53 "/usr/include/x86_64-linux-gnu/bits/sigaction.h" 3
+}; }
+# 229 "/usr/include/signal.h" 3
+extern "C" int sigprocmask(int , const sigset_t *__restrict__ , sigset_t *__restrict__ ) throw();
+# 237 "/usr/include/signal.h" 3
+extern "C" int sigsuspend(const sigset_t * ) __attribute((__nonnull__(1)));
+# 240 "/usr/include/signal.h" 3
+extern "C" int sigaction(int , const struct sigaction *__restrict__ , struct sigaction *__restrict__ ) throw();
+# 244 "/usr/include/signal.h" 3
+extern "C" int sigpending(sigset_t * ) throw() __attribute((__nonnull__(1)));
+# 252 "/usr/include/signal.h" 3
+extern "C" int sigwait(const sigset_t *__restrict__ , int *__restrict__ )
+# 253 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1, 2)));
+# 261 "/usr/include/signal.h" 3
+extern "C" int sigwaitinfo(const sigset_t *__restrict__ , siginfo_t *__restrict__ )
+# 262 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 269 "/usr/include/signal.h" 3
+extern "C" int sigtimedwait(const sigset_t *__restrict__ , siginfo_t *__restrict__ , const timespec *__restrict__ )
+# 272 "/usr/include/signal.h" 3
+ __attribute((__nonnull__(1)));
+# 276 "/usr/include/signal.h" 3
+extern "C" int sigqueue(__pid_t , int , const sigval ) throw();
+# 286 "/usr/include/signal.h" 3
+extern "C" { extern const char *const _sys_siglist[64 + 1]; }
+# 287 "/usr/include/signal.h" 3
+extern "C" { extern const char *const sys_siglist[64 + 1]; }
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpx_sw_bytes {
+# 33 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t magic1;
+# 34 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t extended_size;
+# 35 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t xstate_bv;
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t xstate_size;
+# 37 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t __glibc_reserved1[7];
+# 38 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 40 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpreg {
+# 42 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short significand[4];
+# 43 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short exponent;
+# 44 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 46 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpxreg {
+# 48 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short significand[4];
+# 49 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short exponent;
+# 50 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short __glibc_reserved1[3];
+# 51 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 53 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xmmreg {
+# 55 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t element[4];
+# 56 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 123 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _fpstate {
+# 126 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t cwd;
+# 127 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t swd;
+# 128 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t ftw;
+# 129 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint16_t fop;
+# 130 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rip;
+# 131 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdp;
+# 132 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t mxcsr;
+# 133 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t mxcr_mask;
+# 134 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpxreg _st[8];
+# 135 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_xmmreg _xmm[16];
+# 136 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t __glibc_reserved1[24];
+# 137 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 139 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct sigcontext {
+# 141 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r8;
+# 142 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r9;
+# 143 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r10;
+# 144 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r11;
+# 145 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r12;
+# 146 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r13;
+# 147 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r14;
+# 148 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t r15;
+# 149 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdi;
+# 150 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rsi;
+# 151 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rbp;
+# 152 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rbx;
+# 153 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rdx;
+# 154 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rax;
+# 155 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rcx;
+# 156 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rsp;
+# 157 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t rip;
+# 158 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t eflags;
+# 159 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short cs;
+# 160 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short gs;
+# 161 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short fs;
+# 162 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+unsigned short __pad0;
+# 163 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t err;
+# 164 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t trapno;
+# 165 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t oldmask;
+# 166 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t cr2;
+# 168 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+union {
+# 169 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpstate *fpstate;
+# 170 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __fpstate_word;
+# 171 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+};
+# 172 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __reserved1[8];
+# 173 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 177 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xsave_hdr {
+# 179 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t xstate_bv;
+# 180 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __glibc_reserved1[2];
+# 181 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint64_t __glibc_reserved2[5];
+# 182 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 184 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _ymmh_state {
+# 186 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+__uint32_t ymmh_space[64];
+# 187 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 189 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+extern "C" { struct _xstate {
+# 191 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_fpstate fpstate;
+# 192 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_xsave_hdr xstate_hdr;
+# 193 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+_ymmh_state ymmh;
+# 194 "/usr/include/x86_64-linux-gnu/bits/sigcontext.h" 3
+}; }
+# 294 "/usr/include/signal.h" 3
+extern "C" int sigreturn(sigcontext * ) throw();
+# 31 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+extern "C" { typedef
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+struct {
+# 28 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+void *ss_sp;
+# 29 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+int ss_flags;
+# 30 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+size_t ss_size;
+# 31 "/usr/include/x86_64-linux-gnu/bits/types/stack_t.h" 3
+} stack_t; }
+# 37 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ extern "C" { typedef long long greg_t; }
+# 46 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef greg_t gregset_t[23]; }
+# 51 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+enum {
+# 52 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R8,
+# 54 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R9,
+# 56 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R10,
+# 58 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R11,
+# 60 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R12,
+# 62 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R13,
+# 64 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R14,
+# 66 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_R15,
+# 68 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RDI,
+# 70 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RSI,
+# 72 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RBP,
+# 74 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RBX,
+# 76 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RDX,
+# 78 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RAX,
+# 80 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RCX,
+# 82 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RSP,
+# 84 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_RIP,
+# 86 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_EFL,
+# 88 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_CSGSFS,
+# 90 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_ERR,
+# 92 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_TRAPNO,
+# 94 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_OLDMASK,
+# 96 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+REG_CR2
+# 98 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+};
+# 101 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_fpxreg {
+# 103 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short significand[4];
+# 104 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short exponent;
+# 105 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned short __glibc_reserved1[3];
+# 106 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 108 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_xmmreg {
+# 110 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t element[4];
+# 111 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 113 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { struct _libc_fpstate {
+# 116 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t cwd;
+# 117 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t swd;
+# 118 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t ftw;
+# 119 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint16_t fop;
+# 120 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint64_t rip;
+# 121 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint64_t rdp;
+# 122 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t mxcsr;
+# 123 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t mxcr_mask;
+# 124 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_fpxreg _st[8];
+# 125 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_xmmreg _xmm[16];
+# 126 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__uint32_t __glibc_reserved1[24];
+# 127 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+}; }
+# 130 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef _libc_fpstate *fpregset_t; }
+# 139 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef
+# 134 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+struct {
+# 135 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+gregset_t gregs;
+# 137 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+fpregset_t fpregs;
+# 138 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ unsigned long long __reserved1[8];
+# 139 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+} mcontext_t; }
+# 151 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+extern "C" { typedef
+# 142 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+struct ucontext_t {
+# 144 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+unsigned long uc_flags;
+# 145 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+ucontext_t *uc_link;
+# 146 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+stack_t uc_stack;
+# 147 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+mcontext_t uc_mcontext;
+# 148 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+sigset_t uc_sigmask;
+# 149 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+_libc_fpstate __fpregs_mem;
+# 150 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+__extension__ unsigned long long __ssp[4];
+# 151 "/usr/include/x86_64-linux-gnu/sys/ucontext.h" 3
+} ucontext_t; }
+# 314 "/usr/include/signal.h" 3
+extern "C" int siginterrupt(int , int ) throw();
+# 28 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+enum {
+# 29 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+SS_ONSTACK = 1,
+# 31 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+SS_DISABLE
+# 33 "/usr/include/x86_64-linux-gnu/bits/ss_flags.h" 3
+};
+# 321 "/usr/include/signal.h" 3
+extern "C" int sigaltstack(const stack_t *__restrict__ , stack_t *__restrict__ ) throw();
+# 23 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+extern "C" { struct sigstack {
+# 25 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+void *ss_sp;
+# 26 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+int ss_onstack;
+# 27 "/usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h" 3
+}; }
+# 335 "/usr/include/signal.h" 3
+extern "C" int sigstack(struct sigstack * , struct sigstack * ) throw()
+# 336 "/usr/include/signal.h" 3
+ __attribute((__deprecated__));
+# 343 "/usr/include/signal.h" 3
+extern "C" int sighold(int ) throw();
+# 346 "/usr/include/signal.h" 3
+extern "C" int sigrelse(int ) throw();
+# 349 "/usr/include/signal.h" 3
+extern "C" int sigignore(int ) throw();
+# 352 "/usr/include/signal.h" 3
+extern "C" __sighandler_t sigset(int , __sighandler_t ) throw();
+# 31 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_sigmask(int , const __sigset_t *__restrict__ , __sigset_t *__restrict__ ) throw();
+# 36 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_kill(pthread_t , int ) throw();
+# 40 "/usr/include/x86_64-linux-gnu/bits/sigthread.h" 3
+extern "C" int pthread_sigqueue(pthread_t , int , const sigval ) throw();
+# 366 "/usr/include/signal.h" 3
+extern "C" int __libc_current_sigrtmin() throw();
+# 368 "/usr/include/signal.h" 3
+extern "C" int __libc_current_sigrtmax() throw();
+# 29 "/usr/include/x86_64-linux-gnu/bits/signal_ext.h" 3
+extern "C" int tgkill(__pid_t , __pid_t , int );
 # 148 "/usr/local/cuda-5.0//include/cuda.h"
 extern "C" { typedef unsigned long long CUdeviceptr; }
 # 155 "/usr/local/cuda-5.0//include/cuda.h"
@@ -29788,66 +30724,40 @@ extern "C" CUresult cuGraphicsMapResources(unsigned , CUgraphicsResource * , CUs
 extern "C" CUresult cuGraphicsUnmapResources(unsigned , CUgraphicsResource * , CUstream );
 # 9059 "/usr/local/cuda-5.0//include/cuda.h"
 extern "C" CUresult cuGetExportTable(const void ** , const CUuuid * );
-# 10 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-extern "C" CUresult cuda_enc_setup(char * , char * );
-# 11 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-extern "C" CUresult cuda_enc_release();
-# 123 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 46 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+static void __cca_sighandler(int signo, void *si, void *data)
+# 47 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+{
+# 48 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+arm_ucontext_t *uc = ((arm_ucontext_t *)data);
+# 49 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+((uc->uc_mcontext).pc) += (4);
+# 50 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+}
+# 116 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 static inline int _benchmark_init()
-# 124 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 117 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 {
-# 125 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-printf("_benchmark_init\n");
-# 128 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-{
-# 129 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-printf("calling cuda_enc_setup\n");
-# 131 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-char static_key[] = "0123456789abcdeF0123456789abcdeF";
 # 132 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-char static_iv[] = "12345678876543211234567887654321";
-# 134 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-CUresult ret = cuda_enc_setup(static_key, static_iv);
+printf("init: ENC_CUDA=0\n");
 # 135 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-if (ret != (CUDA_SUCCESS)) {
+return CUDA_SUCCESS;
 # 136 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-fprintf(stderr, "cuda_enc_setup failed\n");
-# 137 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return ret;
+}
 # 138 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 144 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return CUDA_SUCCESS;
-# 145 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 147 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 static inline int _benchmark_cleanup()
-# 148 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 139 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 {
-# 152 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-{
+# 151 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+printf("cleanup: ENC_CUDA=0\n");
 # 153 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-CUresult ret = cuda_enc_release();
-# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-if (ret != (CUDA_SUCCESS)) {
-# 155 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-fprintf(stderr, "cuda_enc_release failed\n");
-# 156 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-return ret;
-# 157 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 158 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
-}
-# 160 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 return CUDA_SUCCESS;
-# 161 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
+# 154 "/home/b/2.5bay/mthesis-unsync/projects/trusted-periph-nn/gpu-rodinia/common/cca_benchmark.h"
 }
 # 884 "ex_particle_CUDA_float_seq.cu"
 int main(int argc, char **argv) {
 # 885 "ex_particle_CUDA_float_seq.cu"
-_benchmark_init();
+{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
 # 886 "ex_particle_CUDA_float_seq.cu"
 int ret = do_main(argc, argv);
 # 887 "ex_particle_CUDA_float_seq.cu"
@@ -29856,9 +30766,9 @@ _benchmark_cleanup();
 return ret;
 # 889 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
-# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 1 3
+# 1 "tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -30444,8 +31354,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_000298b7_00000000-1_ex_particle_CUDA_float_seq.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_00022e5f_00000000-1_ex_particle_CUDA_float_seq.fatbin.c" 1 3
 
 
 asm(
@@ -31113,415 +32023,415 @@ asm(
 ".quad 0x4891efbff51bbaba,0xb078ebeb9ce3d44a,0x8a24a257be387a9b,0xfe20e0f227f22892\n"
 ".quad 0xedd5fddde5ebfd79,0x9c3f5e0e2d7aa1cd,0xedff7870f97cfddf,0xee2e2fcfaf074e4c\n"
 ".quad 0x71feafeecfefef2e,0xf5d5ebf85cf56879,0xbe1e6f0ff0e20fe5,0x9b387d7dbf7fe36d\n"
-".quad 0xa4bfc5d9ff0649a6,0xdb676fe5d9c2af3f,0x6797d72fab87bbf3,0xd7afb3e3fbd7feef\n"
-".quad 0xf5ff97f7670fe7b7,0x01fd5f5eab76cbfa,0x9bddfde3d699c969,0x3cbe6fd7e72fdbeb\n"
-".quad 0x3737a7af32bf9c5e,0xb3ab97cdedfafebf,0xaf97178fd72f9bab,0x160dfe5c6af2a17f\n"
-".quad 0xafb397e1fcedf37c,0x9fdd31e61e5f378f,0xa6fc3edb3ebe7c5d,0xdbf6e5f8133d010a\n"
-".quad 0xf9f36be46fcf9be5,0x7972fc3dbe6feffc,0xeffee6f1eaff757f,0xcfff6eef6cde5f37\n"
-".quad 0x8f770f37fb8797e5,0x7797b6af17970ff7,0xf9bcdcdd5e5fdb57,0xeae2f6eeeaf8fb79\n"
-".quad 0x38c686fd353ceae6,0xea36b37bbcb87e53,0xe3a5046bd980ea47,0xbeaf5fcb8bbd4776\n"
-".quad 0x38797fccbf35365c,0xa1cdf3f57d7e7d7c,0xc59d9e1fd9fd7c3f,0x7b76f257670f77ba\n"
-".quad 0xf0e9fd6851f17675,0xda830e6fd3fe1e7f,0x4ffe6a87362d0a1c,0xc4d28736627f3738\n"
-".quad 0x602c74a937f9a6df,0x1573517fce5e8737,0xaffcdffccdcfe7a9,0x937fce1f8aa4e58d\n"
-".quad 0xbfe61101331ac432,0x2e622ff153573f09,0x63e3080d8b520daa,0xfcd376573b493303\n"
-".quad 0x0a4c4912ff30aa5f,0x2632672105d8ca2a,0x3117f8cfd80a6376,0x3625fc53ec530a57\n"
-".quad 0xb4cc0d497f1bba90,0x624fa4e1c6528b63,0xa7a72e661207b50f,0x37d49d20376a41f8\n"
-".quad 0x48c352fc6c6a4715,0x8910db16aa44bf63,0xaa987b06b37e0625,0x86991091e46499fa\n"
-".quad 0x68ec7dcfc6d24852,0xd22f62afa7eb1d22,0x4854d3df8d8ab1f7,0x9f882c8d7c4cec8f\n"
-".quad 0x1a3901059190d9a4,0xa58cb9f8ad33703f,0xba97391b01226f22,0xe9a991c38965fb13\n"
-".quad 0x6dcdc2438937b17f,0x8ae34a5b02f339c6,0xb7a9cf91b23d8fe3,0x8596444b76215d91\n"
-".quad 0xa9487122f9195cc8,0x1271f8be9a6c915f,0x4cc497d477c3010c,0xed8bad1fbf95bde0\n"
-".quad 0xf9fbdb97d9cdd5fd,0xe90a3fef5fafcbbf,0x642e710af126f493,0x462892d76049c89e\n"
-".quad 0x5cdc21f895b28ce9,0xf49f126a88a80e3c,0x3722e2591952c4bf,0x930cb280cabf8326\n"
-".quad 0xcc62506465e0d823,0xd1e690d21b7e364c,0xfcccdea5ff563883,0x11d307ffd37bf1f3\n"
-".quad 0xe909a62bfe7b4c29,0x93731376494138cb,0x8a288baca1cc83cc,0xc4c169b7b2d242b0\n"
-".quad 0xa64fa4528060a105,0x694aad2a0e224924,0xe3ded02057894391,0x24a10133483673cc\n"
-".quad 0xfc7935f249db0a4d,0x2b21b494681c5bcd,0xc24d63f55e45e4a2,0x2cd568471925c0bd\n"
-".quad 0x9fe1e29b8b8ce94b,0x9a59b7f9f39bcf5e,0x3e5ddd9c9f8c3eac,0xae1679fd3d7e7afc\n"
-".quad 0x3ebf39bf03799bab,0xe2e2fe79fabbb87b,0x7fb7d7f767a2ed31,0x780e9fc5f23bcedb\n"
-".quad 0xa6cfc54b385427f5,0xfc1f3f838a2b33cd,0x90a5dbeeda75e0f3,0x4c3ededcb8bb3c3e\n"
-".quad 0x9777325e69f4f51f,0xcd4febfc7f0b433f,0x0ed6e76fbf4effaf,0x3e85fe988bfdb8ff\n"
-".quad 0xd17f778ff0f257ba,0xc5fc5ddd2b127cbe,0xfc5ebe8fc6be8f97,0x5fdbb7e7e44bfd45\n"
-".quad 0xa399d34de5223f5f,0xa79a552e180beb83,0x3c28c4fadc1ee3e7,0x624cc4247ed44f42\n"
-".quad 0xa7a07659ed725c56,0x08bce50f3722e773,0xd4a19f2069343843,0x4a1d4258afb1942c\n"
-".quad 0x1505cdf9c1d50e27,0x0b39055ee508b288,0xce768deb254f9bbd,0xff77ae727ab3c9f8\n"
-".quad 0x8f233d535e6e5dcb,0xd272f7e304054138,0x16337b8fbc8cfa0e,0xe8f74ced60e832d1\n"
-".quad 0x44951faf0fafcbe0,0x6d4ab6d658ca02d2,0x91e62db51c26e75f,0xedf8a5d0e7d1dedd\n"
-".quad 0xb892124b1a18b18e,0xc00c9326e766a66d,0xcfc7a56db278f1a7,0xaafd626583725928\n"
-".quad 0xd3d55f3d59123a5e,0x649da62a0e42efa9,0x8aba858ba348a2b1,0x51031f3042ce48e9\n"
-".quad 0x89960dc5a86eae06,0x3fd7db0f97f25a34,0x50740d1a6dc9425f,0x522c890b30e5951f\n"
-".quad 0xf9f87f2e75ff5546,0xf3533a64e4f0fcee,0x70a35aa7116669fa,0x13234496f0614f40\n"
-".quad 0x0df98a04e49b528c,0x3605334f2b357e16,0x21ab11ec05836157,0x66a04061ac430a61\n"
-".quad 0x4e56fa742f2fc391,0xd0949b25326c834d,0x9461d472918c4fd7,0x711fcb9a1b1554bc\n"
-".quad 0x1cb55465436ad571,0x7f0e1aaf7e3a8a3c,0xcb8babb7fd7ebc7b,0x766afabec1bd0ddc\n"
-".quad 0xd83b75bf2ad242a2,0x7107b7387a99582d,0xff3bbf4f79dbe51a,0x1f6e6e1fe1f9dbf9\n"
-".quad 0x8cd0ffafaf6eee6f,0x9f5b931692c5de7a,0x411153e46a63f367,0x2ae5fffdce08a2ef\n"
-".quad 0x20982e41ab458397,0x67bfcc5f9ecb117a,0x0479fa06ecaafa76,0x3ee7916f4d8d7ae2\n"
-".quad 0xd797bb38ca299d7f,0xc36477074876dcdb,0x307e012241acd656,0x2a738079122af499\n"
-".quad 0x66d5b09f14a34a11,0x1e68ff274d69fab2,0xe32c989ebaba8fe2,0xc3ceb568d29a8c02\n"
-".quad 0x472f3ad5aaaad587,0xd96f54f9c4a39795,0x09657c7698549136,0x86959c2224cb5e24\n"
-".quad 0x3236507352a506c6,0x23b5cd2b035115ab,0xce3ade599ba49537,0x9cd530c89f2ce41a\n"
-".quad 0x05f5c2db89933a15,0x7ea545102aab11a3,0xaebccf132313fa94,0xa5bd85658585ceb0\n"
-".quad 0x56c0d9d3c90d3203,0x261805f319349067,0x84cf3495a7cc7523,0xe20a6c466f3133ce\n"
-".quad 0x540e7a87e8996f89,0xe82404c578954612,0x2bd6640627ecaa58,0xa9f60c03654ec72c\n"
-".quad 0xf1ef23d1c3f24a3b,0xc4466be869b2e707,0x1b34c7f72a8e6cf7,0x25801de3ac4abe3f\n"
-".quad 0x684a964003a0cc6b,0x3ad5c474b6f35194,0x501353b6a0797186,0x5d4fcacec96c3101\n"
-".quad 0x21887cfac481e7df,0x5345622d08fbae53,0x65220eb54d35634e,0x4ec0f75129592da6\n"
-".quad 0x76c7ec011ba20465,0xab5aaa48a82447e2,0x4b07fd042ad5926a,0x3f973749ea2c566a\n"
-".quad 0xac8a8ee50a34b153,0x5c5f8a8d9a137da6,0x10a6c3a6c49b7187,0x6471d6d186b7758f\n"
-".quad 0xce2ab9606cb0fba9,0xea9d1d4b0b2dd322,0x6af3a89e20640733,0xe2d42d5dccb579b1\n"
-".quad 0xb8b70c40fb737211,0x78e2458fa0d63aab,0x83a48b9b26544e71,0x9f0cb28f2a3e1abe\n"
-".quad 0xd492b58253964b26,0x60020b01038bbe29,0xa4c6fd92788934d9,0xa2580e90ac7a70a9\n"
-".quad 0x9137a959b7b85970,0xf1d0d9207feb97ec,0x3f681f534f8cf441,0x7ad8587181c399f2\n"
-".quad 0xd702f8d23cdc5bdd,0xd3a2cd616fbd7530,0xc0edaa1496805626,0x61a968c6070256e2\n"
-".quad 0xe257396f0ee34b09,0x08c9bbc60a95f925,0x56250594b3318ce3,0xc42601bc376b0d35\n"
-".quad 0x70034a03ef3aca72,0xce1a292ae0ae5ad3,0x456929374f8a5cb8,0xd2edd2bd373eb171\n"
-".quad 0x5349c3c3f6146142,0x6e841ea10760e4d8,0x5421585162f97130,0x351e15aa1b617223\n"
-".quad 0xc3270cf5e22457d1,0x9271ccbe40395f23,0x33b5742779415065,0xb3786e156586c681\n"
-".quad 0x5b1410385c8d0d22,0xb255d1cec40ec5ed,0x2a25c711b20734ac,0x5d74ea5cb0b072b1\n"
-".quad 0xd0300aae99dee605,0x7df465301af214c1,0x164de22c15987ccd,0xebfb45f92da2f9bb\n"
-".quad 0x1b26cd242e06ec05,0x4e3f31edc8f87e0a,0x6d45fe32cb9ccf71,0xb2e8f7e0e8fafe63\n"
-".quad 0xb8797d7cfabfbab8,0xf227cdc21ff3aedb,0xabebcbcffabf7f97,0xedf8fafe2f6f6e5f\n"
-".quad 0xec6abababa7e5fa7,0x2b3b38ec1705cb39,0xe415ddd69e615608,0x8ed36a88581415be\n"
-".quad 0x561da677523b4d6a,0xb6b4edb244769b28,0xab0337813dfca897,0x06ccd5514d52798d\n"
-".quad 0x49f29a8394d42785,0x15de70fab1691535,0xa52c0553005d7345,0x2e9d0668a0c8b728\n"
-".quad 0x45f55d884d4fe6a6,0x6d25fcfd2fe7a339,0x8d95168f7653d080,0xc9e2a332b349e982\n"
-".quad 0x09d6d5aa9ef9fe7d,0xf45319e3ab6aaf33,0x68142822d4c9a022,0x88a76215860d051b\n"
-".quad 0x5b766a31d9015990,0xb1b8b5e22c5ae89a,0xd43647d9a65da408,0xeddb11e2a8fefc54\n"
-".quad 0xa361b560dc49b770,0x8d14b60009217d41,0x60f2aa9f0adf5153,0xa3e4f300b1abc279\n"
-".quad 0xdc85ac9cdd217f9f,0xf96d8265419262a2,0x24b79fbe033226ee,0x9a5d0eeb98af9118\n"
-".quad 0xe9d140b2325a645e,0x4056aef0d0f87d42,0x3a69cca8d9981f12,0xd6e4dad11ba4888f\n"
-".quad 0x743558a69ba5b2b6,0xaa141dce319b84cd,0xb7aa6ce34ce2c52e,0x35cf04b84d4a8f6d\n"
-".quad 0x6df970f7c289fb69,0x281b6fe21ff4559b,0xe10773c7f373b02a,0xe5479fb88b5f0816\n"
-".quad 0xbc4adbb138afb715,0xd537613885bd428d,0x5f5e621b1089d58f,0x7ebd7043f662c476\n"
-".quad 0x34e0c35c195c86b4,0xd9a2bbdaae4b9bd6,0x0a6717ad4abbce33,0x678982ab56dfaf39\n"
-".quad 0xae13c50fd294f120,0x458eeb602b9561e1,0x852cb0a2c6b9e247,0xd848e4d85970a512\n"
-".quad 0xb25bb6c274d90e2c,0x5a24b0ad15a92792,0xea9bf2d915b99482,0x97d25886d5172ac7\n"
-".quad 0x62b75588fd8e311d,0x55700e16602e115a,0xe511857092a084bc,0xd4538b5b5bc83204\n"
-".quad 0x8e627992ba5fa955,0xfd5c5d70a8d14e8d,0x34aa1b37be96028a,0x224849f18749e85d\n"
-".quad 0x7b7a9a43f2908ecb,0xbe0d2cfc1034f996,0x5b83d58bffc75a33,0xc86646a878e1726e\n"
-".quad 0xbb8bef98cc890ccc,0x1686e61386c54f15,0xbe2e5f70ffb3cf14,0x7afe2e9f8d959bbe\n"
-".quad 0xe45a4b97d59469d6,0x81c90a8e39a750a8,0xba47d1dc7ee9d7f2,0x5cfd543b3f74e89f\n"
-".quad 0x7e7ba8188386a652,0x65858b53c540f4b1,0x675fd66624c4cdd1,0x87574a7fdb13c241\n"
-".quad 0x55866330750e68af,0x474c586c0e9d6393,0xa85688d2e5c36993,0x8ae2069d72267662\n"
-".quad 0x883ce124288d2173,0x4023555752dbe544,0x830328e75098aa4b,0xb83c61706c1c612f\n"
-".quad 0xcdd0c92d6a62cbbe,0xe4d849e7e2650dd0,0xec28a86e4f70afae,0x1b1590e24ff332de\n"
-".quad 0x8bb9a8bacf9439b2,0xbfa9fc7f8779bbb3,0x485608cb06afb19a,0x7a1abcb1f5b04457\n"
-".quad 0x0c93b8062e1eb71f,0xa86d983855e4c23a,0x553e28a85ca97a88,0xea2eeab5c8b47b97\n"
-".quad 0x3fba57940affe9ad,0x3108f27bc688f944,0x612611946aa13ec5,0xcba090499a548470\n"
-".quad 0xa7262205c08fe548,0x42eadcd36e3e169c,0x1e935671ad55b75a,0x72d919be2a578b1f\n"
-".quad 0xcfa1bb6e75c120d1,0x0a4b15224b7d51f5,0xa58a527a3657b4ed,0x5c5b88eec0686fc5\n"
-".quad 0x3cd397b132b83275,0x474b07dcaa575ee2,0xff789e07ce4b06de,0xd43c9e07e3bcfe01\n"
-".quad 0xbc64789d1a4bc193,0x163bf2f4d341c278,0x70bdd9b9c2f2cdce,0x8f744ee15385ba6e\n"
-".quad 0xdd13b0def51fd13b,0xe56697f594c64f9e,0x4546b742b03fa62f,0xef249d1448abc95a\n"
-".quad 0xbb06d3fafe647b9c,0xabd4de916aeeaed5,0xda4264403649439b,0xd5d3af27c3b5b70f\n"
-".quad 0x8608ecd6342f411d,0x88a369608ef5ae2e,0xb76da3c7808ef845,0xa80537fd9812c404\n"
-".quad 0x77ef457c857716e8,0x7c85b6ce86e9e105,0x8c6ae3c082dbf672,0x414835b5770b8055\n"
-".quad 0xb802a4407378deca,0x60642240bdcec561,0x9ac881fbc9f8051f,0x3085c12cd517256f\n"
-".quad 0x72006812ce7bfc29,0x134698881346f379,0x5a914cd51184f125,0x9973df7c0ae68d3e\n"
-".quad 0x8bc7ddbc5bb8b26a,0xa0b0a6fcb2617c37,0xddeee5ccda6dccde,0xc053273f6bb03b1c\n"
-".quad 0xc71957423748337e,0xd2c2824c97ac3ae0,0xf1482d5ca137d574,0x6f927be5ad68c4e1\n"
-".quad 0x72bf269754c99892,0x5e536a35cd7480d8,0x395af5bde14af604,0xec596289515cdd29\n"
-".quad 0x37bee28881a0f30d,0xbda11f2e6e817b2e,0xd69d4aaa8d86b42d,0x3262b943c6e41d49\n"
-".quad 0x9761c6f4ba68aa8d,0xa98a800e6791a209,0x4fe8d2950ead56b3,0xa713cd12a95476a2\n"
-".quad 0xbc2eff7d93507cda,0x03bc8ca4f6955ef3,0x0cee0403728ab9d1,0xbd0289a1d0cb50de\n"
-".quad 0x300e61ae57046140,0x9dcf8230bd8a3d15,0x38cfa99cba13d417,0x88d864c95b9b5d3c\n"
-".quad 0x6fd7d86f25c08e06,0xd9e89a240a618ce7,0x05de7ad810a81a5a,0x8ef3684a55a56c71\n"
-".quad 0x02c2e8a86e90c4cd,0x82ac3ac9d002f550,0x19e7234b1c2af13b,0xd5d3964c564eb77d\n"
-".quad 0x78099ae02cb0fac8,0xa0992c9f28caa6e6,0x63991b4ed5d469aa,0xb43f079c2c9d16d7\n"
-".quad 0x2a8ecfe7863c2606,0xf839b56a75fd2a35,0xb0495b5de838f494,0x5140950125739f4a\n"
-".quad 0x788ca363a5505560,0x3ab9bc0166fe5996,0x2783c39b7ca913fc,0x4e803a7f52e76180\n"
-".quad 0xc35cfe0f86857fce,0xd2d458f909a07f73,0x442b60bb90fe7ea4,0xbea3da5a0dadda50\n"
-".quad 0x1a8cb65b7ea69692,0x402306f2a0cb8506,0xc804eae014c09af6,0x00725a658077415f\n"
-".quad 0xc0f5059b77c44a98,0x5b87b182ac96a82a,0xd4b7da74eb595475,0xc10f9ac4fef353fb\n"
-".quad 0x793b3f1c727a7379,0x1f4e4af07c3fec7f,0xeee65bf25c917bde,0x3e0b97d111a39677\n"
-".quad 0x9dd110c81aa0389b,0x4c3a19136a1a6f0b,0xfd48590547b5d4f0,0xeb4ffa3f70973845\n"
-".quad 0x5cff3845f0d86bdb,0x16961a126c1aac5d,0x47481ce54be865d4,0x0b62f0537b931bdd\n"
-".quad 0xcb67d20cd81ba1f4,0x2fd32efa3af9813c,0x33616bb0fa05b5e0,0x0fd1185c41e19f48\n"
-".quad 0xc0e0f1f4eb92be99,0x4069fbfa733e9066,0x03e83b4f5f4c88df,0xf252d86fa019b1e3\n"
-".quad 0xf4ebf68348bf4462,0x51da8d7e7c361005,0xb762925ed5586dc5,0xad6d70de759ec014\n"
-".quad 0xbb52787ae2bd1818,0x81ca2d903b8d57d8,0x8b70c690112c15d7,0x6ec8987160641daa\n"
-".quad 0xecb359d37d67726e,0xde793ed8e922a502,0x23831a3e01a7e078,0x21dc6883a4d605f2\n"
-".quad 0xfeded661df1b4c7f,0xc81df88cfbda47f9,0x75df3848132e6dc6,0x012dc7e208497702\n"
-".quad 0x6b69c2d50704e875,0xe08561206a0230c9,0xdce2df3d26ac574b,0xd6f0b173b09be6e0\n"
-".quad 0x8bdc5d167d2bf056,0x7ce0ec45d471811a,0x445007d225782a65,0xbcc363079967655c\n"
-".quad 0xb4154d6942d6c635,0x5a82b24f7e227397,0x854f03a8a236b4ef,0x79a89880d4c4e498\n"
-".quad 0xbe267b5c9f04cfc7,0xea2ea4e04222f14f,0x439452fe23b3af5f,0x323cf4b38e58b732\n"
-".quad 0xee6f7de36caa9837,0x9dca03a7522c5270,0x0d83611273b67a28,0x0604bab15754b521\n"
-".quad 0xc04aa2f5b162761c,0x781e1e647ab921a2,0xbc0b706cacfdaa8c,0xc122754d820cf051\n"
-".quad 0x948ecd960b7340dd,0x995acd3284cf4fb5,0xc84463d673cb6b85,0x9d70dd0a0482df7e\n"
-".quad 0x9d09a9d03d95d623,0x13936c06cd19f789,0xecce80197e03b3bf,0xb2c01288544a7758\n"
-".quad 0x8c8dbbebe6afeac5,0x23bb9b788357f421,0x996aa76acc95506d,0xdfe5737c68ff6f4d\n"
-".quad 0x394f3afca68ac359,0x3c6748437580cef4,0x8b365f5399553ade,0x8bb36c046936f1a7\n"
-".quad 0xf5dac1359fdfd318,0x6f0c881ae851e624,0x9f6b9289d43c342f,0x3320ce7a08c420c0\n"
-".quad 0x914f7c9a81376c0b,0x1d2d04bd420a4c15,0x3959a0767f8e0bd9,0xf2e975dd03f0722e\n"
-".quad 0xc1ddf8e9126c55fc,0xdbb7cfafb65f770f,0xe63fc3c4a0dfdbbb,0x3b58fbe0212e7212\n"
-".quad 0xf3caa11bd6c1935e,0x5f50a721bee547d7,0x6a61faeded5c2d93,0xb958c7b0c2a48141\n"
-".quad 0xac7e9554a02e075e,0x823b62aa8f5381d7,0x17cb38ee586f8fcd,0xc11035169eb98414\n"
-".quad 0x652565add5894682,0x48ec1f861750abdf,0x502081dd4648f748,0x3a9fbb4bbd4d50bd\n"
-".quad 0xdc4fe34a9e9d3f7d,0xe903852b6a993fb1,0x8ea27b86b3113d38,0xce72ae9c41f4fd4f\n"
-".quad 0xae03b134d038d4c1,0xa83f4f0ad039d846,0xeceb4930f86d6913,0xc91d441330b27587\n"
-".quad 0xbcda708a9b45bd36,0xeb305327c70e393b,0xd648ea24ac071ef7,0xbc4e77a9157164d6\n"
-".quad 0x8bacc23138bdf273,0x2beb24751386038f,0x21d4ac1f2a4c1eb2,0x64abe2674e4eabfe\n"
-".quad 0x5ebeb2075121c83d,0x58e7f40fb4171ed0,0x7512a607adef5bbd,0x189fc8a8b26b2b24\n"
-".quad 0xa6afaa60590767f6,0x87d6f433b44b97cc,0xf73ae543bc4ad82a,0x5d18a16cf19629f0\n"
-".quad 0x03bd6bfae7de2f2b,0xce0427b1fd6afa26,0x1f3aaf89852d7a98,0x127a460494d74958\n"
-".quad 0xbe0992bc047ed5aa,0x4ca6ccac31db0352,0x202bd7d4700c786e,0x87e5aa795a9d2ce0\n"
-".quad 0xac2fae9c2ac70fd3,0xbcd7414b300cbd00,0x5c0702527a2bed8b,0x9d6c73827d0776a0\n"
-".quad 0x18306f2c1d5801f1,0xdba5e022c5aea0d6,0xb21ee4494db35df5,0x8d34425e296f5eb4\n"
-".quad 0xa89d54e17793e3ba,0xa256149cceb527e0,0x343ef02e04204770,0xf9dbac81bfa90107\n"
-".quad 0xb5266f113a050ec0,0xbc18f253cfdd0017,0xcbd223d2d91e2eeb,0xdd497aa87bbaffb4\n"
-".quad 0x136d4dc26e7083a3,0x8b5b714f7617537a,0xb71eaf8d0b3c2278,0xeaf2fbff970fe717\n"
-".quad 0x51a9b087ee1e5fe7,0x7e1ed972fe0c4599,0x2463eaa584765cbf,0x6d37cea7a6fbd948\n"
-".quad 0xb195f4d000fa40c6,0xab63d906d6aa822d,0x18d5e5621c3aaedc,0xbf8759bbf85ae52b\n"
-".quad 0x528cd9320ce62103,0x4e91f0a3f9fb64d0,0x5ba97d3e2d159a85,0x0575e5880c07b107\n"
-".quad 0xb8b3a1de2b0552c4,0x808b84809b9f7509,0x72cc08677980d766,0x1a50a567be0158f2\n"
-".quad 0x960f060e8e26e665,0x2483e7ed582bba65,0x27593716ebe6fdde,0x5d339ad11eaaadb8\n"
-".quad 0x8a65d9209ef3b6ee,0xf404da3e7bd8bc99,0x79cf2dbebaf98988,0x6299af41a1b6d77a\n"
-".quad 0x3424cdb35a6458d0,0xa25b841a1c8867de,0x1d55e356a20d5093,0x6730556e589e2749\n"
-".quad 0xb5b58214d8a0c50e,0xdc76dd2f6a3850e7,0x4f9f89e46b39c1ac,0xdb9315de93683cc9\n"
-".quad 0xa2411c36b05f5d30,0x83fe07f23ac107a8,0x009e8e6d7371187b,0x40597c658e3d8297\n"
-".quad 0xfd274a7713e2070d,0x48e1010cf39f64fd,0xf9ce8b42f5f34095,0x553ba58fe9079ca8\n"
-".quad 0xd44845bd6c6307d3,0x6811d1d5a9f1cddf,0xd28a80640de1ddbd,0xce9fbfa0b26aa90f\n"
-".quad 0xf6f6933f53fbf67a,0x537e5e8b27593dbd,0x5ccfbf8477f5ad91,0xfd5b5227b638449f\n"
-".quad 0xc8abb6f84593acce,0xd933977f50aa93d6,0x593af1f097175ff9,0x779aab207513a674\n"
-".quad 0xffcc4efb1bbfa838,0x02d7ebf3bc320fba,0xefeb5b2475138af4,0xf52c73fa0bdf250a\n"
-".quad 0x3b22aac21c8e4dfa,0x6214813be71f6376,0x23b59136372b6f47,0x9ea1b2ec7787f62f\n"
-".quad 0x1791f94ca6aec5e6,0xf4329f5e32e543fb,0x7a653d74ca6aab49,0xabaa981646b286c1\n"
-".quad 0xb3561b18ec3bd329,0x42b776ba48ef32ad,0x69bf41b812ce83c0,0x9a9601a09eebc06f\n"
-".quad 0x1c001b88db0ea035,0xcf977c40095a664b,0x2ce6543a0d7f6628,0x7ceca4d42160ae41\n"
-".quad 0x04671ddf19acf5fb,0xfcb55d4d03a2ed00,0x1e39218103a317b2,0xdc62ebef6351041a\n"
-".quad 0x865f47830abd5134,0xce32bcf5c216ac41,0x83879181eb3d613a,0x5468c0a649fa3d98\n"
-".quad 0x54677ee4660e67fd,0xbfcc149b468e9b1b,0xda69cf4d3969a35e,0xf1c2c7e164792686\n"
-".quad 0x5b30aa1114ec796a,0x6b22eb871a0ee37d,0xb6c3bd78db719b5b,0x8150880af1d1a35c\n"
-".quad 0xe6450cd7a304616a,0x1b0a25cde87d5ccd,0x3cf610177151acf8,0x55e0437bb0e6c1ec\n"
-".quad 0xf7a0a8a2f847bc03,0x2c7861726c3c6503,0x94ff13c89242f216,0xc68053dc38d52d07\n"
-".quad 0xbabd7e4de5ddf373,0x4edfcb8b9bb7f8b9,0x836abab8ba7e6eae,0x8b978f012c8a8de2\n"
-".quad 0x10bbb2a2c5b737f6,0xc900ee963e1d162e,0x86f15fdb3c77754a,0xfe81ccbc7c7c3c37\n"
-".quad 0x9dfb833a8ecd26ae,0x85d9a30f54ea3bd4,0xf8c4184eec399567,0xd516e9cad918884e\n"
-".quad 0xf033da0182a2579d,0x99d06b565133d9e6,0x755668bb935c3d26,0x5bf11ce096cb7e19\n"
-".quad 0xb2c85e0ef8da4f83,0x8cf7366f13796888,0x578720d3aa658e8f,0x8ee42d49c6e02aab\n"
-".quad 0x5bd6e15e973801d8,0x15f8ab63016d5c04,0xa15d004e15641454,0x766552ec118ebe54\n"
-".quad 0x5c61f91ba58497c4,0xf4b413273da9731d,0x9dd50d9c3641beae,0xf74be57c7edf6259\n"
-".quad 0x8dd8ef51b5a877b0,0x6768f1c36d2b63dd,0x2c09653965aa8ba8,0xd6cddec1375b53c0\n"
-".quad 0xbbb8f65301e5900c,0x4445a549b039799a,0x3602f3b884d86391,0xfca03f44a5e77aa1\n"
-".quad 0xfb46d9fd947ff5b0,0x1d96971e2d2e3947,0x1245a1630ebd3261,0x3d6c71c19d550a99\n"
-".quad 0x8cc39b7798bb00c0,0x81e9a498c4f1e397,0xf41d431a3a7cc3b1,0x8c4b24e9fda05998\n"
-".quad 0x3c75b617c29f4959,0x7616639fac97e403,0x014675bd5d0ec678,0x814de431b4dce415\n"
-".quad 0xcbd8eee93a392a53,0x4d1db0741d14294d,0x1b936f85b550adac,0xaa116c0ca4127b3e\n"
-".quad 0xbc820bd258aca495,0xd445763a94336cfd,0xc2085737d0bed1ed,0x948b904457ff064e\n"
-".quad 0x3d7f2e2f6afcdfd8,0xb8bb38b9bc7dbbbb,0x845f7827f56b9c7d,0x10885c9d41feafce\n"
-".quad 0xdcd99a46bb018c3b,0x1c8c9436f41f8264,0xb690087e33498621,0xcba0d5e9978627e7\n"
-".quad 0xf12bd8a7bfbb879b,0x7fd9e5878abb3cac,0x6a23475e5cddde5e,0x3b73811fadd987f9\n"
-".quad 0xb3c5359ed0aaf46b,0xa9aecf54d767ca6b,0x3565a6bb3cd35d9f,0x0fd0374d6a7c7741\n"
-".quad 0xbacebc2c005c13cd,0xc0c94b27801e887e,0x232f23ec9c82901f,0xee4344721a3f621a\n"
-".quad 0xe868fda8688d4347,0xd3abd30d1fbd0d11,0xf7fb7953ee0a3f66,0xd09ff1f6e7edf5f3\n"
-".quad 0xcbefa5aa93d3df4b,0x2c2b50f0f7f19bfb,0x7787bf8d651e5d7d,0x47ea545a9fed8283\n"
-".quad 0x37faf17570f3702c,0xcbe875448aaa6456,0x29d51326a65379c3,0xf01b60dc433f52a4\n"
-".quad 0x075bdaf90233d7aa,0xa7c2ddd533ff4e58,0x058003c062b91698,0x0ce4af77fbb8721c\n"
-".quad 0xe0667791d65d1c92,0xd49247168d883a6b,0x33557a0bc0ad1abe,0x27df91319a8e14b5\n"
-".quad 0x036d3b6fa851898d,0xa78be2c17eb208f8,0x7e7362d78dd0d887,0xa012de01850098f4\n"
-".quad 0x1df069ff1057d49c,0x514724fdd2dc015d,0xb0c78b2bab20076f,0x2f8f4691ba459e2f\n"
-".quad 0x1c4875319061b22e,0x2975ae8caabca685,0x78566925e21c131e,0x62061ae99b32aaf8\n"
-".quad 0xc2ec5eafa0606400,0xbe25abe1d608a350,0x2096301a7c5d060b,0xa63f2fb05b6201fb\n"
-".quad 0x8afeb2697163edfa,0x18cbba8be8a6484d,0x2901978f372c53ed,0x999ce19f342bcdc7\n"
-".quad 0x7cf9f3f9f2366732,0xdbd5327aacfbfe61,0xd017ad8aa91028e6,0x768b85d258537aa4\n"
-".quad 0x7d4998a86b7da3eb,0x1feafafcedf77b73,0xb1de76ef037f6797,0x9ecdd3a9feb360af\n"
-".quad 0x9f6215259ea06954,0x494ee54fb6869dca,0xb953eda7a772a7db,0x939a066ca9f6d553\n"
-".quad 0x9d7484c13ea734ef,0xdf5e1f83abf494e6,0xb117ac95091e72ff,0x9ebffe47c296bc00\n"
-".quad 0xeca674ec27299ddf,0xff73753e7c6dcdd9,0x5627afaef628f670,0x068e26421bf1feff\n"
-".quad 0x96984bd965404041,0xd9f5596a84bd8e34,0x50cdeff66446bc4b,0x6e73ea19937bb399\n"
-".quad 0x287766429766326f,0xb215d66642876e64,0x8aef308564cd8565,0xab8d6efd65c6a761\n"
-".quad 0x5c6b592e34162321,0xe638d7d8b27478ec,0x99c3a83a2863d044,0xe38f466883868a64\n"
-".quad 0x0e0f2b01e1c0c3d3,0xd702653f1c16fd8f,0x34eb9c6538599cb9,0x950cda662cb5cd47\n"
-".quad 0x6a655efc8f96e4ca,0x8ff20cb27318fc4f,0x610e0ea1cf6a9810,0x061085cfd48074cb\n"
-".quad 0xa43d51ceb70311e8,0x56c872fbe816f0fe,0x87e2d6c0b17970a6,0x1b6acc4390c1e2ca\n"
-".quad 0x46746aeb85317b2a,0x3c16aa1eefa8aa16,0xaa0845150020c742,0x4e8ae3310487a0c3\n"
-".quad 0x57a30bbe12b1834e,0x0c676474977e26a8,0x7931eabc0148cbdc,0x33910bc71d6c97d4\n"
-".quad 0x0185994ba0690f3e,0xad0e451a3f88c3f7,0x70db4617a83d66b9,0x5c56b462e57ac2bb\n"
-".quad 0xb1faceb30b492c66,0x7ba3f2f8f5602db5,0xb6870914fb4a1a58,0x98b9795c49acecc8\n"
-".quad 0x49235a0e5a5f7835,0x2868eb235b095e0f,0x20f6e0a1a30f5ca4,0x1445229ae85b7fe5\n"
-".quad 0x5deb861450424287,0x51d859e42755710a,0xc645730cf6db5e04,0x11d7c7090b547970\n"
-".quad 0xcbc092d1a87e18ba,0x5babf95a3f8da08d,0xb617e50ef8031920,0xcb2230fd10f910ae\n"
-".quad 0xfe08b38031d4fd72,0x4f922ef70c3ba452,0x687145d1ada3e4f1,0xe8f5a1476f145a86\n"
-".quad 0x3833a34b519dcab8,0x6a49d19aa746593a,0x0e903935c9a01d8b,0x5f6b7872be0f0d8b\n"
-".quad 0x547b0fc23fc21b95,0x941f2c22939dd837,0x3107e5158deae32d,0x36ccc248ef37be9f\n"
-".quad 0x27e287279f8f263b,0x9c63142c59c8ee35,0x3e69823ecc33061f,0xafea0439da668bd2\n"
-".quad 0xa9706262e397ae97,0xa3deed0fa20ad0ea,0x3a74d1a39a1a8415,0x762e2b596b7f63ee\n"
-".quad 0x2cbce0560545e0e8,0x5dbd4d58157b58af,0xb1d681f6558155b2,0xe663a7655901d302\n"
-".quad 0x95d3ca2d1a375cc8,0x9bd66eac26c8e680,0xc641371314816543,0xda5e2f0595a32be4\n"
-".quad 0xde971291e09fc3d5,0x847279da82118d7a,0x69ee8d27b1dc2b6d,0x3329d38f04bf332e\n"
-".quad 0x2c5efe1767da30cc,0x6ca918e845e77dbc,0xef0012fd74c33395,0xd543b162778f1045\n"
-".quad 0xca066686fc362f94,0x0f638f87038a2872,0x457e7930c07da364,0x659d0a8cbaf996b2\n"
-".quad 0x3172c311da5e5451,0xf11f1d5503b73c30,0x3dfd8a27b071e4d0,0x89f2f1af255d0d31\n"
-".quad 0x63beb51558685999,0xfc73f3a1169cebb9,0x3925f8fe29d7f574,0x7ce8ef41f49fd23c\n"
-".quad 0x0d89f3e7df659106,0x3e90f03627cfa1dc,0x03627cfa69c0d89f,0xcfab5c0d89f3ea3f\n"
-".quad 0x62497b98925f6627,0x5eda1517858925fe,0xc9a945e26a1ef801,0x517e9a945ea6a517\n"
-".quad 0x1042e8bda945e66a,0x5f3c5a7f8412ba2f,0xdb1afa037dfa3e21,0xfe86fa23688df999\n"
-".quad 0xf4d16a1331eaa4d5,0x4429069757bf739f,0xe5ebf5f8fcf8697d,0x0b599668853d47dd\n"
-".quad 0x4e3381b13ec42c0d,0x77c2e835bd0e3be1,0xc20ebbff3db2eccc,0xb203891d77fefb65\n"
-".quad 0x17961e46133f7c52,0x64fdf91b5e403b20,0x50980bf7ccab5907,0xf6407a60202fb203\n"
-".quad 0x2fdf38608c4c05fb,0x302f612760da2960,0xead7c063e380ae67,0x32eba5581706eafe\n"
-".quad 0x2f0585096d83747e,0xee10af0c8546640e,0x1ed4e8024d8bb0cb,0x65bea25ac1117490\n"
-".quad 0xa61dc96d46f8b388,0xcd65b3ee28bbf877,0x631a0f52d609918b,0x6c5ede68d514260c\n"
-".quad 0x636c63b51ac767c7,0x1eaaa4cfaba34722,0x463707084745d775,0x63742a1984939038\n"
-".quad 0xf62fc1b672380795,0x486bbdee581c155e,0xdec397bdf45ff221,0xc48a1f634d5219a3\n"
-".quad 0x9012ed0f48461bde,0x90a7af6d458a31f5,0x4d4e30d952a3cb34,0x2a3b74e7255476b8\n"
-".quad 0xc739bcb42ac6bc3d,0x9a12e1c80321da8a,0x5cb43d1dbe86fefb,0xd137cafaf6c98918\n"
-".quad 0x86292bac52c8dcbd,0xf42a10554644bfb4,0x01add6b94bc7a2d9,0x8a4073f233dd3c19\n"
-".quad 0xa712721de41cb762,0x50aa83f3035bbd72,0xdce95426342035b9,0x4144cf575439981a\n"
-".quad 0x8c48eb25d72be07c,0x2c421e5dde418b71,0x8edd45290175d3bb,0x64e78528831eee78\n"
-".quad 0x6164d5032b53f0e8,0xeb1bf0482c9ff607,0x34621907c6964c2f,0x54b27acb45a61e59\n"
-".quad 0xe2ab3347964dd2a9,0x068a55f02353e593,0xdcc5cba2730b27c5,0x07c8d5e059937a2a\n"
-".quad 0x12673bd159a41ca5,0xa304999b4399d0bb,0x46aa514509d3df9d,0x54dc1f991e9ea971\n"
-".quad 0x08f1357e6072d6b9,0xe08a31df7cb82c15,0x5fbbd17c609b2b6f,0xc31868976a74141c\n"
-".quad 0x415c057c21d8fcb8,0xfbb1ece41624041f,0x998f4fd391a7e607,0xbd252396489e52fb\n"
-".quad 0x0dbb171629b78e16,0x04e7a912bb518fd8,0xb11216eb870a97ec,0xf445d0fa699a6468\n"
-".quad 0x885f8767825f98d7,0x9fea0db2577defe9,0x83bda6b7e1d587a3,0x8b55fb8a30ac53fa\n"
-".quad 0x88c7f5077b921512,0x85a28d8c82974455,0xa26310615fd413ed,0xab60475656bbd18b\n"
-".quad 0x90c31fd410737323,0x41b908a6fea0c599,0xbe248ae0a37e4834,0x47695b76e87fb46c\n"
-".quad 0x8fbffc87b3117fb4,0x69ff78af6ae69ff7,0x43d66f35a162e1b5,0x2961ff31cb2aa7fe\n"
-".quad 0xa5fe369c3dff31b5,0x7114ff98a5dbfe62,0xff989f760a13c79a,0xc3843fe628fc863c\n"
-".quad 0x3c0c431ff98da1f3,0x1db31d03c1bfe625,0x8df05180ffcc7d4f,0xda1944505ff319d8\n"
-".quad 0x6cf581811efadd75,0x0ffd451e23e34be5,0x2f1cffd45767f721,0xb8c3f9b8b02d57cf\n"
-".quad 0xf02bb1361eea29ff,0xd85236f1379c897f,0x838a7ff828c8dcbd,0xe7625ffe8aec8d87\n"
-".quad 0x019861219611bac9,0x00a57646c1aa2520,0xda3b08dd75f60128,0x646a796052006986\n"
-".quad 0x36eb67fe0a001e57,0x416a81384d4505d6,0x5769b657002a58be,0x72de9f88e18b22eb\n"
-".quad 0x03e62dc9eda7afee,0x4f69007c839460c0,0x16a67e8b1540db4a,0xed3170bedd871eda\n"
-".quad 0x739747954680129d,0x079dd128571a042c,0xcd80a911d631f931,0xfe504764dd1ce5d3\n"
-".quad 0xa795ff92d92ea1e4,0x88461fa322671614,0xe1873763465f9130,0x50695750405032e0\n"
-".quad 0x2e582bdc497f3639,0x3c686d6afce8a580,0x851ffac556a47856,0xf72df6f91b35d7e7\n"
-".quad 0xf1299a8f302fcf0b,0x5c9a9955f9f10698,0xbf735d705d071b67,0x9fa21cb046949f11\n"
-".quad 0x7f48397adae5d968,0xa7ff8e834cb513dd,0x9eaeb80eaa975bc6,0x485852d32a5d6e1b\n"
-".quad 0x805730cde6ef8015,0xe329530059396e54,0xb82016c9a05280e3,0x213c3c80ba4cbddc\n"
-".quad 0x8d23265a0309ded4,0x316f8d203398d47e,0x30ac758199084069,0xf41628e80422f0a9\n"
-".quad 0x18902f87001bc9b6,0x49f050ba40800e67,0x6350f37adc5403b9,0x3e9f58a803d91dfd\n"
-".quad 0x0fe67b470e59b2c0,0x2b9e14f3c99f2380,0x0833e8d3d0bab3d1,0x042793f4977ff9c0\n"
-".quad 0xe5ed63474146230e,0x13e0413d4279022c,0xe122da080913964f,0x971d842024cd5c20\n"
-".quad 0x7fbf76d220254a59,0x04c91df8af31012e,0x1d417e71b3552104,0x854b918f2e6b6022\n"
-".quad 0xfe7eb9aa010f51dd,0xb53eb9adf08f5eb9,0xbe0405a9b75fe2c7,0x41016e7a7849c036\n"
-".quad 0x3ee178d141253ee1,0xd93f8f2daa9080bd,0x55d4921018a6d6a9,0x6699d9a4e0c0dcaa\n"
-".quad 0x080cf23dcfe45040,0x0d30fd56ea99ce0c,0x020364f4f9ff0a6d,0xd713768836967423\n"
-".quad 0x50407191ee806295,0x80e26ed206dccf1a,0x4101da47ba040a0a,0xb4365b441b7331f9\n"
-".quad 0xccec060407b9def5,0xd048525ccdda646d,0xdb99da8c0810123d,0x859defdb436db4c8\n"
-".quad 0xcda646dccee86040,0x9a9e840899b466f2,0xa4aaa514776aa095,0xd0811f36acad9a72\n"
-".quad 0x2cf68629eb5910b2,0x4acda4779611a9e5,0x3a2984f526893420,0xecb30e69a102626d\n"
-".quad 0xa179a65d0511e8ed,0x8409f90b0e2cb21e,0xdefda853d4d67876,0x9118c68085040a29\n"
-".quad 0xc8029a7da186fb42,0xd830673a0fcd0b2a,0xcc06706157f07ac2,0x5d26800279ac3754\n"
-".quad 0x4bd572b97b24c081,0x66ece4528e2616db,0x181692bdbd0262a5,0x91de1888a0cbb353\n"
-".quad 0xe635e6410ba190e6,0xd4a803b781b74ba7,0x0ba012df966f000b,0xef9a447d7df8c45e\n"
-".quad 0xd79ce74dcb4c9007,0x9a029bee49e2444d,0x7ae3f535f6396d4e,0xdb7c1ad04ad07401\n"
-".quad 0xf82c62d20acf9ed6,0x02a181302ab946e1,0x9fa5282ab9bec7c3,0x75c185573e81b029\n"
-".quad 0xc04fde8626fd3946,0x5af03d6849e25681,0xd6931835df04f354,0x218b2c7ab6190b95\n"
-".quad 0xd1e93d37469f8079,0x69df063063d0c60e,0x57a4a2bd73062191,0xe3262c211908dd64\n"
-".quad 0xd6b28f453279ae35,0xc0371890fb0963a6,0xe7663428805c583e,0xbdd4ec6311814efb\n"
-".quad 0xef1919e22c90c4f0,0x5bb0745e851adc2d,0xd2a605d83a1da0e8,0x7fa752aadd87b5b5\n"
-".quad 0xd8b95b0bc93709e5,0x200a666bc553be05,0x62c4c8a302ecbdc4,0x8dc4a237c0bb3f63\n"
-".quad 0xbf989e8d05ee79dd,0xc7696381e2cf38f4,0x53150ed85edf9dd9,0x7bde7d8d6b3e19cd\n"
-".quad 0x38673cb4f6ee30ce,0x9ad76cf867387a2b,0x8a19cfd3a96cce7a,0x4bc38c83c69f4c69\n"
-".quad 0x12673b452b657c1d,0x713d160ce716aa7b,0xd782c23c3d4b6a23,0xeaaa338bb108f04f\n"
-".quad 0xbb55b6278a338ba2,0xcaf5613a92605467,0x5d84953c5af64469,0xe78a2f876961f54b\n"
-".quad 0x2ee26283df908a10,0x5638bc400f30b7b0,0x811e37b5b3cc4cea,0x496ab66caa2f4efa\n"
-".quad 0x5da3d8cccb3eb6f9,0x8d46557a6763d195,0xcce7c96ce9ccf91d,0x3f766041fa2dbadc\n"
-".quad 0xe4a07f039eea6f05,0x69180160ff017e27,0xe23d60ff0e8bd35d,0x6c20ff016df7981f\n"
-".quad 0xdcf9810800b68ae8,0x520113026b348ec4,0xe9ea96b646a93579,0x8941249ebefd1ea6\n"
-".quad 0xbc08af4e1d5c3db6,0xa0efc852087e05eb,0xdc527730414c22ed,0x27b8ba90901a5e30\n"
-".quad 0x3a484781fffec120,0x9f5b35f404787ec2,0xcf23d03578b208f1,0xbeebd17d1dc72a92\n"
-".quad 0x65a9b13060c06300,0xc90ad9526b58031c,0x832c7f7afa5bfa80,0x68c7733c433003f0\n"
-".quad 0x4e5906f107678806,0xe01b303401f6e727,0x269d50eb40e0d118,0x9d076c1efc4e800c\n"
-".quad 0x2b04ed4ebbf09a2b,0x85f5882d02197a50,0x18fe5570a5eb302d,0xa7e1057847db38e1\n"
-".quad 0x4981cc05809da7dc,0x59086d339e23518d,0x29e0b213b23732f0,0x2191ac911ba89449\n"
-".quad 0x82c84ec8dcebc164,0xc6da81846eaaaa27,0x0b213b23736f0590,0xeb0c2372c6a3ef08\n"
-".quad 0x20bb2722f82c8635,0xbf779ebe232d0a0b,0x520bb3b2e457696e,0x6db65b62720b20c6\n"
-".quad 0x6da3d8f9e0bf1634,0x5a88bb4bee7671ea,0x82dc3a19da653300,0xbb9920b908e995c4\n"
-".quad 0x5e612161e3a6fa5e,0x11c1a05d8fec4655,0xb1a764228c110324,0x4f544f8fbc69ccf4\n"
-".quad 0xb268977f7e9320e0,0x508631231d3f16c8,0x0a20d6baa45ea4e4,0x432267a0f38274b4\n"
-".quad 0xe12edb8878084051,0xa306bd5c80e4bfb1,0xf3028e1ad8b52508,0x6732428e11f1519b\n"
-".quad 0x5933e814703b52b6,0xee4aa6bcc7245d1a,0x9e4bccb49e505200,0xcc7808a489ef520d\n"
-".quad 0x9378614908f31330,0x41901597711b6950,0x8322941ae4a725e5,0xd5452835ab6a97a9\n"
-".quad 0x00c64030a997e915,0x40c69ea49c6f00c8,0x9ce9920c81172d06,0x130bb0101901aeca\n"
-".quad 0xf133b55a064842ff,0x41761fa348b65eef,0x0c77006488bb2832,0x090aabc03281b0b0\n"
-".quad 0xd0658b4d772a31ef,0xf1111032c058d322,0xd8305ee480832c54,0x96a6ba80cb1d7f58\n"
-".quad 0x6f7ed1360641961d,0xfd0832c30262432c,0x96018d3dd6832c6c,0x32032c34fd2c1b41\n"
-".quad 0x681960af6b1a3a0a,0x6582bf2832c31546,0x3abd13e3d0ba2420,0xc403660cb193dd18\n"
-".quad 0x58c6622e760cb057,0x420658abb3bf1086,0x5d7ecc2ace1d86cf,0x929dc1d614e2a3ca\n"
-".quad 0x1ea3b9fe7eb9e40c,0xd4f1d8f69a9d0fa5,0x1d3c24f924e41962,0x032404406ed120cb\n"
-".quad 0xac05ed120cb08ef8,0x90658b67fb64fe3c,0xf8ab8c9b95282c68,0x37b72720cb0d658c\n"
-".quad 0xb6b022540e224196,0x7d9c308a64c9a3f4,0xa20da57b1d120cb0,0x832c6f62b26c9a1d\n"
-".quad 0x6885b481b4baad44,0x47a1120cb1bdab68,0xcc2b1a49bb4c8db9,0x1b7384c9890658de\n"
-".quad 0x0cb1bdbb6869b699,0xd0d76d0db5d72732,0x73f93a2419637b0e,0x0658b747f336991b\n"
-".quad 0x497cd422cafcd399,0x341b8724e54c2692,0xa7abb4f17a490658,0xd44a1cb659b7e894\n"
-".quad 0x2ab5a5f1a5241962,0xb0e9241962d80e99,0x5866511e8edecb32,0x602d5e8321ea179a\n"
-".quad 0xb0c9e88d66a92419,0x8ba92eec2a419637,0xcb068a90e2780c94,0x29ce83f352dc8f00\n"
-".quad 0x97394555ac762ad4,0xb06daebb62b0dd45,0xa5e8392aff92920c,0x61aad39147130b6d\n"
-".quad 0x35b2a419637b3297,0xb0e91de2b06d28bb,0xc60bcaad7908540c,0x6589dff0c832c030\n"
-".quad 0x9f5b50f9920720a0,0xe9ed99b0c8a4a4ba,0x53ecb2a267580753,0x42ea3c5615025727\n"
-".quad 0x1e5b53d79c373972,0x718c3941f6f50f7f,0xf5bbd383397175d2,0xe23d0e11a085ba0f\n"
-".quad 0x768ef5ee9b672fc8,0xaea00acea7a030e7,0xb2f4c4be28a02ab0,0xa5c9b8246c3c8d3c\n"
-".quad 0xa8cadb5885fe8ee4,0x585ed75c7c6d6026,0xa612554d4e4a48d9,0x699203f610845094\n"
-".quad 0x59d11586cc1fc8c4,0xec28cec47eff2903,0xa2335d277e8e724a,0x8bfd74f655665e2b\n"
-".quad 0xe0cafda9b9aa87c0,0x853c317f951037b7,0x0c16ab101a617da3,0x3021a41ad523075c\n"
-".quad 0x08a3198b725208bc,0x8e0224600a9623f9,0x5e2f18bc64a3184a,0xf60edcbf1920d9b0\n"
-".quad 0x960582206320ac44,0xea9c9d78a18675f4,0xcd3568ceaa15e04f,0x0464918c619a8ca2\n"
-".quad 0x5814bb03ccf49080,0x4bd7e0b352f05d15,0x6cf1876adaf108f9,0x63b58cf0bfb03650\n"
-".quad 0xa50c7b54edd0122f,0x028492287d514c03,0x0096a1a7f49ce948,0xa3c6f76aff7e4a8c\n"
-".quad 0x3ccbe284f3cad292,0xb5e038d334debda1,0x4a23c5d37601492d,0x92b7b1331af027db\n"
-".quad 0x5f1f98c44dc631d4,0x6f0d4effd306f12d,0xa03184ff5c343ba8,0x6c01d0b1de6a5bbf\n"
-".quad 0x492b027b4434ce1c,0xb0a0d260a5376d74,0xaedc1482653e9081,0xc9818748e2e7df3f\n"
-".quad 0x61422fa01d1fd4ec,0x997c384f0536e753,0x3001e8c3344a8dbc,0xc64ecdbac512c202\n"
-".quad 0x4b1370e5ee4535ad,0x98122a9a604d753f,0xa367477a6154d9f0,0x67b2efe306f294dc\n"
-".quad 0x11f8d742cde55a86,0xf53e52c6c133e0b9,0x8c870696218db0e6,0xefaf0f0fc643eefb\n"
-".quad 0x9edf7978729abec7,0x9c2c738120a32a5d,0x0ec1ecb2e49bdc74,0xd593b65e65aa3225\n"
-".quad 0x5454a52842adb2b6,0xb09331719a02c554,0xeb4c415f7fb8c5e5,0x56d0c596cf05c385\n"
-".quad 0xe749c5f117d40b01,0xec68518114a58ca7,0xa9de7ff2611736db,0xcb27187bdcc6cf66\n"
-".quad 0xd5079c9d2cef9a9b,0xc04f840717a85637,0x96a377652818c591,0x8066aaa7fde12111\n"
-".quad 0x5f6c8f3d1c8618a3,0xa7d30d80e8afb1f4,0x12bedf895d07330a,0x2062152dd9ab5a18\n"
-".quad 0x69069ed5d0a6abbd,0x6d76ac2af0b7d0c8,0x7e4554e05329dc82,0x4d29bb30d0cfbf6a\n"
-".quad 0x6c7661c4342ce36e,0x0e49a67d684cdc43,0xf9d34ee60bf60c50,0x2c77a59457a6b9b5\n"
-".quad 0x1bbfc6e2a6a03601,0x16a1fa1a937081fa,0xaad956e1fba45903,0xcd37612888b6aaff\n"
-".quad 0x161bae472219f5cf,0xe55bfa84fd9eb21f,0xa6b43863f8325656,0xa64281054ac9be70\n"
-".quad 0xf30a4c39f00bbf4e,0x8d7725d210ece973,0xb34927eb05b6b5f7,0x19bb810a2097c394\n"
-".quad 0xd629077c2bc0b04e,0xd820886df12c1842,0xa5cb18cc6cdbba14,0xc9d0a4b6534b905f\n"
-".quad 0x8c193b844c116ee5,0x56d7b7260cb1f9d7,0x3ae7e69bf419758b,0xbc87c5861327c95f\n"
-".quad 0x23e6eb36fea13f64,0x90a55768d1fe4419,0xd4479a16109e4a7c,0x8dc712d5335c8ecc\n"
-".quad 0xe81d96ad0475f960,0xd270a6013968696d,0x8b63f368907bac61,0x9455e95096d194fd\n"
-".quad 0xc130ab306b4ab866,0xaa536d16da155a57,0xd2a94cb38148aa55,0x8188cd8db3a0e70c\n"
-".quad 0x42a1bb15a205ed8d,0x05035f976fb102f4,0x706ab1d17609bac4,0x0330462f7c720e2f\n"
-".quad 0x60d7b859919209d2,0x5606f079091dd7e4,0xc0596b7b9437df26,0xb8c0620d31766c0c\n"
-".quad 0x0033fb1b69a23cb0,0x005e1a03568b1f76,0xf1f7005d8619e92d,0x99fb3b7639a39334\n"
-".quad 0xcdb80f443024d567,0xa7cfc9eb374fdf41,0x5f103b56b441d193,0x6df1719ded5b4774\n"
-".quad 0xab41d2e4de5dedcb,0x6ed00c7ae8c15b61,0x3ddf32424c46b218,0xa35d52a981a9e036\n"
-".quad 0xe6de128068bf7473,0x88ecb16e6a77305c,0x65b0a14dd7b50ed2,0x6119be0839fed6d7\n"
-".quad 0x58c2ae890021f1f8,0x9f33d1a53bc09a5c,0xa127b475c94c2289,0x0d29584edc9d2dda\n"
-".quad 0x5fd94d4658d83628,0x448edb26d827180a,0x9da309d135258d73,0x6b09c50fcbc4f235\n"
-".quad 0x8ee125affb786682,0xb0713716d21797c4,0x274c9f55d5f2608e,0x7dedae035b0071b6\n"
-".quad 0x326f34a282f842bc,0x797b275869d22aeb,0x8de78d21420df050,0xfa41cb7d16cb7c6d\n"
-".quad 0xdb18c1f4d54ee963,0xc7353f77bc1d71f8,0x1ddbd615a7c756a7,0x650a00ff23a50311\n"
-".quad 0xfddef0767fe34fee,0xdf4cfd4fef139df4,0x5ab46d0764f6f7db,0x46b686c9db441b51\n"
-".quad 0x993db1c224f1f9bf,0xe1d0bf876efd318f,0x0edd3376991b52f4,0xe2ebff3da672382f\n"
-".quad 0xb501ce368bbc72be,0x8d8f014273376991,0xde1907dd7fe6277d,0x36e72e846dbe1df9\n"
-".quad 0xbb18f4b621faed32,0x9c0ef52c73fa0bc0,0x353f6d350cb9a782,0x4b6c7671c17631b4\n"
-".quad 0x99b2e213dbf47621,0x79df08f4abe026cb,0x827a0c876ae6dcc7,0x14f4b99be97335e8\n"
-".quad 0x13d2e63ba5ef94a6,0xdfa5ccdf4b99b1f8,0x8db99b30c499fa3f,0xb7cd4b4cfc1d7b4c\n"
-".quad 0x1c0fd741a66054d3,0x3599810062ec60f0,0x810233add43d8769,0x868af606b182c076\n"
-".quad 0x26c0521f7b7c488e,0x9ca66a2dc32bee09,0x604bea39e65661b1,0x2b3526a11fd8b754\n"
-".quad 0x04320777ca0f92fb,0x6aeaf080071cec58,0x97b6217b80684316,0x2044b142c94302b4\n"
-".quad 0x00e28253ca48d1ca,0xc0008d5fcd685879,0xd9613ace32be0a01,0x1e89b3fa2460830b\n"
-".quad 0x464e88127f830de0,0xdfada984713fcfd3,0x926de884f116e919,0xc965359652ad3098\n"
-".quad 0xa07ae74826e6db29,0x85f96f3744f9729f,0x8050fdc6eb996277,0x37587279b0984ca7\n"
-".quad 0x46e681c286ea59b4,0x241aa391b914716d,0x9ae6054a87d3a060,0x9e973385dcc99137\n"
-".quad 0x2049cc0705338e01,0xe6556fac737dce83,0x174cb71183a47c05,0x9d127a7ac0453477\n"
-".quad 0x3d6f09f89688cafa,0x874146559690d4d3,0x470e23e7f530eb39,0x5b81cbb13b828c48\n"
-".quad 0x5ee53a251caa7448,0x47e33806cbf74ef1,0x1112b09c0817cb77,0x050c4c07348bc262\n"
-".quad 0x48c18312f5772306,0x40ca1d320f49a90a,0xd9ccf58641a76849,0xd3f1411423f33054\n"
-".quad 0x698b0024049b8f02,0x313562f02a409953,0x506ca2362a6dd218,0x9999b1822a76d705\n"
-".quad 0xe7589d8aef66c577,0x51ade21467e69bb2,0x16f662101689c224,0xed986f94abd232cb\n"
-".quad 0x0857ee559ba8f089,0x8df27de69f643618,0x4d281977aa41db9c,0x593476bf69f2263b\n"
-".quad 0x788b69e0dfcf7964,0x8599936bb7f11958,0x4bc7bc85afc64adb,0xbaee5c953cd864f3\n"
-".quad 0xb42779b1b066279d,0x0c543723d29e65cc,0x29e5a41330891ab1,0xe9cb3480386c9b52\n"
-".quad 0xfc7b0902fb65fa70,0x8286db0f7725b2ca,0x92745d4502a5ed1c,0x851434d688424822\n"
-".quad 0xb530ee7b0bc76c85,0x5a333643c914dccb,0x43c91e842533ed96,0x872802ffe0f8b895\n"
-".quad 0x00000000000077c7\n"
+".quad 0x25fe35f34bca49a6,0xdb3b7f2ece1579fd,0x3cbeb97d5c3ddf9e,0xbd7d9f1fdebff77b\n"
+".quad 0xaffcbfbb387f3dbe,0x0feafaf55bb65fd7,0xdeefef1eb4ce4b48,0xe5f37ebf397edf5c\n"
+".quad 0xb9bd3d7995fce2f1,0x9d5cbe6f6fd7f5f9,0x7cb8bc7eb97cdd5d,0xb06ff2e357950bfd\n"
+".quad 0x7d9cbf0fe76f9be0,0xfee98f30f2f9bc7d,0x37e1f6d9f5f3e2ec,0xdfb72fc099e80855\n"
+".quad 0xcf9b5f237e7cdf2e,0xcb97e1edf37f7fe7,0x7ff7378f57fbabfb,0x7ffb777b66f2f9bf\n"
+".quad 0x7bb879bfdc3cbf2e,0xbcbdb578bcb87fbc,0xcde6e6eaf2fedabb,0x5717b77757c7dbcf\n"
+".quad 0xc63437e9a9e75737,0x51b59bdde5c3f299,0x1d28235ecc07523f,0xf57afe5c5dea3bb7\n"
+".quad 0xc3cbfe65f9a9b2e5,0x0e6f9fabebf3ebe1,0x2cecf0fecfebe1fd,0xdbb792bb387bbdd6\n"
+".quad 0x874feb428f8bb3ab,0xd418737e9ff0f3ff,0x7ff35439b16850e6,0x269439b313f9b9c2\n"
+".quad 0x0163a549bfcd36fe,0xab9a8bfe72f439bb,0x7fe6ffe66e7f3d48,0x9bfe70fc55272c6d\n"
+".quad 0xff30880998d62194,0x73117f8a9ab9f84d,0x1f18406c5a906d51,0xe69bb2b9da49981b\n"
+".quad 0x52624897f98552ff,0x319339082ec65150,0x88bfc67ec0531bb1,0xb12fe29f629852b9\n"
+".quad 0xa6606a4bf8ddd481,0x127d270e32945b1d,0x3d397330903da87b,0xbea4e901bb520fc5\n"
+".quad 0x461a97e3635238a9,0x4886d8b55225fb1a,0x54c3d8359bf0312c,0x34c8848f2324cfd5\n"
+".quad 0x4763ee7e36924294,0x917b157d3f58e913,0x42a69efc6c558fbe,0xfc41646be267647a\n"
+".quad 0xd1c8082c8c86cd24,0x2c65cfc5699b81f8,0xd4b9c8d809137915,0x4d4c8e1c4b2fd89d\n"
+".quad 0x6e6e121c49bd8bff,0x571a52d81799ce33,0xbd4e7c8d91ec7f1c,0x2cb2225bb10aec8d\n"
+".quad 0x4a438917c8cae644,0x938fc5f4d3648afd,0x6624bea3be180860,0x6c5d68fdfcadef02\n"
+".quad 0xcfdedcbece6eafef,0x4851ff7afd7e5dff,0x217388578937a49f,0x314496bb024e44f3\n"
+".quad 0xe6e10fc4ad94674a,0xa4f89354454071e2,0xb91712c8ca9625ff,0x9865940655fc1931\n"
+".quad 0x631283232f06c11c,0x8f348690dbf1b266,0xe666f52ffab1c41e,0x8e983ffe9bdf8f9f\n"
+".quad 0x484d315ff3da6148,0x9b989bb24a09c65f,0x51445d650e641e64,0x260b4dbd96921584\n"
+".quad 0x327d22940305082e,0x4a55695071124925,0x1ef68102bc4a1c8b,0x2508099a41b39e67\n"
+".quad 0xe3c9af924ed85269,0x590da4a340e2de6f,0x126b1faaf22f2511,0x66ab4238c92e05ee\n"
+".quad 0xff0f14dc5c674a59,0xd2cdbfcf9cde7af4,0xf2eeece4fc61f564,0x70b3cfe9ebf3d7e1\n"
+".quad 0xf5f9cdf81bccdd5d,0x1717f3cfd5ddc3d9,0xfdbebfbb3d17698f,0xc074fe2f91de76db\n"
+".quad 0x367e2a59c2a13fab,0xe0f9fc1c51599e6d,0x852edf76d3af079f,0x61f6f6e5c5d9e1f4\n"
+".quad 0xbbb992f34fa7a8fa,0x6a7f5fe3f85a19fc,0x76b73b7dfa77fd7e,0xf42ff4c45fedc7f8\n"
+".quad 0x8bfbbc7f8792bdd1,0x2fe2eee95893e5f6,0xe2f5f47e35f47cbe,0xfeddbf3f225fea2f\n"
+".quad 0x1cce9a6f2911fafa,0x3cd2a970c05f5c1d,0xe14627d6e0f71f3d,0x12662123f6a27a11\n"
+".quad 0x3d03b2cf6b92e2b3,0x45e72879b9173b9d,0xa50cf90349a1c218,0x50ea12c57d8ca166\n"
+".quad 0xa82e6fce0ea8713a,0x59c82af728459440,0x73b46f592a7cdde8,0xfbbd7393d59e4fc6\n"
+".quad 0x7919ea9af372ee5f,0x9397bf18202a09c4,0xb19bdc7de467d076,0x47ba676b07419688\n"
+".quad 0x24a8fd787d7e5f07,0x6a55b6b2c6501692,0x8f316da8e1373afb,0x6fc52e873e8ef6ec\n"
+".quad 0xc4909258d0c58c77,0x006499373b35336d,0x7e3d2b6d93c78d3e,0x57eb132c1b92c946\n"
+".quad 0x9eaaf9eac891d2f5,0x24ed315072177d4e,0x55d42c5d1a45158b,0x8818f9821672474c\n"
+".quad 0x4cb06e2d43757032,0xfebed87cbf92d1a4,0x83a068d36e4a12f9,0x91644859872ca8fa\n"
+".quad 0xcfc3f973affaaa32,0x9a99d3272787e777,0x851ad5388b334fd7,0x991a24b7830a7a03\n"
+".quad 0x6fcc502724da9460,0xb0299a7959abf0b0,0x0d588f602c1b0ab9,0x3502030d62185309\n"
+".quad 0x72b7d3a1797e1c8b,0x84a4d92993641a6a,0xa30ea3948c627ebe,0x88fe5cd0d8aaa5e4\n"
+".quad 0xe5aaa32a1b56ab8b,0xf870d57bf1d451e0,0x5c5d5dbfebf5e3db,0xb357d5f60de86ee6\n"
+".quad 0xc1dbadf956921513,0x883db9c3d4cac16e,0xf9ddfa7bcedf28d3,0xfb7370ff0fcedfcf\n"
+".quad 0x6687fd7d7b777378,0xfadc98b4962ef3d4,0x088a9f23531f9b3c,0x572fffee7045177a\n"
+".quad 0x04c1720d5a2c1cb9,0x3dfe62fcf6588bd1,0x23cfd0376557d3b3,0xf73c8b7a6c6bd710\n"
+".quad 0xbcbdd9c6514cebf9,0x1b23b83a43b6e6de,0x83f009120d66b2b6,0x539c03c89157a4c9\n"
+".quad 0x36ad84f8a51a5089,0xf347f93a6b4fd593,0x1964c4f5d5d47f10,0x1e75ab4694d46017\n"
+".quad 0x3979d6ad5556ac3e,0xcb7aa7ce251cbcaa,0x4b2be3b4c2a489b6,0x34ace111265af120\n"
+".quad 0x91b2839a95283634,0x1dae69581a88ad59,0x71d6f2ccdd24a9b9,0xe6a98644f96720d6\n"
+".quad 0x2fae16dc4c99d0ac,0xf52a288155588d18,0x75e67899189fd4a3,0x2dec2b2c2c2e7585\n"
+".quad 0xb606ce9e4869901d,0x30c02f98c9a4833a,0x2679a4ad3e63a919,0x1053623379899e74\n"
+".quad 0xa073d43f44cb7c4f,0x4120262bc4aa3092,0x5eb320313f6552c7,0x4fb0601b2a763961\n"
+".quad 0x8f791e8e1f9251dd,0x22335f434d97383f,0xd9a63fb9547367be,0x2c00ef1d6255f1f8\n"
+".quad 0x4254b2001d066359,0xd6ae23a5b79a8ca3,0x809a9db503cb8c31,0xea7e56764b61880a\n"
+".quad 0x0c43e7d6240f3efa,0x9a2b116847dd7299,0x291075aa69ab1a72,0x7607ba894ac96d33\n"
+".quad 0xb63f6008dd10232a,0x5ad5524541223f13,0x583fe82156ac9355,0xfcb9ba4f5162b352\n"
+".quad 0x6454772851a58a99,0xe2fc546cd09bed35,0x85361d3624db8c3a,0x238eb68c35bbac78\n"
+".quad 0x7155cb036587dd4b,0x54e8ea58596e9916,0x579d44f10320399f,0x16a16aee65abcd8b\n"
+".quad 0xc5b86207db9b908f,0xc7122c7d06b1d55d,0x1d245cd932a2738b,0xf865947951f0d5f4\n"
+".quad 0xa495ac129cb25934,0x001058081c5df14e,0x2637ec93c449a6cb,0x12c0748563d3854d\n"
+".quad 0x89bd4acdbdc2cb85,0x8e86c903ff5cbf64,0xfb40fa9a7c67a20f,0xd6c2c38c0e1ccf91\n"
+".quad 0xb817c691e6e2deeb,0x9d166b0b7deba986,0x076d50a4b402b136,0x0d4b46303812b716\n"
+".quad 0x12b9cb78771a584b,0x464dde3054afc92f,0xb1282ca5998c6718,0x21300de1bb5869aa\n"
+".quad 0x801a501f79d65396,0x70d149570572d69b,0x2b4949ba7c52e5c6,0x976e95e9b9f58b8a\n"
+".quad 0x9a4e1e1fb0a30a16,0x7420f5083b0726c2,0xa10ac28b17cb8983,0xa8f0ad50db0b911a\n"
+".quad 0x193867af1122be89,0x938e65f201caf91e,0x9daba13bca0a832c,0x9bc370ab2c363409\n"
+".quad 0xd8a081c2e4686915,0x92ae8e7620762f6a,0x512e388d9039a565,0xeba752e585839589\n"
+".quad 0x81805574cef7302a,0xefa32980d790a60e,0xb26f1160acc3e66b,0x5fda2fc96d17cdd8\n"
+".quad 0xd93669217037602f,0x71f98f6e47c3f050,0x6a2ff1965ce67b8a,0x9747bf0747d7f31b\n"
+".quad 0xc3cbebe7d5fdd5c5,0x913e6e10ff9d76dd,0x5f5e5e7fd5fbfcbf,0x6fc7d7f17b7b72fd\n"
+".quad 0x6355d5d5d3f2fd3f,0x59d9c760b82e59cf,0x20aeeeb4f30ab041,0x769b5442c0a0adf7\n"
+".quad 0xb0ed33ba91da6b54,0xb5a76d9223b4d942,0x5819bc09efe544bd,0x3666aa8a6a93cc6d\n"
+".quad 0x4f94d41ca6a13c28,0xaef387d58b48a9aa,0x29602a9802eb9a28,0x74e833450645b945\n"
+".quad 0x2faaec426a7f3531,0x692fe7e97f3d19ca,0x6ca8b47bb29e8403,0x4f1519959a4f4c14\n"
+".quad 0x4eb6ad54f7cff3ee,0xa298cf1d5b557998,0x40a14116a64d0117,0x453b10ac306828db\n"
+".quad 0xdbb3518ec80acc84,0x8dc5af1162d744d2,0xa1b23ecd32ed2045,0x6ed88f1547f7e2a6\n"
+".quad 0x1b0dab06e24dbb87,0x68a5b000490bea0d,0x079554f856fa8a9c,0x1f2798058d5e13cb\n"
+".quad 0xe42d64e6e90bfcfd,0xcb6c132a0c931516,0x25bcfdf019913777,0xd2e8775cc57c88c1\n"
+".quad 0x4e8a059192d322f4,0x02b5778687c3ea17,0xd34e6546ccc0f892,0xb726d688dd244479\n"
+".quad 0xa1aac534dd2d95b6,0x50a0ee718cdc266b,0xbd53671a67162975,0xae7825c26a547b6d\n"
+".quad 0x6fcb87be144fdb49,0x40db7f10ffa2acdb,0x083b9e3f9b9d8151,0x2a3cfdc45af840b7\n"
+".quad 0xe256dd89c57db8af,0xa9bb09c42dea146d,0xfaf310d8844eac7e,0xf5eb821fb31623b2\n"
+".quad 0xa7061ae0cae435a3,0xcd15ded5725cdeb1,0x5338bd6a55de719e,0x3c4c155ab6fd79c8\n"
+".quad 0x709e287e94a78903,0x2c775b015cab0f0d,0x2965851635cf123a,0xc24726c2cb852894\n"
+".quad 0x92ddb613a6c87166,0xd1258568ad493c95,0x54df96c8adcca412,0xbe92c436a8b9563f\n"
+".quad 0x15baac47ec7188ec,0xab8070b301708ad3,0x288c2b84950425e2,0xa29c5adade419027\n"
+".quad 0x7313cc95d2fd4aae,0xeae2eb85468a746c,0xa550d9bdf4b01457,0x12424f8c3a4f42e9\n"
+".quad 0xdbd4d21f94847659,0xf06967e081a7ccb3,0xdc1eac5ffe3ad19d,0x43323543c70b9372\n"
+".quad 0xdc5f7cc664486666,0xb437309c362a78ad,0xf172fb87fd9e78a0,0xd7f174fc6cacddf5\n"
+".quad 0x22d25cbeaca34eb3,0x0e485471cd3a8547,0xd23e8ee3f74ebf94,0xe7eaa1d9fba744fd\n"
+".quad 0xf3dd40c41c353292,0x2c2c5a9e2a07a58b,0x3afeb33126266e8b,0x3aba53fed89e120b\n"
+".quad 0xac331983a873457c,0x3a62c36074eb1c9a,0x42b446972e1b4c9a,0x571034eb9133b315\n"
+".quad 0x41e7092144690b9c,0x011aaaba96df2a24,0x1819473a84c5525a,0xc1e30b8360e3097c\n"
+".quad 0x6e86496b53165df5,0x26c24f3f13286e86,0x614543727b857d77,0xd8ac87127f9996f7\n"
+".quad 0x5dcd45d67ca1cd90,0xfd4fe3fc3bcddd9c,0x42b04658357d8cd5,0xd0d5e58fad8222ba\n"
+".quad 0x649dc03170f5b8fb,0x436cc1c2af2611d0,0xa9f14542e54bd445,0x517755ae45a3dcba\n"
+".quad 0xfdd2bca057ff4d6f,0x884793de3447ca21,0x09308ca35509f629,0x5d04824cd2a42383\n"
+".quad 0x3931102e047f2a46,0x1756e69b71f0b4e5,0xf49ab38d6aadbad2,0x96c8cdf152bc58f8\n"
+".quad 0x7d0ddb73ae09068b,0x5258a9125bea8fae,0x2c5293d1b2bda768,0xe2dc477603437e2d\n"
+".quad 0xe69cbd8995c193aa,0x3a583ee552baf711,0xfbc4f03e725836f2,0xa1e4f03f1de7f00f\n"
+".quad 0xe323c4e8d25e0c9e,0xb1df97a69a0e13c5,0x85eecdce17966e70,0x7ba2770a9c2dd373\n"
+".quad 0xe89d86f7a8fe89dc,0x2b34bfaca6327cf6,0x2a35ba1581fd317f,0x7924e8a2455e4ad2\n"
+".quad 0xd8369fd7f323dce7,0x5ea6f48b577576ad,0xd2132201b24a1cdd,0xae9d793e1dadb87e\n"
+".quad 0x304766b1a17a08ee,0x451b4b0477ad7174,0xbb6d1e3c0477c22c,0x4029bfecc0962025\n"
+".quad 0xbf7a2be42bb8b745,0xe42db674374f082b,0x63571e0416dfb393,0x0a41adabb85c02ac\n"
+".quad 0xc01522039bc6f652,0x03211205ee762b0d,0xd6440fde4fc028fb,0x842e0966a8b92b7c\n"
+".quad 0x9003409673dfe149,0x9a34c4409a379bcb,0xd48a66a88c278928,0xcb9efbe0573469f2\n"
+".quad 0x5e3eede2ddc59354,0x058537e5930be1bc,0xef772e66d36e66f5,0x029939fb5d81d8e6\n"
+".quad 0x38caba11ba419bf6,0x96141264bd61d706,0x8a416ae509beaba6,0x7c93df2d6b46270f\n"
+".quad 0x95f934baa64cc493,0xf29b51ae6ba406c3,0xcad7adef0a57b022,0x62cb144a8ae6e949\n"
+".quad 0xbdf714440d07986f,0xed08f973740bd971,0xb4ea55546c35a16d,0x9315ca1e3720ea4e\n"
+".quad 0xbb0e37a5d3455469,0x4c5400733c8d104c,0x7f4694a8756ab59d,0x389e68954aa3b512\n"
+".quad 0xe177fbec9a83e6d5,0x1de46527b4aaf79d,0x6770201b9455ce88,0xe8144d0e865a86f0\n"
+".quad 0x80730d72b8230a05,0xee7c1185ec51e8a9,0xc67d4ce5d09ea0bc,0x46c3264adcdae9e1\n"
+".quad 0x7ebec3792e047034,0xcf44d120530c673b,0x2ef3d6c08540d2d6,0x779b4252ad2b6388\n"
+".quad 0x161745437486266c,0x1561d64e8017aa80,0xcf391a58e15789dc,0xae9cb262b275bbe8\n"
+".quad 0xc04cd7016587d646,0x04c964f946553733,0x1cc8da76aea34d55,0xa1f83ce164e8b6bb\n"
+".quad 0x54767f3c31e13035,0xc1cdab53afe951a9,0x824adaef41c7a4a7,0x8a04a8092b9cfa55\n"
+".quad 0xc4651b1d2a82ab02,0xd5cde00b37f2ccb3,0x3c1e1cdbe5489fe1,0x7401d3fa973b0c01\n"
+".quad 0x1ae7f07c342bfe72,0x96a2c7c84d03fb9e,0x215b05dc87f3f526,0xf51ed2d06d6ed282\n"
+".quad 0xd465b2dbf534b495,0x01183795065c2830,0x40275700a604d7b2,0x0392d32c03ba0afe\n"
+".quad 0x07a82cdbbe2254c0,0xdc3d8c1564b54156,0xa5bed3a75acaa3aa,0x087cd627f79a9fde\n"
+".quad 0xc9d9f8e393d39bce,0xfa725783e1ff63fb,0x7732df92e48bdef0,0xf05cbe888d1cb3bf\n"
+".quad 0xee888640d501c4d9,0x61d0c89b50d3785c,0xea42c82a3daea782,0x5a7fd1fb84b9c22f\n"
+".quad 0xe7f9c22f86c35edf,0xb4b0d09360d562ea,0x3a40e72a5f432ea0,0x5b17829bdc98deea\n"
+".quad 0x5b3e9066c0dd0fa0,0x7e9977d1d7cc09e6,0x9b0b5d87d02daf01,0x7e88c2e20f0cfa41\n"
+".quad 0x07078fa75c95f4c8,0x034fdfd399f48336,0x1f41da7afa6446fa,0x9296c37d00cd8f18\n"
+".quad 0xa75fb41a45fa2317,0x8ed46bf3e1b0802f,0xbb1492f6aac36e2a,0x6b6b86f3acf600a5\n"
+".quad 0xda93c3d715e8c0c5,0x0e516c81dc6abec5,0x5b8634808960aebc,0x7644c38b0320ed54\n"
+".quad 0x659ace9beb3b9373,0xf3c9f6c749152817,0x1c18d1f00d3f03c6,0x0ee3441d26b02f91\n"
+".quad 0xf6f6b30ef8da63f9,0x40efc467ded23fcf,0xaef9c24099736e36,0x096e3f10424bb813\n"
+".quad 0x5b4e16a8382743a8,0x042b09035011864b,0xe716f9e93562ba5f,0xb7858b9d84df3706\n"
+".quad 0x5ee2e8b3e95f82b6,0xe707622ea38c08d4,0x22803e912bc1532b,0xe61b183ccb3b2ae2\n"
+".quad 0xa0aa6b4a16b631ad,0xd415927bf1139cbd,0x2a781d4511b5a77a,0xcd44c406a62724c4\n"
+".quad 0xf133dae4f8267e3b,0x5175270211178a7d,0x1ca297f11d9d7aff,0x91e7a59c72c5b992\n"
+".quad 0x737bef1b6554c1b9,0xee501d3a91629387,0x6c1b08939db3d144,0x3025d58abaa5a908\n"
+".quad 0x025517ad8b13b0e0,0xc0f0f323d5c90d16,0xe05b836567ed5463,0x0913aa6c1067828d\n"
+".quad 0xa4766cb05b9a06ee,0xcad66994267a7dac,0x42231eb39e5b5c2c,0xeb86e8502416fbf6\n"
+".quad 0xe84d4e81ecaeb11c,0x9c9b603668cfbc4c,0x667400cbf01d9df8,0x96009442a253bac7\n"
+".quad 0x646ddf5f357f562d,0x1ddcdbc41abfa10c,0xcb553b5664aa8369,0xff2b9be347fb7a6c\n"
+".quad 0xca79d7e534561ace,0xe33a421bac0677a1,0x59b2fa9ccaa9d6f1,0x5d9b602349b78d3c\n"
+".quad 0xaed609acfefe98c4,0x786440d7428f3127,0xfb5c944ea1e1a17b,0x990673d046210604\n"
+".quad 0x8a7be4d409bb6059,0xe96825ea105260ac,0xcacd03b3fc705ec8,0x974baee81f839171\n"
+".quad 0x0eefc7489362afe7,0xddbe7d7db2fbb87e,0x31fe1e2506feddde,0xdac7df0109739097\n"
+".quad 0x9e5508deb60c9af1,0xfa85390df72a3ebf,0x530fd76f6ae16c9a,0xcac63d8615240a0b\n"
+".quad 0x63f4aaa501703af5,0x11db15547a9c0ebd,0xbe59c772c37c7e6c,0x0881a8b4f5cc20a0\n"
+".quad 0x292b2d6eac4a3416,0x4760fc30ba855efb,0x81040eea3247ba42,0xd4fdda5dea6a85ea\n"
+".quad 0xe27f1a54f4e9fbe9,0x481c295b54c9fd8e,0x7513dc359889e9c7,0x739574e20fa7ea7c\n"
+".quad 0x701d89a681c6a60e,0x41fa785681cec235,0x675a4987c36b489d,0x48ea20998593ac3f\n"
+".quad 0xe6d38454da2de9b6,0x5982993e3871c9dd,0xb24751256038f7bf,0xe273bd48ab8b26b6\n"
+".quad 0x5d661189c5ef939d,0x5f5923a89c301c7c,0x0ea560f95260f591,0x255f133a72755ff1\n"
+".quad 0xf5f5903a890e41eb,0xc73fa07da0b8f682,0xa895303d6f7addea,0xc4fe454593595923\n"
+".quad 0x357d5302c83b3fb0,0x3eb7a19da25cbe65,0xb9d72a1de256c154,0xe8c50b678cb14f87\n"
+".quad 0x1deb5fd73ef1795a,0x70213d8feb57d130,0xf9d57c4c296bd4c6,0x93d23024a6ba4ac0\n"
+".quad 0xf04c95e023f6ad50,0x653665618ed81a95,0x015ebea38063c372,0x3f2d53cad4e96701\n"
+".quad 0x617d74e156387e9c,0xe6ba0a598065e805,0xe0381293d15f6c5d,0xeb639c13e83bb502\n"
+".quad 0xc1837960eac00f8c,0xdd2f01162d7506b0,0x90f7224a6d9aefae,0x69a212f14b7af5a5\n"
+".quad 0x44eaa70bbc9f1dd4,0x12b0a4e675a93f05,0xa1f7817021023b85,0xcedd640dfd480839\n"
+".quad 0xa9337889d0287607,0xe0c7929e7ee800bd,0x5e911e96c8f1775d,0xea4bd543ddd7fda6\n"
+".quad 0x9b6a6e1373841d1e,0x5adb8a7bb0ba9bd0,0xb8f57c6859e113c4,0x5797dffcb87f38bd\n"
+".quad 0x8d4d843f70f2ff3f,0xf0f6cb97f0622cca,0x231f552c23b2e5fb,0x69be753d37deca41\n"
+".quad 0x8cafa68007d20633,0x5b1ec836b554116d,0xc6af2b10e1d576e5,0xfc3acddfc2d72958\n"
+".quad 0x9466c9906731081d,0x748f851fcfdb2682,0xdd4be9f168acd42a,0x2baf2c40603d883a\n"
+".quad 0xc59d0ef1582a9620,0x045c2404dcfba84d,0x9660433bcc06bb34,0xd2852b3df00ac793\n"
+".quad 0xb078307471373328,0x241f3f6ac15dd32c,0x3ac9b8b75f37eef1,0xe99cd688f5556dc1\n"
+".quad 0x532ec904f79db772,0xa026d1f3dec5e4cc,0xce796df5d7cc4c47,0x14cd7a0d0db6bbd3\n"
+".quad 0xa1266d9ad322c683,0x12dc20d0e4433ef1,0xeaaf1ab5106a849d,0x3982ab72c4f13a48\n"
+".quad 0xadac10a6c5062873,0xe3b6e97b51c2873d,0x7cfc4f2359ce0d66,0xdc98aef49b41e64a\n"
+".quad 0x1208e1b582fae986,0x1ff03f91d6083d45,0x04f4736b9b88c3dc,0x02cbe32c71ec14b8\n"
+".quad 0xe93a53b89f10386a,0x470808679cfb27ef,0xce745a17af9a04aa,0xa9dd2c7f483ce547\n"
+".quad 0xa2422deb63183e9a,0x408e8ead4f8e6efe,0x945403206f0eedeb,0x74fdfd059355487e\n"
+".quad 0xb7b499fa9fdfb3d6,0x9bf2f4593ac9edef,0xe67dfc23bfad6c8a,0xeada913db1c224fa\n"
+".quad 0x455db7c22c9d6677,0xc99cbbfa85549eb6,0xc9d78f84b8baffce,0xbcd55903a89d33a2\n"
+".quad 0xfe6277d8ddfd41c3,0x16bf5f9de1907dd7,0x7f5ad923a89c57a0,0xa9639fd05ef92857\n"
+".quad 0xd9155610e4726fd7,0x10a409df38fb1bb1,0x1dac89b1b95b7a3b,0xf50d9763bc3fb179\n"
+".quad 0xbc8fca6535762f34,0xa194faf1972a1fd8,0xd329eba653555a4f,0x5d54c0b23594360b\n"
+".quad 0x9ab0d8c761de994d,0x15bbb5d24779956d,0x4dfa0dc096741e02,0xd4b00d04f75e037b\n"
+".quad 0xe000dc46d87501ac,0x7cbbe2004ad33258,0x6732a1d06bfb3146,0xe76526a10b057209\n"
+".quad 0x2338eef8cd67afdb,0xe5aaea681d176800,0xf1c90c081d18bd97,0xe3175f7b1a8820d0\n"
+".quad 0x32fa3c1855ea89a6,0x7195e7ae10b5620c,0x1c3c8c0f59eb09d6,0xa34605324fd1ecc4\n"
+".quad 0xa33bf72330733fea,0xfe60a4da3474d8da,0xd34e7a69cb4d1af5,0x8e163f0b23c93436\n"
+".quad 0xd9855088a763cb57,0x59175c38d0771bea,0xb61debc6db8cdadb,0x0a8440578e8d1ae5\n"
+".quad 0x322866bd18230b54,0xd8512e6f43eae66f,0xe7b080bb8a8d67c0,0xaf021bdd87360f61\n"
+".quad 0xbd054517c23de01a,0x63c30b9361e3281f,0xa7f89e44921790b1,0x34029ee1c6a9683c\n"
+".quad 0xd5ebf26f2eef9b9e,0x76fe5c5cddbfc5cd,0x1b55d5c5d3f37572,0x5cbc780964546f14\n"
+".quad 0x85dd95162db9bfb4,0x480774b1f0e8b170,0x378afed9e3bbaa56,0xf40e65e3e3e1e1bc\n"
+".quad 0xefdc19d476693577,0x2ecd187aa751dea4,0xc620c27761ccab3c,0xa8b74e56c8c44277\n"
+".quad 0x819ed00c1512bcee,0xce835ab2899ecf37,0xaab345dc9ae1e934,0xdf88e704b65bf0cb\n"
+".quad 0x9642f077c6d27c1a,0x67b9b3789bcb4445,0xbc39069d532c747c,0x77216a4e3701555a\n"
+".quad 0xdeb70af4b9c00ec4,0xafc55b180b6ae022,0x0ae80270ab20a2a0,0xb32a97608c75f2a5\n"
+".quad 0xe30fc8dd2c24be23,0xa5a09939ed4b98ea,0xeea86ce1b20df577,0xba5f2be3f6fb12cc\n"
+".quad 0x6ec77a8dad43bd87,0x3b478e1b695b1eec,0x604b29cb2d545d43,0xb66ef609bada9e01\n"
+".quad 0xddc7b2980f2c8066,0x222d2a4d81cbccd5,0xb0179dc426c31c8a,0xe501fa252f3bd509\n"
+".quad 0xda36cfeca3ffad87,0xecb4b8f16971ca3f,0x922d0b1875e99308,0xeb638e0ceaa854c8\n"
+".quad 0x661cdbbcc5d80601,0x0f4d24c6278f1cbc,0xa0ea18d1d3e61d8c,0x6259274fed02ccc7\n"
+".quad 0xe3adb0be14fa4acc,0xb0b31cfd64bf2019,0x0a33adeae87633c3,0x0a6f218da6e720a8\n"
+".quad 0x5ec77749d1c9529c,0x68ed83a0e8a14a6e,0xdc9b7c2daa856d62,0x508b60652093d9f0\n"
+".quad 0xe4105e92c56524ad,0xa22bb1d4a19b67ed,0x1042b9be85f68f6e,0xa45c8222bff83276\n"
+".quad 0xebf9717b57e6fec4,0xc5d9c5cde3edddd9,0x22fbc13fab5ce3ed,0x8442e4ea0ff57e74\n"
+".quad 0xe6ccd235d80c61d8,0xe464a1b7a0fc1326,0xb48043f19a4c3108,0x5d06af4cbc313f3d\n"
+".quad 0x895ec53dfddc3cde,0xfecf2c3c55d9e567,0x511a3af2e6eef2f3,0xdb9c08fd6ecc3fcb\n"
+".quad 0x9e29acf68557a359,0x4d767aa6bb3e535d,0xab2d35d9e69aecfd,0x7e81ba6b53e3ba09\n"
+".quad 0xd675e16002e09e68,0x064a593c00f443f5,0x19791f64e41480fe,0x721a2390d1fb10d1\n"
+".quad 0x4347ed43446a1a3f,0x9d5e9868fde8688f,0xbfdbca9f7051fb36,0x84ff8fb73f6faf9f\n"
+".quad 0x5f7d2d549e9efa5e,0x615a8787bf8cdfde,0xbc3dfc6b28f2ebe9,0x3f52a2d4ff6c141b\n"
+".quad 0xbfd78bab879b8162,0x5f43aa24555322b1,0x4ea89935329bce1e,0x80db06e219fa9521\n"
+".quad 0x3aded7c8119ebd57,0x3e16eea99ffa72c0,0x2c001e0315c8b4c5,0x67257bbfddc390e0\n"
+".quad 0x0333bc8eb2e8e490,0xa49238b46c41d35f,0x9aabd05e0568d5f6,0x3efc898cd470a5a9\n"
+".quad 0x1b69db7d428c4c69,0x3c5f160bf59047c0,0xf39b16bc6e86c43d,0x0096f00c2804c7a3\n"
+".quad 0xef834ff882bea4e5,0x8a3927ee96e00ae8,0x863c595d59003b7a,0x7c7a348dd22cf17d\n"
+".quad 0xe243a98c830d9171,0x4bad746555e53428,0xc2b3492f10e098f1,0x1030d74cd99557c3\n"
+".quad 0x1762f57d03032003,0xf12d5f0eb0451a86,0x04b180d3e2e8305d,0x31f97d82db100fd9\n"
+".quad 0x57f5934b8b1f6fd5,0xc65dd45f4532426c,0x480cbc79b9629f68,0xcce70cf9a15e6e39\n"
+".quad 0xe7cf9fcf91b33994,0xdea993d567dff30b,0x80bd6c5548814736,0xb45c2e92c29bd526\n"
+".quad 0xea4cc5435bed1f5b,0xff57d7e76fbbdb9b,0x8ef3b7781bfb3cb8,0xf66e9d4ff59b057d\n"
+".quad 0xfb10a92cf5034aa4,0x4a772a7db434ee54,0xca9f6d3d3b953eda,0x9cd033654fb6aa9d\n"
+".quad 0xeba42609f539a77c,0xfaf0fc1d5fa4a734,0x88bd64a848f397fe,0xf5fff23e14b5e005\n"
+".quad 0x6533a761394ceefc,0xfb9ba9f3e36e6ecf,0xb13d7d77b147b387,0x34713210df8ff7fa\n"
+".quad 0xb4c25ecb2a020208,0xcfaacb5425ec71a4,0x866f7fb32235e25e,0x739f50cc9bdd9cca\n"
+".quad 0x43bb3214bb31937b,0x90aeb332143b7321,0x5779842b266c2b2d,0x5c6b77eb2e353b0c\n"
+".quad 0xe35ac971a0b1190d,0x31c6bec593a3c762,0xce1d41d1431e8227,0x1c7a33441c345324\n"
+".quad 0x7079580f0e061e9f,0xb81329f8e0b7ec78,0xa75ce329c2cce5ce,0xa866d33165ae6a39\n"
+".quad 0x532af7e47cb72654,0x7f90659398c7e27b,0x0870750e7b54c084,0x30842e7ea403a65b\n"
+".quad 0x21ea8e75b8188f40,0xb64397df40b787f5,0x3f16b6058bcb8532,0xdb56621c860f1654\n"
+".quad 0x33a3575c298bd950,0xe0b550f77d4550b2,0x504228a801063a11,0x74571988243d061d\n"
+".quad 0xbd185df0958c1a72,0x633b23a4bbf13542,0xc98f55e00a465ee0,0x9c885e38eb64bea3\n"
+".quad 0x0c2cca5d034879f1,0x687228d1fc461fb8,0x86da30bd41eb35cd,0xe2b5a3172bd615db\n"
+".quad 0x8fd675985a496332,0xdd1f97c7ab016dad,0xb43848a7da50d2c3,0xc5cbcae24d676645\n"
+".quad 0x491ad072d2fbc1ac,0x4347591ad84af07a,0x07b7050d187ae521,0xa22914d742dbff29\n"
+".quad 0xef5c30a282121438,0x8ec2cf213aab8852,0x322b9867b6daf022,0x8ebe38485aa3cb86\n"
+".quad 0x5e04968d43f0c5d0,0xdd5fcad1fc6d046e,0xb0bf2877c018c902,0x591187e887c88575\n"
+".quad 0xf0459c018ea7eb96,0x7c9177b861dd2297,0x438a2e8d6d1f278a,0x47ad0a3b78a2d433\n"
+".quad 0xc19d1a5a8cee55c7,0x524e8cd53a32c9d1,0x7481c9ae4d00ec5b,0xfb5bc395f0786c58\n"
+".quad 0xa3d87e11fe10dcaa,0xa0f961149ceec1ba,0x883f28ac6f57196c,0xb666124779bdf4f9\n"
+".quad 0x3f14393cfc7931d9,0xe318a162ce4771a9,0xf34c11f6619830fc,0x7f5021ced3345e91\n"
+".quad 0x4b8313171cbd74bd,0x1ef7687d10568755,0xd3a68d1cd0d420ad,0xb1715acb5bfb1f71\n"
+".quad 0x65e702b02a2f0743,0xedea6ac0abdac579,0x8eb40fb2ac0aad92,0x331d3b2ac80e9815\n"
+".quad 0xae9e5168d1bae647,0xdeb3756136473404,0x3209b898a40b2a1c,0xd2f1782cad195f26\n"
+".quad 0xf4b8948f04fe1eae,0x2393ced4108c6bd6,0x4f74693d8ee15b6c,0x994e9c7825f99973\n"
+".quad 0x62f7f0bb3ed18661,0x6548c7422f3bede1,0x780097eba6199cab,0xaa1d8b13bc78822f\n"
+".quad 0x50333437e1b17ca6,0x7b1c7c381c514396,0x2bf3c98603ed1b20,0x2ce85465d7ccb592\n"
+".quad 0x8b96188ed2f2a28b,0x88f8eaa81db9e181,0xefec513d838f2687,0x4f978d792ae86989\n"
+".quad 0x1df5a8aac342cccc,0xe39f9d08b4e75dcb,0xc92fc7f14ebfaba7,0xe7477a0fa4fe91e1\n"
+".quad 0x6c4f9f3efb2c8833,0xf48781b13e7d0ee0,0x1b13e7d34e06c4f9,0x7d5ae06c4f9f51f8\n"
+".quad 0x124bdcc492fb313e,0xf6d0a8bc2c492ff3,0x4d4a2f1350f7c00a,0x8bf4d4a2f53528be\n"
+".quad 0x821745ed4a2f3352,0xf9e2d3fc2095d178,0xd8d7d01befd1f10a,0xf437d11b446fccce\n"
+".quad 0xa68b50998f5526af,0x214834babdfb9cff,0x2f5fafc7e7c34bea,0x5accb34429ea3eef\n"
+".quad 0x719c0d89f6216068,0xbe1741ade871df0a,0x1075dff9ed976663,0x901c48ebbff7db2e\n"
+".quad 0xbcb0f23099fbe295,0x27efc8daf201d900,0x84c05fbe655ac83b,0xb203d301017d901a\n"
+".quad 0x7ef9c30462602fdf,0x817b093b06d14b01,0x56be031f1c057339,0x975d2ac0b83757f7\n"
+".quad 0x782c284b6c1ba3f1,0x708578642a332071,0xf6a740126c5d865f,0x2df512d6088ba480\n"
+".quad 0x30ee4b6a37c59c43,0x6b2d9f7145dfc3bd,0x18d07a96b04c8c5e,0x62f6f346a8a13063\n"
+".quad 0x1b631da8d63b3e3b,0xf555267d5d1a3913,0x31b838423a2ebba8,0x1ba150cc249c81c2\n"
+".quad 0xb17e0db391c03cab,0x435def72c0e0aaf7,0xf61cbdefa2ff910a,0x2450fb1a6a90cd1e\n"
+".quad 0x8097687a4230def6,0x853d7b6a2c518fac,0x6a7186ca951e59a4,0x51dba7392aa3b5c2\n"
+".quad 0x39cde5a15635e1e9,0xd0970e40190ed456,0xe5a1e8edf437f7dc,0x89be57d7b64c48c2\n"
+".quad 0x31495d629646e5ee,0xa15082aa3225fda4,0x0d6eb5ca5e3d16cf,0x52039f919ee9e0c8\n"
+".quad 0x389390ef20e5bb14,0x85541f981addeb95,0xe74aa131a101adca,0x0a267abaa1ccc0d6\n"
+".quad 0x6247592eb95f03e2,0x6210f2eef20c5b8c,0x76ea29480bae9dd9,0x273c294418f773c4\n"
+".quad 0x0b26a8195a9f8743,0x58df824164ffb03b,0xa310c83e34b2617f,0xa593d65a2d30f2c9\n"
+".quad 0x15599a3cb26e954a,0x3452af811a9f2c9f,0xe62e5d1398593e28,0x3e46af02cc9bd156\n"
+".quad 0x9339de8acd20e528,0x1824ccda1cce85d8,0x35528a284e9efced,0xa6e0fcc8f4f54b8a\n"
+".quad 0x4789abf30396b5ca,0x04518efbe5c160a8,0xfdde8be304d95b7f,0x18c344bb53a0a0e2\n"
+".quad 0x0ae02be10ec7e5c6,0xdd8f6720b12020fa,0xcc7a7e9c8d3f303f,0xe9291cb244f297dc\n"
+".quad 0x6dd8b8b14dbc70b5,0x273d4895da8c7ec0,0x8890b75c3854bf60,0xa22e87d34cd32345\n"
+".quad 0x42fc3b3c12fcc6bf,0xff506d92bbef7f4c,0x1ded35bf0eac3d1c,0x5aafdc5185629fd4\n"
+".quad 0x463fa83bdc90a894,0x2d146c6414ba22ac,0x1318830afea09f6c,0x5b023ab2b5de8c5d\n"
+".quad 0x8618fea0839b991d,0x0dc84537f5062ccc,0xf12457051bf241a2,0x3b4adbb743fda365\n"
+".quad 0x7dffe43d988bfda2,0x4ffbc57b5734ffbc,0x1eb379ad0b170dab,0x4b0ff98e59553ff2\n"
+".quad 0x2ff1b4e1eff98da9,0x88a7fcc52edff315,0xfcc4fbb0509e3cd3,0x1c21ff3147e431e7\n"
+".quad 0xe06218ffcc6d0f9e,0xed98e81e0dff3129,0x6f828c07fe63ea78,0xd0ca2282ff98cec4\n"
+".quad 0x67ac0c08f7d6ebae,0x7fea28f11f1a5f2b,0x78e7fea2bb3fb908,0xc61fcdc5816abe79\n"
+".quad 0x815d89b0f7514ffd,0xc291b789bce44bff,0x1c53ffc14646e5ee,0x3b12fff457646c3c\n"
+".quad 0x0cc3090cb08dd64f,0x052bb2360d512900,0xd1d846ebafb00940,0x2353cb0290034c36\n"
+".quad 0xb75b3ff05000f2bb,0x0b5409c26a282eb1,0xbb4db2b80152c5f2,0x96f4fc470c59175a\n"
+".quad 0x1f316e4f6d3d7f73,0x7b4803e41ca30600,0xb533f458aa06da52,0x698b85f6ec38f6d0\n"
+".quad 0x9cba3caa340094ef,0x3cee8942b8d02163,0x6c05488eb18fc988,0xf2823b26e8e72e9e\n"
+".quad 0x3caffc96c9750f27,0x4230fd191338b0a5,0x0c39bb1a32fc8984,0x834aba8202819707\n"
+".quad 0x72c15ee24bf9b1ca,0xe3436b57e7452c01,0x28ffd62ab523c2b1,0xb96fb7c8d9aebf3c\n"
+".quad 0x894cd479817e785f,0xe4d4caafcf8834c7,0xfb9aeb82e838db3a,0xfd10e58234a4f88d\n"
+".quad 0xfa41cbd6d72ecb44,0x3ffc741a65a89eeb,0xf575c07554bade35,0x42c2969952eb70dc\n"
+".quad 0x02b9866f377c00aa,0x194a9802c9cb72a4,0xc100b64d0294071f,0x09e1e405d265eee5\n"
+".quad 0x691932d0184ef6a1,0x8b7c69019cc6a3f4,0x8563ac0cc8420349,0xa0b1474021178549\n"
+".quad 0xc4817c3800de4db7,0x4f8285d204007338,0x1a879bd6e2a01dca,0xf4fac5401ec8efeb\n"
+".quad 0x7f33da3872cd9601,0x5cf0a79e4cf91c00,0x419f469e85d59e89,0x213c9fa4bbffce00\n"
+".quad 0x2f6b1a3a0a311870,0x9f0209ea13c81167,0x0916d040489cb278,0xb8ec2101266ae107\n"
+".quad 0xfdfbb691012a52cc,0x2648efc579880973,0xea0bf38d9aa90820,0x2a5c8c79735b0110\n"
+".quad 0xf3f5cd50087a8eec,0xa9f5cd6f847af5cf,0xf0202d4dbaff163d,0x080b73d3c24e01b5\n"
+".quad 0xf70bc68a0929f70a,0xc9fc796d548405e9,0xaea49080c536b54e,0x34cecd270606e552\n"
+".quad 0x406791ee7f228203,0x6987eab754ce7060,0x101b27a7cff85368,0xb89bb441b4b3a118\n"
+".quad 0x82038c8f740314ae,0x0713769036e678d2,0x080ed23dd0205054,0xa1b2da20db998fca\n"
+".quad 0x676030203dcef7ad,0x824292e66ed3236e,0xdcced460408091ee,0x2cef7eda1b6da646\n"
+".quad 0x6d3236e677430204,0xd4f42044cda33796,0x255528a3bb5504ac,0x8408f9b5656cd395\n"
+".quad 0x67b4314f5ac88596,0x566d23bcb08d4f29,0xd14c27a93449a102,0x6598734d08131369\n"
+".quad 0x0bcd32e8288f476f,0x204fc858716590f5,0xf7ed429ea6b3c3b4,0x88c634042820514e\n"
+".quad 0x4014d3ed0c37da14,0xc18339d07e685956,0x6033830abf83d616,0xe9340013cd61baa6\n"
+".quad 0x5eab95cbd926040a,0x376722947130b6da,0xc0b495ede813152b,0x8ef0c445065d9a98\n"
+".quad 0x31af32085d0c8734,0xa5401dbc0dba5d3f,0x5d0096fcb378005e,0x7cd223ebefc622f0\n"
+".quad 0xbce73a6e5a64803f,0xd014df724f12226e,0xd71fa9afb1cb6a74,0xdbe0d6825683a00b\n"
+".quad 0xc1631690567cf6b6,0x150c098155ca370f,0xfd294155cdf63e18,0xae0c2ab9f40d814c\n"
+".quad 0x027ef43137e9ca33,0xd781eb424f12b40e,0xb498c1aef8279aa2,0x0c5963d5b0c85cae\n"
+".quad 0x8f49e9ba34fc03c9,0x4ef831831e863076,0xbd2515eb98310c8b,0x19316108c846eb22\n"
+".quad 0xb5947a2993cd71af,0x01b8c487d84b1d36,0x3b31a14402e2c1f6,0xeea763188c0a77df\n"
+".quad 0x78c8cf1164862785,0xdd83a2f428d6e16f,0x95302ec1d0ed0742,0xfd3a9556ec3dadae\n"
+".quad 0xc5cad85e49b84f2b,0x0053335e2a9df02e,0x162645181765ee21,0x6e2511be05d9fb1b\n"
+".quad 0xfcc4f4682f73ceec,0x3b4b1c0f1679c7a5,0x98a876c2f6fceece,0xdef3ec6b59f0ce6a\n"
+".quad 0xc339e5a7b7718673,0xd6bb67c339c3d159,0x50ce7e9d4b6673d4,0x5e1c641e34fa634c\n"
+".quad 0x9339da295b2be0ea,0x89e8b06738b553d8,0xbc1611e1ea5b511b,0x55519c5d8847827e\n"
+".quad 0xdaadb13c519c5d17,0x57ab09d49302a33d,0xec24a9e2d7b2234e,0x3c517c3b4b0faa5a\n"
+".quad 0x7713141efc845087,0xb1c5e2007985bd81,0x08f1bdad9e626752,0x4b55b365517a77d4\n"
+".quad 0xed1ec66659f5b7ca,0x6a32abd33b1e8caa,0x673e4b674e67c8ec,0xfbb3020fd16dd6e6\n"
+".quad 0x2503f81cf7537829,0x48c00b07f80bf13f,0x11eb07f8745e9aeb,0x6107f80b6fbcc0ff\n"
+".quad 0xe7cc084005b45743,0x9008981359a47626,0x4f54b5b23549abca,0x4a0924f5f7e8f537\n"
+".quad 0xe0457a70eae1edb4,0x077e429043f02f5d,0xe293b9820a61176d,0x3dc5d48480d2f186\n"
+".quad 0xd2423c0ffff60901,0xfad9afa023c3f611,0x791e81abc590478c,0xf75e8be8ee395496\n"
+".quad 0x2d4d898306031805,0x4856ca935ac018e3,0x1963fbd7d2dfd406,0x463b99e219801f84\n"
+".quad 0x72c837883b3c4033,0x00d981a00fb7393a,0x34ea875a070688c7,0xe83b60f7e2740061\n"
+".quad 0x58276a75df84d15c,0x2fac416810cbd281,0xc7f2ab852f59816c,0x3f082bc23ed9c708\n"
+".quad 0x4c0e602c04ed3ee5,0xc843699cf11a8c6a,0x4f05909d91b99782,0x0c8d6488dd44a249\n"
+".quad 0x16427646e75e0b21,0x36d40c237555513c,0x5909d91b9b782c86,0x58611b96351f7840\n"
+".quad 0x05d93917c16431af,0xfbbcf5f119685059,0x905d9d9722bb4b75,0x6db2db1390590632\n"
+".quad 0x6d1ec7cf05f8b1a3,0xd445da5f73b38f53,0x16e1d0ced3299802,0xdcc905c8474cae24\n"
+".quad 0xf3090b0f1d37d2f5,0x8e0d02ec7f6232aa,0x8d3b211460881920,0x7aa27c7de34e67a5\n"
+".quad 0x9344bbfbf4990702,0x84318918e9f8b645,0x5106b5d522f52722,0x19133d079c13a5a0\n"
+".quad 0x0976dc43c042028a,0x1835eae40725fd8f,0x981470d6c5a92845,0x399214708f8a8cdf\n"
+".quad 0xc99f40a381da95b3,0x725535e63922e8d2,0xf25e65a4f2829007,0x63c045244f7a906c\n"
+".quad 0x9bc30a4847989986,0x0c80acbb88db4a84,0x1914a0d725392f2a,0xaa2941ad5b54bd4c\n"
+".quad 0x063201854cbf48ae,0x0634f524e3780640,0xe74c906408b96832,0x985d8080c80d7654\n"
+".quad 0x899daad0324217f8,0x0bb0fd1a45b2f77f,0x63b8032445d94192,0x48555e01940d8580\n"
+".quad 0x832c5a6bb9518f78,0x8888819602c69916,0xc182f724041962a7,0xb535d40658ebfac6\n"
+".quad 0x7bf689b0320cb0ec,0xe841961813121963,0xb00c69eeb4196367,0x901961a7e960da0c\n"
+".quad 0x40cb057b58d1d051,0x2c15f9419618aa33,0xd5e89f1e85d12103,0x201b30658c9ee8c1\n"
+".quad 0xc6331173b06582be,0x1032c55d9df88432,0xebf6615670ec367a,0x94ee0eb0a7151e52\n"
+".quad 0xf51dcff3f5cf2064,0xa78ec7b4d4e87d28,0xe9e127c92720cb16,0x1920220376890658\n"
+".quad 0x602f6890658477c0,0x832c5b3fdb27f1e5,0xc55c64dca9416344,0xbdb93906586b2c67\n"
+".quad 0xb58112a071120cb1,0xece18453264d1fa5,0x106d2bd8e8906583,0x19637b159364d0ed\n"
+".quad 0x442da40da5d56a24,0x3d0890658ded5b43,0x6158d24dda646dca,0xdb9c264c4832c6f6\n"
+".quad 0x658deddb434db4c8,0x86bb686daeb93990,0x9fc9d120cb1bd876,0x32c5ba3f99b4c8db\n"
+".quad 0x4be6a11657e69cc8,0xa0dc39272a613492,0x3d5da78bd24832c1,0xa250e5b2cdbf44a5\n"
+".quad 0x55ad2f8d2920cb16,0x874920cb16c074c9,0xc33288f476f65995,0x016af4190f50bcd2\n"
+".quad 0x864f446b354920cb,0x5d497761520cb1bd,0x5834548713c064a4,0x4e741f9a96e47806\n"
+".quad 0xb9ca2aad63b156a1,0x836d75db1586ea2c,0x2f41c957fc949065,0x0d569c8a38985b6d\n"
+".quad 0xad9520cb1bd994bb,0x8748ef15836945d9,0x305e556bc842a065,0x2c4eff8641960186\n"
+".quad 0xfada87cc90390503,0x4f6ccd86452525d4,0x9f6595133ac03a9f,0x1751e2b0a812b93a\n"
+".quad 0xf2da9ebce1b9cb92,0x8c61ca0fb7a87bf8,0xadde9c19cb8bae93,0x11e8708d042dd07f\n"
+".quad 0xb477af74db397e47,0x750056753d01873b,0x97a625f145015585,0x2e4dc12361e469e5\n"
+".quad 0x4656dac42ff47725,0xc2f6bae3e36b0135,0x3092aa6a725246ca,0x4c901fb0842284a5\n"
+".quad 0xce88ac3660fe4623,0x61467623f7f9481a,0x119ae93bf4739257,0x5feba7b2ab32f15d\n"
+".quad 0x0657ed4dcd543e04,0x29e18bfca881bdbf,0x60b55880d30bed1c,0x810d20d6a9183ae0\n"
+".quad 0x4518cc5b929045e1,0x7011230054b11fc8,0xf178c5e32518c254,0xb076e5f8c906cd82\n"
+".quad 0xb02c110319056227,0x54e4ebc50c33afa4,0x69ab467550af027f,0x23248c630cd46516\n"
+".quad 0xc0a5d81e67a48400,0x5ebf059a9782e8aa,0x678c3b56d78847ca,0x1dac6785fd81b283\n"
+".quad 0x2863daa76e80917b,0x14249143ea8a601d,0x04b50d3fa4e74a40,0x1e37bb57fbf25460\n"
+".quad 0xe65f14279e569495,0xaf01c699a6f5ed09,0x511e2e9bb00a496d,0x95bd8998d7813eda\n"
+".quad 0xf8fcc6226e318ea4,0x786a77fe9837896a,0x018c27fae1a1dd43,0x600e858ef352ddfd\n"
+".quad 0x495813da21a670e3,0x8506930529bb6ba2,0x76e0a41329f4840d,0x4c0c3a47173ef9fd\n"
+".quad 0x0a117d00e8fea766,0xcbe1c27829b73a9b,0x800f4619a2546de4,0x32766dd628961011\n"
+".quad 0x589b872f7229ad6e,0xc09154d3026ba9fa,0x1b3a3bd30aa6cf84,0x3d977f183794a6e5\n"
+".quad 0x8fc6ba166f2ad433,0xa9f29636099f05c8,0x643834b10c6d8737,0x7d78787e321f77dc\n"
+".quad 0xf6fbcbc394d5f63f,0xe1639c09051952ec,0x760f659724dee3a4,0xac9db2f32d519128\n"
+".quad 0xa2a52942156d95b6,0x84998b8cd0162aa2,0x5a620afbfdc62f2d,0xb6862cb6782e1c2f\n"
+".quad 0x3a4e2f88bea0580a,0x63428c08a52c653f,0x4ef3ff9308b9b6df,0x5938c3dee6367b35\n"
+".quad 0xa83ce4e9677cd4de,0x027c2038bd42b1be,0xb51bbb2940c62c8e,0x0335553fef09088c\n"
+".quad 0xfb6479e8e430c51c,0x3e986c07457d8fa2,0x95f6fc4ae8399855,0x0310a96ecd5ad0c0\n"
+".quad 0x4834f6ae85355de9,0x6bb5615785be8643,0xf22aa702994ee413,0x694dd986867dfb53\n"
+".quad 0x63b30e21a1671b72,0x724d33eb4266e21b,0xce9a77305fb06280,0x63bd2ca2bd35cdaf\n"
+".quad 0xddfe37153501b009,0xb50fd0d49b840fd0,0x56cab70fdd22c818,0x69bb094445b557fd\n"
+".quad 0xb0dd723910cfae7e,0x2adfd427ecf590f8,0x35a1c31fc192b2b7,0x3214082a564df385\n"
+".quad 0x985261cf805dfa75,0x6bb92e9087674b9f,0x9a493f582db5afbc,0xcddc085104be1ca5\n"
+".quad 0xb1483be15e058270,0xc104436f8960c216,0x2e58c66366ddd0a6,0x4e8525b29a5c82fd\n"
+".quad 0x60c9dc22608b772e,0xb6bdb930658fcebc,0xd73f34dfa0cbac5a,0xe43e2c30993e4af9\n"
+".quad 0x1f3759b7f509fb25,0x852abb468ff220c9,0xa23cd0b084f253e4,0x6e3896a99ae47666\n"
+".quad 0x40ecb56823afcb04,0x93853009cb434b6f,0x5b1f9b4483dd630e,0xa2af4a84b68ca7ec\n"
+".quad 0x098559835a55c334,0x529b68b6d0aad2be,0x954a659c0a4552ad,0x0c466c6d9d073866\n"
+".quad 0x150dd8ad102f6c6c,0x281afcbb7d8817a2,0x83558e8bb04dd620,0x1982317be390717b\n"
+".quad 0x06bdc2cc8c904e90,0xb03783c848eebf23,0x02cb5bdca1bef932,0xc60310698bb36066\n"
+".quad 0x019fd8db4d11e585,0x02f0d01ab458fbb0,0x8fb802ec30cf4968,0xcfd9dbb1cd1c99a7\n"
+".quad 0x6dc07a218126ab3c,0x3e7e4f59ba7efa0e,0xf881dab5a20e8c9d,0x6f8b8cef6ada3ba2\n"
+".quad 0x5a0e9726f2ef6e5b,0x768063d7460adb0d,0xeef99212623590c3,0x1aea954c0d4f01b1\n"
+".quad 0x36f0940345fba39d,0x47658b7353b982e7,0x2d850a6ebda87694,0x08cdf041cff6b6bb\n"
+".quad 0xc6157448010f8fc3,0xf99e8d29de04d2e2,0x093da3ae4a61144c,0x694ac276e4e96ed5\n"
+".quad 0xfeca6a32c6c1b140,0x2476d936c138c052,0xed184e89a92c6b9a,0x584e287e5e2791ac\n"
+".quad 0x77092d7fdbc33413,0x8389b8b690bcbe24,0x3a64faaeaf930475,0xef6d701ad8038db1\n"
+".quad 0x9379a51417c215e3,0xcbd93ac34e915759,0x6f3c690a106f8283,0xd20e5be8b65be36c\n"
+".quad 0xd8c60fa6aa774b1f,0x39a9fbbde0eb8fc6,0xeedeb0ad3e3ab53e,0x285007f91d281888\n"
+".quad 0xeef783b3ff1a7f73,0xfa67ea7f789cefa7,0xd5a3683b27b7bede,0x35b4364eda20da8a\n"
+".quad 0xc9ed8e11278fcdfa,0x0e85fc3b77e98c7c,0x76e99bb4c8da97a7,0x175ff9ed3391c178\n"
+".quad 0xa80e71b45de395f7,0x6c780a1399bb4c8d,0xf0c83eebff313bec,0xb73974236df0efce\n"
+".quad 0xd8c7a5b10fd76991,0xe077a9639fd05e05,0xa9fb69a865cd3c14,0x5b63b38e0bb18da1\n"
+".quad 0xcd97109edfa3b10a,0xcef847a55f01365c,0x13d0643b5736e63b,0xa7a5ccdf4b99af44\n"
+".quad 0x9e9731dd2f7ca530,0xfd2e66fa5ccd8fc0,0x6dccd98624cfd1fe,0xbe6a5a67e0ebda64\n"
+".quad 0xe07eba0d3302a69d,0xaccc080317630780,0x08119d6ea1ec3b49,0x3457b0358c1603b4\n"
+".quad 0x360290fbdbe24474,0xe533516e195f7049,0x025f51cf32b30d8c,0x59a93508fec5baa3\n"
+".quad 0x21903bbe507c97d9,0x5757840038e762c0,0xbdb10bdc034218b3,0x02258a164a1815a4\n"
+".quad 0x0714129e52468e51,0x00046afe6b42c3c8,0xcb09d67195f0500e,0xf44d9fd12304185e\n"
+".quad 0x32744093fc186f00,0xfd6d4c2389fe7e9a,0x936f442788b748ce,0x4b29acb2956984c4\n"
+".quad 0x03d73a413736d94e,0x2fcb79ba27cb94fd,0x0287ee375ccb13bc,0xbac393cd84c2653c\n"
+".quad 0x37340e143752cda1,0x20d51c8dc8a38b6a,0xd7302a543e9d0301,0xf4b99c2ee64c89bc\n"
+".quad 0x024e6038299c700c,0x32ab7d639bee7419,0xba65b88c1d23e02f,0xe893d3d60229a3b8\n"
+".quad 0xeb784fc4b44657d4,0x3a0a32acb486a699,0x38711f3fa98759cc,0xdc0e5d89dc146242\n"
+".quad 0xf729d128e553a242,0x3f19c0365fba778a,0x889584e040be5bba,0x28626039a45e1310\n"
+".quad 0x460c1897abb91830,0x0650e9907a4d4852,0xce67ac320d3b424a,0x9f8a08a11f9982a6\n"
+".quad 0x4c58012024dc7816,0x89ab17815204ca9b,0x836511b1536e90c1,0xcccd8c1153b6b82a\n"
+".quad 0x3ac4ec577b362bbc,0x8d6f10a33f34dd97,0xb7b31080b44e1122,0x6cc37ca55e919658\n"
+".quad 0x42bf72acdd47844f,0x6f93ef34fb21b0c0,0x6940cbbd520edce4,0xc9a3b5fb4f9131da\n"
+".quad 0xc45b4f06fe7bcb22,0x2ccc9b5dbf88cac3,0x5e3de42d7e3256dc,0xd772e4a9e6c3279a\n"
+".quad 0xa13bcd8d83313ced,0x62a1b91e94f32e65,0x4f2d20998448d588,0x4e59a401c364da91\n"
+".quad 0xe3d84817db2fd387,0x1436d87bb92d9657,0x93a2ea28152f68e4,0x28a1a6b442124114\n"
+".quad 0xa98773d85e3b642c,0xd199b21e48a6e65d,0x1e48f421299f6cb2,0xda9a17ff07c5c4aa\n"
+".quad 0x0000000000009fc7\n"
 ".text");
 
 extern "C" {
@@ -31537,13 +32447,13 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2 3
 extern void __device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i(double *, double *, double *, double *, double *, double *, double *, int);
 extern void __device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi(double *, int, double *, double *, double *, int *);
 extern void __device_stub__Z10sum_kernelPdi(double *, int);
 extern void __device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_61_tmpxft_000298b7_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_61_tmpxft_00022e5f_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) __attribute__((__constructor__));
 void __device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i(double *__par0, double *__par1, double *__par2, double *__par3, double *__par4, double *__par5, double *__par6, int __par7){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel))); };}
 # 239 "ex_particle_CUDA_float_seq.cu"
 void find_index_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,double *__cuda_5,double *__cuda_6,int __cuda_7)
@@ -31551,7 +32461,7 @@ void find_index_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,doubl
 {__device_stub__Z17find_index_kernelPdS_S_S_S_S_S_i( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7);
 # 265 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi( double *__par0, int __par1, double *__par2, double *__par3, double *__par4, int *__par5) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel))); }; }
 # 267 "ex_particle_CUDA_float_seq.cu"
 void normalize_weights_kernel( double *__cuda_0,int __cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,int *__cuda_5)
@@ -31559,7 +32469,7 @@ void normalize_weights_kernel( double *__cuda_0,int __cuda_1,double *__cuda_2,do
 {__device_stub__Z24normalize_weights_kernelPdiS_S_S_Pi( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5);
 # 298 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z10sum_kernelPdi( double *__par0, int __par1) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, int))sum_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, int))sum_kernel))); }; }
 # 300 "ex_particle_CUDA_float_seq.cu"
 void sum_kernel( double *__cuda_0,int __cuda_1)
@@ -31567,7 +32477,7 @@ void sum_kernel( double *__cuda_0,int __cuda_1)
 {__device_stub__Z10sum_kernelPdi( __cuda_0,__cuda_1);
 # 313 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 void __device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_( double *__par0, double *__par1, double *__par2, double *__par3, double *__par4, int *__par5, int *__par6, double *__par7, unsigned char *__par8, double *__par9, double *__par10, int __par11, int __par12, int __par13, int __par14, int __par15, int __par16, int *__par17, double *__par18) { if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)56UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)64UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)72UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)80UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par11, sizeof(__par11), (size_t)88UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par12, sizeof(__par12), (size_t)92UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par13, sizeof(__par13), (size_t)96UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par14, sizeof(__par14), (size_t)100UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par15, sizeof(__par15), (size_t)104UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par16, sizeof(__par16), (size_t)108UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par17, sizeof(__par17), (size_t)112UL) != cudaSuccess) return; if (cudaSetupArgument((void *)(char *)&__par18, sizeof(__par18), (size_t)120UL) != cudaSuccess) return; { volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel))); }; }
 # 333 "ex_particle_CUDA_float_seq.cu"
 void likelihood_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,int *__cuda_5,int *__cuda_6,double *__cuda_7,unsigned char *__cuda_8,double *__cuda_9,double *__cuda_10,int __cuda_11,int __cuda_12,int __cuda_13,int __cuda_14,int __cuda_15,int __cuda_16,int *__cuda_17,double *__cuda_18)
@@ -31575,8 +32485,8 @@ void likelihood_kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,doubl
 {__device_stub__Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10,__cuda_11,__cuda_12,__cuda_13,__cuda_14,__cuda_15,__cuda_16,__cuda_17,__cuda_18);
 # 398 "ex_particle_CUDA_float_seq.cu"
 }
-# 1 "/tmp/tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T222) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T222; }; __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, double *, double *, double *, double *, int *, int *, double *, unsigned char *, double *, double *, int, int, int, int, int, int, int *, double *))likelihood_kernel), (char*)"_Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_", "_Z17likelihood_kernelPdS_S_S_S_PiS0_S_PhS_S_iiiiiiS0_S_", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, int))sum_kernel), (char*)"_Z10sum_kernelPdi", "_Z10sum_kernelPdi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, int, double *, double *, double *, int *))normalize_weights_kernel), (char*)"_Z24normalize_weights_kernelPdiS_S_S_Pi", "_Z24normalize_weights_kernelPdiS_S_S_Pi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); __cudaRegisterFunction(__T222, (const char*)((void ( *)(double *, double *, double *, double *, double *, double *, double *, int))find_index_kernel), (char*)"_Z17find_index_kernelPdS_S_S_S_S_S_i", "_Z17find_index_kernelPdS_S_S_S_S_S_i", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_61_tmpxft_000298b7_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2
-# 1 "tmpxft_000298b7_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_61_tmpxft_00022e5f_00000000_6_ex_particle_CUDA_float_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c" 2
+# 1 "tmpxft_00022e5f_00000000-3_ex_particle_CUDA_float_seq.cudafe1.stub.c"

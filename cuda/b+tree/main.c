@@ -1846,7 +1846,8 @@ do_main(	int argc,
 		char** argv ) 
 {
   printf("WG size of kernel 1 & 2  = %d \n", DEFAULT_ORDER);
-
+  CCA_BENCHMARK_START;
+  CCA_INIT;
 	// ------------------------------------------------------------60
 	// figure out and display whether 32-bit or 64-bit architecture
 	// ------------------------------------------------------------60
@@ -2028,6 +2029,8 @@ do_main(	int argc,
 
 	printf("Waiting for command\n");
 	printf("> ");
+    CCA_INIT_STOP;
+
 	while (sscanf(commandPointer, "%c", &instruction) != EOF) {
 	  commandPointer++;
 		switch (instruction) {
@@ -2429,6 +2432,7 @@ do_main(	int argc,
 	// ------------------------------------------------------------60
 
 	free(mem);
+    CCA_BENCHMARK_STOP;
 	return EXIT_SUCCESS;
 
 }
