@@ -30,3 +30,5 @@ backprop
 /cuda/lud/cuda/abc
 /cuda/lud/cuda/abcdef
 /cuda/lud/cuda/libenccuda.so
+/cuda/b+tree/main.o.c
+/tmp/
