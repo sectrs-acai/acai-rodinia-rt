@@ -1,3 +1,3 @@
-./3D 512 8 100 ../../data/hotspot3D/power_512x8 ../../data/hotspot3D/temp_512x8 output.out
+# ./3D 512 8 100 ../../data/hotspot3D/power_512x8 ../../data/hotspot3D/temp_512x8 output.out
 
-# ./3D 64 8 100 ../../data/hotspot3D/power_64x8 ../../data/hotspot3D/temp_64x8 output.out
+./3D 64 8 10 ../../data/hotspot3D/power_64x8 ../../data/hotspot3D/temp_64x8 output.out

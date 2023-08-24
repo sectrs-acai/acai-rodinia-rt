@@ -6,7 +6,7 @@
 
 #define fp float
 
-#define NUMBER_THREADS 12
+#define NUMBER_THREADS 1
 
-#define EQUATIONS 91
-#define PARAMETERS 18
+#define EQUATIONS 27
+#define PARAMETERS 9

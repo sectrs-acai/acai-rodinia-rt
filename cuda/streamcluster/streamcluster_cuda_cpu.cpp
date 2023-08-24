@@ -896,7 +896,7 @@ int do_main(int argc, char **argv)
   strcpy(infilename, argv[7]);
   strcpy(outfilename, argv[8]);
   nproc = atoi(argv[9]);
-  CCA_INIT_STOP;
+
 
   srand48(SEED);
   PStream* stream;
@@ -921,11 +921,14 @@ int do_main(int argc, char **argv)
 	kernel_t = 0.0;
 	
 	isCoordChanged = false;
-	
+
+  CCA_INIT_STOP;
   streamCluster(stream, kmin, kmax, dim, chunksize, clustersize, outfilename );
 
-	freeDevMem();
-	freeHostMem();
+  CCA_CLOSE;
+  freeDevMem();
+  freeHostMem();
+
 
 #ifdef ENABLE_PARSEC_HOOKS
   __parsec_roi_end();
@@ -959,6 +962,7 @@ int do_main(int argc, char **argv)
   __parsec_bench_end();
 #endif
 
+  CCA_CLOSE_STOP;
   CCA_BENCHMARK_STOP;
   
   return 0;

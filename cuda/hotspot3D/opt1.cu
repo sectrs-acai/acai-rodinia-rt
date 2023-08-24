@@ -67,7 +67,6 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
     ce = cw =stepDivCap/ Rx;
     cn = cs =stepDivCap/ Ry;
     ct = cb =stepDivCap/ Rz;
-
     CCA_MEMALLOC;
 
     cc = 1.0 - (2.0*ce + 2.0*cn + 3.0*ct);
@@ -79,6 +78,7 @@ void hotspot_opt1(float *p, float *tIn, float *tOut,
     cudaMalloc((void**)&tOut_d,s);
     CCA_MEMALLOC_STOP;
     CCA_H_TO_D;
+
     cudaMemcpy(tIn_d, tIn, s, cudaMemcpyHostToDevice);
     cudaMemcpy(p_d, p, s, cudaMemcpyHostToDevice);
     CCA_H_TO_D_STOP;

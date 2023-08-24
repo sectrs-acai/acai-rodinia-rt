@@ -295,6 +295,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	cudaEventRecord(start,0);
 #endif
     CCA_D_TO_H_STOP;
+    CCA_INIT;
 	
 	//=======================================
 	// CPU (SERIAL) WORK
@@ -371,6 +372,7 @@ float pgain( long x, Points *points, float z, long int *numcenters, int kmax, bo
 	cudaEventRecord(start,0);
 #endif
 
+    CCA_INIT_STOP;
     CCA_CLOSE;
 	//=======================================
 	// DEALLOCATE GPU MEMORY

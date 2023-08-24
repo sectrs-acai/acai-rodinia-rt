@@ -28,4 +28,4 @@ main.cu.cpp: main.cu
 include AVI/makefile
 
 clean:
-	rm -f *.cu.cpp AVI/*.o
+	rm -f *.cu.cpp AVI/*.o AVI/*.out heartwall *.o *.out

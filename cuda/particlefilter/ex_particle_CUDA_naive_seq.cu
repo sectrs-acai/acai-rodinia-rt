@@ -478,6 +478,7 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 	//double * Ik = (double *)malloc(sizeof(double)*IszX*IszY);
 	int indX, indY;
 	for(k = 1; k < Nfr; k++){
+        CCA_INIT;
 		long long set_arrays = get_time();
 		//// printf("TIME TO SET ARRAYS TOOK: %f\n", elapsed_time(get_weights, set_arrays));
 		//apply motion model
@@ -561,6 +562,7 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 		long long u_time = get_time();
 		// printf("TIME TO CALC U TOOK: %f\n", elapsed_time(cum_sum, u_time));
 		long long start_copy = get_time();
+        CCA_INIT_STOP;
         CCA_H_TO_D;
 		//CUDA memory copying from CPU memory to GPU memory
 		cudaMemcpy(arrayX_GPU, arrayX, sizeof(double)*Nparticles, cudaMemcpyHostToDevice);
@@ -585,8 +587,6 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
         CCA_D_TO_H;
         cudaMemcpy(yj, yj_GPU, sizeof(double)*Nparticles, cudaMemcpyDeviceToHost);
 		cudaMemcpy(xj, xj_GPU, sizeof(double)*Nparticles, cudaMemcpyDeviceToHost);
-        CCA_D_TO_H_STOP;
-        CCA_CLOSE;
 		long long end_copy_back = get_time();
 		// printf("SENDING TO GPU TOOK: %lf\n", elapsed_time(start_copy, end_copy));
 		// printf("CUDA EXEC TOOK: %lf\n", elapsed_time(end_copy, start_copy_back));
@@ -602,7 +602,10 @@ void particleFilter(int * I, int IszX, int IszY, int Nfr, int * seed, int Nparti
 		}
 		long long reset = get_time();
 		// printf("TIME TO RESET WEIGHTS TOOK: %f\n", elapsed_time(xyj_time, reset));
+        CCA_D_TO_H_STOP;
 	}
+
+    CCA_CLOSE;
 	
 	//CUDA freeing of memory
 	cudaFree(u_GPU);
@@ -705,18 +708,18 @@ int do_main(int argc, char * argv[]){
 
 	//call particle filter
 	particleFilter(I, IszX, IszY, Nfr, seed, Nparticles);
+    CCA_CLOSE;
 	long long endParticleFilter = get_time();
 	printf("PARTICLE FILTER TOOK %f\n", elapsed_time(endVideoSequence, endParticleFilter));
 	printf("ENTIRE PROGRAM TOOK %f\n", elapsed_time(start, endParticleFilter));
 	
 	free(seed);
 	free(I);
+    CCA_CLOSE_STOP;
     CCA_BENCHMARK_STOP;
 	return 0;
 }
 
-
-#include "cca_benchmark.h"
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
     int ret = do_main(argc, argv);

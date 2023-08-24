@@ -185,13 +185,14 @@ int do_main(int argc, char** argv)
 
     hotspot_opt1(powerIn, tempIn, tempOut, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt,iterations);
 
+    CCA_CLOSE;
     computeTempCPU(powerIn, tempCopy, answer, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt,iterations);
-
     float acc = accuracy(tempOut,answer,numRows*numCols*layers);
     printf("Accuracy: %e\n",acc);
     writeoutput(tempOut,numRows, numCols, layers, ofile);
     free(tempIn);
     free(tempOut); free(powerIn);
+    CCA_CLOSE_STOP;
     CCA_BENCHMARK_STOP;
     return 0;
 }

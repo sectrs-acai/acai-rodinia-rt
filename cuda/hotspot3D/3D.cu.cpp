@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.cpp"
+# 1 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.cpp"
 # 1 "3D.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -28914,23 +28914,23 @@ ce = (cw = (stepDivCap / Rx));
 cn = (cs = (stepDivCap / Ry));
 # 69 "opt1.cu"
 ct = (cb = (stepDivCap / Rz));
-# 71 "opt1.cu"
+# 70 "opt1.cu"
 __asm__("MOV XZR, 0x1012");
-# 73 "opt1.cu"
+# 72 "opt1.cu"
 cc = ((1.0) - ((((2.0) * ce) + ((2.0) * cn)) + ((3.0) * ct)));
-# 75 "opt1.cu"
+# 74 "opt1.cu"
 size_t s = (((sizeof(float) * nx) * ny) * nz);
-# 76 "opt1.cu"
+# 75 "opt1.cu"
 float *tIn_d, *tOut_d, *p_d;
-# 77 "opt1.cu"
+# 76 "opt1.cu"
 cudaMalloc((void **)(&p_d), s);
-# 78 "opt1.cu"
+# 77 "opt1.cu"
 cudaMalloc((void **)(&tIn_d), s);
-# 79 "opt1.cu"
+# 78 "opt1.cu"
 cudaMalloc((void **)(&tOut_d), s);
-# 80 "opt1.cu"
+# 79 "opt1.cu"
 __asm__("MOV XZR, 0x1013");
-# 81 "opt1.cu"
+# 80 "opt1.cu"
 __asm__("MOV XZR, 0x1018");
 # 82 "opt1.cu"
 cudaMemcpy(tIn_d, tIn, s, cudaMemcpyHostToDevice);
@@ -29255,6 +29255,8 @@ __asm__("MOV XZR, 0x1011");
 # 186 "3D.cu"
 hotspot_opt1(powerIn, tempIn, tempOut, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt, iterations);
 # 188 "3D.cu"
+__asm__("MOV XZR, 0x1016");
+# 189 "3D.cu"
 computeTempCPU(powerIn, tempCopy, answer, numCols, numRows, layers, Cap, Rx, Ry, Rz, dt, iterations);
 # 190 "3D.cu"
 float acc = accuracy(tempOut, answer, (numRows * numCols) * layers);
@@ -29267,26 +29269,28 @@ free(tempIn);
 # 194 "3D.cu"
 free(tempOut); free(powerIn);
 # 195 "3D.cu"
-__asm__("MOV XZR, 0x2"); __asm__("ISB"); ; __asm__("HLT 0x1337"); ;
+__asm__("MOV XZR, 0x1017");
 # 196 "3D.cu"
-return 0;
+__asm__("MOV XZR, 0x2"); __asm__("ISB"); ; __asm__("HLT 0x1337"); ;
 # 197 "3D.cu"
+return 0;
+# 198 "3D.cu"
 }
-# 200 "3D.cu"
-int main(int argc, char **argv) {
 # 201 "3D.cu"
-{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
+int main(int argc, char **argv) {
 # 202 "3D.cu"
-int ret = do_main(argc, argv);
+{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
 # 203 "3D.cu"
-_benchmark_cleanup();
+int ret = do_main(argc, argv);
 # 204 "3D.cu"
-return ret;
+_benchmark_cleanup();
 # 205 "3D.cu"
+return ret;
+# 206 "3D.cu"
 }
-# 1 "tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c"
-# 1 "tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c" 1 3
+# 1 "tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c"
+# 1 "tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -29872,8 +29876,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_00022d9a_00000000-1_3D.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_000216fd_00000000-1_3D.fatbin.c" 1 3
 
 
 asm(
@@ -30010,58 +30014,58 @@ asm(
 ".quad 0xe1db7e80df7e8ae8,0x3c4b90f3b9c5e410,0x912bdff61b7ae9db,0x0280492e0a592db2\n"
 ".quad 0xca290f8a43e48957,0xab69b2b7c97fa451,0xaadd251212c661e3,0x69a4bafb59bb2e79\n"
 ".quad 0x65db6ca6dbb6ac94,0xbbc25724ce5bfd5b,0xdde61f6644fe5f6a,0x34cb75df7dffad6b\n"
-".quad 0xfc07fd2b16dd294d,0x9aea6c92fb258bee,0xcbce9543a307d525,0xeb1134e7af9cb5f1\n"
-".quad 0xaadb297bb5fcdbd5,0x5e66c3b7da1d3fbd,0xbbced74dcabfc737,0x9b2ebef6e576d4e6\n"
-".quad 0xf5cfe61c3fb97eaa,0x9ab543ab6e39bee9,0xf5b5d43295db4e6f,0xc923bac7e65f63b1\n"
-".quad 0x7ad5b551c741f4e6,0xb36f35d0f292ce5f,0xd095dfb918849fe5,0x555dcbafcbafbb1f\n"
-".quad 0xaaf5251cfdfc3b55,0x4aefe49392cebd59,0x9168b7c69976412f,0x52f463b5a8e8b49b\n"
-".quad 0xd26fc5ae5d61662d,0x6ecae29bc9693712,0x22d26e2ad26fcad2,0xe8dbb536e46a6de9\n"
-".quad 0x34945ff44bf45841,0xbb3b729ba92cf3e5,0x5a966175f9081fab,0x961f292079aeea65\n"
-".quad 0x2147cc83ddbbf5b4,0xb55190fb66bbe245,0x56e4023a2dfb4514,0xf505a5e3d9a22aeb\n"
-".quad 0xa424fae5e9f5f0b4,0x5a463eb6a7d72ecf,0xca3a38741ccdae5c,0xbab9717501e7572f\n"
-".quad 0xba1fa5d5cbcba808,0x8afd4059eac5f0a2,0x045ef22bf501e7c4,0x57fa03493b48afd4\n"
-".quad 0x23a915fe80908e64,0xf33447722b91de01,0xe7931dd255badf36,0x6157ec0fdabd71fd\n"
-".quad 0x33371fdd6aa81140,0x6fc7af448cf9233a,0xd556e9b02532473d,0x7eb573d7b0bef936\n"
-".quad 0xeafd770f5565bce8,0xb8d2c1269a6cab6a,0x1c2cc4744aba86b7,0xa338db37cc06464c\n"
-".quad 0x14dbe60cccbba63d,0x0744aba86b038213,0x41e22e23a6344a4c,0xde25738a3a6aa289\n"
-".quad 0xd1af944a1c9d5d96,0x4ebee5b5494b8aae,0xe9ed5ee6654668d6,0x03d458d488b26b80\n"
-".quad 0x3285a68e4606f440,0x3164f703bde5496d,0xa8372c9470f1a481,0x06d4a0f7c1d410e6\n"
-".quad 0x7d95391e3a05a9e5,0x77c3eb38c6dfe53c,0x4ead499e2cc6e1e3,0xce3474e37bad3db0\n"
-".quad 0x5960e222733c68c9,0x678f9401a221ab37,0x04ee5c1dcb8b99ce,0xc902dc967e5c2c25\n"
-".quad 0xda7e93aa58c7074d,0x5f6aa6735b54ff27,0xb6c59ea30c7ac6f6,0xf4514ea3cc613195\n"
-".quad 0x32081f0b11d40e11,0xbb940385402765ab,0x4be5616137c2aaee,0x069051a7bdc079dd\n"
-".quad 0x89470a6cf998a2e2,0x7f23a10785d3470d,0xff6b2cc28c27c904,0x5d7bb445ef775361\n"
-".quad 0x738041d4dfa1cd25,0x0814047fb8b49cd8,0x513e3989f13939a3,0x999ba4f80d1d27df\n"
-".quad 0xda49de3ec0f10c83,0x1532cbcc72320097,0x3c2c8353200f320e,0x2fb450bc7d9b1664\n"
-".quad 0xb209952e97e06401,0x34d526c8032a2fc3,0xd426f1f66c4590f3,0x17141095a4454cbe\n"
-".quad 0x62acc309663d852e,0x45825fe42ed72cc2,0x620570f5da763eb8,0x010fb3dae212dfa7\n"
-".quad 0x8737210e860bdfb9,0x1dd5039400877850,0xe987bd6574d999fe,0xc03139ade0dfd38e\n"
-".quad 0xb0a24e14ec045f52,0x6cedb1f2a5770ee1,0x438b0629e6411f1f,0x8d0e9209769d3ca4\n"
-".quad 0xd432a62c5c136fb0,0x4f5264f10c9ea193,0x2050b766525af526,0x27a677de4f569525\n"
-".quad 0xffd49fb851da8e83,0x5d39fcfb3566eb66,0x382c8a12999d862a,0x9c62143c3c32140d\n"
-".quad 0x7d5783c14023c212,0xa011c7414193c2c1,0xac8e1241dce67e3f,0x3412282c393b8730\n"
-".quad 0xa41d622a7c4ac88e,0xbe924d7ac503861c,0x378fd68190c871d2,0xbb8cfd9b18eff49c\n"
-".quad 0xa7ced203a3236bde,0x15a705be93498d0f,0xdd936a697712c6c5,0x17bb0e5b23d4fae6\n"
-".quad 0x3ecbed835dc8aae2,0x9d4f2d70ac411b59,0x9a64d1acfeddb9d8,0x789a9adfce1e3cb9\n"
-".quad 0xc7b86b4761c72ae8,0x52ca839e9e78f4ec,0x7997520a0778aa0b,0x2c2859c8a0749937\n"
-".quad 0x4368198f94de245b,0x9c88a9f1296960f5,0xcfc90c38ef1331f2,0x75d4e216e761d4e4\n"
-".quad 0x58760d2b32f51c78,0x7721a5e651202841,0x05988f6ac15398a0,0xeb98af54498117e3\n"
-".quad 0x54e4b99ace3c5cc9,0x3fe9747e8a1dd267,0xcd53c3aba56dc1c8,0x58b67145728def16\n"
-".quad 0x8de97119c9867f30,0x5703c1b7af618a61,0x713392823ca47eaf,0xef05c4c0cd814341\n"
-".quad 0xb42ad35c4e06131e,0x7331bccbca5e41bd,0xf61dca172bd39707,0x489879527acb59fb\n"
-".quad 0x59bd30694c32ecad,0x131653f7ec0d3a07,0x669865f9639131e7,0xcb04f30987b9e0b4\n"
-".quad 0xf4088e9edf4af9c7,0xe616d3578e16241a,0x75c9fce6aa66578d,0x5e38eb81e24b35cb\n"
-".quad 0x5170e5e6b47cf4f1,0xa0a41bdcb1ccdcb4,0xd950dc520cdf615e,0x117d67f4781ba36c\n"
-".quad 0x24c0fe2fa0b12538,0x2d4981bafce26070,0x2647f7a5a9313fbd,0x68ccf444ccfef4b5\n"
-".quad 0x7db6def1a8fecb37,0xb0f53e05ef6adca7,0x09416933a31739a9,0x8d39a18939b76119\n"
-".quad 0x30e6b49f626fbc6b,0xe3ef47d8fcd35196,0x23f6723a27c57666,0x54f5ffa965964491\n"
-".quad 0x80033d3d7cd7b55f,0x73be2b8001e6422d,0x91e35b0bb001e7a5,0xc1a7b8d04b7b81e0\n"
-".quad 0x8110839b56407e64,0x069cc1276f3729e7,0xdb9c0d0336176d0e,0x7a28e8fe9414292f\n"
-".quad 0xcbc0a9c7094e7ab6,0xc72b97bc26fe9b95,0xb400b3ce3ec7cf32,0x740e67409c2afb8c\n"
-".quad 0xed785d73cc26d5e0,0x79ced8e91383405c,0x09edafb8f22eb9e0,0xe7d36801e740e174\n"
-".quad 0x77dfb08d20e7d784,0x5eb322c089cd3175,0x1b4ac216b0fa62cd,0x1c1e60069fb3ea08\n"
-".quad 0x24919b63491ec7de,0x07fcf52509b9bfe0,0xf7610b4fb05640c2,0x9c505cc423333869\n"
-".quad 0xe4ac17a1233afa50,0x6fe849f9f8c590d0,0x28a3ffa22dd94d84,0x0000a248617e01fa\n"
+".quad 0x7e03feadbb91294d,0xcd7536497d92c5f7,0xe5e74aa1d183ea92,0xf5889a73d7ce5af8\n"
+".quad 0xd56d94bddafe6dea,0xaf3361dbed0e9fde,0x5de76ba6e55fe39b,0x4d975f7b72bb6a73\n"
+".quad 0xfae7f30e1fdcbf55,0xcd5aa1d5b71cdf74,0xfadaea194aeda737,0x6491dd63f32fb1d8\n"
+".quad 0xbd6adaa8e3a0fa73,0xd9b79ae87949672f,0xe84aefdc8c424ff2,0xaaaee5d7e5d7dd8f\n"
+".quad 0xd57a928e7efe1daa,0xa577f249c9675eac,0xc8b45be34cbb2097,0xa97a31dad4745a4d\n"
+".quad 0x6937e2d72eb0b316,0x3765714de4b49b89,0x916937156937e569,0xf46dda9b723536f4\n"
+".quad 0x9a4a2ffa25fa2c20,0xdd9db94dd49679f2,0xad4b30bafc840fd5,0x4b0f94903cd77532\n"
+".quad 0x90a3e641eeddfada,0x5aa8c87db35df122,0xab72011d16fda28a,0x7a82d2f1ecd11575\n"
+".quad 0xd2127d72f4faf85a,0x2d231f5b53eb9767,0xe51d1c3a0e66d72e,0x5d5cb8ba80f3ab97\n"
+".quad 0x5d0fd2eae5e5d404,0x457ea02cf562f851,0x022f7915fa80f3e2,0x2bfd01a49da457ea\n"
+".quad 0x91d48aff40484732,0x799a23b915c8ef00,0xf3c98ee92add6f9b,0x30abf607ed5eb8fe\n"
+".quad 0x199b8feeb55408a0,0xb7e3d7a2467c919d,0x6aab74d81299239e,0x3f5ab9ebd85f7c9b\n"
+".quad 0x757ebb87aab2de74,0xdc6960934d3655b5,0x0e16623a255d435b,0xd19c6d9be6032326\n"
+".quad 0x8a6df306665dd31e,0x03a255d43581c109,0xa0f11711d31a2526,0x6f12b9c51d355144\n"
+".quad 0x68d7ca250e4eaecb,0x275f72daa4a5c557,0x74f6af7332a3346b,0x01ea2c6a445935c0\n"
+".quad 0x9942d34723037a20,0x98b27b81def2a4b6,0x541b964a3878d240,0x836a507be0ea0873\n"
+".quad 0x3eca9c8f1d02d4f2,0xbbe1f59c636ff29e,0x2756a4cf166370f1,0xe71a3a71bdd69ed8\n"
+".quad 0xacb07111399e3464,0x33c7ca00d110d59b,0x82772e0ee5c5cce7,0xe4816e4b3f2e1612\n"
+".quad 0xed3f49d52c6383a6,0x2fb55339adaa7f93,0xdb62cf51863d637b,0xfa28a751e63098ca\n"
+".quad 0x99040f8588ea0708,0x5dca01c2a013b2d5,0xa5f2b0b09be15577,0x034828d3dee03cee\n"
+".quad 0xc4a385367ccc5171,0x3f91d083c2e9a386,0xffb596614613e482,0xaebdda22f7bba9b0\n"
+".quad 0x39c020ea6fd0e692,0x840a023fdc5a4e6c,0xa89f1cc4f89c9cd1,0xcccdd27c068e93ef\n"
+".quad 0xed24ef1f60788641,0x0a9965e63919004b,0x1e1641a990079907,0x97da285e3ecd8b32\n"
+".quad 0xd904ca974bf03200,0x9a6a9364019517e1,0x6a1378fb3622c879,0x0b8a084ad222a65f\n"
+".quad 0x31566184b31ec297,0x22c12ff2176b9661,0xb102b87aed3b1f5c,0x8087d9ed71096fd3\n"
+".quad 0x439b90874305efdc,0x0eea81ca0043bc28,0x74c3deb2ba6cccff,0x60189cd6f06fe9c7\n"
+".quad 0xd851270a76022fa9,0xb676d8f952bb8770,0x21c58314f3208f8f,0x46874904bb4e9e52\n"
+".quad 0xea1953162e09b7d8,0x27a93278864f50c9,0x90285bb3292d7a93,0x93d33bef27ab4a92\n"
+".quad 0x7fea4fdc28ed4741,0x2e9cfe7d9ab375b3,0x9c1645094ccec315,0x4e310a1e1e190a06\n"
+".quad 0xbeabc1e0a011e109,0xd008e3a0a0c9e160,0x56470920ee733f1f,0x1a0914161c9dc398\n"
+".quad 0x520eb1153e256447,0x5f4926bd6281c30e,0x1bc7eb40c86438e9,0x5dc67ecd8c77fa4e\n"
+".quad 0xd3e76901d191b5ef,0x8ad382df49a4c687,0x6ec9b534bb896362,0x0bdd872d91ea7d73\n"
+".quad 0x9f65f6c1aee45571,0x4ea796b856208dac,0xcd3268d67f6edcec,0x3c4d4d6fe70f1e5c\n"
+".quad 0x63dc35a3b0e39574,0xa96541cf4f3c7a76,0xbccba90503bc5505,0x96142ce4503a4c9b\n"
+".quad 0xa1b40cc7ca6f122d,0x4e4454f894b4b07a,0x67e4861c778998f9,0x3aea710b73b0ea72\n"
+".quad 0xac3b0695997a8e3c,0x3b90d2f328901420,0x82cc47b560a9cc50,0xf5cc57aa24c08bf1\n"
+".quad 0xaa725ccd671e2e64,0x1ff4ba3f450ee933,0x66a9e1d5d2b6e0e4,0x2c5b38a2b946f78b\n"
+".quad 0xc6f4b88ce4c33f98,0xab81e0dbd7b0c530,0xb899c9411e523f57,0x7782e26066c0a1a0\n"
+".quad 0xda1569ae2703098f,0xb998de65e52f20de,0xfb0ee50b95e9cb83,0xa44c3ca93d65acfd\n"
+".quad 0xacde9834a6197656,0x898b29fbf6069d03,0x334c32fcb1c898f3,0xe5827984c3dcf05a\n"
+".quad 0x7a04474f6fa57ce3,0xf30b69abc70b120d,0xbae4fe7355332bc6,0xaf1c75c0f1259ae5\n"
+".quad 0x28b872f35a3e7a78,0x50520dee58e66e5a,0x6ca86e29066fb0af,0x08beb3fa3c0dd1b6\n"
+".quad 0x12607f17d058929c,0x96a4c0dd7e713038,0x9323fbd2d4989fde,0xb4667a22667f7a5a\n"
+".quad 0xbedb6f78d47f659b,0xd87a9f02f7b56e53,0x84a0b499d18b9cd4,0xc69cd0c49cdbb08c\n"
+".quad 0x18735a4fb137de35,0x71f7a3ec7e69a8cb,0x91fb391d13e2bb33,0xaa7affd4b2cb2248\n"
+".quad 0xc0019e9ebe6bdaaf,0xb9df15c000f32116,0x48f1ad85d800f3d2,0x60d3dc6825bdc0f0\n"
+".quad 0xc08841cdab203f32,0x034e6093b79b94f3,0xedce06819b0bb687,0x3d14747f4a0a1497\n"
+".quad 0xe5e054e384a73d5b,0x6395cbde137f4dca,0x5a0059e71f63e799,0x3a0733a04e157dc6\n"
+".quad 0x76bc2eb9e6136af0,0x3ce76c7489c1a02e,0x04f6d7dc79175cf0,0x73e9b400f3a070ba\n"
+".quad 0xbbefd8469073ebc2,0xaf59916044e698ba,0x0da5610b587d3166,0x0e0f30034fd9f504\n"
+".quad 0x1248cdb1a48f63ef,0x03fe7a9284dcdff0,0xfbb085a7d82b2061,0x4e282e6211999c34\n"
+".quad 0x72560bd0919d7d28,0x37f424fcfc62c868,0x1451ffd116eca6c2,0x0000a348e19b00fd\n"
 ".text");
 
 extern "C" {
@@ -30077,10 +30081,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c" 2 3
 extern void __device_stub__Z11hotspotOpt1PfS_S_fiiifffffff(float *, float *, float *, float, int, int, int, float, float, float, float, float, float, float);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_37_tmpxft_00022d9a_00000000_6_3D_cpp1_ii_3a66a5c8(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_37_tmpxft_000216fd_00000000_6_3D_cpp1_ii_3a66a5c8(void) __attribute__((__constructor__));
 void __device_stub__Z11hotspotOpt1PfS_S_fiiifffffff(float *__par0, float *__par1, float *__par2, float __par3, int __par4, int __par5, int __par6, float __par7, float __par8, float __par9, float __par10, float __par11, float __par12, float __par13){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)28UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)36UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par7, sizeof(__par7), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par8, sizeof(__par8), (size_t)44UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par9, sizeof(__par9), (size_t)48UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par10, sizeof(__par10), (size_t)52UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par11, sizeof(__par11), (size_t)56UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par12, sizeof(__par12), (size_t)60UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par13, sizeof(__par13), (size_t)64UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(float *, float *, float *, float, int, int, int, float, float, float, float, float, float, float))hotspotOpt1)); (void)cudaLaunch(((char *)((void ( *)(float *, float *, float *, float, int, int, int, float, float, float, float, float, float, float))hotspotOpt1))); };}
 # 9 "opt1.cu"
 void hotspotOpt1( float *__cuda_0,float *__cuda_1,float *__cuda_2,float __cuda_3,int __cuda_4,int __cuda_5,int __cuda_6,float __cuda_7,float __cuda_8,float __cuda_9,float __cuda_10,float __cuda_11,float __cuda_12,float __cuda_13)
@@ -30088,8 +30092,8 @@ void hotspotOpt1( float *__cuda_0,float *__cuda_1,float *__cuda_2,float __cuda_3
 {__device_stub__Z11hotspotOpt1PfS_S_fiiifffffff( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6,__cuda_7,__cuda_8,__cuda_9,__cuda_10,__cuda_11,__cuda_12,__cuda_13);
 # 57 "opt1.cu"
 }
-# 1 "/tmp/tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T23) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T23; }; __cudaRegisterFunction(__T23, (const char*)((void ( *)(float *, float *, float *, float, int, int, int, float, float, float, float, float, float, float))hotspotOpt1), (char*)"_Z11hotspotOpt1PfS_S_fiiifffffff", "_Z11hotspotOpt1PfS_S_fiiifffffff", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_37_tmpxft_00022d9a_00000000_6_3D_cpp1_ii_3a66a5c8(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c" 2
-# 1 "tmpxft_00022d9a_00000000-3_3D.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_37_tmpxft_000216fd_00000000_6_3D_cpp1_ii_3a66a5c8(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c" 2
+# 1 "tmpxft_000216fd_00000000-3_3D.cudafe1.stub.c"

@@ -28,4 +28,4 @@ $(EXECUTABLE) : lud.cu.cpp ../common/common.c
 	$(CC) $(CCFLAGS) $? -o $@ $(LDFLAGS) $(CC_LIB_DIRS) $(CC_LIBS) -lrt
 
 clean:
-	rm -f $(EXECUTABLE) $(OBJS) *.linkinfo *.cu.cpp
+	rm -f $(EXECUTABLE) $(OBJS) *.linkinfo *.cu.cpp lud_cuda

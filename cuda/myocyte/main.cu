@@ -91,6 +91,7 @@
 
 #include "work.cu"
 #include "work_2.cu"
+#include "cca_benchmark.h"
 
 //====================================================================================================100
 //		MAIN FUNCTION
@@ -198,7 +199,7 @@ int do_main(int argc, char *argv []){
 
 }
 
-#include "cca_benchmark.h"
+
 int main(int argc, char **argv) {
     CCA_BENCHMARK_INIT;
     int ret = do_main(argc, argv);

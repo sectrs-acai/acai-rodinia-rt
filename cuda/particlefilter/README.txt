@@ -1,3 +1,5 @@
+- added benchmarks hooks in naive implementation
+
 Particle Filter Changelog
 Donnie Newell
 11Nov2011

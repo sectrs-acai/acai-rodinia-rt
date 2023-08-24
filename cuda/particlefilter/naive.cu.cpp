@@ -1,7 +1,7 @@
-# 1 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.cpp"
+# 1 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.cpp"
 # 1 "ex_particle_CUDA_naive_seq.cu"
 # 61 "/usr/local/cuda-5.0//include/device_types.h"
 # 149 "/usr/lib/gcc/x86_64-linux-gnu/4.4.7/include/stddef.h" 3
@@ -30453,145 +30453,145 @@ int indX, indY;
 # 480 "ex_particle_CUDA_naive_seq.cu"
 for (k = 1; k < Nfr; k++) {
 # 481 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1010");
+# 482 "ex_particle_CUDA_naive_seq.cu"
 long long set_arrays = get_time();
-# 487 "ex_particle_CUDA_naive_seq.cu"
-for (x = 0; x < Nparticles; x++) {
 # 488 "ex_particle_CUDA_naive_seq.cu"
-(arrayX[x]) = (((arrayX[x]) + (1.0)) + ((5.0) * randn(seed, x)));
+for (x = 0; x < Nparticles; x++) {
 # 489 "ex_particle_CUDA_naive_seq.cu"
-(arrayY[x]) = (((arrayY[x]) - (2.0)) + ((2.0) * randn(seed, x)));
+(arrayX[x]) = (((arrayX[x]) + (1.0)) + ((5.0) * randn(seed, x)));
 # 490 "ex_particle_CUDA_naive_seq.cu"
+(arrayY[x]) = (((arrayY[x]) - (2.0)) + ((2.0) * randn(seed, x)));
+# 491 "ex_particle_CUDA_naive_seq.cu"
 }
-# 492 "ex_particle_CUDA_naive_seq.cu"
+# 493 "ex_particle_CUDA_naive_seq.cu"
 long long error = get_time();
-# 494 "ex_particle_CUDA_naive_seq.cu"
+# 495 "ex_particle_CUDA_naive_seq.cu"
 for (x = 0; x < Nparticles; x++) {
-# 501 "ex_particle_CUDA_naive_seq.cu"
-for (y = 0; y < countOnes; y++) {
 # 502 "ex_particle_CUDA_naive_seq.cu"
-indX = (roundDouble(arrayX[x]) + (objxy[(y * 2) + 1]));
+for (y = 0; y < countOnes; y++) {
 # 503 "ex_particle_CUDA_naive_seq.cu"
-indY = (roundDouble(arrayY[x]) + (objxy[y * 2]));
+indX = (roundDouble(arrayX[x]) + (objxy[(y * 2) + 1]));
 # 504 "ex_particle_CUDA_naive_seq.cu"
-(ind[y]) = (fabs((((indX * IszY) * Nfr) + (indY * Nfr)) + k));
+indY = (roundDouble(arrayY[x]) + (objxy[y * 2]));
 # 505 "ex_particle_CUDA_naive_seq.cu"
-if ((ind[y]) >= max_size) {
+(ind[y]) = (fabs((((indX * IszY) * Nfr) + (indY * Nfr)) + k));
 # 506 "ex_particle_CUDA_naive_seq.cu"
-(ind[y]) = 0; }
+if ((ind[y]) >= max_size) {
 # 507 "ex_particle_CUDA_naive_seq.cu"
-}
+(ind[y]) = 0; }
 # 508 "ex_particle_CUDA_naive_seq.cu"
-(likelihood[x]) = calcLikelihoodSum(I, ind, countOnes);
+}
 # 509 "ex_particle_CUDA_naive_seq.cu"
-(likelihood[x]) = ((likelihood[x]) / countOnes);
+(likelihood[x]) = calcLikelihoodSum(I, ind, countOnes);
 # 510 "ex_particle_CUDA_naive_seq.cu"
-}
+(likelihood[x]) = ((likelihood[x]) / countOnes);
 # 511 "ex_particle_CUDA_naive_seq.cu"
+}
+# 512 "ex_particle_CUDA_naive_seq.cu"
 long long likelihood_time = get_time();
-# 515 "ex_particle_CUDA_naive_seq.cu"
-for (x = 0; x < Nparticles; x++) {
 # 516 "ex_particle_CUDA_naive_seq.cu"
-(weights[x]) = ((weights[x]) * exp(likelihood[x]));
+for (x = 0; x < Nparticles; x++) {
 # 517 "ex_particle_CUDA_naive_seq.cu"
-}
+(weights[x]) = ((weights[x]) * exp(likelihood[x]));
 # 518 "ex_particle_CUDA_naive_seq.cu"
+}
+# 519 "ex_particle_CUDA_naive_seq.cu"
 long long exponential = get_time();
-# 520 "ex_particle_CUDA_naive_seq.cu"
-double sumWeights = (0);
 # 521 "ex_particle_CUDA_naive_seq.cu"
-for (x = 0; x < Nparticles; x++) {
+double sumWeights = (0);
 # 522 "ex_particle_CUDA_naive_seq.cu"
-sumWeights += (weights[x]);
+for (x = 0; x < Nparticles; x++) {
 # 523 "ex_particle_CUDA_naive_seq.cu"
-}
+sumWeights += (weights[x]);
 # 524 "ex_particle_CUDA_naive_seq.cu"
+}
+# 525 "ex_particle_CUDA_naive_seq.cu"
 long long sum_time = get_time();
-# 526 "ex_particle_CUDA_naive_seq.cu"
-for (x = 0; x < Nparticles; x++) {
 # 527 "ex_particle_CUDA_naive_seq.cu"
-(weights[x]) = ((weights[x]) / sumWeights);
+for (x = 0; x < Nparticles; x++) {
 # 528 "ex_particle_CUDA_naive_seq.cu"
-}
+(weights[x]) = ((weights[x]) / sumWeights);
 # 529 "ex_particle_CUDA_naive_seq.cu"
+}
+# 530 "ex_particle_CUDA_naive_seq.cu"
 long long normalize = get_time();
-# 531 "ex_particle_CUDA_naive_seq.cu"
-xe = (0);
 # 532 "ex_particle_CUDA_naive_seq.cu"
+xe = (0);
+# 533 "ex_particle_CUDA_naive_seq.cu"
 ye = (0);
-# 534 "ex_particle_CUDA_naive_seq.cu"
-for (x = 0; x < Nparticles; x++) {
 # 535 "ex_particle_CUDA_naive_seq.cu"
-xe += ((arrayX[x]) * (weights[x]));
-# 536 "ex_particle_CUDA_naive_seq.cu"
-ye += ((arrayY[x]) * (weights[x]));
-# 537 "ex_particle_CUDA_naive_seq.cu"
-}
-# 538 "ex_particle_CUDA_naive_seq.cu"
-long long move_time = get_time();
-# 542 "ex_particle_CUDA_naive_seq.cu"
-double distance = sqrt(pow((double)(xe - ((int)roundDouble(IszY / (2.0)))), 2) + pow((double)(ye - ((int)roundDouble(IszX / (2.0)))), 2));
-# 551 "ex_particle_CUDA_naive_seq.cu"
-(CDF[0]) = (weights[0]);
-# 552 "ex_particle_CUDA_naive_seq.cu"
-for (x = 1; x < Nparticles; x++) {
-# 553 "ex_particle_CUDA_naive_seq.cu"
-(CDF[x]) = ((weights[x]) + (CDF[x - 1]));
-# 554 "ex_particle_CUDA_naive_seq.cu"
-}
-# 555 "ex_particle_CUDA_naive_seq.cu"
-long long cum_sum = get_time();
-# 557 "ex_particle_CUDA_naive_seq.cu"
-double u1 = (((1) / ((double)Nparticles)) * randu(seed, 0));
-# 558 "ex_particle_CUDA_naive_seq.cu"
 for (x = 0; x < Nparticles; x++) {
-# 559 "ex_particle_CUDA_naive_seq.cu"
-(u[x]) = (u1 + (x / ((double)Nparticles)));
-# 560 "ex_particle_CUDA_naive_seq.cu"
+# 536 "ex_particle_CUDA_naive_seq.cu"
+xe += ((arrayX[x]) * (weights[x]));
+# 537 "ex_particle_CUDA_naive_seq.cu"
+ye += ((arrayY[x]) * (weights[x]));
+# 538 "ex_particle_CUDA_naive_seq.cu"
 }
+# 539 "ex_particle_CUDA_naive_seq.cu"
+long long move_time = get_time();
+# 543 "ex_particle_CUDA_naive_seq.cu"
+double distance = sqrt(pow((double)(xe - ((int)roundDouble(IszY / (2.0)))), 2) + pow((double)(ye - ((int)roundDouble(IszX / (2.0)))), 2));
+# 552 "ex_particle_CUDA_naive_seq.cu"
+(CDF[0]) = (weights[0]);
+# 553 "ex_particle_CUDA_naive_seq.cu"
+for (x = 1; x < Nparticles; x++) {
+# 554 "ex_particle_CUDA_naive_seq.cu"
+(CDF[x]) = ((weights[x]) + (CDF[x - 1]));
+# 555 "ex_particle_CUDA_naive_seq.cu"
+}
+# 556 "ex_particle_CUDA_naive_seq.cu"
+long long cum_sum = get_time();
+# 558 "ex_particle_CUDA_naive_seq.cu"
+double u1 = (((1) / ((double)Nparticles)) * randu(seed, 0));
+# 559 "ex_particle_CUDA_naive_seq.cu"
+for (x = 0; x < Nparticles; x++) {
+# 560 "ex_particle_CUDA_naive_seq.cu"
+(u[x]) = (u1 + (x / ((double)Nparticles)));
 # 561 "ex_particle_CUDA_naive_seq.cu"
+}
+# 562 "ex_particle_CUDA_naive_seq.cu"
 long long u_time = get_time();
-# 563 "ex_particle_CUDA_naive_seq.cu"
-long long start_copy = get_time();
 # 564 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1018");
+long long start_copy = get_time();
+# 565 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1011");
 # 566 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(arrayX_GPU, arrayX, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
-# 567 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(arrayY_GPU, arrayY, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+__asm__("MOV XZR, 0x1018");
 # 568 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(xj_GPU, xj, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+cudaMemcpy(arrayX_GPU, arrayX, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
 # 569 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(yj_GPU, yj, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+cudaMemcpy(arrayY_GPU, arrayY, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
 # 570 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(CDF_GPU, CDF, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+cudaMemcpy(xj_GPU, xj, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
 # 571 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(u_GPU, u, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+cudaMemcpy(yj_GPU, yj, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
 # 572 "ex_particle_CUDA_naive_seq.cu"
-long long end_copy = get_time();
+cudaMemcpy(CDF_GPU, CDF, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
+# 573 "ex_particle_CUDA_naive_seq.cu"
+cudaMemcpy(u_GPU, u, sizeof(double) * Nparticles, cudaMemcpyHostToDevice);
 # 574 "ex_particle_CUDA_naive_seq.cu"
-int num_blocks = (ceil(((double)Nparticles) / ((double)threads_per_block)));
+long long end_copy = get_time();
 # 576 "ex_particle_CUDA_naive_seq.cu"
+int num_blocks = (ceil(((double)Nparticles) / ((double)threads_per_block)));
+# 578 "ex_particle_CUDA_naive_seq.cu"
 __asm__("MOV XZR, 0x1019");
-# 577 "ex_particle_CUDA_naive_seq.cu"
+# 579 "ex_particle_CUDA_naive_seq.cu"
 __asm__("MOV XZR, 0x1014");
-# 580 "ex_particle_CUDA_naive_seq.cu"
-(cudaConfigureCall(num_blocks, threads_per_block)) ? ((void)0) : kernel(arrayX_GPU, arrayY_GPU, CDF_GPU, u_GPU, xj_GPU, yj_GPU, Nparticles);
-# 581 "ex_particle_CUDA_naive_seq.cu"
-cudaThreadSynchronize();
 # 582 "ex_particle_CUDA_naive_seq.cu"
-long long start_copy_back = get_time();
+(cudaConfigureCall(num_blocks, threads_per_block)) ? ((void)0) : kernel(arrayX_GPU, arrayY_GPU, CDF_GPU, u_GPU, xj_GPU, yj_GPU, Nparticles);
+# 583 "ex_particle_CUDA_naive_seq.cu"
+cudaThreadSynchronize();
 # 584 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1015");
-# 585 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x101A");
+long long start_copy_back = get_time();
 # 586 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(yj, yj_GPU, sizeof(double) * Nparticles, cudaMemcpyDeviceToHost);
+__asm__("MOV XZR, 0x1015");
 # 587 "ex_particle_CUDA_naive_seq.cu"
-cudaMemcpy(xj, xj_GPU, sizeof(double) * Nparticles, cudaMemcpyDeviceToHost);
+__asm__("MOV XZR, 0x101A");
 # 588 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x101B");
+cudaMemcpy(yj, yj_GPU, sizeof(double) * Nparticles, cudaMemcpyDeviceToHost);
 # 589 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1016");
+cudaMemcpy(xj, xj_GPU, sizeof(double) * Nparticles, cudaMemcpyDeviceToHost);
 # 590 "ex_particle_CUDA_naive_seq.cu"
 long long end_copy_back = get_time();
 # 594 "ex_particle_CUDA_naive_seq.cu"
@@ -30609,190 +30609,198 @@ for (x = 0; x < Nparticles; x++) {
 # 603 "ex_particle_CUDA_naive_seq.cu"
 long long reset = get_time();
 # 605 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x101B");
+# 606 "ex_particle_CUDA_naive_seq.cu"
 }
 # 608 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(u_GPU);
-# 609 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(CDF_GPU);
-# 610 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(yj_GPU);
+__asm__("MOV XZR, 0x1016");
 # 611 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(xj_GPU);
+cudaFree(u_GPU);
 # 612 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(arrayY_GPU);
+cudaFree(CDF_GPU);
 # 613 "ex_particle_CUDA_naive_seq.cu"
-cudaFree(arrayX_GPU);
+cudaFree(yj_GPU);
+# 614 "ex_particle_CUDA_naive_seq.cu"
+cudaFree(xj_GPU);
+# 615 "ex_particle_CUDA_naive_seq.cu"
+cudaFree(arrayY_GPU);
 # 616 "ex_particle_CUDA_naive_seq.cu"
-free(disk);
-# 617 "ex_particle_CUDA_naive_seq.cu"
-free(objxy);
-# 618 "ex_particle_CUDA_naive_seq.cu"
-free(weights);
+cudaFree(arrayX_GPU);
 # 619 "ex_particle_CUDA_naive_seq.cu"
-free(likelihood);
+free(disk);
 # 620 "ex_particle_CUDA_naive_seq.cu"
-free(arrayX);
+free(objxy);
 # 621 "ex_particle_CUDA_naive_seq.cu"
-free(arrayY);
+free(weights);
 # 622 "ex_particle_CUDA_naive_seq.cu"
-free(xj);
+free(likelihood);
 # 623 "ex_particle_CUDA_naive_seq.cu"
-free(yj);
+free(arrayX);
 # 624 "ex_particle_CUDA_naive_seq.cu"
-free(CDF);
+free(arrayY);
 # 625 "ex_particle_CUDA_naive_seq.cu"
-free(u);
+free(xj);
 # 626 "ex_particle_CUDA_naive_seq.cu"
-free(ind);
+free(yj);
 # 627 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1017");
+free(CDF);
 # 628 "ex_particle_CUDA_naive_seq.cu"
-}
+free(u);
 # 629 "ex_particle_CUDA_naive_seq.cu"
-int do_main(int argc, char *argv[]) {
+free(ind);
 # 630 "ex_particle_CUDA_naive_seq.cu"
-__asm__("HLT 0x1337"); ; __asm__("ISB"); ; __asm__("MOV XZR, 0x1");
+__asm__("MOV XZR, 0x1017");
 # 631 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1010");
+}
+# 632 "ex_particle_CUDA_naive_seq.cu"
+int do_main(int argc, char *argv[]) {
 # 633 "ex_particle_CUDA_naive_seq.cu"
-char *usage = ((char *)("naive.out -x <dimX> -y <dimY> -z <Nfr> -np <Nparticles>"));
-# 635 "ex_particle_CUDA_naive_seq.cu"
-if (argc != 9)
+__asm__("HLT 0x1337"); ; __asm__("ISB"); ; __asm__("MOV XZR, 0x1");
+# 634 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1010");
 # 636 "ex_particle_CUDA_naive_seq.cu"
-{
-# 637 "ex_particle_CUDA_naive_seq.cu"
-printf("%s\n", usage);
+char *usage = ((char *)("naive.out -x <dimX> -y <dimY> -z <Nfr> -np <Nparticles>"));
 # 638 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+if (argc != 9)
 # 639 "ex_particle_CUDA_naive_seq.cu"
-}
-# 641 "ex_particle_CUDA_naive_seq.cu"
-if ((((strcmp(argv[1], "-x")) || (strcmp(argv[3], "-y"))) || (strcmp(argv[5], "-z"))) || (strcmp(argv[7], "-np"))) {
-# 642 "ex_particle_CUDA_naive_seq.cu"
+{
+# 640 "ex_particle_CUDA_naive_seq.cu"
 printf("%s\n", usage);
-# 643 "ex_particle_CUDA_naive_seq.cu"
+# 641 "ex_particle_CUDA_naive_seq.cu"
 return 0;
+# 642 "ex_particle_CUDA_naive_seq.cu"
+}
 # 644 "ex_particle_CUDA_naive_seq.cu"
-}
+if ((((strcmp(argv[1], "-x")) || (strcmp(argv[3], "-y"))) || (strcmp(argv[5], "-z"))) || (strcmp(argv[7], "-np"))) {
+# 645 "ex_particle_CUDA_naive_seq.cu"
+printf("%s\n", usage);
 # 646 "ex_particle_CUDA_naive_seq.cu"
-int IszX, IszY, Nfr, Nparticles;
+return 0;
+# 647 "ex_particle_CUDA_naive_seq.cu"
+}
 # 649 "ex_particle_CUDA_naive_seq.cu"
-if (sscanf(argv[2], "%d", &IszX) == (-1)) {
-# 650 "ex_particle_CUDA_naive_seq.cu"
-printf("ERROR: dimX input is incorrect");
-# 651 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+int IszX, IszY, Nfr, Nparticles;
 # 652 "ex_particle_CUDA_naive_seq.cu"
-}
+if (sscanf(argv[2], "%d", &IszX) == (-1)) {
+# 653 "ex_particle_CUDA_naive_seq.cu"
+printf("ERROR: dimX input is incorrect");
 # 654 "ex_particle_CUDA_naive_seq.cu"
-if (IszX <= 0) {
+return 0;
 # 655 "ex_particle_CUDA_naive_seq.cu"
-printf("dimX must be > 0\n");
-# 656 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 657 "ex_particle_CUDA_naive_seq.cu"
-}
+if (IszX <= 0) {
+# 658 "ex_particle_CUDA_naive_seq.cu"
+printf("dimX must be > 0\n");
+# 659 "ex_particle_CUDA_naive_seq.cu"
+return 0;
 # 660 "ex_particle_CUDA_naive_seq.cu"
-if (sscanf(argv[4], "%d", &IszY) == (-1)) {
-# 661 "ex_particle_CUDA_naive_seq.cu"
-printf("ERROR: dimY input is incorrect");
-# 662 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 663 "ex_particle_CUDA_naive_seq.cu"
-}
+if (sscanf(argv[4], "%d", &IszY) == (-1)) {
+# 664 "ex_particle_CUDA_naive_seq.cu"
+printf("ERROR: dimY input is incorrect");
 # 665 "ex_particle_CUDA_naive_seq.cu"
-if (IszY <= 0) {
+return 0;
 # 666 "ex_particle_CUDA_naive_seq.cu"
-printf("dimY must be > 0\n");
-# 667 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 668 "ex_particle_CUDA_naive_seq.cu"
-}
+if (IszY <= 0) {
+# 669 "ex_particle_CUDA_naive_seq.cu"
+printf("dimY must be > 0\n");
+# 670 "ex_particle_CUDA_naive_seq.cu"
+return 0;
 # 671 "ex_particle_CUDA_naive_seq.cu"
-if (sscanf(argv[6], "%d", &Nfr) == (-1)) {
-# 672 "ex_particle_CUDA_naive_seq.cu"
-printf("ERROR: Number of frames input is incorrect");
-# 673 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 674 "ex_particle_CUDA_naive_seq.cu"
-}
+if (sscanf(argv[6], "%d", &Nfr) == (-1)) {
+# 675 "ex_particle_CUDA_naive_seq.cu"
+printf("ERROR: Number of frames input is incorrect");
 # 676 "ex_particle_CUDA_naive_seq.cu"
-if (Nfr <= 0) {
+return 0;
 # 677 "ex_particle_CUDA_naive_seq.cu"
-printf("number of frames must be > 0\n");
-# 678 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 679 "ex_particle_CUDA_naive_seq.cu"
-}
+if (Nfr <= 0) {
+# 680 "ex_particle_CUDA_naive_seq.cu"
+printf("number of frames must be > 0\n");
+# 681 "ex_particle_CUDA_naive_seq.cu"
+return 0;
 # 682 "ex_particle_CUDA_naive_seq.cu"
-if (sscanf(argv[8], "%d", &Nparticles) == (-1)) {
-# 683 "ex_particle_CUDA_naive_seq.cu"
-printf("ERROR: Number of particles input is incorrect");
-# 684 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 685 "ex_particle_CUDA_naive_seq.cu"
-}
+if (sscanf(argv[8], "%d", &Nparticles) == (-1)) {
+# 686 "ex_particle_CUDA_naive_seq.cu"
+printf("ERROR: Number of particles input is incorrect");
 # 687 "ex_particle_CUDA_naive_seq.cu"
-if (Nparticles <= 0) {
+return 0;
 # 688 "ex_particle_CUDA_naive_seq.cu"
-printf("Number of particles must be > 0\n");
-# 689 "ex_particle_CUDA_naive_seq.cu"
-return 0;
+}
 # 690 "ex_particle_CUDA_naive_seq.cu"
-}
+if (Nparticles <= 0) {
+# 691 "ex_particle_CUDA_naive_seq.cu"
+printf("Number of particles must be > 0\n");
 # 692 "ex_particle_CUDA_naive_seq.cu"
-int *seed = ((int *)malloc(sizeof(int) * Nparticles));
-# 693 "ex_particle_CUDA_naive_seq.cu"
-int i;
-# 694 "ex_particle_CUDA_naive_seq.cu"
-for (i = 0; i < Nparticles; i++) {
-# 695 "ex_particle_CUDA_naive_seq.cu"
-(seed[i]) = (time(0) * i); }
-# 697 "ex_particle_CUDA_naive_seq.cu"
-int *I = ((int *)malloc(((sizeof(int) * IszX) * IszY) * Nfr));
-# 698 "ex_particle_CUDA_naive_seq.cu"
-long long start = get_time();
-# 700 "ex_particle_CUDA_naive_seq.cu"
-videoSequence(I, IszX, IszY, Nfr, seed);
-# 701 "ex_particle_CUDA_naive_seq.cu"
-long long endVideoSequence = get_time();
-# 702 "ex_particle_CUDA_naive_seq.cu"
-printf("VIDEO SEQUENCE TOOK %f\n", elapsed_time(start, endVideoSequence));
-# 703 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x1011");
-# 707 "ex_particle_CUDA_naive_seq.cu"
-particleFilter(I, IszX, IszY, Nfr, seed, Nparticles);
-# 708 "ex_particle_CUDA_naive_seq.cu"
-long long endParticleFilter = get_time();
-# 709 "ex_particle_CUDA_naive_seq.cu"
-printf("PARTICLE FILTER TOOK %f\n", elapsed_time(endVideoSequence, endParticleFilter));
-# 710 "ex_particle_CUDA_naive_seq.cu"
-printf("ENTIRE PROGRAM TOOK %f\n", elapsed_time(start, endParticleFilter));
-# 712 "ex_particle_CUDA_naive_seq.cu"
-free(seed);
-# 713 "ex_particle_CUDA_naive_seq.cu"
-free(I);
-# 714 "ex_particle_CUDA_naive_seq.cu"
-__asm__("MOV XZR, 0x2"); __asm__("ISB"); ; __asm__("HLT 0x1337"); ;
-# 715 "ex_particle_CUDA_naive_seq.cu"
 return 0;
+# 693 "ex_particle_CUDA_naive_seq.cu"
+}
+# 695 "ex_particle_CUDA_naive_seq.cu"
+int *seed = ((int *)malloc(sizeof(int) * Nparticles));
+# 696 "ex_particle_CUDA_naive_seq.cu"
+int i;
+# 697 "ex_particle_CUDA_naive_seq.cu"
+for (i = 0; i < Nparticles; i++) {
+# 698 "ex_particle_CUDA_naive_seq.cu"
+(seed[i]) = (time(0) * i); }
+# 700 "ex_particle_CUDA_naive_seq.cu"
+int *I = ((int *)malloc(((sizeof(int) * IszX) * IszY) * Nfr));
+# 701 "ex_particle_CUDA_naive_seq.cu"
+long long start = get_time();
+# 703 "ex_particle_CUDA_naive_seq.cu"
+videoSequence(I, IszX, IszY, Nfr, seed);
+# 704 "ex_particle_CUDA_naive_seq.cu"
+long long endVideoSequence = get_time();
+# 705 "ex_particle_CUDA_naive_seq.cu"
+printf("VIDEO SEQUENCE TOOK %f\n", elapsed_time(start, endVideoSequence));
+# 706 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1011");
+# 710 "ex_particle_CUDA_naive_seq.cu"
+particleFilter(I, IszX, IszY, Nfr, seed, Nparticles);
+# 711 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1016");
+# 712 "ex_particle_CUDA_naive_seq.cu"
+long long endParticleFilter = get_time();
+# 713 "ex_particle_CUDA_naive_seq.cu"
+printf("PARTICLE FILTER TOOK %f\n", elapsed_time(endVideoSequence, endParticleFilter));
+# 714 "ex_particle_CUDA_naive_seq.cu"
+printf("ENTIRE PROGRAM TOOK %f\n", elapsed_time(start, endParticleFilter));
 # 716 "ex_particle_CUDA_naive_seq.cu"
-}
+free(seed);
+# 717 "ex_particle_CUDA_naive_seq.cu"
+free(I);
+# 718 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x1017");
+# 719 "ex_particle_CUDA_naive_seq.cu"
+__asm__("MOV XZR, 0x2"); __asm__("ISB"); ; __asm__("HLT 0x1337"); ;
 # 720 "ex_particle_CUDA_naive_seq.cu"
-int main(int argc, char **argv) {
+return 0;
 # 721 "ex_particle_CUDA_naive_seq.cu"
-{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
-# 722 "ex_particle_CUDA_naive_seq.cu"
-int ret = do_main(argc, argv);
-# 723 "ex_particle_CUDA_naive_seq.cu"
-_benchmark_cleanup();
-# 724 "ex_particle_CUDA_naive_seq.cu"
-return ret;
-# 725 "ex_particle_CUDA_naive_seq.cu"
 }
-# 1 "tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
-# 1 "tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
-# 1 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 1 3
+# 723 "ex_particle_CUDA_naive_seq.cu"
+int main(int argc, char **argv) {
+# 724 "ex_particle_CUDA_naive_seq.cu"
+{ printf("enc_cuda: %d\n", 0); printf("cca is no bench: %d\n", 0); arm_sigaction sa, osa; (sa.sa_flags) = ((134217728 | 268435456) | 4); ; ((sa.__arm_sigaction_handler).sa_arm_sigaction) = __cca_sighandler; sigaction(4, (struct sigaction *)(&sa), (struct sigaction *)(&osa)); _benchmark_init(); } ;
+# 725 "ex_particle_CUDA_naive_seq.cu"
+int ret = do_main(argc, argv);
+# 726 "ex_particle_CUDA_naive_seq.cu"
+_benchmark_cleanup();
+# 727 "ex_particle_CUDA_naive_seq.cu"
+return ret;
+# 728 "ex_particle_CUDA_naive_seq.cu"
+}
+# 1 "tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
+# 1 "tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 1 3
 
 # 1 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 1 3
 # 74 "/usr/local/cuda-5.0//include/crt/host_runtime.h" 3
@@ -31378,8 +31386,8 @@ inline unsigned long long int ullmax(unsigned long long int a, unsigned long lon
 
 
 #pragma pack()
-# 3 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2 3
-# 1 "/tmp/tmpxft_00022e2e_00000000-1_ex_particle_CUDA_naive_seq.fatbin.c" 1 3
+# 3 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2 3
+# 1 "/tmp/tmpxft_00021617_00000000-1_ex_particle_CUDA_naive_seq.fatbin.c" 1 3
 
 
 asm(
@@ -31454,50 +31462,50 @@ asm(
 ".quad 0x00000075632e7165,0x46a36f5b589d9c78,0x69148d057e5e7e14,0x51c4300673318b57\n"
 ".quad 0x7d5695b7d2fba6d5,0xc62d09c66c216469,0xb9deffd56934e02c,0x12828ea4ec4c0cc2\n"
 ".quad 0x8ec6dce6f9973be6,0x58f2bb6913fe3ec3,0x03ede7df8e47d8bb,0x79f8e04190eedde9\n"
-".quad 0x9bfcaeb2eba4b451,0x1f22b2fbc14871b8,0x7dfb0d0fecb57b90,0x080400041059f7de\n"
-".quad 0xb39e4669167f83fb,0x97ec915772fb6f26,0x44f979d59cfcbedf,0xfd834d77f77c8eb2\n"
-".quad 0x78f1ebaa02ea4af2,0xbf9b68fc12edcb20,0x716ecae923fd0f2c,0xe3da6cb77a97bbaa\n"
-".quad 0x753dbecb77d7641f,0x71e6cb690d16293d,0x8f68b4e687cbd751,0xf22a7772f9975945\n"
-".quad 0x9e5da4f7354932a5,0xe5765eb6c574e273,0xf73bd53fbfae22b6,0x18b7f5c1f9d14fa3\n"
-".quad 0x5794ff496b26f65c,0xacbec11dfb3727c1,0xdf237f3c82eb5f8b,0x71f019d1f16516bf\n"
-".quad 0x473c0b3d7c644568,0x04eab7bc89067cd7,0xc1e4b7e38ff393e7,0x1b7375ee14969bf5\n"
-".quad 0xbae66a3a6f96b8fe,0xb75dd5437c7845bd,0x96e2fb37b3d98685,0x24ff61842aa71c61\n"
-".quad 0xb3696dcfef73c880,0xd204bcf0b5b844d6,0x1c8a80460beda425,0xa80dcf023f524f8e\n"
-".quad 0xbf1c6e86417777ab,0x1d22ec63705cee3a,0x5457f2086a1c7814,0x4ec1103fe37d23b4\n"
-".quad 0xcf63a3a847b35e23,0x5e3e39ea6bf5a05d,0x2ee6db7779513f3b,0xf8623e14af5306f3\n"
-".quad 0x5b50d21655ffe553,0xea509a1dac94b480,0x8dce08667927b028,0x7a46fad9efc28564\n"
-".quad 0x7c4530d4b127f55c,0x5fb885f99eb7719d,0xd6c0f0b64a15f830,0x78962e07dc7ba80a\n"
-".quad 0x704510af0db4dce2,0x6651dc51044934b3,0xaf8a3c35523ac181,0xd286f9b82a53d4db\n"
-".quad 0xbdc3e22980f2f5d0,0xa3a6430d839f429e,0xc6863e945d2cc621,0x51fc5225e6810689\n"
-".quad 0xf6f92ea9fe6b74f3,0x2bbe1ceffeffbfe8,0xde41589367691a6b,0xce143b7a2813c590\n"
-".quad 0x668f292d8a04fc64,0x3e72cf1f39e78f39,0xc0ca71d34c3ce6b2,0x322c8320ba21e93c\n"
-".quad 0xf02a52c4e5314ab3,0x2a56b22a2d961905,0x79976675cf5eab84,0xf96b58440e0e27ac\n"
-".quad 0x4caad224c794b28c,0x2a4b80f9552a0c12,0xc8b57a852d2d5175,0xa647a4556d3bb1f2\n"
-".quad 0x727b1e0955b1eed2,0x906f2b1b9eb5a31d,0x5733222b9090b143,0xb289cc9101466d3c\n"
-".quad 0x78a1c5b296c0fca0,0x97ac4fe2c164b65a,0xec2d979a16ca242d,0x903c6b9c8e7675c9\n"
-".quad 0x3dab3445e0f2eac1,0x5c9f4c329821f4a1,0xa0acc04595a56853,0x16fa4e74648bcfa2\n"
-".quad 0x46912046eb152569,0xe1ab2386e12176a6,0x69b1f76a26a0ed54,0xe57aa7ddd6c68a81\n"
-".quad 0x54bfd138932ba215,0x5d796b161a92274c,0x126c1732aac092a8,0x7f1a280edf3477c3\n"
-".quad 0x51655e894f8362a0,0x0521921ab0c992b6,0x60c82302238a27a3,0x652621a6f6f858de\n"
-".quad 0x31ea1631691631a7,0x4c0e31d48c938a16,0xf689546dd7cfbef1,0x458de2a8d230f218\n"
-".quad 0x6185102d85885288,0x8d81923246455d4c,0x4d0e2b3453432a8e,0xa1340c1c45772e6f\n"
-".quad 0x95346422c8beb400,0xa1905000b400a618,0x441a784700a83df4,0x1464ac6685970343\n"
-".quad 0x983954e6981239ac,0x589e25f289f51b59,0xdd49b2da6983d3e9,0xb6927fc5e9b42fb7\n"
-".quad 0xca7ea65be2d7d526,0xe661b463789f33b1,0xef0b03bd1622f9ad,0x236077c36077e2c0\n"
-".quad 0x32d8d8338967cb0d,0x2036600101d34421,0xde52109f6056fcc0,0xc765eed1849dcf85\n"
-".quad 0x24ba149b21492e08,0x526d8524b8293605,0x492f0a93685492f8,0x531324ba27e1f345\n"
-".quad 0x7fd1fdfb9f53dd99,0xdc64aed2bcdb8ea8,0x6296b25ea2eb6bea,0xaf3adafc0e17975f\n"
-".quad 0xecca28b2dafa4506,0x1e58fac58f5f656a,0x5f7500c1468d8a10,0xeb080c8906b3fe16\n"
-".quad 0xac354c609f3ebb5b,0x3520a0bc872d49ef,0x9a26d2d706d278f0,0x645fcbf38aa86482\n"
-".quad 0x1046476345907f0c,0x65aa28965bba4152,0x0ce4cada6b4de4ad,0x8cee2b4bbc656d36\n"
-".quad 0x370642cfba901139,0xc0b2df938dc9cda3,0xb42f4e943ee24ee8,0xad6257993dcb8ea2\n"
-".quad 0xdac7aea0400d4c45,0xdb30d068eefc0a90,0x8fce43c64dcd2c6f,0x73138cbfc798860a\n"
-".quad 0xada9353596364c4e,0x01b15f772d221b5e,0xa86cc962c84ae630,0x8410984bc7da9b31\n"
-".quad 0x835bcb281bc7c6cd,0x50126b887d6cd4c4,0xb5d36d0a6a1350ee,0x2637a98119c3cf9c\n"
-".quad 0x21abf15f48d84a23,0x90d8821655be70cb,0x21604382441a5101,0x6ba4bf0dd3624b16\n"
-".quad 0xc183c6a37e5cf78b,0x9336804d209150e7,0x99b0cabe3065d321,0xe6163cdd801b7397\n"
-".quad 0xe5786678d1667943,0x24f33553d10d30c2,0x9af8d20324140630,0x00ff9c399f16e680\n"
-".quad 0x00000000b1ddc74f\n"
+".quad 0x9bfcaeb2eba4b451,0x1f22b2fbc14871b8,0x7dfb0d0fecb57b90,0xb46280041059f7de\n"
+".quad 0x73c8cd22cff07f62,0xfd922aee5f6de4d6,0x9f2f3ab39f97dbf2,0xb069aefeef91d648\n"
+".quad 0x1e3d75405d495e5f,0xf36d1f825db9640f,0x2dd95d247fa1e597,0x7b4d96ef52f7754e\n"
+".quad 0xa7b7d96efaec83fc,0x3cd96d21a2c527ae,0xed169cd0f97aea2e,0x454eee5f32eb28b1\n"
+".quad 0xcbb49ee6a92654be,0xaecbd6d8ae9c4e73,0xe77aa7f7f5c456dc,0x16feb83f3a29f47e\n"
+".quad 0xf29fe92d64decb83,0x97d823bf66e4f82a,0xe46fe7905d6bf175,0x3e033a3e2ca2d7fb\n"
+".quad 0xe78167af8c88ad0e,0x9d56f79120cf9ae8,0x3c96fc71fe727ce0,0x6e6ebdc292d37eb8\n"
+".quad 0x5ccd474df2d71fc3,0xebbaa86f8f08b7b7,0xdc5f66f67b30d0b6,0x9fec308554e38c32\n"
+".quad 0x6d2db9fdee791004,0x40979e16b7089ad6,0x915008c17db484ba,0x01b9e047ea49f1c3\n"
+".quad 0xe38dd0c82eeef575,0xa45d8c6e0b9dc757,0x8afe410d438f0283,0xd82207fc6fa4768a\n"
+".quad 0xec747508f66bc469,0xc7c73d4d7eb40bb9,0xdcdb6eef2a27e76b,0x0c47c295ea60de65\n"
+".quad 0x6a1a42cabffcaa7f,0x4a1343b59296900b,0xb9c10ccf24f6051d,0x48df5b3df850ac91\n"
+".quad 0x88a61a9624feab8f,0xf710bf33d6ee33af,0xd81e16c942bf060b,0x12c5c0fb8f75015a\n"
+".quad 0x08a215e1b69b9c4f,0xca3b8a208926966e,0xf14786aa4758302c,0x50df37054a7a9b75\n"
+".quad 0xb87c45301e5eba1a,0x74c861b073e853d7,0xd0c7d28ba598c434,0x3f8a44bcd020d138\n"
+".quad 0xdf25d53fcd6e9e6a,0x77c39dffdff7fd1e,0xc82b126ced234d65,0xc2876f450278b21b\n"
+".quad 0xd1e525b1409f8c99,0xce59e3e73cf1e72c,0x194e3a69879cd647,0x45906417443d2798\n"
+".quad 0x054a589ca6295666,0x4ad64545b2c320be,0x32ecceb9ebd57085,0x2d6b0881c1c4f58f\n"
+".quad 0x955a4498f296519f,0x49701f2aa5418249,0x16af50a5a5aa2ea5,0xc8f48aada7763e59\n"
+".quad 0x4f63c12ab63dda54,0x0de56373d6b463ae,0xe664457212162872,0x5139922028cda78a\n"
+".quad 0x1438b652d81f9416,0xf589fc582c96cb4f,0x85b2f342d94485b2,0x078d7391ceceb93d\n"
+".quad 0xb56688bc1e5d5832,0x93e98653043e9427,0x159808b2b4ad0a6b,0xdf49ce8c9179f454\n"
+".quad 0xd22408dd62a4ad22,0x356470dc242ed4c8,0x363eed44d41daa9c,0xaf54fbbad8d1502d\n"
+".quad 0x97fa2712657442bc,0xaf2d62c35244e98a,0x4d82e6555812550b,0xe34501dbe68ef862\n"
+".quad 0x2cabd129f06c540f,0xa4324356193256ca,0x190460447144f460,0xa4c434dedf0b1bcc\n"
+".quad 0x3d42c62d22c634ec,0x81c63a91927142c6,0xd12a8dbaf9f7de29,0xb1bc551a461e431e\n"
+".quad 0x30a205b0b10a5108,0xb0324648c8aba98c,0xa1c5668a686551d1,0x26818388aee5cde9\n"
+".quad 0xa68c845917d68014,0x320a00168014c312,0x834f08e01507be94,0x8c958cd0b2e06868\n"
+".quad 0x072a9cd302473582,0x13c4be513ea36b33,0xa9365b4d307a7d2b,0xd24ff8bd3685f6fb\n"
+".quad 0x4fd4cb7c5afaa4d6,0xcc368c6f13e67639,0xe16077a2c45f35bc,0x6c0ef86c0efc581d\n"
+".quad 0x5b1b06712cf961a4,0x06cc00203a688426,0xca4213ec0adf9804,0xecbdda3093b9f0bb\n"
+".quad 0x974293642925c118,0x4db0a4970526c0a4,0x25e1526d0a925f0a,0x62649744fc3e68a9\n"
+".quad 0xfa3fbf73ea7bb32a,0x8c95da579b71d50f,0x52d64bd45d6d7d5b,0xe75b5f81c2f2ebec\n"
+".quad 0x9945165b5f48a0d5,0xcb1f58b1ebecad5d,0xeea01828d1b14203,0x61019120d67fc2cb\n"
+".quad 0x86a98c13e7d76b7d,0xa4141790e5a93df5,0x44da5ae0da4f1e06,0x8bf97e71550c9053\n"
+".quad 0x08c8ec68b20fe18c,0xb54512cb77482a42,0x9c995b4d69bc95ac,0x9dc569778cada6c1\n"
+".quad 0xe0c859f752022731,0x165bf271b939b466,0x85e9d287dc49dd18,0xac4af327b971d456\n"
+".quad 0x58f5d40801a988b5,0x661a0d1ddf81521b,0xf9c878c9b9a58dfb,0x627197f8f310c151\n"
+".quad 0xb526a6b2c6c989ce,0x362beee5a4436bd5,0x0d992c59095cc600,0x82130978fb536635\n"
+".quad 0x6b79650378f8d9b0,0x024d710fad9a9890,0xba6da14d426a1dca,0xc6f530233879f396\n"
+".quad 0x357e2be91b094464,0x1b1042cab7ce1964,0x2c087048834a2032,0x7497e1ba6c4962c4\n"
+".quad 0x3078d46fcb9ef16d,0x66d009a4122a1cf8,0x361957c60cba6432,0xc2c79bb0036e72f3\n"
+".quad 0xaf0ccf1a2ccf287c,0x9e66aa7a21a6185c,0x5f1a40648280c604,0x1ff38733e2dcd013\n"
+".quad 0x0000000052dd4ba8\n"
 ".text");
 
 extern "C" {
@@ -31513,10 +31521,10 @@ static const struct {int m; int v; const unsigned long long* d; char* f;} __fatD
  { 0x466243b1, 1, fatbinData, 0 };
 
 }
-# 4 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2 3
+# 4 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2 3
 extern void __device_stub__Z6kernelPdS_S_S_S_S_i(double *, double *, double *, double *, double *, double *, int);
 static void __nv_cudaEntityRegisterCallback(void **);
-static void __sti____cudaRegisterAll_61_tmpxft_00022e2e_00000000_6_ex_particle_CUDA_naive_seq_cpp1_ii_M(void) __attribute__((__constructor__));
+static void __sti____cudaRegisterAll_61_tmpxft_00021617_00000000_6_ex_particle_CUDA_naive_seq_cpp1_ii_M(void) __attribute__((__constructor__));
 void __device_stub__Z6kernelPdS_S_S_S_S_i(double *__par0, double *__par1, double *__par2, double *__par3, double *__par4, double *__par5, int __par6){if (cudaSetupArgument((void *)(char *)&__par0, sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par1, sizeof(__par1), (size_t)8UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)16UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par3, sizeof(__par3), (size_t)24UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par4, sizeof(__par4), (size_t)32UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par5, sizeof(__par5), (size_t)40UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par6, sizeof(__par6), (size_t)48UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(double *, double *, double *, double *, double *, double *, int))kernel)); (void)cudaLaunch(((char *)((void ( *)(double *, double *, double *, double *, double *, double *, int))kernel))); };}
 # 114 "ex_particle_CUDA_naive_seq.cu"
 void kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3,double *__cuda_4,double *__cuda_5,int __cuda_6)
@@ -31524,8 +31532,8 @@ void kernel( double *__cuda_0,double *__cuda_1,double *__cuda_2,double *__cuda_3
 {__device_stub__Z6kernelPdS_S_S_S_S_i( __cuda_0,__cuda_1,__cuda_2,__cuda_3,__cuda_4,__cuda_5,__cuda_6);
 # 137 "ex_particle_CUDA_naive_seq.cu"
 }
-# 1 "/tmp/tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
+# 1 "/tmp/tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T214) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T214; }; __cudaRegisterFunction(__T214, (const char*)((void ( *)(double *, double *, double *, double *, double *, double *, int))kernel), (char*)"_Z6kernelPdS_S_S_S_S_i", "_Z6kernelPdS_S_S_S_S_i", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }
-static void __sti____cudaRegisterAll_61_tmpxft_00022e2e_00000000_6_ex_particle_CUDA_naive_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
-# 2 "tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2
-# 1 "tmpxft_00022e2e_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
+static void __sti____cudaRegisterAll_61_tmpxft_00021617_00000000_6_ex_particle_CUDA_naive_seq_cpp1_ii_M(void) { __cudaFatCubinHandle = __cudaRegisterFatBinary((void*)&__fatDeviceText); { void (*callback_fp)(void **) = (void (*)(void **))(__nv_cudaEntityRegisterCallback); (*callback_fp)(__cudaFatCubinHandle); } atexit(__cudaUnregisterBinaryUtil); }
+# 2 "tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c" 2
+# 1 "tmpxft_00021617_00000000-3_ex_particle_CUDA_naive_seq.cudafe1.stub.c"
