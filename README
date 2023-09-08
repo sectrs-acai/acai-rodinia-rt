@@ -1,6 +1,6 @@
 # Rodinia Benchmark Suite
 
-This variant leverages the CUDA runtime APIs.
+This variant leverages the CUDA runtime APIs for ACAI.
 
 We use ocelot for the cuda runtime api. Due to compatibility issues of ocelot
 for cuda > 5 we build all benchmarks with cuda 5. cuda 5 is only compatible with
@@ -17,3 +17,8 @@ Requirements:
 
 
 upstream: https://github.com/utcs-scea/rodinia-cudadrv
+
+LICENSE:
+- Rodinia: Copyright (c)2008-2011 University of Virginia, see ./LICENSE
+- CUDA Samples: Copyright (c) 2022, NVIDIA CORPORATION. All rights reserved, see ./LICENSE-CUDA 
+
