@@ -14,3 +14,6 @@ Requirements:
 - cuda 5
 - cross compiler for arm
 - gdev with runtime api (ocelot) integrated
+
+
+upstream: https://github.com/utcs-scea/rodinia-cudadrv
