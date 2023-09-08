@@ -16,7 +16,7 @@ Requirements:
 - gdev with runtime api (ocelot) integrated
 
 
-upstream: https://github.com/utcs-scea/rodinia-cudadrv
+upstream: http://lava.cs.virginia.edu/Rodinia/download_links.htm
 
 LICENSE:
 - Rodinia: Copyright (c)2008-2011 University of Virginia, see ./LICENSE
